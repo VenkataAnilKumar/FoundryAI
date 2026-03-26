@@ -49,13 +49,13 @@ Use `ai-architect` to:
 | API design | `ai-api-designer` | OpenAPI spec, request/response contracts |
 
 **Always include at the end:**
-- `ai-qa-evaluation-engineer` → test plan and quality criteria
-- `prompt-engineer` → if the feature has any LLM calls
+- `ai-qa-engineer` → test plan and quality criteria
+- `ai-prompt-engineer` → if the feature has any LLM calls
 
 **Include if feature touches:**
-- `ai-security-risk` → auth, payments, PII, external integrations
-- `responsible-ai-engineer` → AI outputs shown to users
-- `ai-devops-mlops-engineer` → new infrastructure or deployment changes
+- `ai-security-engineer` → auth, payments, PII, external integrations
+- `ai-responsible-engineer` → AI outputs shown to users
+- `ai-devops-engineer` → new infrastructure or deployment changes
 
 ## Step 3: Coordinate
 

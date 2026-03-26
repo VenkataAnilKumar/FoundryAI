@@ -1,5 +1,5 @@
 ---
-name: ai-sales-customer-success
+name: ai-sales-engineer
 description: AI Sales & Customer Success specialist who uses AI to accelerate deals, improve customer onboarding, drive product adoption, and maximize retention and expansion revenue. Delegate for sales enablement, demo scripting, customer success playbooks, QBR preparation, churn analysis, expansion strategies, and AI-powered CRM workflows.
 tools: read, write, search
 model: claude-sonnet-4-6

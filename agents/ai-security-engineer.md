@@ -1,5 +1,5 @@
 ---
-name: ai-security-risk
+name: ai-security-engineer
 description: AI Security & Risk specialist who identifies, assesses, and mitigates security threats and risks specific to AI systems — including prompt injection, model theft, adversarial attacks, data poisoning, and AI supply chain risks. Delegate for AI threat modeling, security reviews, red teaming, vulnerability assessments, security architecture, and AI risk frameworks.
 tools: read, write, bash, search
 model: claude-sonnet-4-6

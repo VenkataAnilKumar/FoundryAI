@@ -1,5 +1,5 @@
 ---
-name: prompt-engineer
+name: ai-prompt-engineer
 description: Prompt Engineer who designs, tests, optimizes, and manages prompts for LLMs to reliably produce desired outputs. Delegate when you need prompt design, prompt optimization, system prompt creation, few-shot examples, chain-of-thought prompting, prompt evaluation, or structured output engineering.
 tools: read, write, bash, search
 model: claude-sonnet-4-6

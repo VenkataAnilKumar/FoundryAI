@@ -21,10 +21,10 @@ $ARGUMENTS
 | `ai-database-engineer` | Schema design, vector DBs, query optimization, migrations |
 | `ai-api-designer` | API design, OpenAPI specs, versioning, developer experience |
 | `ai-software-engineer` | Code review, refactoring, debugging, testing, general coding |
-| `ai-agentic-autonomous-engineer` | Agent frameworks, tool use, memory, multi-agent systems |
-| `ai-devops-mlops-engineer` | CI/CD, Docker/K8s, MLOps pipelines, deployment automation |
+| `ai-agent-engineer` | Agent frameworks, tool use, memory, multi-agent systems |
+| `ai-devops-engineer` | CI/CD, Docker/K8s, MLOps pipelines, deployment automation |
 | `ai-platform-engineer` | Model serving, GPU infra, internal AI platform, MLOps tooling |
-| `ai-qa-evaluation-engineer` | Test strategy, LLM eval, regression gates, quality frameworks |
+| `ai-qa-engineer` | Test strategy, LLM eval, regression gates, quality frameworks |
 | `ai-research-engineer` | Paper implementation, novel AI techniques, model benchmarking |
 
 ## Instructions

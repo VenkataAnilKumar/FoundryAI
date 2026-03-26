@@ -35,10 +35,10 @@ What outcome does this person actually need — not just the task they described
 | Database schema, vector store, migrations | `ai-database-engineer` |
 | API design, OpenAPI, DX | `ai-api-designer` |
 | General coding across any language | `ai-software-engineer` |
-| Agents, autonomous workflows, tool use | `ai-agentic-autonomous-engineer` |
-| CI/CD, MLOps, deployment, infra | `ai-devops-mlops-engineer` |
+| Agents, autonomous workflows, tool use | `ai-agent-engineer` |
+| CI/CD, MLOps, deployment, infra | `ai-devops-engineer` |
 | AI platform, model serving, GPU | `ai-platform-engineer` |
-| Testing, evaluation, quality gates | `ai-qa-evaluation-engineer` |
+| Testing, evaluation, quality gates | `ai-qa-engineer` |
 | Research, papers, experiments | `ai-research-engineer` |
 
 #### Product
@@ -49,25 +49,25 @@ What outcome does this person actually need — not just the task they described
 | UX, wireframes, interaction design | `ai-ux-designer` |
 | Client solution, PoC, feasibility | `ai-solution-architect` |
 | AI strategy, executive docs | `ai-strategy-engineer` |
-| Prompt design, optimization | `prompt-engineer` |
-| Complex multi-agent coordination | `multi-agent-orchestrator` |
+| Prompt design, optimization | `ai-prompt-engineer` |
+| Complex multi-agent coordination | `ai-orchestrator` |
 
 #### Business
 | Need | Agent |
 |---|---|
-| LLM costs, ROI, unit economics | `ai-finance-cost-optimization` |
-| Sales, demos, customer success | `ai-sales-customer-success` |
-| Marketing, content, growth | `ai-growth-marketing` |
-| Security review, threat model | `ai-security-risk` |
-| Bias, fairness, AI safety | `responsible-ai-engineer` |
-| Legal, GDPR, compliance | `legal-compliance-agent` |
-| Dashboards, KPIs, analytics | `analytics-insights-agent` |
-| Incident response, ops | `autonomous-ops-agent` |
-| Data analysis, ML models | `data-scientist` |
-| ETL, data pipelines | `data-engineer` |
-| Domain expertise, validation | `domain-expert` |
-| API docs, knowledge base | `ai-documentation-knowledge-engineer` |
-| User guides, tutorials, SOPs | `technical-writer` |
+| LLM costs, ROI, unit economics | `ai-finance-engineer` |
+| Sales, demos, customer success | `ai-sales-engineer` |
+| Marketing, content, growth | `ai-growth-engineer` |
+| Security review, threat model | `ai-security-engineer` |
+| Bias, fairness, AI safety | `ai-responsible-engineer` |
+| Legal, GDPR, compliance | `ai-legal-engineer` |
+| Dashboards, KPIs, analytics | `ai-analytics-engineer` |
+| Incident response, ops | `ai-ops-engineer` |
+| Data analysis, ML models | `ai-data-scientist` |
+| ETL, data pipelines | `ai-data-engineer` |
+| Domain expertise, validation | `ai-domain-expert` |
+| API docs, knowledge base | `ai-docs-engineer` |
+| User guides, tutorials, SOPs | `ai-technical-writer` |
 
 ### Step 4: Execute with judgment
 

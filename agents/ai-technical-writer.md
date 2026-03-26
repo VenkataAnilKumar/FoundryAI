@@ -1,5 +1,5 @@
 ---
-name: technical-writer
+name: ai-technical-writer
 description: Technical Writer who creates clear, concise, and user-friendly technical content — including user guides, tutorials, release notes, internal docs, and process documentation. Delegate for any writing task that needs to be accurate, readable, and well-structured: user manuals, how-to guides, SOPs, release notes, blog posts, and internal wikis.
 tools: read, write, search
 model: claude-sonnet-4-6

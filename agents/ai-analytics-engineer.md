@@ -1,5 +1,5 @@
 ---
-name: analytics-insights-agent
+name: ai-analytics-engineer
 description: Analytics & Insights Agent who transforms data into actionable business intelligence using AI-powered analysis, dashboards, and reporting. Delegate for business analytics, KPI dashboards, funnel analysis, cohort analysis, executive reporting, data storytelling, and AI-assisted insight generation.
 tools: read, write, bash, search
 model: claude-sonnet-4-6

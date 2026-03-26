@@ -185,7 +185,7 @@ Output: Severity classification, containment action, RCA structure, filled postm
 
 ## Routing Commands (from the plugin)
 
-These come with the `ai-team-router` plugin and route tasks to specialist agents:
+These come with the `founders-kit` plugin and route tasks to specialist agents:
 
 | Command | Use When |
 |---|---|

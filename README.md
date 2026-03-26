@@ -17,7 +17,7 @@ Instead of switching between AI tools, spinning up different ChatGPT conversatio
 - `ai-architect` designing the system
 - `ai-engineer` implementing the embedding pipeline
 - `ai-backend-engineer` building the API
-- `ai-qa-evaluation-engineer` setting up evals
+- `ai-qa-engineer` setting up evals
 
 All coordinated. All specialists. No context switching.
 
@@ -69,10 +69,10 @@ claude plugin add ./claude-agents/plugin
 | `ai-database-engineer` | PostgreSQL, vector DBs, migrations, query optimization |
 | `ai-api-designer` | REST/GraphQL/gRPC design, OpenAPI specs, DX |
 | `ai-software-engineer` | General coding across any language/framework |
-| `ai-agentic-autonomous-engineer` | Multi-agent systems, tool use, autonomous workflows |
-| `ai-devops-mlops-engineer` | CI/CD, Docker/K8s, model deployment, MLOps |
+| `ai-agent-engineer` | Multi-agent systems, tool use, autonomous workflows |
+| `ai-devops-engineer` | CI/CD, Docker/K8s, model deployment, MLOps |
 | `ai-platform-engineer` | Internal AI platform, model serving, GPU infra |
-| `ai-qa-evaluation-engineer` | LLM evals, test frameworks, adversarial testing |
+| `ai-qa-engineer` | LLM evals, test frameworks, adversarial testing |
 | `ai-research-engineer` | Paper implementation, experiments, new techniques |
 
 ### Product (7 agents)
@@ -83,25 +83,25 @@ claude plugin add ./claude-agents/plugin
 | `ai-ux-designer` | User flows, wireframes, AI UX patterns |
 | `ai-solution-architect` | Client proposals, PoC design, feasibility assessment |
 | `ai-strategy-engineer` | AI strategy docs, roadmaps, competitive analysis |
-| `prompt-engineer` | Prompt design, optimization, evaluation, few-shot |
-| `multi-agent-orchestrator` | Complex multi-agent workflow coordination |
+| `ai-prompt-engineer` | Prompt design, optimization, evaluation, few-shot |
+| `ai-orchestrator` | Complex multi-agent workflow coordination |
 
 ### Business (13 agents)
 | Agent | Best For |
 |---|---|
-| `ai-finance-cost-optimization` | LLM cost reduction, unit economics, ROI analysis |
-| `ai-sales-customer-success` | Sales playbooks, demo scripts, churn reduction |
-| `ai-growth-marketing` | Content strategy, SEO, AI-powered growth |
-| `ai-security-risk` | Threat modeling, prompt injection, red teaming |
-| `responsible-ai-engineer` | Bias audits, fairness, safety, EU AI Act |
-| `legal-compliance-agent` | GDPR, IP, contracts, regulatory analysis |
-| `analytics-insights-agent` | KPI dashboards, funnel analysis, BI reporting |
-| `autonomous-ops-agent` | Incident response, monitoring, runbooks |
-| `data-scientist` | Statistical analysis, ML modeling, A/B testing |
-| `data-engineer` | ETL pipelines, data warehouse, stream processing |
-| `domain-expert` | Deep domain knowledge and expert validation |
-| `ai-documentation-knowledge-engineer` | API docs, architecture docs, knowledge bases |
-| `technical-writer` | User guides, tutorials, SOPs, release notes |
+| `ai-finance-engineer` | LLM cost reduction, unit economics, ROI analysis |
+| `ai-sales-engineer` | Sales playbooks, demo scripts, churn reduction |
+| `ai-growth-engineer` | Content strategy, SEO, AI-powered growth |
+| `ai-security-engineer` | Threat modeling, prompt injection, red teaming |
+| `ai-responsible-engineer` | Bias audits, fairness, safety, EU AI Act |
+| `ai-legal-engineer` | GDPR, IP, contracts, regulatory analysis |
+| `ai-analytics-engineer` | KPI dashboards, funnel analysis, BI reporting |
+| `ai-ops-engineer` | Incident response, monitoring, runbooks |
+| `ai-data-scientist` | Statistical analysis, ML modeling, A/B testing |
+| `ai-data-engineer` | ETL pipelines, data warehouse, stream processing |
+| `ai-domain-expert` | Deep domain knowledge and expert validation |
+| `ai-docs-engineer` | API docs, architecture docs, knowledge bases |
+| `ai-technical-writer` | User guides, tutorials, SOPs, release notes |
 
 ---
 
@@ -114,10 +114,10 @@ Install the plugin to get smart routing slash commands:
 → Routes to: ai-architect + ai-engineer + ai-backend-engineer (parallel)
 
 /founder "we need to be GDPR compliant before launch"
-→ Routes to: legal-compliance-agent + responsible-ai-engineer (parallel)
+→ Routes to: ai-legal-engineer + ai-responsible-engineer (parallel)
 
 /founder "optimize our LLM costs, we're at $8k/month"
-→ Routes to: ai-finance-cost-optimization + prompt-engineer
+→ Routes to: ai-finance-engineer + ai-prompt-engineer
 
 /engineering "design the database schema for conversation history"
 → Routes to: ai-database-engineer
@@ -126,7 +126,7 @@ Install the plugin to get smart routing slash commands:
 → Routes to: ai-product-manager
 
 /business "set up a security review for our AI API"
-→ Routes to: ai-security-risk
+→ Routes to: ai-security-engineer
 ```
 
 ---

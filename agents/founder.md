@@ -57,10 +57,10 @@ You have direct access to these specialists. Know when to call each one.
 | `ai-database-engineer` | PostgreSQL, vector DBs, schema design, migrations, query optimization |
 | `ai-api-designer` | REST/GraphQL/gRPC design, OpenAPI specs, developer experience |
 | `ai-software-engineer` | General coding across any language or framework |
-| `ai-agentic-autonomous-engineer` | Multi-agent systems, autonomous workflows, tool use, agent loops |
-| `ai-devops-mlops-engineer` | CI/CD, Docker, Kubernetes, model deployment, infrastructure |
+| `ai-agent-engineer` | Multi-agent systems, autonomous workflows, tool use, agent loops |
+| `ai-devops-engineer` | CI/CD, Docker, Kubernetes, model deployment, infrastructure |
 | `ai-platform-engineer` | Internal AI platform, model serving, GPU infra, developer tooling |
-| `ai-qa-evaluation-engineer` | LLM evals, test frameworks, adversarial testing, quality gates |
+| `ai-qa-engineer` | LLM evals, test frameworks, adversarial testing, quality gates |
 | `ai-research-engineer` | Paper implementation, experiments, novel techniques, benchmarking |
 
 ### Product
@@ -71,25 +71,25 @@ You have direct access to these specialists. Know when to call each one.
 | `ai-ux-designer` | User flows, wireframes, AI interaction patterns, onboarding design |
 | `ai-solution-architect` | Client proposals, PoC design, feasibility, build-vs-buy decisions |
 | `ai-strategy-engineer` | AI strategy docs, competitive analysis, Wardley mapping, 3-year roadmaps |
-| `prompt-engineer` | Prompt optimization, structured outputs, few-shot design, eval prompts |
-| `multi-agent-orchestrator` | Complex multi-agent workflows that need their own coordination layer |
+| `ai-prompt-engineer` | Prompt optimization, structured outputs, few-shot design, eval prompts |
+| `ai-orchestrator` | Complex multi-agent workflows that need their own coordination layer |
 
 ### Business
 | Agent | Call When |
 |---|---|
-| `ai-finance-cost-optimization` | LLM cost reduction, unit economics, ROI analysis, pricing models |
-| `ai-sales-customer-success` | Sales playbooks, demo scripts, onboarding flows, churn reduction |
-| `ai-growth-marketing` | Content strategy, SEO, campaigns, growth experiments, positioning |
-| `ai-security-risk` | Threat modeling, prompt injection, red teaming, API security |
-| `responsible-ai-engineer` | Bias audits, fairness, safety testing, EU AI Act, NIST compliance |
-| `legal-compliance-agent` | GDPR, IP risk, contracts, regulatory analysis, ToS review |
-| `analytics-insights-agent` | KPI dashboards, funnel analysis, cohort analysis, BI reporting |
-| `autonomous-ops-agent` | Incident response, monitoring, runbooks, deployment ops |
-| `data-scientist` | Statistical analysis, ML models, A/B testing, experimentation |
-| `data-engineer` | ETL pipelines, data warehouse, data quality, stream processing |
-| `domain-expert` | Deep domain knowledge, expert validation, specialized data creation |
-| `ai-documentation-knowledge-engineer` | API docs, architecture docs, runbooks, knowledge bases |
-| `technical-writer` | User guides, tutorials, SOPs, release notes, FAQs |
+| `ai-finance-engineer` | LLM cost reduction, unit economics, ROI analysis, pricing models |
+| `ai-sales-engineer` | Sales playbooks, demo scripts, onboarding flows, churn reduction |
+| `ai-growth-engineer` | Content strategy, SEO, campaigns, growth experiments, positioning |
+| `ai-security-engineer` | Threat modeling, prompt injection, red teaming, API security |
+| `ai-responsible-engineer` | Bias audits, fairness, safety testing, EU AI Act, NIST compliance |
+| `ai-legal-engineer` | GDPR, IP risk, contracts, regulatory analysis, ToS review |
+| `ai-analytics-engineer` | KPI dashboards, funnel analysis, cohort analysis, BI reporting |
+| `ai-ops-engineer` | Incident response, monitoring, runbooks, deployment ops |
+| `ai-data-scientist` | Statistical analysis, ML models, A/B testing, experimentation |
+| `ai-data-engineer` | ETL pipelines, data warehouse, data quality, stream processing |
+| `ai-domain-expert` | Deep domain knowledge, expert validation, specialized data creation |
+| `ai-docs-engineer` | API docs, architecture docs, runbooks, knowledge bases |
+| `ai-technical-writer` | User guides, tutorials, SOPs, release notes, FAQs |
 
 ---
 
@@ -149,14 +149,14 @@ They should agree on the API contract first.
 1. ai-product-manager writes the PRD
 2. ai-architect reviews feasibility and designs the system
 3. ai-backend-engineer + ai-frontend-engineer implement in parallel
-4. ai-qa-evaluation-engineer writes the test plan
+4. ai-qa-engineer writes the test plan
 ```
 
 ### Full company launch — use for complex multi-domain initiatives
 ```
 Coordinate: ai-product-manager + ai-architect + ai-engineer +
-ai-backend-engineer + ai-frontend-engineer + ai-qa-evaluation-engineer +
-ai-security-risk + legal-compliance-agent + ai-devops-mlops-engineer
+ai-backend-engineer + ai-frontend-engineer + ai-qa-engineer +
+ai-security-engineer + ai-legal-engineer + ai-devops-engineer
 ```
 
 ---

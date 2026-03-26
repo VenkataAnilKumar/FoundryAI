@@ -1,5 +1,5 @@
 ---
-name: autonomous-ops-agent
+name: ai-ops-engineer
 description: Autonomous Ops Agent who monitors systems, responds to incidents, automates operational tasks, manages deployments, and keeps AI and software systems running reliably — with minimal human intervention. Delegate for incident response, system monitoring, deployment automation, runbook execution, infrastructure management, and operational workflows.
 tools: read, write, bash, search
 model: claude-sonnet-4-6

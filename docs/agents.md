@@ -66,12 +66,12 @@ Or use the routing commands (requires plugin):
 **Best for**: General coding in any language (Python, TypeScript, Go, Java, Rust, C#)
 **Use when**: General purpose coding that doesn't fit a specialist category
 
-### `ai-agentic-autonomous-engineer`
+### `ai-agent-engineer`
 **Model**: claude-sonnet-4-6
 **Best for**: Multi-agent systems, tool use, planning loops, memory systems, autonomous workflows
 **Use when**: Building agent-to-agent systems, autonomous workflows, or anything that uses LLMs to make decisions
 
-### `ai-devops-mlops-engineer`
+### `ai-devops-engineer`
 **Model**: claude-sonnet-4-6
 **Best for**: CI/CD, Docker, Kubernetes, model deployment, GitHub Actions, infrastructure as code
 **Use when**: Setting up deployment pipelines, containerization, or MLOps workflows
@@ -81,7 +81,7 @@ Or use the routing commands (requires plugin):
 **Best for**: Internal AI platform, model serving (vLLM, TGI), GPU infrastructure, developer tooling
 **Use when**: Building internal infrastructure that other teams use to ship AI features
 
-### `ai-qa-evaluation-engineer`
+### `ai-qa-engineer`
 **Model**: claude-sonnet-4-6
 **Best for**: LLM evaluation frameworks, adversarial testing, RAGAS, automated quality gates
 **Use when**: Setting up evals for LLM outputs, designing test suites, or validating model behavior
@@ -120,12 +120,12 @@ Or use the routing commands (requires plugin):
 **Best for**: AI strategy documents, competitive analysis, Wardley mapping, 3-year roadmaps
 **Use when**: Executive-level strategy documents or major technology direction decisions
 
-### `prompt-engineer`
+### `ai-prompt-engineer`
 **Model**: claude-sonnet-4-6
 **Best for**: Prompt design, optimization, few-shot examples, chain-of-thought, structured output
 **Use when**: Your LLM outputs aren't good enough and you need to improve prompts systematically
 
-### `multi-agent-orchestrator`
+### `ai-orchestrator`
 **Model**: claude-opus-4-6
 **Best for**: Coordinating teams of agents, complex multi-step projects, parallel workstreams
 **Use when**: A task is too complex for one agent and needs a coordinator
@@ -134,55 +134,55 @@ Or use the routing commands (requires plugin):
 
 ## Business Agents (13)
 
-### `ai-finance-cost-optimization`
+### `ai-finance-engineer`
 **Best for**: LLM cost reduction, model routing by cost, token optimization, ROI analysis
 **Use when**: Your AI costs are too high or you need to justify AI investment
 
-### `ai-sales-customer-success`
+### `ai-sales-engineer`
 **Best for**: Sales playbooks, demo scripts, customer onboarding flows, QBR prep, churn analysis
 **Use when**: Building sales materials or improving customer retention
 
-### `ai-growth-marketing`
+### `ai-growth-engineer`
 **Best for**: AI-powered content, SEO strategy, campaign planning, growth experiments
 **Use when**: Marketing and growth tasks
 
-### `ai-security-risk`
+### `ai-security-engineer`
 **Best for**: Prompt injection testing, threat modeling, adversarial attacks, API security review
 **Use when**: Security review of your AI system or API
 
-### `responsible-ai-engineer`
+### `ai-responsible-engineer`
 **Best for**: Bias audits, fairness evaluation, EU AI Act compliance, harmful output testing
 **Use when**: Ethics review, safety testing, or regulatory compliance (EU AI Act, NIST)
 
-### `legal-compliance-agent`
+### `ai-legal-engineer`
 **Best for**: GDPR, CCPA, IP risk, data processing agreements, AI-specific regulatory analysis
 **Use when**: Legal review of your AI product before launch
 
-### `analytics-insights-agent`
+### `ai-analytics-engineer`
 **Best for**: KPI dashboards, funnel analysis, cohort analysis, executive reporting
 **Use when**: Building analytics or extracting insights from your data
 
-### `autonomous-ops-agent`
+### `ai-ops-engineer`
 **Best for**: Incident response, runbook execution, monitoring setup, deployment automation
 **Use when**: Operational tasks, live incidents, or setting up automated operations
 
-### `data-scientist`
+### `ai-data-scientist`
 **Best for**: Statistical analysis, ML models, A/B testing, experimentation design
 **Use when**: Data analysis, building ML models, or designing experiments
 
-### `data-engineer`
+### `ai-data-engineer`
 **Best for**: ETL/ELT pipelines, data warehouse design, data quality, stream processing
 **Use when**: Building data infrastructure or data pipelines
 
-### `domain-expert`
+### `ai-domain-expert`
 **Best for**: Deep subject matter knowledge, expert validation, domain-specific training data
 **Use when**: You need specialized knowledge in a specific industry or domain
 
-### `ai-documentation-knowledge-engineer`
+### `ai-docs-engineer`
 **Best for**: API docs, architecture docs, runbooks, knowledge base design, developer guides
 **Use when**: Creating technical documentation for internal or external audiences
 
-### `technical-writer`
+### `ai-technical-writer`
 **Best for**: User guides, tutorials, how-to articles, SOPs, release notes, FAQs
 **Use when**: Creating user-facing documentation or step-by-step guides
 

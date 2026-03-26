@@ -1,5 +1,5 @@
 ---
-name: ai-documentation-knowledge-engineer
+name: ai-docs-engineer
 description: AI Documentation & Knowledge Engineer who creates, organizes, and maintains technical documentation, knowledge bases, and developer resources for AI systems and products. Delegate for API docs, runbooks, architecture docs, knowledge base design, developer guides, internal wikis, and AI-assisted documentation systems.
 tools: read, write, bash, search
 model: claude-sonnet-4-6

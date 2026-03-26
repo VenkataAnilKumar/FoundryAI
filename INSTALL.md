@@ -87,9 +87,9 @@ cp agents/*.md ~/.claude/agents/
 # Remove agents
 rm ~/.claude/agents/ai-*.md
 rm ~/.claude/agents/team-manager.md
-rm ~/.claude/agents/technical-writer.md
+rm ~/.claude/agents/ai-technical-writer.md
 # ... etc
 
 # Remove plugin
-claude plugin remove ai-team-router
+claude plugin remove founders-kit
 ```

@@ -31,28 +31,29 @@ When delegating tasks in this project, prefer these agents:
 - **iOS/Android/React Native/Flutter** → `ai-mobile-engineer`
 - **Database schema, vector search, migrations** → `ai-database-engineer`
 - **API design, OpenAPI specs, DX** → `ai-api-designer`
-- **Agent/autonomous workflow** → `ai-agentic-autonomous-engineer`
-- **CI/CD, deployment, infra** → `ai-devops-mlops-engineer`
-- **Testing and evaluation** → `ai-qa-evaluation-engineer`
+- **Agent/autonomous workflow** → `ai-agent-engineer`
+- **CI/CD, deployment, infra** → `ai-devops-engineer`
+- **Testing and evaluation** → `ai-qa-engineer`
 
 ### Data & AI
-- **Data pipelines, ETL** → `data-engineer`
-- **Model evaluation, benchmarking** → `ai-qa-evaluation-engineer`
-- **Prompt optimization** → `prompt-engineer`
-- **Analytics, dashboards** → `analytics-insights-agent`
+- **Data pipelines, ETL** → `ai-data-engineer`
+- **Model evaluation, benchmarking** → `ai-qa-engineer`
+- **Prompt optimization** → `ai-prompt-engineer`
+- **Analytics, dashboards** → `ai-analytics-engineer`
 
 ### Safety & Compliance
-- **Bias or fairness review** → `responsible-ai-engineer`
-- **Security threat review** → `ai-security-risk`
-- **Legal / regulatory review** → `legal-compliance-agent`
+- **Bias or fairness review** → `ai-responsible-engineer`
+- **Security threat review** → `ai-security-engineer`
+- **Legal / regulatory review** → `ai-legal-engineer`
 
 ### Business
-- **Cost analysis** → `ai-finance-cost-optimization`
-- **Technical documentation, API docs** → `ai-documentation-knowledge-engineer`
-- **User guides, tutorials, SOPs** → `technical-writer`
+- **Cost analysis** → `ai-finance-engineer`
+- **Technical documentation, API docs** → `ai-docs-engineer`
+- **User guides, tutorials, SOPs** → `ai-technical-writer`
 
 ### Multi-agent tasks
-- **Complex multi-step projects** → `multi-agent-orchestrator` (coordinates the above)
+- **Any task needing strategic judgment + execution** → `founder` (thinks like a co-founder, delegates to the right team)
+- **Complex multi-step projects** → `ai-orchestrator` (pure coordination layer)
 
 ---
 
@@ -92,24 +93,24 @@ Deploy:     [e.g. Vercel (frontend), Railway (backend), Supabase (db)]
 Lead:   ai-product-manager (define requirements)
 →       ai-architect (design approach)
 →       ai-frontend-engineer + ai-backend-engineer (build in parallel)
-→       ai-qa-evaluation-engineer (test and validate)
+→       ai-qa-engineer (test and validate)
 ```
 
 ### AI quality review team
 ```
-Lead:   ai-qa-evaluation-engineer
-→       prompt-engineer (optimize prompts)
-→       responsible-ai-engineer (fairness/safety check)
-→       ai-security-risk (adversarial testing)
+Lead:   ai-qa-engineer
+→       ai-prompt-engineer (optimize prompts)
+→       ai-responsible-engineer (fairness/safety check)
+→       ai-security-engineer (adversarial testing)
 ```
 
 ### Launch readiness team
 ```
-Lead:   multi-agent-orchestrator
-→       legal-compliance-agent (compliance review)
-→       ai-documentation-knowledge-engineer (docs)
-→       ai-devops-mlops-engineer (deployment checklist)
-→       analytics-insights-agent (metrics setup)
+Lead:   ai-orchestrator
+→       ai-legal-engineer (compliance review)
+→       ai-docs-engineer (docs)
+→       ai-devops-engineer (deployment checklist)
+→       ai-analytics-engineer (metrics setup)
 ```
 
 ---
@@ -118,17 +119,17 @@ Lead:   multi-agent-orchestrator
 
 ```bash
 # "Review this PR for AI-specific issues"
-→ ai-qa-evaluation-engineer + ai-security-risk + responsible-ai-engineer
+→ ai-qa-engineer + ai-security-engineer + ai-responsible-engineer
 
 # "Optimize our LLM costs — we're at $15k/month"
-→ ai-finance-cost-optimization + prompt-engineer
+→ ai-finance-engineer + ai-prompt-engineer
 
 # "We need to be EU AI Act compliant before launch"
-→ legal-compliance-agent + responsible-ai-engineer
+→ ai-legal-engineer + ai-responsible-engineer
 
 # "Build the chat interface with streaming"
 → ai-frontend-engineer + ai-backend-engineer
 
 # "Set up evaluation pipeline for our RAG system"
-→ ai-qa-evaluation-engineer + ai-engineer + data-scientist
+→ ai-qa-engineer + ai-engineer + ai-data-scientist
 ```
