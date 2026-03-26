@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Founders Kit — Install Script
-# Usage: curl -fsSL https://raw.githubusercontent.com/yourusername/claude-agents/main/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
 
 set -e
 
-REPO_URL="https://github.com/yourusername/claude-agents"
+REPO_URL="https://github.com/VenkataAnilKumar/FoundryAI"
 AGENTS_DIR="$HOME/.claude/agents"
 COMMANDS_DIR="$HOME/.claude/commands"
 PLUGIN_DIR="$HOME/.claude/plugins/founders-kit"

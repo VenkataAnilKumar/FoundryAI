@@ -28,23 +28,23 @@ All coordinated. All specialists. No context switching.
 ## One-Line Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yourusername/claude-agents/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
 ```
 
 Or manually:
 
 ```bash
-git clone https://github.com/yourusername/claude-agents
+git clone https://github.com/VenkataAnilKumar/FoundryAI
 
 # Agents
-cp claude-agents/agents/*.md ~/.claude/agents/
+cp FoundryAI/agents/*.md ~/.claude/agents/
 
 # Skills (slash commands)
 mkdir -p ~/.claude/commands
-cp claude-agents/skills/*.md ~/.claude/commands/
+cp FoundryAI/skills/*.md ~/.claude/commands/
 
 # Plugin (routing commands)
-claude plugin add ./claude-agents/plugin
+claude plugin add ./FoundryAI/plugin
 ```
 
 ---
@@ -209,7 +209,7 @@ Drop a stack-specific `CLAUDE.md` into your project root — it configures agent
 
 ```bash
 # Example: Next.js SaaS project
-cp claude-agents/templates/CLAUDE-nextjs-saas.md ./CLAUDE.md
+cp FoundryAI/templates/CLAUDE-nextjs-saas.md ./CLAUDE.md
 # Edit with your project name, stage, and any custom conventions
 ```
 
@@ -220,7 +220,7 @@ cp claude-agents/templates/CLAUDE-nextjs-saas.md ./CLAUDE.md
 ### Hooks — Automate Claude Code behaviors
 
 ```bash
-cp claude-agents/templates/hooks/*.sh ~/.claude/hooks/
+cp FoundryAI/templates/hooks/*.sh ~/.claude/hooks/
 chmod +x ~/.claude/hooks/*.sh
 ```
 
@@ -234,13 +234,13 @@ chmod +x ~/.claude/hooks/*.sh
 
 ```bash
 # GitHub (issues, PRs, code search)
-cp claude-agents/templates/mcp-github.json ./.mcp.json
+cp FoundryAI/templates/mcp-github.json ./.mcp.json
 
 # PostgreSQL (query your DB directly)
-cp claude-agents/templates/mcp-postgres.json ./.mcp.json
+cp FoundryAI/templates/mcp-postgres.json ./.mcp.json
 
 # Full stack (GitHub + PostgreSQL + Filesystem)
-cp claude-agents/templates/mcp-full-stack.json ./.mcp.json
+cp FoundryAI/templates/mcp-full-stack.json ./.mcp.json
 ```
 
 See [`templates/hooks-setup.md`](templates/hooks-setup.md) for full setup instructions.
@@ -274,7 +274,7 @@ Copy any recipe from [`templates/WORKFLOWS.md`](templates/WORKFLOWS.md) and past
 ## File Structure
 
 ```
-claude-agents/
+FoundryAI/
 ├── install.sh                       ← one-liner installer
 ├── agents/                          ← 38 agent definitions
 │   ├── founder.md                   ← AI co-founder (master orchestrator)
@@ -327,4 +327,4 @@ MIT — use freely, build products, ship it.
 
 ---
 
-*Built by [venka](https://github.com/venka) · Powered by [Claude Code](https://claude.ai/code)*
+*Built by [VenkataAnilKumar](https://github.com/VenkataAnilKumar) · Powered by [Claude Code](https://claude.ai/code)*
