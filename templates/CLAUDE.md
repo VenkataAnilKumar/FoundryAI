@@ -52,7 +52,8 @@ When delegating tasks in this project, prefer these agents:
 - **User guides, tutorials, SOPs** → `technical-writer`
 
 ### Multi-agent tasks
-- **Complex multi-step projects** → `multi-agent-orchestrator` (coordinates the above)
+- **Any task needing strategic judgment + execution** → `founder` (thinks like a co-founder, delegates to the right team)
+- **Complex multi-step projects** → `multi-agent-orchestrator` (pure coordination layer)
 
 ---
 

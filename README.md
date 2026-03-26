@@ -146,9 +146,9 @@ Use ai-frontend-engineer and ai-backend-engineer in parallel to build the
 user authentication flow — frontend handles the UI, backend handles the JWT API.
 ```
 
-### Use the team-manager for complex projects
+### Use the founder for complex projects
 ```
-Use the team-manager agent to orchestrate building a complete AI SaaS product MVP.
+Use the founder agent to orchestrate building a complete AI SaaS product MVP.
 Include: architecture, frontend, backend, deployment, and an eval framework.
 ```
 
@@ -223,7 +223,7 @@ claude-agents/
 ├── agents/                    ← 34 specialist agent definitions
 │   ├── ai-architect.md
 │   ├── ai-engineer.md
-│   ├── team-manager.md        ← Master routing agent
+│   ├── founder.md        ← Master routing agent
 │   └── ... (31 more)
 ├── skills/                    ← 20 slash commands (~/.claude/commands/)
 │   ├── review.md              ← /review

@@ -188,9 +188,9 @@ Or use the routing commands (requires plugin):
 
 ---
 
-## The `team-manager` Agent
+## The `founder` Agent
 
-The `team-manager` agent is the master orchestrator. It knows all 34 specialists and can:
+The `founder` agent is the master orchestrator. It knows all 34 specialists and can:
 - Decompose complex tasks into subtasks
 - Assign the right agents to each subtask
 - Run agents in parallel where possible
@@ -199,6 +199,6 @@ The `team-manager` agent is the master orchestrator. It knows all 34 specialists
 Use it for large, multi-domain projects where you want intelligent routing without specifying agents yourself.
 
 ```
-Use the team-manager agent to plan and execute a complete AI product launch,
+Use the founder agent to plan and execute a complete AI product launch,
 including architecture, engineering, compliance, documentation, and marketing.
 ```
