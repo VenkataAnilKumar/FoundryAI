@@ -9,6 +9,8 @@
 [![Skills](https://img.shields.io/badge/skills-25-orange)](#skills--25-slash-commands)
 [![Plugin](https://img.shields.io/badge/plugin-founders--kit-purple)](#routing-commands)
 
+![FoundryAI Demo](demo.svg)
+
 ---
 
 ## What is this?
