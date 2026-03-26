@@ -1,0 +1,10 @@
+{
+  "name": "claude-agents-router",
+  "version": "1.0.0",
+  "description": "Smart routing commands for 34 AI specialist agents. Use /team for any task, or /engineering, /product, /business for domain-specific routing.",
+  "author": {
+    "name": "venka",
+    "url": "https://github.com/yourusername"
+  },
+  "repository": "https://github.com/yourusername/claude-agents"
+}
