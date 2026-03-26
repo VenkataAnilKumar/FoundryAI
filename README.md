@@ -13,7 +13,7 @@
 
 Instead of switching between AI tools, spinning up different ChatGPT conversations, or wondering which AI is best for your task — you get a full team of specialists that work together inside Claude Code.
 
-**Ask `/team "build me a RAG-powered document search"` and get:**
+**Ask `/founder "build me a RAG-powered document search"` and get:**
 - `ai-architect` designing the system
 - `ai-engineer` implementing the embedding pipeline
 - `ai-backend-engineer` building the API
@@ -29,7 +29,7 @@ All coordinated. All specialists. No context switching.
 |---|---|---|
 | **Agents** | 34 | Specialist subagents (architect, PM, security, data scientist...) |
 | **Skills** | 20 | Slash commands (`/review`, `/debug`, `/prd`, `/eval`...) |
-| **Routing commands** | 4 | `/team`, `/engineering`, `/product`, `/business` |
+| **Routing commands** | 4 | `/founder`, `/engineering`, `/product`, `/business` |
 | **Workflow recipes** | 15 | Pre-built multi-agent team prompts |
 | **Project template** | 1 | `CLAUDE.md` drop-in for any project |
 
@@ -110,13 +110,13 @@ claude plugin add ./claude-agents/plugin
 Install the plugin to get smart routing slash commands:
 
 ```
-/team "build a RAG-powered document Q&A feature"
+/founder "build a RAG-powered document Q&A feature"
 → Routes to: ai-architect + ai-engineer + ai-backend-engineer (parallel)
 
-/team "we need to be GDPR compliant before launch"
+/founder "we need to be GDPR compliant before launch"
 → Routes to: legal-compliance-agent + responsible-ai-engineer (parallel)
 
-/team "optimize our LLM costs, we're at $8k/month"
+/founder "optimize our LLM costs, we're at $8k/month"
 → Routes to: ai-finance-cost-optimization + prompt-engineer
 
 /engineering "design the database schema for conversation history"

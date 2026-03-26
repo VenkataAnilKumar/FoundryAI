@@ -189,7 +189,7 @@ These come with the `ai-team-router` plugin and route tasks to specialist agents
 
 | Command | Use When |
 |---|---|
-| `/team "task"` | Any task — universal router across all 34 agents |
+| `/founder "task"` | Any task — universal router across all 34 agents |
 | `/engineering "task"` | Engineering tasks |
 | `/product "task"` | Product, design, strategy tasks |
 | `/business "task"` | Business, ops, compliance, data tasks |

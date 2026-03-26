@@ -14,7 +14,7 @@ Use the ai-architect agent to design a scalable architecture for my AI SaaS.
 
 Or use the routing commands (requires plugin):
 ```
-/team "design a scalable architecture for my AI SaaS"
+/founder "design a scalable architecture for my AI SaaS"
 ```
 
 ---

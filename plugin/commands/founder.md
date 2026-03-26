@@ -1,5 +1,5 @@
 ---
-description: Route any task to the right AI specialist agent(s) — powered by the founder agent's judgment
+description: Your AI co-founder — thinks strategically, delegates to the right specialists, and gets it shipped
 argument-hint: Describe what you need done
 ---
 
