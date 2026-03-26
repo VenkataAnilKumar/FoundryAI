@@ -1,10 +1,11 @@
 # Claude Agents — Your AI Team in a Box
 
-> 34 specialized AI agents for Claude Code. Drop them in and get an entire product & engineering team available as subagents.
+> 34 specialized AI agents + 20 slash commands for Claude Code. Drop them in and get an entire product & engineering team — plus a full developer toolkit.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-blue)](https://claude.ai/code)
 [![Agents](https://img.shields.io/badge/agents-34-green)](#agent-roster)
+[![Skills](https://img.shields.io/badge/skills-20-orange)](#skills--slash-commands)
 
 ---
 
@@ -22,20 +23,35 @@ All coordinated. All specialists. No context switching.
 
 ---
 
+## What's Included
+
+| | Count | What |
+|---|---|---|
+| **Agents** | 34 | Specialist subagents (architect, PM, security, data scientist...) |
+| **Skills** | 20 | Slash commands (`/review`, `/debug`, `/prd`, `/eval`...) |
+| **Routing commands** | 4 | `/team`, `/engineering`, `/product`, `/business` |
+| **Workflow recipes** | 15 | Pre-built multi-agent team prompts |
+| **Project template** | 1 | `CLAUDE.md` drop-in for any project |
+
+---
+
 ## Quick Install
 
 ```bash
-# 1. Clone to your Claude agents folder
-git clone https://github.com/yourusername/claude-agents ~/.claude/agents-repo
+# 1. Clone the repo
+git clone https://github.com/yourusername/claude-agents
 
-# 2. Copy agents to Claude's agents directory
-cp ~/.claude/agents-repo/agents/*.md ~/.claude/agents/
+# 2. Install agents (specialist subagents)
+cp claude-agents/agents/*.md ~/.claude/agents/
 
-# 3. (Optional) Install the routing plugin
-claude plugin add ./plugin
+# 3. Install skills (slash commands)
+cp claude-agents/skills/*.md ~/.claude/commands/
+
+# 4. (Optional) Install the routing plugin
+claude plugin add ./claude-agents/plugin
 ```
 
-**That's it.** The agents are now available in every Claude Code session.
+**That's it.** Agents and skills are available in every Claude Code session immediately.
 
 ---
 
@@ -152,6 +168,54 @@ cp ~/.claude/agents-repo/templates/CLAUDE.md ./CLAUDE.md
 
 ---
 
+## Skills — Slash Commands
+
+20 slash commands for common developer tasks. Instant, no subprocess.
+
+### Code Quality
+| Command | What it does |
+|---|---|
+| `/review` | Code review: logic, security, performance — CRITICAL/HIGH/MEDIUM/LOW severity |
+| `/review-ai` | AI-specific: prompt injection, hallucination risks, PII leakage, token cost |
+| `/debug "error"` | 6-step structured debugging: symptom → evidence → hypotheses → fix → verify |
+| `/test-plan "feature"` | Complete test plan: unit, integration, E2E, edge cases, coverage targets |
+| `/explain` | Plain-language explanation of any code with examples and analogies |
+
+### Feature Development
+| Command | What it does |
+|---|---|
+| `/feature "name"` | Classifies feature, routes to the right agents in parallel automatically |
+| `/prd "idea"` | Lean PRD: user stories, acceptance criteria, success metrics, non-goals |
+| `/spec "component"` | Technical spec: interface, behavior, error cases, data model |
+| `/estimate "task"` | T-shirt sizing with breakdown, risk multipliers, unknowns |
+
+### AI / LLM Specific
+| Command | What it does |
+|---|---|
+| `/prompt "text"` | Optimize any prompt — diagnosis, rewrite, diff of changes, edge cases |
+| `/eval "feature"` | Design an eval suite — 15+ test cases, scoring, regression strategy |
+| `/rag-design` | RAG architecture: chunking, embeddings, vector DB, retrieval approach |
+| `/cost-check` | Token cost estimate at scale + ranked optimization recommendations |
+| `/agent-design "role"` | Design a new agent — outputs a complete ready-to-use `.md` file |
+
+### Docs & Communication
+| Command | What it does |
+|---|---|
+| `/docs` | Docstrings, API docs, architecture docs — language-appropriate format |
+| `/changelog "v1.2.0"` | CHANGELOG entry from recent git commits |
+| `/release "v2.0.0"` | Release notes with highlights, breaking changes, upgrade steps |
+| `/standup` | Standup update from recent git activity |
+
+### Launch & Ops
+| Command | What it does |
+|---|---|
+| `/launch-check` | 40-point pre-launch checklist — security, ops, compliance, comms |
+| `/incident "error"` | Incident response: severity triage, containment, RCA, postmortem |
+
+→ Full reference: [`docs/skills.md`](docs/skills.md)
+
+---
+
 ## File Structure
 
 ```
@@ -161,18 +225,46 @@ claude-agents/
 │   ├── ai-engineer.md
 │   ├── team-manager.md        ← Master routing agent
 │   └── ... (31 more)
-├── plugin/                    ← Claude Code plugin (routing commands)
+├── skills/                    ← 20 slash commands (~/.claude/commands/)
+│   ├── review.md              ← /review
+│   ├── review-ai.md           ← /review-ai
+│   ├── debug.md               ← /debug
+│   ├── feature.md             ← /feature
+│   ├── prd.md                 ← /prd
+│   ├── prompt.md              ← /prompt
+│   ├── eval.md                ← /eval
+│   ├── rag-design.md          ← /rag-design
+│   ├── cost-check.md          ← /cost-check
+│   ├── agent-design.md        ← /agent-design
+│   ├── docs.md                ← /docs
+│   ├── changelog.md           ← /changelog
+│   ├── release.md             ← /release
+│   ├── standup.md             ← /standup
+│   ├── launch-check.md        ← /launch-check
+│   ├── incident.md            ← /incident
+│   ├── spec.md                ← /spec
+│   ├── estimate.md            ← /estimate
+│   ├── test-plan.md           ← /test-plan
+│   └── explain.md             ← /explain
+├── plugin/                    ← Claude Code plugin (routing + AI skills)
 │   ├── .claude-plugin/
 │   └── commands/
-│       ├── team.md            ← /team command
-│       ├── engineering.md     ← /engineering command
-│       ├── product.md         ← /product command
-│       └── business.md        ← /business command
+│       ├── team.md            ← /team (universal router)
+│       ├── engineering.md     ← /engineering
+│       ├── product.md         ← /product
+│       ├── business.md        ← /business
+│       ├── feature.md         ← /feature
+│       ├── prompt.md          ← /prompt
+│       ├── review-ai.md       ← /review-ai
+│       ├── eval.md            ← /eval
+│       ├── rag-design.md      ← /rag-design
+│       └── ... (more AI skills)
 ├── templates/
 │   ├── CLAUDE.md              ← Drop into your project root
 │   └── WORKFLOWS.md           ← 15 pre-built team recipes
 └── docs/
-    └── agents.md              ← Full agent capability reference
+    ├── agents.md              ← Full agent capability reference
+    └── skills.md              ← Full skills reference
 ```
 
 ---

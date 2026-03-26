@@ -6,14 +6,19 @@
 # Clone the repo
 git clone https://github.com/yourusername/claude-agents
 
-# Copy agents to your Claude agents directory
+# Install agents (specialist subagents)
 cp claude-agents/agents/*.md ~/.claude/agents/
 
-# Verify installation
-ls ~/.claude/agents/
+# Install skills (slash commands)
+mkdir -p ~/.claude/commands
+cp claude-agents/skills/*.md ~/.claude/commands/
+
+# Verify
+ls ~/.claude/agents/ | wc -l    # should show 35
+ls ~/.claude/commands/ | wc -l  # should show 20
 ```
 
-Done. Open Claude Code and the agents are available immediately.
+Done. Open Claude Code — agents and skills are available immediately.
 
 ---
 
