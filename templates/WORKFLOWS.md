@@ -13,8 +13,8 @@ Team composition:
 - AI Architect: design overall system architecture and component selection
 - AI Engineer: implement the embedding pipeline, chunking strategy, and retrieval layer
 - AI Backend Engineer: build the API layer and integrate with the vector database
-- AI QA & Evaluation Engineer: design the evaluation framework and RAG metrics
-- Responsible AI Engineer: review for data privacy and content safety
+- ai-qa-engineer: design the evaluation framework and RAG metrics
+- ai-responsible-engineer: review for data privacy and content safety
 
 Shared goal: Deliver a complete RAG architecture document, working implementation
 plan, and evaluation framework for a document Q&A system over a 10k-document corpus.
@@ -35,8 +35,8 @@ Team composition:
 - AI Product Manager: write a lean PRD with core user stories and acceptance criteria
 - AI UX Designer: design the key user flows and main UI screens
 - AI Full Stack Engineer: implement the MVP end-to-end (frontend + backend + AI layer)
-- AI DevOps & MLOps Engineer: set up deployment and CI/CD
-- Prompt Engineer: design and optimize the core prompts for the product
+- ai-devops-engineer: set up deployment and CI/CD
+- ai-prompt-engineer: design and optimize the core prompts for the product
 
 Constraint: Ship a working demo in 2 days. Cut scope aggressively. Use managed services.
 Start with the PRD, then parallelize design and engineering.
@@ -50,12 +50,12 @@ Start with the PRD, then parallelize design and engineering.
 Create an agent team to conduct a full launch readiness review for our AI product.
 
 Team composition:
-- Legal & Compliance Agent: assess EU AI Act classification, GDPR compliance, and T&C gaps
-- Responsible AI Engineer: audit for bias, fairness, and harmful output risks
-- AI Security & Risk: conduct threat model review and test for prompt injection
-- AI QA & Evaluation Engineer: define go/no-go quality metrics and run final eval suite
-- AI Documentation & Knowledge Engineer: review docs completeness for launch
-- Analytics & Insights Agent: verify that all launch metrics and dashboards are in place
+- ai-legal-engineer: assess EU AI Act classification, GDPR compliance, and T&C gaps
+- ai-responsible-engineer: audit for bias, fairness, and harmful output risks
+- ai-security-engineer: conduct threat model review and test for prompt injection
+- ai-qa-engineer: define go/no-go quality metrics and run final eval suite
+- ai-docs-engineer: review docs completeness for launch
+- ai-analytics-engineer: verify that all launch metrics and dashboards are in place
 
 Deliverable: A launch readiness report with a clear GO / NO-GO recommendation
 and a list of blocking vs. non-blocking issues. Each agent provides their section.
@@ -72,11 +72,11 @@ Context: We are currently spending $[X]/month on LLM API calls.
 Main usage: [describe your AI features and usage patterns]
 
 Team composition:
-- AI Finance & Cost Optimization: analyze cost breakdown and identify top opportunities
-- Prompt Engineer: audit prompts for token inefficiency and optimize for cost
+- ai-finance-engineer: analyze cost breakdown and identify top opportunities
+- ai-prompt-engineer: audit prompts for token inefficiency and optimize for cost
 - AI Engineer: identify caching opportunities and implement semantic cache
 - AI Platform Engineer: review model serving configuration and right-sizing
-- Data Scientist: analyze usage patterns to find batching and routing opportunities
+- ai-data-scientist: analyze usage patterns to find batching and routing opportunities
 
 Goal: Identify and implement changes targeting a 40%+ cost reduction
 without degrading output quality. Prioritize highest-impact changes first.
@@ -92,8 +92,8 @@ Create an agent team to research and implement [technique name, e.g. "self-RAG" 
 Team composition:
 - AI Research Engineer: review the paper, summarize key contributions, and design implementation plan
 - AI Engineer: implement the core technique in our existing stack
-- Prompt Engineer: design the prompts required for the technique
-- AI QA & Evaluation Engineer: design the evaluation to compare against our baseline
+- ai-prompt-engineer: design the prompts required for the technique
+- ai-qa-engineer: design the evaluation to compare against our baseline
 - AI Architect: review the implementation for production readiness
 
 Deliverable: Working implementation + evaluation results + recommendation
@@ -118,7 +118,7 @@ Team composition:
 - AI UX Designer: design the chat UI components and interaction patterns
 - AI Frontend Engineer: implement the chat UI with Vercel AI SDK streaming
 - AI Backend Engineer: build the chat API with streaming, session management, and history
-- AI QA & Evaluation Engineer: write tests and define quality metrics
+- ai-qa-engineer: write tests and define quality metrics
 
 Start with UX designs, then fan out to parallel frontend/backend development.
 Reconvene for integration and testing.
@@ -136,9 +136,9 @@ Company context: [brief description of company, industry, current AI maturity]
 Team composition:
 - AI Strategy Engineer: lead the strategy document — vision, roadmap, investment thesis
 - AI Solution Architect: map specific AI use cases to business outcomes with feasibility scores
-- Analytics & Insights Agent: build the ROI models and expected business impact quantification
-- Responsible AI Engineer: write the responsible AI principles and governance framework
-- Legal & Compliance Agent: summarize key regulatory considerations for the industry
+- ai-analytics-engineer: build the ROI models and expected business impact quantification
+- ai-responsible-engineer: write the responsible AI principles and governance framework
+- ai-legal-engineer: summarize key regulatory considerations for the industry
 
 Deliverable: A 10-15 page executive AI strategy document including:
 vision, prioritized use cases, 3-year roadmap, governance framework, and investment case.
@@ -157,10 +157,10 @@ Target: Fully automated model training, evaluation, and deployment pipeline
 
 Team composition:
 - AI Platform Engineer: design the platform architecture and component selection
-- AI DevOps & MLOps Engineer: implement CI/CD pipelines, model registry, and deployment automation
-- Data Engineer: design the data versioning and feature pipeline integration
-- AI QA & Evaluation Engineer: set up automated model evaluation and quality gates
-- AI Documentation & Knowledge Engineer: write runbooks and platform documentation
+- ai-devops-engineer: implement CI/CD pipelines, model registry, and deployment automation
+- ai-data-engineer: design the data versioning and feature pipeline integration
+- ai-qa-engineer: set up automated model evaluation and quality gates
+- ai-docs-engineer: write runbooks and platform documentation
 
 Deliverable: Working MLOps platform with CI/CD, model registry, automated evaluation,
 and monitoring. Include full documentation and runbooks.
@@ -201,11 +201,11 @@ Goal: [e.g. improve accuracy on domain tasks, reduce hallucinations, match brand
 
 Team composition:
 - AI Research Engineer: select base model, design fine-tuning approach (SFT, DPO, LoRA)
-- Data Scientist: analyze existing data, identify quality signals, build training dataset
-- Data Engineer: build the data pipeline — collect, clean, format, version training data
-- AI DevOps & MLOps Engineer: set up training infrastructure (GPU cluster, experiment tracking)
-- AI QA & Evaluation Engineer: design evaluation suite to measure improvement vs. baseline
-- Prompt Engineer: optimize system prompts to complement the fine-tuned model
+- ai-data-scientist: analyze existing data, identify quality signals, build training dataset
+- ai-data-engineer: build the data pipeline — collect, clean, format, version training data
+- ai-devops-engineer: set up training infrastructure (GPU cluster, experiment tracking)
+- ai-qa-engineer: design evaluation suite to measure improvement vs. baseline
+- ai-prompt-engineer: optimize system prompts to complement the fine-tuned model
 
 Deliverable: Fine-tuned model with evaluation results showing improvement on target tasks,
 training pipeline for future iterations, and deployment plan.
@@ -229,8 +229,8 @@ Team composition:
 - AI Engineer: build embedding pipeline, product indexing, and semantic search layer
 - AI Backend Engineer: build recommendation API and product generation endpoints
 - AI Frontend Engineer: build search UI with AI suggestions and visual search upload
-- Data Engineer: build the product catalog ETL and embedding update pipeline
-- AI QA & Evaluation Engineer: design offline and online evaluation for search quality
+- ai-data-engineer: build the product catalog ETL and embedding update pipeline
+- ai-qa-engineer: design offline and online evaluation for search quality
 
 Start with semantic search (highest impact), then recommendations, then generation.
 ```
@@ -245,10 +245,10 @@ Create an agent team to conduct a comprehensive AI security review.
 Scope: [describe your AI system — LLM API, RAG pipeline, agentic system, etc.]
 
 Team composition:
-- AI Security & Risk: lead the threat model, test for prompt injection, jailbreaks, data exfiltration
-- Responsible AI Engineer: test for harmful outputs, bias, PII leakage, and safety bypasses
+- ai-security-engineer: lead the threat model, test for prompt injection, jailbreaks, data exfiltration
+- ai-responsible-engineer: test for harmful outputs, bias, PII leakage, and safety bypasses
 - AI Backend Engineer: review API security, authentication, rate limiting, and input validation
-- Legal & Compliance Agent: assess regulatory compliance gaps and liability exposure
+- ai-legal-engineer: assess regulatory compliance gaps and liability exposure
 
 Deliverable: Security assessment report with:
 - Threat model diagram
@@ -269,11 +269,11 @@ Data sources: [describe sources — user interactions, documents, databases, API
 Target: Clean, versioned, labeled training dataset with automated refresh
 
 Team composition:
-- Data Engineer: design and build the ingestion, transformation, and storage pipeline
-- Data Scientist: define quality criteria, label schema, and statistical validation
-- AI DevOps & MLOps Engineer: automate pipeline scheduling, monitoring, and alerting
-- Responsible AI Engineer: audit data for bias, PII, and consent compliance
-- AI Documentation & Knowledge Engineer: document data lineage and schema
+- ai-data-engineer: design and build the ingestion, transformation, and storage pipeline
+- ai-data-scientist: define quality criteria, label schema, and statistical validation
+- ai-devops-engineer: automate pipeline scheduling, monitoring, and alerting
+- ai-responsible-engineer: audit data for bias, PII, and consent compliance
+- ai-docs-engineer: document data lineage and schema
 
 Deliverable: Automated data pipeline with monitoring, data quality gates, versioned
 dataset artifacts, and full lineage documentation.
@@ -314,8 +314,8 @@ Team composition:
 - AI Architect: design the target RAG architecture and select optimal vector store
 - AI Database Engineer: design vector schema, indexing strategy, and migration plan
 - AI Engineer: implement improved chunking, embedding, and hybrid retrieval pipeline
-- AI QA & Evaluation Engineer: build RAG evaluation framework (RAGAS metrics) and run A/B tests
-- AI DevOps & MLOps Engineer: automate the migration and set up ongoing index maintenance
+- ai-qa-engineer: build RAG evaluation framework (RAGAS metrics) and run A/B tests
+- ai-devops-engineer: automate the migration and set up ongoing index maintenance
 
 Deliverable: Migrated RAG system with measurable accuracy improvements, evaluation
 report comparing old vs. new system, and automated re-indexing pipeline.
