@@ -192,7 +192,7 @@
       values="0;0;1;1;0;0"
       keyTimes="0;0.78;0.82;0.90;0.94;1"
       dur="20s" repeatCount="indefinite"/>
-    <text x="20" y="415" fill="#585b70" font-size="12">38 agents · 25 skills · zero context switching</text>
+    <text x="20" y="415" fill="#585b70" font-size="12">52 agents + 9 teams · 25 skills · zero context switching</text>
     <text x="20" y="438" fill="#89b4fa" font-size="12.5">⭐  github.com/VenkataAnilKumar/FoundryAI</text>
   </g>
 

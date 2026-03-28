@@ -1,11 +1,11 @@
 # Founders Kit — Your AI Team in a Box
 
-> 38 specialist AI agents + 25 slash commands + hooks + MCP configs for Claude Code.
+> 52 specialist AI agents + 9 team coordinators + 25 slash commands + hooks + MCP configs for Claude Code.
 > One install. Your entire product, engineering, and business team — ready to ship.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-blue)](https://claude.ai/code)
-[![Agents](https://img.shields.io/badge/agents-38-green)](#the-team--38-specialists)
+[![Agents](https://img.shields.io/badge/agents-52-green)](#the-team--52-specialists)
 [![Skills](https://img.shields.io/badge/skills-25-orange)](#skills--25-slash-commands)
 [![Plugin](https://img.shields.io/badge/plugin-founders--kit-purple)](#routing-commands)
 
@@ -55,28 +55,41 @@ claude plugin add ./FoundryAI/plugin
 
 | | Count | What |
 |---|---|---|
-| **Agents** | 38 | Specialist subagents across engineering, product, and business |
+| **Agents** | 52 + 9 teams | Specialist subagents across engineering, product, and business |
 | **Skills** | 25 | Slash commands — `/review`, `/debug`, `/prd`, `/eval`, `/migrate`... |
 | **Routing commands** | 4 | `/founder`, `/engineering`, `/product`, `/business` |
 | **Project templates** | 4 | Stack-specific `CLAUDE.md` files for your project |
-| **Workflow recipes** | 15 | Pre-built multi-agent team prompts |
+| **Workflow recipes** | 16 | Pre-built multi-agent team prompts |
 | **Hooks** | 3 | Automated behaviors (logging, protection, notifications) |
 | **MCP configs** | 3 | GitHub, PostgreSQL, full-stack server configs |
 
 ---
 
-## The Team — 38 Specialists
+## The Team — 52 Specialists
 
-### Leadership
+### Leadership (5)
 | Agent | Best For |
 |---|---|
 | `founder` | Your AI co-founder — thinks strategically, delegates to the right team, ships |
 | `cto-advisor` | Build-vs-buy decisions, hiring plans, tech debt strategy, scaling engineering teams |
+| `engineering-manager` | Team health, delivery cadence, performance reviews, hiring |
+| `technical-program-manager` | Cross-team coordination, OKRs, program tracking |
+| `ai-orchestrator` | Complex multi-agent workflow coordination |
 
-### Engineering (14 agents)
+### Architecture (7)
 | Agent | Best For |
 |---|---|
-| `ai-architect` | System design, tech stack decisions, architecture reviews, ADRs |
+| `ai-architect` | AI system design, LLM/RAG architecture, tech stack decisions |
+| `cloud-architect` | AWS/GCP/Azure infrastructure, multi-cloud, IaC |
+| `data-architect` | Data lakehouse, warehouse, modeling, lineage |
+| `integration-architect` | API gateways, event mesh, microservices integration |
+| `security-architect` | Threat modeling, zero-trust, security frameworks |
+| `software-architect` | Application architecture, DDD, ADRs, hexagonal design |
+| `staff-engineer` | Cross-team technical leadership, engineering standards |
+
+### Engineering (12)
+| Agent | Best For |
+|---|---|
 | `ai-engineer` | LLM integration, RAG pipelines, embeddings, Claude/OpenAI API |
 | `ai-backend-engineer` | APIs, databases, async processing, microservices |
 | `ai-frontend-engineer` | React/Next.js, streaming UI, AI chat interfaces |
@@ -87,39 +100,75 @@ claude plugin add ./FoundryAI/plugin
 | `ai-software-engineer` | General coding across any language/framework |
 | `ai-agent-engineer` | Multi-agent systems, tool use, autonomous workflows |
 | `ai-devops-engineer` | CI/CD, Docker/K8s, model deployment, MLOps |
-| `ai-platform-engineer` | Internal AI platform, model serving, GPU infra |
 | `ai-qa-engineer` | LLM evals, test frameworks, adversarial testing |
 | `ai-research-engineer` | Paper implementation, experiments, new techniques |
-| `ai-performance-engineer` | Core Web Vitals, API latency, DB query optimization, load testing |
-| `ai-accessibility-engineer` | WCAG 2.2, screen readers, keyboard nav, ARIA patterns |
 
-### Product (7 agents)
+### Platform (4)
+| Agent | Best For |
+|---|---|
+| `ai-platform-engineer` | Internal AI platform, model serving, GPU infra |
+| `ml-engineer` | ML model training, fine-tuning, serving pipelines |
+| `site-reliability-engineer` | SLOs, incident response, reliability engineering |
+| `release-manager` | Release coordination, rollout strategy, feature flags |
+
+### Product (8)
 | Agent | Best For |
 |---|---|
 | `ai-product-manager` | PRDs, roadmaps, user stories, OKRs, GTM planning |
-| `ai-product-builder` | Rapid prototyping, MVPs, demo building |
 | `ai-ux-designer` | User flows, wireframes, AI UX patterns, onboarding design |
-| `ai-solution-architect` | Client proposals, PoC design, feasibility assessment |
+| `ux-researcher` | User interviews, usability testing, JTBD, personas |
+| `product-designer` | Hi-fi designs, design systems, Figma handoff |
+| `product-marketing-manager` | Positioning, launch plans, competitive intel, battlecards |
+| `product-analyst` | Funnel analysis, cohort retention, A/B testing |
+| `technical-product-manager` | Developer-facing products, APIs/SDKs, DX metrics |
 | `ai-strategy-engineer` | AI strategy docs, competitive analysis, 3-year roadmaps |
-| `ai-prompt-engineer` | Prompt design, optimization, evaluation, few-shot examples |
-| `ai-orchestrator` | Complex multi-agent workflow coordination |
 
-### Business (13 agents)
+### Data & AI (6)
+| Agent | Best For |
+|---|---|
+| `ai-data-engineer` | ETL pipelines, data warehouse, stream processing |
+| `ai-data-scientist` | Statistical analysis, ML modeling, A/B testing |
+| `ai-analytics-engineer` | KPI dashboards, funnel analysis, BI reporting |
+| `ai-domain-expert` | Deep domain knowledge and expert validation |
+| `ai-prompt-engineer` | Prompt design, optimization, evaluation, few-shot examples |
+| `ai-research-engineer` | Paper implementation, experiments, new techniques |
+
+### Growth (4)
 | Agent | Best For |
 |---|---|
 | `ai-finance-engineer` | LLM cost reduction, unit economics, ROI analysis |
 | `ai-sales-engineer` | Sales playbooks, demo scripts, churn reduction |
 | `ai-growth-engineer` | Content strategy, SEO, AI-powered growth experiments |
+| `developer-advocate` | DevRel, DX, community, technical content |
+
+### Knowledge (3)
+| Agent | Best For |
+|---|---|
+| `ai-technical-writer` | API docs, architecture docs, knowledge bases |
+| `ai-accessibility-engineer` | WCAG 2.2, screen readers, keyboard nav, ARIA patterns |
+| `content-designer` | UX writing, microcopy, content strategy |
+
+### Safety (3)
+| Agent | Best For |
+|---|---|
 | `ai-security-engineer` | Threat modeling, prompt injection, red teaming |
 | `ai-responsible-engineer` | Bias audits, fairness, safety, EU AI Act compliance |
 | `ai-legal-engineer` | GDPR, IP, contracts, regulatory analysis |
-| `ai-analytics-engineer` | KPI dashboards, funnel analysis, BI reporting |
-| `ai-ops-engineer` | Incident response, monitoring, runbooks |
-| `ai-data-scientist` | Statistical analysis, ML modeling, A/B testing |
-| `ai-data-engineer` | ETL pipelines, data warehouse, stream processing |
-| `ai-domain-expert` | Deep domain knowledge and expert validation |
-| `ai-docs-engineer` | API docs, architecture docs, knowledge bases |
-| `ai-technical-writer` | User guides, tutorials, SOPs, release notes |
+
+### Team Coordinators (9)
+Use a team coordinator when you want the whole team to work together on a problem.
+
+| Coordinator | Delegates To |
+|---|---|
+| `team-leadership` | founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator |
+| `team-architecture` | ai-architect, cloud-architect, data-architect, integration-architect, security-architect, software-architect, staff-engineer |
+| `team-engineering` | All 12 engineering specialists |
+| `team-platform` | ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager |
+| `team-product` | All 8 product specialists |
+| `team-data-ai` | All 6 data & AI specialists |
+| `team-growth` | ai-finance-engineer, ai-sales-engineer, ai-growth-engineer, developer-advocate |
+| `team-knowledge` | ai-technical-writer, ai-accessibility-engineer, content-designer |
+| `team-safety` | ai-security-engineer, ai-responsible-engineer, ai-legal-engineer |
 
 ---
 
@@ -278,11 +327,12 @@ Copy any recipe from [`templates/WORKFLOWS.md`](templates/WORKFLOWS.md) and past
 ```
 FoundryAI/
 ├── install.sh                       ← one-liner installer
-├── agents/                          ← 38 agent definitions
+├── agents/                          ← 52 specialists + 9 team coordinators (flat)
 │   ├── founder.md                   ← AI co-founder (master orchestrator)
 │   ├── cto-advisor.md               ← Technical leadership advisor
+│   ├── team-*.md                    ← 9 team coordinators
 │   ├── ai-architect.md
-│   └── ... (35 more specialists)
+│   └── ... (48 more specialists)
 ├── skills/                          ← 25 slash commands
 │   ├── review.md                    ← /review
 │   ├── debug.md                     ← /debug

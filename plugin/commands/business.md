@@ -19,12 +19,13 @@ $ARGUMENTS
 | `ai-responsible-engineer` | Bias audit, fairness evaluation, AI safety, ethics review, risk assessment |
 | `ai-legal-engineer` | GDPR, EU AI Act, IP risk, data privacy, contracts, regulatory analysis |
 | `ai-analytics-engineer` | KPI dashboards, funnel analysis, business intelligence, executive reporting |
-| `ai-ops-engineer` | Incident response, system monitoring, runbook execution, deployment ops |
 | `ai-data-scientist` | Statistical analysis, ML modeling, A/B testing, experimentation, predictions |
 | `ai-data-engineer` | ETL/ELT pipelines, data warehouse, data quality, stream processing |
 | `ai-domain-expert` | Deep domain knowledge, expert review of AI outputs, specialized validation |
-| `ai-docs-engineer` | API docs, architecture docs, runbooks, knowledge bases, internal wikis |
-| `ai-technical-writer` | User guides, tutorials, how-to articles, SOPs, release notes |
+| `ai-technical-writer` | API docs, architecture docs, runbooks, knowledge bases, user guides, SOPs |
+| `content-designer` | UX writing, microcopy, content strategy, product messaging |
+| `developer-advocate` | DevRel programs, DX, community content, developer documentation |
+| `site-reliability-engineer` | Incident response, SLOs, reliability engineering, runbooks |
 
 ## Instructions
 
@@ -32,6 +33,6 @@ $ARGUMENTS
 2. Pick the **right agent(s)**:
    - For compliance reviews → run `ai-security-engineer` + `ai-responsible-engineer` + `ai-legal-engineer` in **parallel**
    - For data work → `ai-data-engineer` (pipeline) vs `ai-data-scientist` (analysis) — pick the right one
-   - For documentation → `ai-docs-engineer` (technical/API) vs `ai-technical-writer` (user-facing)
-   - For ops → `ai-ops-engineer` for live incidents, `ai-devops-engineer` for pipeline setup
+   - For documentation → `ai-technical-writer` (any docs) vs `content-designer` (UX/product copy)
+   - For ops/incidents → `site-reliability-engineer` for live incidents, `ai-devops-engineer` for pipeline setup
 3. Spawn the chosen agent(s) with full task context and expected deliverables

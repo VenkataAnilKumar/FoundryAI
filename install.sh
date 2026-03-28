@@ -16,7 +16,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m'
 
 echo ""
-echo -e "${BLUE}Founders Kit — Your AI co-founder + 34 specialist agents${NC}"
+echo -e "${BLUE}Founders Kit — Your AI co-founder + 52 specialist agents + 9 team coordinators${NC}"
 echo "────────────────────────────────────────────────────────"
 echo ""
 
@@ -36,7 +36,7 @@ echo "Downloading..."
 git clone --depth 1 "$REPO_URL" "$TMP_DIR/claude-agents" --quiet
 
 # Install agents
-echo -e "Installing ${GREEN}35 agents${NC}..."
+echo -e "Installing ${GREEN}61 agents (52 specialists + 9 team coordinators)${NC}..."
 cp "$TMP_DIR/claude-agents/agents/"*.md "$AGENTS_DIR/"
 
 # Install skills

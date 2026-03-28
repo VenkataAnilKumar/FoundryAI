@@ -13,9 +13,12 @@ $ARGUMENTS
 | Agent | Use When |
 |---|---|
 | `ai-product-manager` | PRDs, user stories, feature prioritization, OKRs, roadmaps, acceptance criteria |
-| `ai-product-builder` | Rapid prototype, working demo, MVP end-to-end, fast shipping |
-| `ai-ux-designer` | UX research, user flows, wireframes, AI interaction patterns, usability review |
-| `ai-solution-architect` | Client-facing solution design, RFP response, PoC architecture, integration blueprint |
+| `ai-ux-designer` | User flows, wireframes, AI interaction patterns, onboarding design, usability review |
+| `ux-researcher` | User interviews, usability testing, JTBD framework, personas, journey maps |
+| `product-designer` | Hi-fi designs, design systems, Figma handoff, visual identity |
+| `product-marketing-manager` | Positioning, GTM strategy, launch plans, competitive intel, battlecards |
+| `product-analyst` | Funnel analysis, cohort retention, A/B testing, product metrics |
+| `technical-product-manager` | Developer-facing products, API/SDK roadmaps, DX metrics, developer feedback |
 | `ai-strategy-engineer` | AI strategy doc, opportunity assessment, build-vs-buy, exec presentation, roadmap |
 | `ai-prompt-engineer` | Prompt design, optimization, evaluation, few-shot examples, structured output |
 | `ai-orchestrator` | Large multi-step project requiring a coordinated team across multiple agents |
@@ -25,10 +28,13 @@ $ARGUMENTS
 1. Read the task and identify what type of product work is needed
 2. Pick the **most appropriate agent**:
    - Writing requirements → `ai-product-manager`
-   - Building something fast → `ai-product-builder`
-   - Designing experience → `ai-ux-designer`
+   - UX flows and interaction design → `ai-ux-designer`
+   - User research, testing, interviews → `ux-researcher`
+   - Visual design, design systems → `product-designer`
+   - GTM, positioning, launch → `product-marketing-manager`
+   - Metrics, funnels, A/B tests → `product-analyst`
+   - Developer products, API/SDK → `technical-product-manager`
    - Strategic planning → `ai-strategy-engineer`
-   - Client solution → `ai-solution-architect`
    - Prompt work → `ai-prompt-engineer`
    - Large coordinated project → `ai-orchestrator`
 3. For tasks that need multiple agents (e.g. PRD + UX design), run them in parallel
