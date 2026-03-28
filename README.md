@@ -1,12 +1,12 @@
 # Founders Kit — Your AI Team in a Box
 
-> 52 specialist AI agents + 9 team coordinators + 25 slash commands + hooks + MCP configs for Claude Code.
+> 52 specialist AI agents + 9 team coordinators + 27 slash commands + hooks + MCP configs for Claude Code.
 > One install. Your entire product, engineering, and business team — ready to ship.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-blue)](https://claude.ai/code)
 [![Agents](https://img.shields.io/badge/agents-52-green)](#the-team--52-specialists)
-[![Skills](https://img.shields.io/badge/skills-25-orange)](#skills--25-slash-commands)
+[![Skills](https://img.shields.io/badge/skills-27-orange)](#skills--25-slash-commands)
 [![Plugin](https://img.shields.io/badge/plugin-founders--kit-purple)](#routing-commands)
 
 ![FoundryAI Demo](demo.svg)
@@ -56,7 +56,7 @@ claude plugin add ./FoundryAI/plugin
 | | Count | What |
 |---|---|---|
 | **Agents** | 52 + 9 teams | Specialist subagents across engineering, product, and business |
-| **Skills** | 25 | Slash commands — `/review`, `/debug`, `/prd`, `/eval`, `/migrate`... |
+| **Skills** | 27 | Slash commands — `/review`, `/debug`, `/prd`, `/eval`, `/migrate`... |
 | **Routing commands** | 4 | `/founder`, `/engineering`, `/product`, `/business` |
 | **Project templates** | 4 | Stack-specific `CLAUDE.md` files for your project |
 | **Workflow recipes** | 16 | Pre-built multi-agent team prompts |
@@ -196,7 +196,7 @@ Use a team coordinator when you want the whole team to work together on a proble
 
 ---
 
-## Skills — 25 Slash Commands
+## Skills — 27 Slash Commands
 
 ### Code Quality
 | Command | What it does |
@@ -213,6 +213,8 @@ Use a team coordinator when you want the whole team to work together on a proble
 | Command | What it does |
 |---|---|
 | `/feature "name"` | Classifies feature, routes to right agents in parallel |
+| `/architect "challenge"` | Routes to the right architect specialist (AI, cloud, data, integration, security, app) |
+| `/design "challenge"` | Routes to the right design/UX specialist (research, UX, visual, content, metrics) |
 | `/prd "idea"` | Lean PRD: user stories, acceptance criteria, success metrics |
 | `/spec "component"` | Technical spec: interface, behavior, error cases, data model |
 | `/estimate "task"` | T-shirt sizing with breakdown, risk multipliers, unknowns |
@@ -333,7 +335,7 @@ FoundryAI/
 │   ├── team-*.md                    ← 9 team coordinators
 │   ├── ai-architect.md
 │   └── ... (48 more specialists)
-├── skills/                          ← 25 slash commands
+├── skills/                          ← 27 slash commands
 │   ├── review.md                    ← /review
 │   ├── debug.md                     ← /debug
 │   ├── prd.md                       ← /prd

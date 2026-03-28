@@ -130,7 +130,11 @@ After producing the agent file, provide:
 
 1. The file name to use: `[agent-name].md`
 2. Where to save it: `~/.claude/agents/[agent-name].md`
-3. How to add it to the routing table in the existing agents (which command file to update)
+3. Which routing tables to update:
+   - `~/.claude/agents/CLAUDE.md` — add to the appropriate team section
+   - `plugin/commands/founder.md` — add to the right domain table
+   - `plugin/commands/engineering.md` / `product.md` / `business.md` — whichever domain fits
+   - Add to the relevant `team-*.md` coordinator's member list so team workflows include it
 4. A one-line test invocation to verify it works
 
 ---
