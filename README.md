@@ -1,12 +1,12 @@
 # Founders Kit — Your AI Team in a Box
 
-> 52 specialist AI agents + 9 team coordinators + 27 slash commands + hooks + MCP configs for Claude Code.
+> 52 specialist AI agents + 9 team coordinators + 42 slash commands + hooks + MCP configs for Claude Code.
 > One install. Your entire product, engineering, and business team — ready to ship.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-blue)](https://claude.ai/code)
 [![Agents](https://img.shields.io/badge/agents-52-green)](#the-team--52-specialists)
-[![Skills](https://img.shields.io/badge/skills-27-orange)](#skills--25-slash-commands)
+[![Skills](https://img.shields.io/badge/skills-42-orange)](#skills--25-slash-commands)
 [![Plugin](https://img.shields.io/badge/plugin-founders--kit-purple)](#routing-commands)
 
 ![FoundryAI Demo](demo.svg)
@@ -56,7 +56,7 @@ claude plugin add ./FoundryAI/plugin
 | | Count | What |
 |---|---|---|
 | **Agents** | 52 + 9 teams | Specialist subagents across engineering, product, and business |
-| **Skills** | 27 | Slash commands — `/review`, `/debug`, `/prd`, `/eval`, `/migrate`... |
+| **Skills** | 42 | Slash commands — `/review`, `/debug`, `/prd`, `/eval`, `/migrate`... |
 | **Routing commands** | 4 | `/founder`, `/engineering`, `/product`, `/business` |
 | **Project templates** | 4 | Stack-specific `CLAUDE.md` files for your project |
 | **Workflow recipes** | 16 | Pre-built multi-agent team prompts |
@@ -196,7 +196,7 @@ Use a team coordinator when you want the whole team to work together on a proble
 
 ---
 
-## Skills — 27 Slash Commands
+## Skills — 42 Slash Commands
 
 ### Code Quality
 | Command | What it does |
@@ -227,8 +227,36 @@ Use a team coordinator when you want the whole team to work together on a proble
 | `/rag-design` | RAG architecture: chunking, embeddings, vector DB, retrieval |
 | `/cost-check` | Token cost estimate at scale + ranked optimization recommendations |
 | `/agent-design "role"` | Design a new agent — outputs a complete ready-to-use `.md` file |
+| `/agent-systems "system"` | Design multi-agent orchestration, tool use, memory, failure handling |
+| `/mlops` | ML training pipelines, fine-tuning, model serving, drift monitoring |
+| `/responsible-ai` | Bias audit, fairness eval, red-team checklist, explainability |
+| `/experiment "hypothesis"` | A/B test design, statistical analysis, ML model evaluation |
 
-### Docs & Communication
+### Product & Design
+| Command | What it does |
+|---|---|
+| `/prd "idea"` | Lean PRD: user stories, acceptance criteria, success metrics |
+| `/spec "component"` | Technical spec: interface, behavior, error cases, data model |
+| `/metrics "product"` | Define north star, funnel, A/B test plan, dashboard design |
+| `/gtm "launch"` | Go-to-market: positioning, messaging, launch plan, competitive battlecards |
+| `/growth "product"` | Growth strategy: acquisition funnels, retention levers, viral loops |
+| `/ai-strategy` | AI opportunity assessment, build-vs-buy, competitive landscape, roadmap |
+
+### Platform & Infrastructure
+| Command | What it does |
+|---|---|
+| `/data-pipeline` | ETL/ELT design, streaming vs batch, data quality gates, lineage |
+| `/performance` | Diagnose latency, Core Web Vitals, DB query tuning, load testing |
+| `/mobile` | iOS/Android/RN/Flutter patterns, on-device AI, app store prep |
+| `/release-plan` | Rollout strategy: canary, feature flags, phased launch, rollback |
+
+### Safety, Compliance & Accessibility
+| Command | What it does |
+|---|---|
+| `/compliance` | GDPR/CCPA/EU AI Act, data privacy, AI risk register |
+| `/accessibility` | WCAG 2.2 audit, screen readers, keyboard nav, ARIA patterns |
+
+### Docs & Community
 | Command | What it does |
 |---|---|
 | `/docs` | Docstrings, API docs, architecture docs |
@@ -236,6 +264,7 @@ Use a team coordinator when you want the whole team to work together on a proble
 | `/release "v2.0.0"` | Release notes: highlights, breaking changes, upgrade steps |
 | `/standup` | Standup update from recent git activity |
 | `/onboard` | 30-day engineer onboarding guide for your codebase |
+| `/devrel` | DevRel strategy: DX audit, community, technical content, OSS |
 
 ### Launch & Ops
 | Command | What it does |
@@ -335,7 +364,7 @@ FoundryAI/
 │   ├── team-*.md                    ← 9 team coordinators
 │   ├── ai-architect.md
 │   └── ... (48 more specialists)
-├── skills/                          ← 27 slash commands
+├── skills/                          ← 42 slash commands
 │   ├── review.md                    ← /review
 │   ├── debug.md                     ← /debug
 │   ├── prd.md                       ← /prd
