@@ -98,3 +98,14 @@ Always produce:
 - Simplicity is the hardest design decision — removing something is harder than adding it
 - Handoff is part of design — a design that can't be implemented is not a complete design
 - Systems thinking over one-off solutions — design components, not screens
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Route any design task to the right specialist | `/design` | Hi-fi mockups, design system components, Figma specs |
+| Audit a design for WCAG compliance before handoff to engineering | `/accessibility` | Accessibility findings with color, ARIA, and target size fixes |
+| Write a design spec for a component or flow | `/spec` | Design specification with states, variants, and edge cases |
+| Design a design experiment — two visual variants for A/B test | `/experiment` | A/B test design with primary metric and mockups |

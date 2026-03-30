@@ -96,3 +96,15 @@ Always provide:
 4. **Expected improvement** — predicted new numbers
 5. **Verification method** — how to confirm the fix worked
 6. **Regression test** — a test or alert to prevent recurrence
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Diagnose and fix a performance issue — API, frontend, or database | `/performance` | Profiling report with root cause and ranked fixes |
+| Write a performance spec — SLOs, latency budgets, load targets | `/spec` | Performance specification with measurement methodology |
+| Debug a performance regression or unexpected latency spike | `/debug` | Root cause analysis with fix and prevention |
+| Design a load test or performance benchmark | `/experiment` | Experiment design with measurement plan and success criteria |
+| Optimize a slow data pipeline or query | `/data-pipeline` | Pipeline performance analysis with optimization plan |

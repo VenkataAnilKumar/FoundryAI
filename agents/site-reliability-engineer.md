@@ -101,3 +101,15 @@ For every engagement, produce:
 - Observability first — instrument before you need it, not after an outage
 - Design for failure — assume everything breaks; optimize for fast recovery, not zero failure
 - Runbooks are living documents — if a runbook is stale, it will fail you at 3am
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Respond to a production incident — triage, RCA, postmortem | `/incident` | Severity classification, timeline, RCA, action items |
+| Review a service for production readiness | `/launch-check` | Readiness checklist with SLO, alerting, and runbook gaps |
+| Diagnose reliability or performance issues in production | `/performance` | Profiling report with infrastructure and code fixes |
+| Review a release plan for reliability risks | `/release-plan` | Risk assessment with go/no-go recommendation |
+| Write an SLO spec — availability, latency, error rate targets | `/spec` | SLO document with measurement methodology and alert thresholds |

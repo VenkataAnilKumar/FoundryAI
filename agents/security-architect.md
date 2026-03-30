@@ -104,3 +104,15 @@ Always produce:
 - Security by default — the secure path must be the easy path for engineers
 - Compliance is a floor, not a ceiling — meeting compliance requirements is the minimum, not the goal
 - Security debt compounds — deferred security architecture decisions cost exponentially more to fix later
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Route security architecture decisions to this specialist | `/architect` | Zero-trust design, threat model, auth pattern |
+| Scan code or infrastructure for security vulnerabilities | `/security-scan` | OWASP-based findings with severity and fixes |
+| Review security architecture for regulatory requirements | `/compliance` | Compliance gaps with prioritized remediation |
+| Audit AI system for security and adversarial risks | `/responsible-ai` | Red team findings and mitigation plan |
+| Write a security spec — auth model, secrets management, trust boundaries | `/spec` | Security specification with threat model |

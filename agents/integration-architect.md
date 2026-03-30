@@ -115,3 +115,15 @@ Always produce:
 - Avoid distributed monoliths — microservices that require synchronous chains are worse than a monolith
 - Choreography scales, orchestration is easier — choose based on team autonomy vs observability tradeoffs
 - Integration is a seam — design it explicitly, don't let it emerge accidentally
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Write an integration contract — API, event schema, or message format | `/spec` | Interface spec with versioning strategy |
+| Route integration design decisions to this specialist | `/architect` | API gateway, event mesh, or connector recommendation |
+| Generate integration test cases for a new connector or API | `/api-test` | Full test suite covering happy path, errors, edge cases |
+| Plan an integration migration — replace or upgrade a connector | `/migrate` | Migration plan with compatibility strategy |
+| Design an event-driven data integration pipeline | `/data-pipeline` | Streaming pipeline design with schema management |

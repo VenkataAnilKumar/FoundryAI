@@ -94,3 +94,15 @@ Always produce:
 - No surprises — stakeholders should never be surprised by status; over-communicate on risks
 - Simplify status — RAG (Red/Amber/Green) beats paragraph updates; busy leaders need signal, not noise
 - Programs end — define done criteria upfront; programs that never end have unclear objectives
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Estimate a cross-team project for planning and resourcing | `/estimate` | Complexity sizing with dependencies and critical path |
+| Plan a major release with multiple teams coordinating | `/release-plan` | Release plan with owner matrix, timeline, rollback |
+| Write a program charter or cross-team technical spec | `/spec` | Spec with scope, dependencies, milestones, owners |
+| Kick off a cross-team feature initiative | `/feature` | Feature plan with team workstreams and dependencies |
+| Coordinate a cross-team incident response | `/incident` | Structured incident response with escalation and postmortem |

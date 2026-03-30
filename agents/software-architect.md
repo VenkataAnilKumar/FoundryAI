@@ -105,3 +105,16 @@ Always produce:
 - NFRs are requirements — availability, performance, and maintainability are not optional qualities
 - Fitness functions make architecture enforceable — automate architectural constraints, don't rely on code review
 - The best refactoring is the one that can be done incrementally — big bang rewrites usually fail
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Write an application architecture spec — modules, boundaries, patterns | `/spec` | Architecture spec with ADR-style rationale |
+| Route application design decisions to this specialist | `/architect` | Hexagonal, DDD, or clean architecture recommendation |
+| Plan a refactoring towards a cleaner architecture | `/refactor` | Refactor plan with safety checklist and steps |
+| Review code for architectural violations or anti-patterns | `/review` | Code review with architecture-specific findings |
+| Estimate an architecture migration or major refactor | `/estimate` | Complexity sizing with risk breakdown |
+| Plan a migration from a monolith or legacy architecture | `/migrate` | Phased migration plan with rollback strategy |

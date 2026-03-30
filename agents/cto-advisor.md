@@ -92,3 +92,16 @@ For any decision or question:
 For hiring and team questions, add:
 - **What good looks like** — concrete description of the right outcome
 - **How to know if it's working** — specific signal within 30/60/90 days
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Build or review an AI strategy for the organization | `/ai-strategy` | AI maturity assessment, opportunity map, 12-month roadmap |
+| Get a high-level architecture recommendation for a major decision | `/architect` | Cross-domain architecture recommendation |
+| Write an engineering strategy or technical vision document | `/spec` | Strategy document with decisions, rationale, and trade-offs |
+| Estimate the cost and complexity of a major technical initiative | `/estimate` | Executive-ready sizing with risk and dependency analysis |
+| Review the technical stack for regulatory and security compliance | `/compliance` | Compliance gap analysis with prioritized remediation |
+| Review a technical design or architecture for strategic soundness | `/review` | Strategic review with risks and recommendations |

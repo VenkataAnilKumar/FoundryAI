@@ -124,3 +124,14 @@ Always produce:
 - Write for the worst day — when a user hits an error at 2am under deadline, your copy is their support team
 - Test your copy — read it aloud, test it with real users, it will surprise you
 - Plain language is harder to write than jargon — but it respects the reader's time
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Get UX writing guidance or route to the right design specialist | `/design` | Microcopy, empty states, error messages, onboarding copy |
+| Write a content spec — voice, tone, copy patterns for a product | `/spec` | Content design spec with examples and do/don't guidance |
+| Review copy for accessibility — reading level, clarity, alt text | `/accessibility` | Accessibility findings for written content |
+| Write user-facing product documentation or help content | `/docs` | User documentation in plain language |

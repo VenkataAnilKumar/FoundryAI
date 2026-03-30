@@ -103,3 +103,15 @@ Always produce:
 - Communicate early and clearly — release surprises erode trust with users and teammates
 - Every rollback is a learning — fix the process that allowed the bad release, not just the code
 - Versioning is a contract — breaking changes require advance notice and migration support
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Plan a production release — canary, blue/green, or feature flag rollout | `/release-plan` | Rollout strategy with go/no-go criteria and rollback procedure |
+| Write release notes for a shipped version | `/release` | Release notes with highlights, breaking changes, upgrade steps |
+| Generate a CHANGELOG entry from git commits | `/changelog` | Formatted CHANGELOG entry |
+| Run the pre-launch checklist before going live | `/launch-check` | 40-point checklist with GO/NO-GO decision |
+| Respond to a release-caused incident | `/incident` | Incident response with rollback decision and postmortem |

@@ -89,3 +89,15 @@ Always produce:
 - Platform products succeed through adoption, not mandate — make it easy, not required
 - Deprecation is a product decision — breaking changes need customer SLAs, migration paths, and notice
 - Technical debt affects customers — translate it into customer impact for stakeholder prioritization
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Write a PRD for a developer-facing product — API, SDK, or platform | `/prd` | Technical PRD with developer user stories and acceptance criteria |
+| Write a technical spec for an API or platform feature | `/spec` | Interface spec with versioning, contracts, and error handling |
+| Plan a developer experience improvement initiative | `/devrel` | DX audit with improvement roadmap and success metrics |
+| Validate that the API matches the spec and docs | `/api-test` | Test suite proving correctness and developer usability |
+| Define developer product metrics — adoption, DX score, API usage | `/metrics` | Metric framework with leading indicators and funnel |

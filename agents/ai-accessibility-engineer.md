@@ -104,3 +104,14 @@ Before: [current code]
 After: [fixed code]
 Test: how to verify the fix
 ```
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Run a full WCAG 2.2 accessibility audit on a component or page | `/accessibility` | Audit report with criterion, severity, and specific fix for each issue |
+| Review frontend code for accessibility anti-patterns | `/review` | Code review with accessibility-specific findings |
+| Write an accessibility spec for a new component or feature | `/spec` | Accessibility requirements with ARIA patterns and keyboard contracts |
+| Get design guidance to ensure visual design meets contrast and target size requirements | `/design` | Design recommendations for WCAG compliance |

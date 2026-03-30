@@ -100,3 +100,15 @@ Always produce:
 - Consistency is credibility — one message, everywhere, reinforced over time
 - Enablement is a product — sales and CS are internal customers; build for their adoption too
 - Measure what matters — pipeline influenced, win rate by segment, feature adoption — not vanity metrics
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Build a full go-to-market plan for a product or feature launch | `/gtm` | Positioning, messaging, launch sequence, competitive battlecards |
+| Define marketing and launch success metrics | `/metrics` | KPI framework with awareness, acquisition, and activation metrics |
+| Develop a growth strategy for a specific product stage | `/growth` | Channel analysis, content strategy, experiment roadmap |
+| Design a messaging or positioning experiment | `/experiment` | A/B test design for landing pages, email, or ads |
+| Review marketing claims for regulatory compliance | `/compliance` | Compliance review with red-flag claims and corrections |

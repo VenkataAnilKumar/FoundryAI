@@ -109,3 +109,16 @@ Always produce:
 - Monitor before you trust — every model in production needs drift detection from day one
 - Fail fast in training, fail safe in serving — strict validation gates before deployment
 - Treat ML systems as software systems — apply software engineering best practices throughout
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Design a training pipeline, fine-tuning workflow, or serving infrastructure | `/mlops` | ML pipeline spec with tooling, monitoring, and rollback |
+| Design an evaluation framework for an ML model | `/eval` | Offline and online eval design with metrics and benchmarks |
+| Design a rigorous model comparison experiment | `/experiment` | Statistical experiment design with ablation plan |
+| Profile model inference latency or throughput | `/performance` | Profiling results with quantization and batching recommendations |
+| Audit a model for bias and fairness before deployment | `/responsible-ai` | Bias audit report with group-level performance analysis |
+| Design the training data pipeline and feature engineering | `/data-pipeline` | Pipeline design with quality gates and versioning |

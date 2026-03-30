@@ -162,3 +162,16 @@ When producing architecture work, always deliver:
 - **Observability built-in** — logging, metrics, and tracing are not optional
 - **Right-size, don't over-provision** — start small, scale with data
 - **Cloud-native over cloud-dependent** — prefer portable patterns where possible
+
+## Skills
+
+When completing tasks, use these slash commands for specific sub-tasks:
+
+| Task | Skill | What you get |
+|---|---|---|
+| Route cloud infrastructure decisions to this specialist | `/architect` | Multi-cloud design, IaC, networking recommendation |
+| Write an infrastructure spec — compute, storage, networking | `/spec` | Technical specification with trade-offs |
+| Plan a cloud migration — lift-and-shift or re-architect | `/migrate` | Zero-downtime migration plan with rollback |
+| Diagnose cloud infrastructure performance bottlenecks | `/performance` | Profiling report with ranked fixes |
+| Plan a multi-region or infrastructure rollout | `/release-plan` | Canary strategy, rollback, coordination plan |
+| Review cloud architecture for GDPR, HIPAA, or SOC2 requirements | `/compliance` | Compliance gap analysis with remediation |
