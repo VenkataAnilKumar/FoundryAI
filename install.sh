@@ -190,6 +190,13 @@ fi
 echo ""
 echo "Try:  /cofounder \"build a RAG-powered document search\"   (or ask: use the founder agent to …)"
 echo "      /prd \"your idea\"     /review     /launch-check"
+case " $TARGETS " in *" claude "*)
+  case " $TARGETS " in *" cursor "*|*" copilot "*)
+    echo ""
+    echo "Note: Cursor and VS Code also read ~/.claude/, so some agents/skills may be listed twice there."
+    echo "      They're identical copies — use either." ;;
+  esac ;;
+esac
 case " $TARGETS " in *" gemini "*)
   echo ""
   echo "Gemini CLI: to also load project AGENTS.md files, add to ~/.gemini/settings.json:"

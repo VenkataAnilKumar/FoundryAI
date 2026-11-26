@@ -531,6 +531,9 @@ Everything still works: coordinators name the right specialist and, if you ask, 
 **Why is the Claude Code plugin called `founders-kit`?**
 That's the project's original name, kept so existing plugin installs keep updating.
 
+**I see some agents or skills twice.**
+Cursor and VS Code also read Claude Code's folders (`~/.claude/agents`, `~/.claude/skills`) for compatibility. If you install for Claude Code *and* Cursor or Copilot on the same machine, the same FoundryAI agent can appear from both places — they're identical, so use either. Cursor prefers its own copy when names match.
+
 **I installed version 2.x.**
 Re-run the installer — it migrates old slash commands to skills and backs up anything you changed. See [CHANGELOG.md](CHANGELOG.md) for what changed.
 
