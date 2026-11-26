@@ -2,6 +2,18 @@
 
 All notable changes to Founders Kit. Versions follow the plugin version in `plugin/.claude-plugin/plugin.json`.
 
+## [3.5.1] — 2026-11-26
+
+### Changed
+- **Landing page redesigned** around what FoundryAI actually does, replacing the generic template look:
+  - **Hero:** the founder agent's real recorded answer, laid out as a Monday–Friday plan board, with a "not this week" strip.
+  - **Look:** steel-grey palette with one molten-amber accent, a wide Archivo display face, monospace for agent and skill names, light and dark themes.
+  - **Team directory:** filterable by team.
+  - **By startup type:** a staffing plan for each AI startup type.
+  - **Get started:** a three-step start plus the full workspace table.
+- `site/data.js` holds the team and skill data. It's generated from the README by `scripts/gen-docs.py` and checked in CI, so the site can't drift from the real roster.
+- **Social preview image** redrawn in the new identity.
+
 ## [3.5.0] — 2026-11-26
 
 ### Added

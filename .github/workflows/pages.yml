@@ -41,7 +41,7 @@ jobs:
         if: steps.pages.outputs.enabled == 'true'
         run: |
           mkdir -p _site
-          cp site/index.html _site/
+          cp site/index.html site/data.js _site/
           cp assets/demo.mp4 assets/demo.gif assets/demo-poster.png assets/social-preview.png _site/
       - uses: actions/configure-pages@v5
         if: steps.pages.outputs.enabled == 'true'
