@@ -2,6 +2,32 @@
 
 All notable changes to Founders Kit. Versions follow the plugin version in `plugin/.claude-plugin/plugin.json`.
 
+## [3.4.0] — 2026-11-26
+
+### Changed
+- **README rewritten for newcomers:**
+  - Order: quick start (install → add `AGENTS.md` → first thing to try in each workspace), why FoundryAI, how it works, workspace table, team and skill overviews.
+  - The full catalogs fold into collapsible groups.
+  - New: examples by startup type and stage, FAQ (privacy, cost, no-subagent workspaces, plugin name, upgrading), CI badge.
+  - Fixed: the `ml-engineer` and `ai-engineer` rows, `team-platform` membership, and duplicate `/prd` and `/spec` rows.
+  - The file-structure section moved to CONTRIBUTING ("Repository Layout").
+- **Workflow recipes merged into one file,** `templates/WORKFLOWS.md`: 23 recipes, all using agent IDs. Voice and fine-tuning recipes now use the new specialists, plus new fundraising-sprint and enterprise-deal-readiness recipes. `agents/WORKFLOWS.md` was removed.
+- **Team coordinators and `founder`** gained a "How to Coordinate" process and an Output Format (plan, integrated result, decisions, open questions, next steps).
+- **Demo image** shows current counts, workspaces, and stage-aware routing. Fixed result labels overlapping their values.
+
+### Fixed
+- **MCP configs** no longer use the deprecated `@modelcontextprotocol/server-github` or the archived `server-postgres`:
+  - GitHub now uses GitHub's official remote server.
+  - Postgres uses the community `postgres-mcp` in restricted (read-only) mode.
+  - Secrets come from environment variables instead of being pasted into the file.
+  - New `docs/mcp.md` covers setup for every workspace, including VS Code's `servers` key.
+- **Contributor templates** (`CONTRIBUTING.md` and `/agent-design`) now include the Not For and Output Format sections the validator requires.
+
+### Added
+- Validator checks:
+  - relative links in docs resolve;
+  - every agent, coordinators included, has an output format.
+
 ## [3.3.0] — 2026-11-26
 
 Quality pass over the original agents and skills.

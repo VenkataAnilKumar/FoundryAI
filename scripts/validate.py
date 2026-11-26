@@ -206,9 +206,9 @@ for p in sorted((ROOT / "agents").glob("*.md")):
     # skill tables: every table row anywhere that names a `/skill`
     rows = "\n".join(l for l in text.splitlines() if l.startswith("|") and "`/" in l)
     check_skill_refs(rel, "\n".join(re.findall(r"`/[a-z][a-z0-9-]*`", rows)))
+    if not re.search(r"^## .*(Output|Deliverable)", text, re.M | re.I):
+        err(p, "agents need an '## Output Format' section so answers have a consistent shape")
     if not p.stem.startswith("team-") and p.stem != "founder":
-        if not re.search(r"^## .*(Output|Deliverable)", text, re.M | re.I):
-            err(p, "specialists need an '## Output Format' section so answers have a consistent shape")
         if "not for" not in text.lower():
             err(p, "specialists need a 'Not For' pointer to the agent to use instead")
 for p in sorted((ROOT / "templates").glob("AGENTS*.md")):
@@ -220,6 +220,20 @@ for name, fm in skills.items():
     check_skill_refs(f"skills/{name}/SKILL.md (description)", fm.get("description", ""))
 routing = (ROOT / "docs" / "routing.md").read_text(encoding="utf-8")
 check_skill_refs("docs/routing.md", "\n".join(re.findall(r"\((/[^)]*)\)", routing)))
+
+# --- relative links in docs resolve ------------------------------------------------
+link_files = [ROOT / n for n in ("README.md", "INSTALL.md", "CONTRIBUTING.md", "CHANGELOG.md")]
+link_files += sorted((ROOT / "docs").glob("*.md")) + sorted((ROOT / "templates").glob("*.md"))
+link_files += [ROOT / "agents" / "README.md", ROOT / "plugin" / "README.md"]
+for f in link_files:
+    if not f.exists():
+        continue
+    for m in re.finditer(r"\]\(([^)#\s]+)(?:#[^)]*)?\)", f.read_text(encoding="utf-8")):
+        target = m.group(1)
+        if re.match(r"^[a-z]+:", target):  # http:, https:, mailto:
+            continue
+        if not (f.parent / target).resolve().exists():
+            err(f, f"broken link to '{target}'")
 
 # --- project templates --------------------------------------------------------
 for t in sorted((ROOT / "templates").glob("AGENTS*.md")):

@@ -144,4 +144,4 @@ Restart your workspace and check its agent list (for example `/agents` in Claude
 
 Or name a specialist directly: *"Use the ai-architect agent to design our retrieval pipeline."*
 
-See [`docs/routing.md`](../docs/routing.md) for the full routing guide and `WORKFLOWS.md` for pre-built team workflows.
+See [`docs/routing.md`](../docs/routing.md) for the full routing guide and [`templates/WORKFLOWS.md`](../templates/WORKFLOWS.md) for pre-built team workflows.

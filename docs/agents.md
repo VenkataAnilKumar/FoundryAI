@@ -112,7 +112,7 @@ Staff Engineer who provides senior individual contributor technical leadership �
 
 ### `ai-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
-**Best for**: LLM integration, RAG pipelines, embeddings, Claude/OpenAI API
+**Best for**: LLM integration, RAG pipelines, embeddings, any model provider
 
 AI Engineer who builds production AI applications using LLMs, embeddings, RAG pipelines, and AI APIs. Delegate when you need to integrate AI into applications, build LLM-powered features, implement RAG, fine-tune models, or optimize AI application performance. Not for training or fine-tuning models (use ai-model-training-engineer), voice agents (use ai-voice-engineer), or image/video understanding (use ai-vision-engineer).
 
@@ -194,7 +194,7 @@ AI Platform Engineer who builds and operates the internal AI platform — includ
 
 ### `ml-engineer`
 **Tier**: `deep` · **Capabilities**: read, edit, shell, web  
-**Best for**: ML model training, fine-tuning, serving pipelines
+**Best for**: Classic ML: training pipelines, feature stores, serving, drift monitoring
 
 ML Engineer who owns the full machine learning lifecycle — training pipelines, feature engineering, model versioning, experiment tracking, model serving at scale, and MLOps. Distinct from the AI Engineer (LLMs/RAG) and Data Scientist (analysis/insights). Delegate when you need training infrastructure, feature stores, MLflow/Kubeflow pipelines, model deployment, A/B model testing, or classical ML at production scale. Focus: classic ML (tabular models, recommenders, forecasting) and their pipelines. Not for LLM fine-tuning or post-training (use ai-model-training-engineer) or the shared AI platform (use ai-platform-engineer).
 
@@ -432,7 +432,7 @@ Engineering team coordinator. Specialist engineers covering AI, voice, vision, g
 
 ### `team-platform`
 **Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
-**Delegates to**: ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager
+**Delegates to**: ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager, ai-performance-engineer
 
 Platform & Operations team coordinator. Owns production reliability, ML infrastructure, release management, model serving, and performance. Delegates to: site-reliability-engineer (SLOs/incidents/observability), ml-engineer (training pipelines/feature stores/model serving), release-manager (versioning/changelogs/hotfix), ai-platform-engineer (GPU infra/MLOps platform), ai-performance-engineer (latency/throughput). Use for production incidents, reliability work, MLOps, releases, and infrastructure performance.
 

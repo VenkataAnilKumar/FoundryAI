@@ -16,7 +16,7 @@ Thanks for contributing. Every new agent, skill, or fix makes the toolkit more u
 | **Improve a skill** | Better output format, more edge cases covered |
 | **Bug fix** | Broken frontmatter, wrong capability, typo |
 | **Template** | New stack-specific `AGENTS.md` (e.g. Django + Vue, Go + HTMX) |
-| **Workflow recipe** | New entry in `WORKFLOWS.md` for a common multi-agent scenario |
+| **Workflow recipe** | New entry in `templates/WORKFLOWS.md` for a common multi-agent scenario |
 
 ---
 
@@ -86,6 +86,9 @@ Use the ai-[role]-engineer agent to [specific task].
 ```
 Use the ai-[role]-engineer agent to review [X] and identify [Y].
 ```
+
+**Not for:** (required — point to the agent that should handle neighbouring work)
+- [Adjacent task] → `[other-agent]`
 
 ## Output Format
 
@@ -248,6 +251,34 @@ scripts/validate.sh                       # run all checks (CI runs the same)
 ```
 
 Then invoke your agent in that workspace: *"Use the ai-your-new-agent agent to [task]"*.
+
+---
+
+## Repository Layout
+
+```
+FoundryAI/
+├── agents/                          ← single source: specialists + team coordinators
+│   ├── founder.md                   ← AI co-founder (master orchestrator)
+│   ├── team-*.md                    ← team coordinators
+│   └── _shared/                     ← operating principles appended to every agent
+├── skills/<name>/SKILL.md           ← skills (Agent Skills standard)
+├── templates/
+│   ├── AGENTS*.md                   ← project templates, by stack and by AI startup type
+│   ├── WORKFLOWS.md                 ← copy-paste team recipes
+│   ├── hooks/                       ← Claude Code hook scripts
+│   └── mcp-*.json                   ← MCP server configs (see docs/mcp.md)
+├── scripts/
+│   ├── build.py                     ← builds every workspace format and the Claude plugin
+│   ├── validate.sh / validate.py    ← all checks (CI runs this)
+│   ├── gen-docs.py                  ← regenerates docs/agents.md, docs/skills.md, founder roster
+│   └── test-hooks.sh                ← hook tests
+├── plugin/                          ← Claude Code plugin (generated — don't edit agents/ or skills/ here)
+├── .claude-plugin/marketplace.json  ← Claude Code marketplace entry
+├── docs/                            ← agents.md, skills.md (generated), routing.md, mcp.md
+├── install.sh / uninstall.sh        ← multi-workspace installer
+└── README.md                        ← its team and skill tables are the source for gen-docs.py
+```
 
 ---
 

@@ -75,17 +75,4 @@ The tests feed each hook the same JSON Claude Code sends and check the exit code
 
 ## MCP Servers
 
-Copy the right config to your project root as `.mcp.json`:
-
-```bash
-# GitHub only
-cp FoundryAI/templates/mcp-github.json ./.mcp.json
-
-# PostgreSQL only
-cp FoundryAI/templates/mcp-postgres.json ./.mcp.json
-
-# Full stack (GitHub + PostgreSQL + Filesystem)
-cp FoundryAI/templates/mcp-full-stack.json ./.mcp.json
-```
-
-Then fill in your credentials and run `claude` — MCP servers start automatically.
+MCP setup has its own guide, covering every workspace: [`docs/mcp.md`](../docs/mcp.md).

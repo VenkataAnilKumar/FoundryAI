@@ -1,8 +1,9 @@
 # FoundryAI — The AI Startup Team for Any AI Workspace
 
 > 58 specialist agents + 9 team coordinators + 54 skills for **every kind of AI startup**, from LLM apps and agents to voice, vision, generative media, robotics, model training and vertical AI.
-> Works in **Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI**, every `AGENTS.md`-compatible agent, and chat workspaces like ChatGPT, Claude and Gemini projects.
+> Works in **Claude Code, Cursor, GitHub Copilot, Codex and Gemini CLI**, in any `AGENTS.md`/Agent Skills–compatible agent, and in chat workspaces like ChatGPT, Claude and Gemini projects.
 
+[![validate](https://github.com/VenkataAnilKumar/FoundryAI/actions/workflows/validate.yml/badge.svg)](https://github.com/VenkataAnilKumar/FoundryAI/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Agents](https://img.shields.io/badge/agents-58-green)](#the-team--58-specialists)
 [![Skills](https://img.shields.io/badge/skills-54-orange)](#skills--54-skills)
@@ -10,54 +11,60 @@
 
 ![FoundryAI Demo](demo.svg)
 
----
-
-## What is this?
-
-An AI startup needs architects, engineers, product people, a growth team, security and legal, long before it can hire them. FoundryAI gives you that team as specialist agents and reusable skills, in whichever AI workspace you already use.
-
-**Ask for `/cofounder "build me a RAG-powered document search"` and get:**
-- `ai-architect` designing the system
-- `ai-engineer` implementing the embedding pipeline
-- `ai-backend-engineer` building the API
-- `ai-qa-engineer` setting up evals
-
-Every agent first works out what kind of AI startup you are and what stage you're at, and recommends the simplest thing that works for you now.
+An AI startup needs architects, engineers, product people, growth, security, legal and fundraising help long before it can hire them. FoundryAI gives you that team as specialist agents and reusable skills, inside the AI workspace you already use.
 
 ---
 
-## Install
+## Quick Start
+
+**1. Install** — the installer detects your AI workspaces and installs into each one (needs `python3` and `git`):
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
 ```
 
-The installer detects the AI workspaces on your machine and installs the agents and skills in each one's native format. Choose explicitly with `--target`:
+**2. Tell it about your startup** — copy a [project template](#project-templates) into your repo as `AGENTS.md` and fill in your AI startup type and stage.
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash -s -- --target cursor --target codex
-```
+**3. Ask for help:**
 
-Or from a clone:
+| In… | Try |
+|---|---|
+| Claude Code, Copilot, Gemini CLI, Cursor | `/cofounder "plan the MVP for our AI support agent"` |
+| Any agent | *"Use the ai-architect agent to design our RAG pipeline"* |
+| Codex | *"Use the founder agent to plan our seed raise"* |
+| ChatGPT / Claude / Gemini projects | `./install.sh --target chat`, then paste `~/FoundryAI-chat-prompts/agents/founder.md` into the project instructions |
 
-```bash
-git clone https://github.com/VenkataAnilKumar/FoundryAI
-cd FoundryAI
-./install.sh --dry-run             # preview what will change
-./install.sh --target all          # every workspace, including chat prompts
-```
-
-The installer needs `python3`. It backs up any file it would overwrite and records what it installed, so you can remove it cleanly:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash
-```
+Not sure where to start? `/cofounder` figures out the right specialists for you.
 
 ---
 
-## Works in any AI workspace
+## Why FoundryAI
 
-One neutral source is built into each workspace's native format by [`scripts/build.py`](scripts/build.py).
+- **Built for every AI startup** — specialists for LLM apps, agents, devtools, voice, vision, generative media, robotics and model training, plus regulated verticals (health, finance, legal).
+- **Advice that fits your stage** — every agent first works out your startup type and stage, then recommends the simplest thing that works now (no Kubernetes before product-market fit) and says what would justify the next step.
+- **Engineering *and* business** — architecture, code, evals and security alongside fundraising, pricing, enterprise sales and product-market fit.
+- **Any AI workspace** — one source, built into each workspace's native format. Switch tools without losing your team.
+- **Consistent, checkable output** — every agent has a defined output format and says when to use a different specialist instead.
+
+---
+
+## How It Works
+
+```
+agents/*.md          neutral agents (tier + capabilities)  ─┐
+skills/*/SKILL.md    Agent Skills standard                  ├─▶  scripts/build.py
+agents/_shared/      stage-aware operating principles       ─┘          │
+                                                                        ▼
+        Claude Code · Cursor · Copilot · Codex · Gemini CLI · chat prompts
+```
+
+- **Agents** declare a *tier* (`deep` / `standard` / `fast`) and *capabilities* (`read`, `edit`, `shell`, `web`, `delegate`); the build maps them to each workspace's models and tools.
+- **Coordinators** (`founder`, `team-*`) run other agents as subagents where the workspace supports it, and otherwise tell you which specialist to use next.
+- **Skills** are reusable workflows (`/prd`, `/eval`, `/pitch-deck`…) any agent — or you — can invoke.
+
+---
+
+## Works in Any AI Workspace
 
 | Workspace | `--target` | Agents | Skills |
 |---|---|---|---|
@@ -66,34 +73,46 @@ One neutral source is built into each workspace's native format by [`scripts/bui
 | **GitHub Copilot / VS Code** | `copilot` | `~/.copilot/agents/*.agent.md` | `~/.copilot/skills/` |
 | **OpenAI Codex CLI** | `codex` | `~/.codex/agents/*.toml` | `~/.agents/skills/` |
 | **Gemini CLI** | `gemini` | `~/.gemini/agents/` | `~/.agents/skills/` |
-| **Other agents** (Windsurf, Cline, Roo, Zed, Amp, Junie, …) | `cursor` or `codex` | — | `~/.agents/skills/` ([Agent Skills](https://agentskills.io) standard) |
-| **Chat workspaces** (ChatGPT Projects & GPTs, Claude Projects, Gemini Gems) | `chat` | paste-ready prompts in `~/FoundryAI-chat-prompts/` | same folder |
+| **Other agents** (Windsurf, Cline, Roo, Zed, Amp, Junie, …) | `cursor` or `codex` | — | `~/.agents/skills/` ([Agent Skills](https://agentskills.io)) |
+| **Chat workspaces** (ChatGPT, Claude, Gemini projects) | `chat` | `~/FoundryAI-chat-prompts/` | same folder |
 
-Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents read directly; see [Project Templates](#project-templates) for Claude Code and Gemini CLI.
-
-**Claude Code plugin.** Claude Code users can also install everything as a plugin:
-
-```
-/plugin marketplace add VenkataAnilKumar/FoundryAI
-/plugin install founders-kit@foundryai
+```bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash -s -- --target cursor --target codex
+./install.sh --dry-run        # from a clone: preview changes
+./install.sh --target all     # every workspace, including chat prompts
 ```
 
----
+The installer backs up any file it would overwrite and records what it installed. Remove everything with:
 
-## What's Included
+```bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash
+```
 
-| | Count | What |
-|---|---|---|
-| **Agents** | 58 + 9 teams | Specialists across architecture, engineering, AI modalities, product, data & AI, fundraising, growth, safety |
-| **Skills** | 54 | `/review`, `/debug`, `/prd`, `/eval`, `/rag-design`, `/cost-check`, `/cofounder`... |
-| **Project templates** | 12 | `AGENTS.md` files by stack and by AI startup type (agents, voice, vision, generative media, robotics, health, fintech, legal) |
-| **Workflow recipes** | 31 | Copy-paste team recipes ([15](templates/WORKFLOWS.md)) + team workflows ([16](agents/WORKFLOWS.md)) |
-| **Hooks** | 3 | Claude Code automations (secret-file protection, logging, notifications) |
-| **MCP configs** | 3 | GitHub, PostgreSQL, full-stack server configs |
+**Claude Code plugin:** `/plugin marketplace add VenkataAnilKumar/FoundryAI` then `/plugin install founders-kit@foundryai` (use the plugin *or* `install.sh --target claude`, not both). See [INSTALL.md](INSTALL.md) for every option.
 
 ---
 
 ## The Team — 58 Specialists
+
+| Group | Specialists |
+|---|---|
+| Leadership | founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator, ai-fundraising-advisor |
+| Architecture | ai-architect, cloud-architect, data-architect, integration-architect, security-architect, software-architect, staff-engineer |
+| Engineering | ai-engineer, ai-backend-engineer, ai-frontend-engineer, ai-fullstack-engineer, ai-mobile-engineer, ai-database-engineer, ai-api-designer, ai-software-engineer, ai-agent-engineer, ai-devops-engineer, ai-qa-engineer, ai-performance-engineer |
+| AI Modalities | ai-voice-engineer, ai-vision-engineer, ai-generative-media-engineer, ai-robotics-engineer |
+| Data & AI | ai-data-engineer, ai-data-scientist, ai-analytics-engineer, ai-domain-expert, ai-prompt-engineer, ai-research-engineer, ai-model-training-engineer |
+| Platform | ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager |
+| Product | ai-product-manager, ai-ux-designer, ux-researcher, product-designer, product-marketing-manager, product-analyst, technical-product-manager, ai-strategy-engineer |
+| Growth | ai-finance-engineer, ai-sales-engineer, ai-growth-engineer, developer-advocate |
+| Knowledge | ai-technical-writer, ai-accessibility-engineer, content-designer |
+| Safety | ai-security-engineer, ai-responsible-engineer, ai-legal-engineer |
+
+Plus **9 team coordinators** (`team-leadership`, `team-architecture`, `team-engineering`, `team-platform`, `team-product`, `team-data-ai`, `team-growth`, `team-knowledge`, `team-safety`) that run a whole team on one problem.
+
+Expand a group for what each specialist is best at, or see the full reference in [`docs/agents.md`](docs/agents.md).
+
+<details>
+<summary><b>Leadership (6)</b></summary>
 
 ### Leadership (6)
 | Agent | Best For |
@@ -104,6 +123,11 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `technical-program-manager` | Cross-team coordination, OKRs, program tracking |
 | `ai-orchestrator` | Complex multi-agent workflow coordination |
 | `ai-fundraising-advisor` | Raise strategy, pitch deck, AI investor metrics, data room, term sheets, investor updates |
+
+</details>
+
+<details>
+<summary><b>Architecture (7)</b></summary>
 
 ### Architecture (7)
 | Agent | Best For |
@@ -116,10 +140,15 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `software-architect` | Application architecture, DDD, ADRs, hexagonal design |
 | `staff-engineer` | Cross-team technical leadership, engineering standards |
 
+</details>
+
+<details>
+<summary><b>Engineering (12)</b></summary>
+
 ### Engineering (12)
 | Agent | Best For |
 |---|---|
-| `ai-engineer` | LLM integration, RAG pipelines, embeddings, Claude/OpenAI API |
+| `ai-engineer` | LLM integration, RAG pipelines, embeddings, any model provider |
 | `ai-backend-engineer` | APIs, databases, async processing, microservices |
 | `ai-frontend-engineer` | React/Next.js, streaming UI, AI chat interfaces |
 | `ai-fullstack-engineer` | End-to-end features across the full stack |
@@ -132,13 +161,23 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `ai-qa-engineer` | LLM evals, test frameworks, adversarial testing |
 | `ai-performance-engineer` | Latency, throughput, Core Web Vitals, load testing, query tuning |
 
+</details>
+
+<details>
+<summary><b>Platform (4)</b></summary>
+
 ### Platform (4)
 | Agent | Best For |
 |---|---|
 | `ai-platform-engineer` | Internal AI platform, model serving, GPU infra |
-| `ml-engineer` | ML model training, fine-tuning, serving pipelines |
+| `ml-engineer` | Classic ML: training pipelines, feature stores, serving, drift monitoring |
 | `site-reliability-engineer` | SLOs, incident response, reliability engineering |
 | `release-manager` | Release coordination, rollout strategy, feature flags |
+
+</details>
+
+<details>
+<summary><b>Product (8)</b></summary>
 
 ### Product (8)
 | Agent | Best For |
@@ -152,6 +191,11 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `technical-product-manager` | Developer-facing products, APIs/SDKs, DX metrics |
 | `ai-strategy-engineer` | AI strategy docs, competitive analysis, 3-year roadmaps |
 
+</details>
+
+<details>
+<summary><b>Data & AI (7)</b></summary>
+
 ### Data & AI (7)
 | Agent | Best For |
 |---|---|
@@ -163,6 +207,11 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `ai-research-engineer` | Paper implementation, experiments, new techniques |
 | `ai-model-training-engineer` | Fine-tuning, post-training (DPO/RL), distillation, pretraining, GPU compute plans |
 
+</details>
+
+<details>
+<summary><b>AI Modalities (4)</b></summary>
+
 ### AI Modalities (4)
 | Agent | Best For |
 |---|---|
@@ -170,6 +219,11 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `ai-vision-engineer` | Detection, segmentation, document AI, vision-language models, edge vision |
 | `ai-generative-media-engineer` | Image, video and audio generation, style fine-tuning, GPU serving, content safety |
 | `ai-robotics-engineer` | ROS 2, simulation and sim-to-real, imitation learning, VLA policies, robot safety |
+
+</details>
+
+<details>
+<summary><b>Growth (4)</b></summary>
 
 ### Growth (4)
 | Agent | Best For |
@@ -179,6 +233,11 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `ai-growth-engineer` | Content strategy, SEO, AI-powered growth experiments |
 | `developer-advocate` | DevRel, DX, community, technical content |
 
+</details>
+
+<details>
+<summary><b>Knowledge (3)</b></summary>
+
 ### Knowledge (3)
 | Agent | Best For |
 |---|---|
@@ -186,12 +245,22 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `ai-accessibility-engineer` | WCAG 2.2, screen readers, keyboard nav, ARIA patterns |
 | `content-designer` | UX writing, microcopy, content strategy |
 
+</details>
+
+<details>
+<summary><b>Safety (3)</b></summary>
+
 ### Safety (3)
 | Agent | Best For |
 |---|---|
 | `ai-security-engineer` | Threat modeling, prompt injection, red teaming |
 | `ai-responsible-engineer` | Bias audits, fairness, safety, EU AI Act compliance |
 | `ai-legal-engineer` | GDPR, IP, contracts, regulatory analysis |
+
+</details>
+
+<details>
+<summary><b>Team Coordinators (9)</b></summary>
 
 ### Team Coordinators (9)
 Use a team coordinator when you want the whole team to work together on a problem.
@@ -201,44 +270,60 @@ Use a team coordinator when you want the whole team to work together on a proble
 | `team-leadership` | founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator, ai-fundraising-advisor |
 | `team-architecture` | ai-architect, cloud-architect, data-architect, integration-architect, security-architect, software-architect, staff-engineer |
 | `team-engineering` | The engineering and AI modality specialists (voice, vision, generative media, robotics) |
-| `team-platform` | ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager |
+| `team-platform` | ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager, ai-performance-engineer |
 | `team-product` | All 8 product specialists |
 | `team-data-ai` | All 7 data & AI specialists |
 | `team-growth` | ai-finance-engineer, ai-sales-engineer, ai-growth-engineer, developer-advocate |
 | `team-knowledge` | ai-technical-writer, ai-accessibility-engineer, content-designer |
 | `team-safety` | ai-security-engineer, ai-responsible-engineer, ai-legal-engineer |
 
+</details>
+
 ---
 
 ## Routing
 
-The routing skills pick the right specialists for you:
+Not sure who to ask? The routing skills pick the specialists for you, based on the task and your startup's type and stage:
 
 ```
-/cofounder "build a RAG-powered document Q&A feature"
-→ Thinks strategically, routes to: ai-architect + ai-engineer + ai-backend-engineer
+/cofounder "we're a voice AI startup at MVP — our calls feel slow"
+→ ai-voice-engineer (latency budget) + ai-finance-engineer (cost per minute)
 
-/cofounder "we need to be GDPR compliant before launch"
-→ Routes to: ai-legal-engineer + ai-responsible-engineer (parallel)
+/cofounder "we want to raise our seed round next quarter"
+→ ai-fundraising-advisor + ai-finance-engineer   (/pitch-deck, /pmf-check, /moat)
 
-/cofounder "our API latency is 2 seconds — fix it"
-→ Routes to: ai-performance-engineer + ai-database-engineer
+/cofounder "should we fine-tune our own model?"
+→ ai-model-training-engineer + ai-finance-engineer   (/model-strategy)
 
-/engineering "design the database schema for conversation history"
-→ Routes to: ai-database-engineer
+/cofounder "a bank sent us a security questionnaire"
+→ ai-sales-engineer + ai-security-engineer   (/security-questionnaire)
 
-/product "write a PRD for AI-powered search"
-→ Routes to: ai-product-manager
-
-/business "set up a security review for our AI API"
-→ Routes to: ai-security-engineer
+/engineering "design the database schema for conversation history"   → ai-database-engineer
+/product "write a PRD for AI-powered search"                          → ai-product-manager
+/business "we need to be GDPR compliant before launch"                → ai-legal-engineer + ai-responsible-engineer
 ```
+
+The full routing guide — every specialist by task, plus routing by AI startup type — is in [`docs/routing.md`](docs/routing.md).
 
 ---
 
 ## Skills — 54 Skills
 
-Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke them as `/name` in workspaces with slash commands, or just describe the task and the agent picks the skill.
+Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke them as `/name` where your workspace supports it, or just describe the task and the agent picks the skill.
+
+| Group | Highlights |
+|---|---|
+| Routing | `/cofounder` · `/engineering` · `/product` · `/business` |
+| AI Startup Business | `/pitch-deck` · `/investor-update` · `/pmf-check` · `/moat` · `/ai-pricing` · `/security-questionnaire` · `/data-rights` |
+| AI / LLM | `/model-strategy` · `/rag-design` · `/eval` · `/prompt` · `/cost-check` · `/agent-systems` · `/responsible-ai` |
+| Build | `/feature` · `/prd` · `/spec` · `/architect` · `/design` · `/estimate` |
+| Code quality | `/review` · `/review-ai` · `/security-scan` · `/debug` · `/refactor` · `/test-plan` |
+| Launch & ops | `/launch-check` · `/release-plan` · `/incident` · `/migrate` · `/compliance` |
+
+Expand a group for every skill, or see [`docs/skills.md`](docs/skills.md).
+
+<details>
+<summary><b>Routing</b></summary>
 
 ### Routing
 | Command | What it does |
@@ -247,6 +332,11 @@ Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke t
 | `/engineering "task"` | Routes an engineering task to the right engineer(s) |
 | `/product "task"` | Routes a product, design or strategy task |
 | `/business "task"` | Routes a business, data, ops or compliance task |
+
+</details>
+
+<details>
+<summary><b>Code Quality</b></summary>
 
 ### Code Quality
 | Command | What it does |
@@ -259,6 +349,11 @@ Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke t
 | `/test-plan "feature"` | Complete test plan: unit, integration, E2E, edge cases |
 | `/explain` | Plain-language explanation of any code with examples |
 
+</details>
+
+<details>
+<summary><b>Feature Development</b></summary>
+
 ### Feature Development
 | Command | What it does |
 |---|---|
@@ -268,6 +363,11 @@ Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke t
 | `/prd "idea"` | Lean PRD: user stories, acceptance criteria, success metrics |
 | `/spec "component"` | Technical spec: interface, behavior, error cases, data model |
 | `/estimate "task"` | T-shirt sizing with breakdown, risk multipliers, unknowns |
+
+</details>
+
+<details>
+<summary><b>AI / LLM Specific</b></summary>
 
 ### AI / LLM Specific
 | Command | What it does |
@@ -283,6 +383,11 @@ Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke t
 | `/experiment "hypothesis"` | A/B test design, statistical analysis, ML model evaluation |
 | `/model-strategy` | API vs open-weight vs fine-tune vs train — providers, cost, lock-in, switching triggers |
 
+</details>
+
+<details>
+<summary><b>AI Startup Business</b></summary>
+
 ### AI Startup Business
 | Command | What it does |
 |---|---|
@@ -294,15 +399,23 @@ Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke t
 | `/security-questionnaire` | Answer enterprise security and AI-governance reviews; close deal-blocking gaps |
 | `/data-rights` | Rights to train on / use customer, scraped, licensed and synthetic data |
 
+</details>
+
+<details>
+<summary><b>Product & Design</b></summary>
+
 ### Product & Design
 | Command | What it does |
 |---|---|
-| `/prd "idea"` | Lean PRD: user stories, acceptance criteria, success metrics |
-| `/spec "component"` | Technical spec: interface, behavior, error cases, data model |
 | `/metrics "product"` | Define north star, funnel, A/B test plan, dashboard design |
 | `/gtm "launch"` | Go-to-market: positioning, messaging, launch plan, competitive battlecards |
 | `/growth "product"` | Growth strategy: acquisition funnels, retention levers, viral loops |
 | `/ai-strategy` | AI opportunity assessment, build-vs-buy, competitive landscape, roadmap |
+
+</details>
+
+<details>
+<summary><b>Platform & Infrastructure</b></summary>
 
 ### Platform & Infrastructure
 | Command | What it does |
@@ -312,11 +425,21 @@ Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke t
 | `/mobile` | iOS/Android/RN/Flutter patterns, on-device AI, app store prep |
 | `/release-plan` | Rollout strategy: canary, feature flags, phased launch, rollback |
 
+</details>
+
+<details>
+<summary><b>Safety, Compliance & Accessibility</b></summary>
+
 ### Safety, Compliance & Accessibility
 | Command | What it does |
 |---|---|
 | `/compliance` | GDPR/CCPA/EU AI Act, data privacy, AI risk register |
 | `/accessibility` | WCAG 2.2 audit, screen readers, keyboard nav, ARIA patterns |
+
+</details>
+
+<details>
+<summary><b>Docs & Community</b></summary>
 
 ### Docs & Community
 | Command | What it does |
@@ -328,6 +451,11 @@ Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke t
 | `/onboard` | 30-day engineer onboarding guide for your codebase |
 | `/devrel` | DevRel strategy: DX audit, community, technical content, OSS |
 
+</details>
+
+<details>
+<summary><b>Launch & Ops</b></summary>
+
 ### Launch & Ops
 | Command | What it does |
 |---|---|
@@ -336,13 +464,13 @@ Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke t
 | `/migrate` | Migration plan: zero-downtime strategy, rollback, data safety |
 | `/api-test` | Full API test suite from endpoint description or OpenAPI spec |
 
-→ Full reference: [`docs/skills.md`](docs/skills.md)
+</details>
 
 ---
 
 ## Project Templates
 
-Drop a stack-specific `AGENTS.md` into your project root. It records your AI startup type, stage and stack, and configures agent routing for your setup.
+Copy one into your project root as `AGENTS.md`. It records your AI startup type, stage and stack, and tells every agent how to work in your project.
 
 | Template | Stack |
 |---|---|
@@ -366,7 +494,7 @@ Drop a stack-specific `AGENTS.md` into your project root. It records your AI sta
 | [`AGENTS-legaltech-ai.md`](templates/AGENTS-legaltech-ai.md) | Legal AI — confidentiality, citations, supervision, UPL |
 
 ```bash
-cp FoundryAI/templates/AGENTS-nextjs-saas.md ./AGENTS.md
+cp FoundryAI/templates/AGENTS-voice-ai.md ./AGENTS.md
 ```
 
 - **Codex, Cursor, Copilot, Windsurf, Zed, Amp…** read `AGENTS.md` directly.
@@ -376,106 +504,41 @@ cp FoundryAI/templates/AGENTS-nextjs-saas.md ./AGENTS.md
 
 ---
 
+## Workflow Recipes
+
+[`templates/WORKFLOWS.md`](templates/WORKFLOWS.md) has **23 copy-paste team recipes** — production RAG, AI MVP, launch readiness, cost sprint, voice product, fine-tune-or-not, fundraising sprint, enterprise deal readiness, incident postmortem and more. Paste one into your workspace, fill in the placeholders, and the team runs it.
+
+---
+
 ## Hooks & MCP
 
-### Hooks — Claude Code automations
-
-```bash
-./install.sh --hooks      # copies the scripts to ~/.claude/hooks
-```
-
-Then register them in `~/.claude/settings.json` — the snippet is in [`templates/hooks-setup.md`](templates/hooks-setup.md). Hooks need `jq` or `python3`.
-
-| Hook | Trigger | Does |
-|---|---|---|
-| `protect-env-files.sh` | Before Write/Edit | Blocks writes to `.env*`, `*.pem`, `*.key`, `secrets.*`, `credentials.*`, SSH keys (fails closed) |
-| `log-agent-usage.sh` | After every subagent call | Logs to `~/.claude/logs/agent-usage.log` |
-| `notify-on-complete.sh` | Prompt submit + Stop | Desktop notification when a turn takes over 30s (Windows/Mac/Linux) |
-
-### MCP Servers — Connect your agents to your infrastructure
-
-```bash
-# GitHub (issues, PRs, code search)
-cp FoundryAI/templates/mcp-github.json ./.mcp.json
-
-# PostgreSQL (query your DB directly)
-cp FoundryAI/templates/mcp-postgres.json ./.mcp.json
-
-# Full stack (GitHub + PostgreSQL + Filesystem)
-cp FoundryAI/templates/mcp-full-stack.json ./.mcp.json
-```
-
-These use the `.mcp.json` format (Claude Code). Most other workspaces take the same `mcpServers` block in their own config file, such as `.cursor/mcp.json` or `.vscode/mcp.json`. See [`templates/hooks-setup.md`](templates/hooks-setup.md) for full setup instructions.
+- **Hooks (Claude Code):** `./install.sh --hooks` adds secret-file write protection (fails closed), subagent usage logging and long-task notifications. Register them with the snippet in [`templates/hooks-setup.md`](templates/hooks-setup.md).
+- **MCP servers:** starter configs for GitHub (official remote server), PostgreSQL (read-only) and the filesystem in `templates/mcp-*.json`, with setup for every workspace in [`docs/mcp.md`](docs/mcp.md).
 
 ---
 
-## Usage Examples
+## FAQ
 
-### Single agent
-```
-Use the ai-architect agent to review our system design and identify scaling risks.
-```
+**Does FoundryAI send my code or data anywhere?**
+No. FoundryAI is prompt files — agents, skills and templates. Your AI workspace runs them with whatever model and data settings you already use.
 
-### Parallel agents
-```
-Use ai-frontend-engineer and ai-backend-engineer in parallel to build
-user authentication — frontend handles the UI, backend handles the JWT API.
-```
+**What does it cost?**
+FoundryAI is free (MIT). You pay your AI workspace or model provider as usual. Agents use a `deep` tier only where reasoning quality matters; coordinators and most specialists use `standard`.
 
-### Full project with the founder
-```
-Use the founder agent to plan and execute our AI product launch —
-architecture, engineering, compliance, docs, and marketing.
-```
+**My workspace can't run subagents.**
+Everything still works: coordinators name the right specialist and, if you ask, take on that role themselves.
 
-### Workflow recipe
-Copy any recipe from [`templates/WORKFLOWS.md`](templates/WORKFLOWS.md) and paste into your AI workspace to launch a pre-configured team for 15 common scenarios.
+**Why is the Claude Code plugin called `founders-kit`?**
+That's the project's original name, kept so existing plugin installs keep updating.
 
----
-
-## File Structure
-
-```
-FoundryAI/
-├── agents/                          ← single source: 58 specialists + 9 team coordinators
-│   ├── founder.md                   ← AI co-founder (master orchestrator)
-│   ├── team-*.md                    ← 9 team coordinators
-│   ├── _shared/                     ← operating principles added to every agent
-│   └── ... (workspace-neutral: tier + capabilities, mapped per workspace at build time)
-├── skills/<name>/SKILL.md           ← 54 skills (Agent Skills standard)
-├── templates/
-│   ├── AGENTS*.md                   ← 12 project templates, by stack and by AI startup type
-│   ├── WORKFLOWS.md                 ← 15 pre-built team recipes
-│   ├── hooks/                       ← 3 Claude Code hook scripts
-│   └── mcp-*.json                   ← MCP server configs
-├── scripts/
-│   ├── build.py                     ← builds every workspace format (and the Claude plugin)
-│   ├── validate.sh                  ← CI: frontmatter, references, counts, all build targets, hooks
-│   ├── gen-docs.py                  ← regenerates docs/agents.md, docs/skills.md, founder roster
-│   └── test-hooks.sh                ← hook tests
-├── plugin/                          ← Claude Code plugin (generated by build.py)
-├── .claude-plugin/marketplace.json  ← lets Claude Code install the plugin from this repo
-├── docs/                            ← agents.md, skills.md (generated), routing.md
-├── install.sh                       ← multi-workspace installer (--target, --dry-run, --hooks)
-└── uninstall.sh                     ← removes exactly what install.sh installed
-```
-
----
-
-## Requirements
-
-- One or more AI workspaces: Claude Code, Cursor, GitHub Copilot (VS Code), Codex CLI, Gemini CLI, any `AGENTS.md` / Agent Skills compatible agent — or a chat workspace (ChatGPT, Claude, Gemini)
-- `python3` and `git` for the installer
-- Subagent support varies by workspace; where agents can't run other agents, coordinators tell you which specialist to use next
+**I installed version 2.x.**
+Re-run the installer — it migrates old slash commands to skills and backs up anything you changed. See [CHANGELOG.md](CHANGELOG.md) for what changed.
 
 ---
 
 ## Contributing
 
-PRs welcome. To add a new agent, see [`CONTRIBUTING.md`](CONTRIBUTING.md).
-The quality bar: every agent should be specific enough that a developer knows exactly when to use it and what to expect back.
-
----
+PRs welcome — see [`CONTRIBUTING.md`](CONTRIBUTING.md). Write agents and skills once in the neutral format; `scripts/validate.sh` (run in CI) checks references, counts, output formats and every workspace build. The bar: every agent should be specific enough that a founder knows exactly when to use it and what they'll get back.
 
 ## License
 

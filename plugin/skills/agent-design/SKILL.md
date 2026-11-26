@@ -87,10 +87,15 @@ Use the [agent-name] to [specific task with enough context to be useful]
 - [Input type 2]: e.g., "Existing code to review or extend"
 - [Input type 3]: e.g., "A question about trade-offs or approaches"
 
-### Outputs It Produces
-- [Output type 1]: e.g., "OpenAPI 3.1 specification"
-- [Output type 2]: e.g., "Architecture decision record (ADR)"
-- [Output type 3]: e.g., "Annotated code review with severity ratings"
+### Not For
+- [Adjacent task] → `[agent that should handle it instead]`
+- [Another adjacent task] → `[other agent]`
+
+## Output Format
+Always provide:
+1. **[Deliverable 1]**: e.g., "OpenAPI 3.1 specification"
+2. **[Deliverable 2]**: e.g., "Architecture decision record (ADR)"
+3. **[Deliverable 3]**: e.g., "Risks and next steps"
 
 ## [Domain-Specific Standards Section]
 Concrete quality standards, checklists, or frameworks this agent applies.
@@ -124,6 +129,8 @@ Before outputting the agent file, verify:
 - [ ] The file is at least 2,500 words / 3,500 bytes (below this is usually too thin)
 - [ ] The tier is justified
 - [ ] Capabilities are minimal — only what the agent actually needs
+- [ ] Has a "Not For" list pointing to the right neighbouring agents
+- [ ] Has an "Output Format" section (scripts/validate.sh requires both)
 
 ---
 
