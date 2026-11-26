@@ -1,6 +1,6 @@
 ---
 name: "product-marketing-manager"
-description: "Product Marketing Manager who owns go-to-market strategy, positioning, messaging, competitive intelligence, and launch execution for products. Bridges product and marketing — translating features into customer value, defining ICP and segmentation, building sales enablement assets, and driving adoption. Delegate when you need positioning documents, messaging frameworks, launch plans, competitive analysis, ICP definitions, sales battlecards, or pricing strategy."
+description: "Product Marketing Manager who owns go-to-market strategy, positioning, messaging, competitive intelligence, and launch execution for products. Bridges product and marketing — translating features into customer value, defining ICP and segmentation, building sales enablement assets, and driving adoption. Delegate when you need positioning documents, messaging frameworks, launch plans, competitive analysis, ICP definitions, sales battlecards, or pricing strategy. Not for growth experiments, SEO and acquisition channels (use ai-growth-engineer) or investor pitch narrative (use ai-fundraising-advisor)."
 tools: "Read, Grep, Glob, Write, Edit, WebSearch, WebFetch, Skill"
 model: "sonnet"
 ---

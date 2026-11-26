@@ -1,11 +1,11 @@
 # FoundryAI — The AI Startup Team for Any AI Workspace
 
-> 52 specialist agents + 9 team coordinators + 46 skills for **every kind of AI startup**, from LLM apps and agents to voice, vision, model training and vertical AI.
+> 58 specialist agents + 9 team coordinators + 54 skills for **every kind of AI startup**, from LLM apps and agents to voice, vision, generative media, robotics, model training and vertical AI.
 > Works in **Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI**, every `AGENTS.md`-compatible agent, and chat workspaces like ChatGPT, Claude and Gemini projects.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Agents](https://img.shields.io/badge/agents-52-green)](#the-team--52-specialists)
-[![Skills](https://img.shields.io/badge/skills-46-orange)](#skills--46-skills)
+[![Agents](https://img.shields.io/badge/agents-58-green)](#the-team--58-specialists)
+[![Skills](https://img.shields.io/badge/skills-54-orange)](#skills--54-skills)
 [![Workspaces](https://img.shields.io/badge/workspaces-Claude%20%C2%B7%20Cursor%20%C2%B7%20Copilot%20%C2%B7%20Codex%20%C2%B7%20Gemini-blue)](#works-in-any-ai-workspace)
 
 ![FoundryAI Demo](demo.svg)
@@ -84,8 +84,8 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 
 | | Count | What |
 |---|---|---|
-| **Agents** | 52 + 9 teams | Specialists across architecture, engineering, product, data & AI, growth, safety |
-| **Skills** | 46 | `/review`, `/debug`, `/prd`, `/eval`, `/rag-design`, `/cost-check`, `/cofounder`... |
+| **Agents** | 58 + 9 teams | Specialists across architecture, engineering, AI modalities, product, data & AI, fundraising, growth, safety |
+| **Skills** | 54 | `/review`, `/debug`, `/prd`, `/eval`, `/rag-design`, `/cost-check`, `/cofounder`... |
 | **Project templates** | 4 | Stack-specific `AGENTS.md` files for your project |
 | **Workflow recipes** | 31 | Copy-paste team recipes ([15](templates/WORKFLOWS.md)) + team workflows ([16](agents/WORKFLOWS.md)) |
 | **Hooks** | 3 | Claude Code automations (secret-file protection, logging, notifications) |
@@ -93,9 +93,9 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 
 ---
 
-## The Team — 52 Specialists
+## The Team — 58 Specialists
 
-### Leadership (5)
+### Leadership (6)
 | Agent | Best For |
 |---|---|
 | `founder` | Your AI co-founder — thinks strategically, delegates to the right team, ships |
@@ -103,6 +103,7 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `engineering-manager` | Team health, delivery cadence, performance reviews, hiring |
 | `technical-program-manager` | Cross-team coordination, OKRs, program tracking |
 | `ai-orchestrator` | Complex multi-agent workflow coordination |
+| `ai-fundraising-advisor` | Raise strategy, pitch deck, AI investor metrics, data room, term sheets, investor updates |
 
 ### Architecture (7)
 | Agent | Best For |
@@ -151,7 +152,7 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `technical-product-manager` | Developer-facing products, APIs/SDKs, DX metrics |
 | `ai-strategy-engineer` | AI strategy docs, competitive analysis, 3-year roadmaps |
 
-### Data & AI (6)
+### Data & AI (7)
 | Agent | Best For |
 |---|---|
 | `ai-data-engineer` | ETL pipelines, data warehouse, stream processing |
@@ -160,12 +161,21 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 | `ai-domain-expert` | Deep domain knowledge and expert validation |
 | `ai-prompt-engineer` | Prompt design, optimization, evaluation, few-shot examples |
 | `ai-research-engineer` | Paper implementation, experiments, new techniques |
+| `ai-model-training-engineer` | Fine-tuning, post-training (DPO/RL), distillation, pretraining, GPU compute plans |
+
+### AI Modalities (4)
+| Agent | Best For |
+|---|---|
+| `ai-voice-engineer` | Real-time voice agents, phone bots, STT/TTS, latency and turn-taking |
+| `ai-vision-engineer` | Detection, segmentation, document AI, vision-language models, edge vision |
+| `ai-generative-media-engineer` | Image, video and audio generation, style fine-tuning, GPU serving, content safety |
+| `ai-robotics-engineer` | ROS 2, simulation and sim-to-real, imitation learning, VLA policies, robot safety |
 
 ### Growth (4)
 | Agent | Best For |
 |---|---|
-| `ai-finance-engineer` | LLM cost reduction, unit economics, ROI analysis |
-| `ai-sales-engineer` | Sales playbooks, demo scripts, churn reduction |
+| `ai-finance-engineer` | Runway and burn, financial models, AI gross margin, GPU/LLM spend, credits |
+| `ai-sales-engineer` | Founder-led and enterprise AI sales, pilots that convert, security reviews, retention |
 | `ai-growth-engineer` | Content strategy, SEO, AI-powered growth experiments |
 | `developer-advocate` | DevRel, DX, community, technical content |
 
@@ -188,12 +198,12 @@ Use a team coordinator when you want the whole team to work together on a proble
 
 | Coordinator | Delegates To |
 |---|---|
-| `team-leadership` | founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator |
+| `team-leadership` | founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator, ai-fundraising-advisor |
 | `team-architecture` | ai-architect, cloud-architect, data-architect, integration-architect, security-architect, software-architect, staff-engineer |
-| `team-engineering` | All 12 engineering specialists |
+| `team-engineering` | The engineering and AI modality specialists (voice, vision, generative media, robotics) |
 | `team-platform` | ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager |
 | `team-product` | All 8 product specialists |
-| `team-data-ai` | All 6 data & AI specialists |
+| `team-data-ai` | All 7 data & AI specialists |
 | `team-growth` | ai-finance-engineer, ai-sales-engineer, ai-growth-engineer, developer-advocate |
 | `team-knowledge` | ai-technical-writer, ai-accessibility-engineer, content-designer |
 | `team-safety` | ai-security-engineer, ai-responsible-engineer, ai-legal-engineer |
@@ -226,7 +236,7 @@ The routing skills pick the right specialists for you:
 
 ---
 
-## Skills — 46 Skills
+## Skills — 54 Skills
 
 Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke them as `/name` in workspaces with slash commands, or just describe the task and the agent picks the skill.
 
@@ -271,6 +281,18 @@ Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke t
 | `/mlops` | ML training pipelines, fine-tuning, model serving, drift monitoring |
 | `/responsible-ai` | Bias audit, fairness eval, red-team checklist, explainability |
 | `/experiment "hypothesis"` | A/B test design, statistical analysis, ML model evaluation |
+| `/model-strategy` | API vs open-weight vs fine-tune vs train — providers, cost, lock-in, switching triggers |
+
+### AI Startup Business
+| Command | What it does |
+|---|---|
+| `/pitch-deck` | Slide-by-slide AI pitch deck, answers to "isn't this a wrapper?", skeptical-investor teardown |
+| `/investor-update` | Monthly investor update with metrics, AI cost and quality, and asks |
+| `/pmf-check` | Product-market fit scorecard with AI-specific traps (novelty usage, pilot purgatory) |
+| `/moat` | Defensibility assessment: data flywheel, workflow depth, distribution, switching costs |
+| `/ai-pricing` | Seat vs usage vs credits vs outcome pricing, tiers, gross margin after inference |
+| `/security-questionnaire` | Answer enterprise security and AI-governance reviews; close deal-blocking gaps |
+| `/data-rights` | Rights to train on / use customer, scraped, licensed and synthetic data |
 
 ### Product & Design
 | Command | What it does |
@@ -401,12 +423,12 @@ Copy any recipe from [`templates/WORKFLOWS.md`](templates/WORKFLOWS.md) and past
 
 ```
 FoundryAI/
-├── agents/                          ← single source: 52 specialists + 9 team coordinators
+├── agents/                          ← single source: 58 specialists + 9 team coordinators
 │   ├── founder.md                   ← AI co-founder (master orchestrator)
 │   ├── team-*.md                    ← 9 team coordinators
 │   ├── _shared/                     ← operating principles added to every agent
 │   └── ... (workspace-neutral: tier + capabilities, mapped per workspace at build time)
-├── skills/<name>/SKILL.md           ← 46 skills (Agent Skills standard)
+├── skills/<name>/SKILL.md           ← 54 skills (Agent Skills standard)
 ├── templates/
 │   ├── AGENTS*.md                   ← project templates (generic, Next.js SaaS, Python ML, React Native)
 │   ├── WORKFLOWS.md                 ← 15 pre-built team recipes

@@ -10,6 +10,7 @@ A quick reference for picking the right FoundryAI agent for any task. Copy the p
 - **Strategic judgment + multi-domain execution** → `founder`
 - **Complex multi-step projects, multi-agent coordination** → `ai-orchestrator`
 - **Cross-team programs, dependency mapping, OKRs, milestone tracking** → `technical-program-manager`
+- **Fundraising, pitch deck, investors, term sheets, investor updates** → `ai-fundraising-advisor`
 - **Sprint planning, velocity, team health, retrospectives** → `engineering-manager`
 - **Technical leadership, build-vs-buy, team structure, tech bets** → `cto-advisor`
 
@@ -48,9 +49,15 @@ A quick reference for picking the right FoundryAI agent for any task. Copy the p
 - **MLOps platform, model serving, GPU infra, internal AI platform** → `ai-platform-engineer`
 - **Accessibility, WCAG compliance, screen readers, inclusive design** → `ai-accessibility-engineer`
 
+### AI Modalities
+- **Voice agents, phone bots, STT/TTS, conversational latency** → `ai-voice-engineer`
+- **Vision, document AI, detection, segmentation, VLMs, edge vision** → `ai-vision-engineer`
+- **Image, video and audio generation, style fine-tuning, content safety** → `ai-generative-media-engineer`
+- **Robotics, ROS 2, simulation, sim-to-real, learned control** → `ai-robotics-engineer`
+
 ### Platform & Operations
 - **SLOs, incidents, runbooks, observability, chaos engineering** → `site-reliability-engineer`
-- **ML training pipelines, feature stores, MLflow/Kubeflow, model serving** → `ml-engineer`
+- **Classic ML pipelines, feature stores, MLflow/Kubeflow, model serving** → `ml-engineer`
 - **Versioning, changelogs, hotfix, rollback, release notes** → `release-manager`
 
 ### Data & AI
@@ -60,6 +67,7 @@ A quick reference for picking the right FoundryAI agent for any task. Copy the p
 - **Prompt design, optimization, system prompts, structured output** → `ai-prompt-engineer`
 - **Dashboards, KPIs, funnel analysis, BI, executive reporting** → `ai-analytics-engineer`
 - **Research paper implementation, novel techniques, benchmarking** → `ai-research-engineer`
+- **Fine-tuning, post-training, distillation, training your own model** → `ai-model-training-engineer`
 
 ### Safety & Compliance
 - **Bias, fairness, explainability, responsible AI** → `ai-responsible-engineer`
@@ -67,9 +75,9 @@ A quick reference for picking the right FoundryAI agent for any task. Copy the p
 - **Legal review, GDPR/CCPA/HIPAA, contracts, regulatory compliance** → `ai-legal-engineer`
 
 ### Growth & Business
-- **LLM cost modeling, token optimization, FinOps** → `ai-finance-engineer`
+- **Runway, financial model, AI gross margin, LLM/GPU cost, FinOps** → `ai-finance-engineer`
 - **Growth marketing, SEO, campaigns, content, acquisition** → `ai-growth-engineer`
-- **Sales enablement, demos, customer success, CRM automation** → `ai-sales-engineer`
+- **Founder-led and enterprise sales, pilots, security reviews, customer success** → `ai-sales-engineer`
 - **Developer community, OSS strategy, DevRel, technical content** → `developer-advocate`
 
 ### Knowledge & Content
@@ -159,4 +167,13 @@ site-reliability-engineer  → postmortem
 
 # "Architect our data platform"
 → data-architect + ai-data-engineer + cloud-architect
+
+# "We're raising our seed round"
+→ ai-fundraising-advisor + ai-finance-engineer   (/pitch-deck, /pmf-check, /moat)
+
+# "Should we fine-tune our own model?"
+→ ai-model-training-engineer + ai-finance-engineer   (/model-strategy)
+
+# "An enterprise customer sent a security questionnaire"
+→ ai-sales-engineer + ai-security-engineer   (/security-questionnaire)
 ```

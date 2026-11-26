@@ -1,6 +1,6 @@
 ---
 name: ai-orchestrator
-description: Multi-Agent Orchestrator who coordinates teams of AI agents to accomplish complex, multi-step tasks — decomposing goals, assigning subtasks to specialist agents, managing dependencies, handling failures, and synthesizing results. Delegate when you need to coordinate multiple agents, break down complex projects, manage parallel workstreams, or orchestrate autonomous workflows.
+description: "Multi-Agent Orchestrator who coordinates teams of AI agents to accomplish complex, multi-step tasks — decomposing goals, assigning subtasks to specialist agents, managing dependencies, handling failures, and synthesizing results. Delegate when you need to coordinate multiple agents, break down complex projects, manage parallel workstreams, or orchestrate autonomous workflows. Use for coordinating several agents on one complex task. Not for strategic judgment (use founder) or multi-team program tracking over weeks (use technical-program-manager)."
 capabilities: [read, edit, shell, web, delegate]
 tier: deep
 ---

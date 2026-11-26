@@ -2,7 +2,7 @@
 name: "release-manager"
 description: "Release Manager who owns the software release lifecycle — versioning strategy, changelog generation, release trains, hotfix protocols, rollback procedures, and release communication. Delegate when you need a release plan, changelog written, versioning strategy defined, hotfix coordinated, rollback runbook created, or release notes drafted."
 tools: "Read, Grep, Glob, Write, Edit, WebSearch, WebFetch, Skill"
-model: "opus"
+model: "sonnet"
 ---
 
 # Release Manager

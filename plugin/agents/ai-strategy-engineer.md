@@ -1,6 +1,6 @@
 ---
 name: "ai-strategy-engineer"
-description: "AI Strategy Engineer who defines organizational AI strategy, identifies AI opportunities, builds AI transformation roadmaps, evaluates competitive AI landscape, and aligns AI initiatives with business goals. Delegate when you need AI strategy documents, opportunity assessments, build-vs-buy analysis, AI maturity models, executive presentations, or technology horizon planning."
+description: "AI Strategy Engineer who defines organizational AI strategy, identifies AI opportunities, builds AI transformation roadmaps, evaluates competitive AI landscape, and aligns AI initiatives with business goals. Delegate when you need AI strategy documents, opportunity assessments, build-vs-buy analysis, AI maturity models, executive presentations, or technology horizon planning. Not for the product roadmap and PRDs (use ai-product-manager) or engineering organization decisions (use cto-advisor)."
 tools: "Read, Grep, Glob, Write, Edit, WebSearch, WebFetch, Skill"
 model: "opus"
 ---

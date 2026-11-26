@@ -1,6 +1,6 @@
-# FoundryAI Agents — Full Team (52 Agents + 9 Team Coordinators)
+# FoundryAI Agents — Full Team (58 Agents + 9 Team Coordinators)
 
-A complete set of **52 specialist AI agents** and **9 team coordinators** covering every role across a modern AI startup.
+A complete set of **58 specialist AI agents** and **9 team coordinators** covering every role across a modern AI startup.
 
 These files are the **workspace-neutral source**: each declares a `tier` and `capabilities` instead of workspace-specific models and tools. Don't copy them into a workspace directly; `install.sh` builds them into the native format for Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI or chat workspaces.
 
@@ -19,17 +19,18 @@ These files are the **workspace-neutral source**: each declares a `tier` and `ca
 | Software Architect | `software-architect.md` |
 | Staff Engineer | `staff-engineer.md` |
 
-### Data & AI Team (6)
+### Data & AI Team (7)
 | Agent | File |
 |-------|------|
 | AI Analytics Engineer | `ai-analytics-engineer.md` |
 | AI Data Engineer | `ai-data-engineer.md` |
 | AI Data Scientist | `ai-data-scientist.md` |
 | AI Domain Expert | `ai-domain-expert.md` |
+| AI Model Training Engineer | `ai-model-training-engineer.md` |
 | AI Prompt Engineer | `ai-prompt-engineer.md` |
 | AI Research Engineer | `ai-research-engineer.md` |
 
-### Engineering Team (12)
+### Engineering Team (16)
 | Agent | File |
 |-------|------|
 | AI Agent Engineer | `ai-agent-engineer.md` |
@@ -40,10 +41,14 @@ These files are the **workspace-neutral source**: each declares a `tier` and `ca
 | AI Engineer | `ai-engineer.md` |
 | AI Frontend Engineer | `ai-frontend-engineer.md` |
 | AI Full Stack Engineer | `ai-fullstack-engineer.md` |
+| AI Generative Media Engineer | `ai-generative-media-engineer.md` |
 | AI Mobile Engineer | `ai-mobile-engineer.md` |
 | AI Performance Engineer | `ai-performance-engineer.md` |
 | AI QA Engineer | `ai-qa-engineer.md` |
+| AI Robotics Engineer | `ai-robotics-engineer.md` |
 | AI Software Engineer | `ai-software-engineer.md` |
+| AI Vision Engineer | `ai-vision-engineer.md` |
+| AI Voice Engineer | `ai-voice-engineer.md` |
 
 ### Growth Team (4)
 | Agent | File |
@@ -60,9 +65,10 @@ These files are the **workspace-neutral source**: each declares a `tier` and `ca
 | AI Technical Writer | `ai-technical-writer.md` |
 | Content Designer | `content-designer.md` |
 
-### Leadership Team (5)
+### Leadership Team (6)
 | Agent | File |
 |-------|------|
+| AI Fundraising Advisor | `ai-fundraising-advisor.md` |
 | AI Orchestrator | `ai-orchestrator.md` |
 | CTO Advisor | `cto-advisor.md` |
 | Engineering Manager | `engineering-manager.md` |

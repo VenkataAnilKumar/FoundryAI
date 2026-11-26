@@ -2,6 +2,38 @@
 
 All notable changes to Founders Kit. Versions follow the plugin version in `plugin/.claude-plugin/plugin.json`.
 
+## [3.1.0] — 2026-11-26
+
+Coverage for every kind of AI startup.
+
+### Added
+- **6 specialists:**
+  - `ai-voice-engineer`: real-time voice agents, STT/TTS, telephony, latency budgets, barge-in
+  - `ai-vision-engineer`: detection, document AI, VLMs, labeling loops, edge vision
+  - `ai-generative-media-engineer`: image/video/audio generation, style fine-tuning, GPU serving, content safety and provenance
+  - `ai-robotics-engineer`: ROS 2, sim-to-real, imitation learning, VLA policies, robot safety
+  - `ai-model-training-engineer`: fine-tuning, post-training, distillation, pretraining, compute planning
+  - `ai-fundraising-advisor`: raise strategy, pitch narrative, AI investor metrics, data room, terms, investor updates
+- **8 skills:**
+  - `/pitch-deck`
+  - `/investor-update`
+  - `/pmf-check`
+  - `/moat`
+  - `/model-strategy` (API vs open-weight vs fine-tune vs train)
+  - `/ai-pricing`
+  - `/security-questionnaire`
+  - `/data-rights`
+- **Routing by AI startup type** in `founder`, plus a new "AI Modalities" group. The routing skills, team coordinators and `docs/routing.md` cover the new specialists.
+
+### Changed
+- `ai-finance-engineer` now covers startup finance: runway and burn, fundraising financial models, gross margin after inference, cloud/model-provider credit programs.
+- `ai-sales-engineer` now covers founder-led sales, pilots that convert, and enterprise AI deal hurdles: security reviews, AI governance, procurement.
+- 21 agent descriptions gained "Not for X (use Y)" guidance to separate overlapping specialists (e.g. software vs fullstack vs backend engineer, staff engineer vs software architect, ml-engineer vs model training).
+- `ml-engineer` is scoped to classic ML; LLM fine-tuning and post-training route to `ai-model-training-engineer`.
+- Team coordinators, `release-manager` and `developer-advocate` moved from the `deep` to the `standard` tier. They do routing and coordination work, so the cheaper tier keeps cost down.
+- `/cost-check` is provider-neutral: it prices whichever providers and models you actually use.
+- Routing skills use workspace-neutral "delegate" wording.
+
 ## [3.0.0] — 2026-11-26
 
 FoundryAI now works in **any AI workspace** and is built for **every kind of AI startup**.

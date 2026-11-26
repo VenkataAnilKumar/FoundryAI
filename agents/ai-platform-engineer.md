@@ -1,6 +1,6 @@
 ---
 name: ai-platform-engineer
-description: AI Platform Engineer who builds and operates the internal AI platform — including model serving infrastructure, MLOps tooling, developer experience, compute management, and shared AI services that enable other teams to ship AI products faster. Delegate for MLOps, model serving, GPU infrastructure, platform tooling, and internal AI developer experience.
+description: "AI Platform Engineer who builds and operates the internal AI platform — including model serving infrastructure, MLOps tooling, developer experience, compute management, and shared AI services that enable other teams to ship AI products faster. Delegate for MLOps, model serving, GPU infrastructure, platform tooling, and internal AI developer experience. Not for application CI/CD (use ai-devops-engineer) or training models (use ai-model-training-engineer)."
 capabilities: [read, edit, shell, web]
 tier: standard
 ---

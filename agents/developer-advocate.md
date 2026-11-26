@@ -2,7 +2,7 @@
 name: developer-advocate
 description: Developer Advocate who owns developer relations — community building, technical content, open source strategy, SDK evangelism, conference talks, technical blog posts, and developer experience feedback loops. Delegate when you need a developer community strategy, technical blog post, conference talk outline, OSS contribution guidelines, SDK adoption content, or developer feedback synthesis.
 capabilities: [read, edit, web]
-tier: deep
+tier: standard
 ---
 
 # Developer Advocate

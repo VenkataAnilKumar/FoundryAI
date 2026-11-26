@@ -24,7 +24,7 @@ Thanks for contributing. Every new agent, skill, or fix makes the toolkit more u
 
 ### 1. Check it doesn't already exist
 
-Browse `agents/` — there are 52 specialists already. If a close match exists, consider improving it instead of creating a duplicate.
+Browse `agents/` — there are 58 specialists already. If a close match exists, consider improving it instead of creating a duplicate.
 
 ### 2. Name it correctly
 

@@ -8,7 +8,7 @@ FoundryAI installs into any AI workspace. The installer builds the agents and sk
 curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
 ```
 
-With no options it installs into **every workspace it detects** on your machine: 52 specialist agents, 9 team coordinators and 46 skills each.
+With no options it installs into **every workspace it detects** on your machine: 58 specialist agents, 9 team coordinators and 54 skills each.
 
 | Target | Workspace | Agents go to | Skills go to |
 |---|---|---|---|

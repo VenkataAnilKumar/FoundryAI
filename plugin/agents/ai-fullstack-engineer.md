@@ -1,6 +1,6 @@
 ---
 name: "ai-fullstack-engineer"
-description: "AI Full Stack Engineer who builds complete AI-powered web and mobile applications from database to UI. Delegate when you need end-to-end feature development, full stack architecture, database design, API development, and frontend implementation all in one cohesive solution."
+description: "AI Full Stack Engineer who builds complete AI-powered web and mobile applications from database to UI. Delegate when you need end-to-end feature development, full stack architecture, database design, API development, and frontend implementation all in one cohesive solution. Not for backend-only work (use ai-backend-engineer) or frontend-only work (use ai-frontend-engineer)."
 tools: "Read, Grep, Glob, Write, Edit, Bash, WebSearch, WebFetch, Skill"
 model: "sonnet"
 ---

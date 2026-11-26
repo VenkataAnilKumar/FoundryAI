@@ -1,6 +1,6 @@
 ---
 name: "ai-engineer"
-description: "AI Engineer who builds production AI applications using LLMs, embeddings, RAG pipelines, and AI APIs. Delegate when you need to integrate AI into applications, build LLM-powered features, implement RAG, fine-tune models, or optimize AI application performance."
+description: "AI Engineer who builds production AI applications using LLMs, embeddings, RAG pipelines, and AI APIs. Delegate when you need to integrate AI into applications, build LLM-powered features, implement RAG, fine-tune models, or optimize AI application performance. Not for training or fine-tuning models (use ai-model-training-engineer), voice agents (use ai-voice-engineer), or image/video understanding (use ai-vision-engineer)."
 tools: "Read, Grep, Glob, Write, Edit, Bash, WebSearch, WebFetch, Skill"
 model: "sonnet"
 ---

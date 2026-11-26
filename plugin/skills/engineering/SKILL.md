@@ -14,7 +14,7 @@ $ARGUMENTS
 | Agent | Use When |
 |---|---|
 | `ai-architect` | Architecture decisions, system design, tech selection, ADRs |
-| `ai-engineer` | LLM APIs, RAG, embeddings, fine-tuning, AI observability |
+| `ai-engineer` | LLM APIs, RAG, embeddings, AI observability |
 | `ai-backend-engineer` | REST/GraphQL APIs, databases, async jobs, auth, performance |
 | `ai-frontend-engineer` | React/Next.js UI, streaming UX, design systems, accessibility |
 | `ai-fullstack-engineer` | Feature spanning frontend + backend + AI layer together |
@@ -27,6 +27,12 @@ $ARGUMENTS
 | `ai-platform-engineer` | Model serving, GPU infra, internal AI platform, MLOps tooling |
 | `ai-qa-engineer` | Test strategy, LLM eval, regression gates, quality frameworks |
 | `ai-research-engineer` | Paper implementation, novel AI techniques, model benchmarking |
+| `ai-voice-engineer` | Real-time voice agents, phone bots, STT/TTS, latency and turn-taking |
+| `ai-vision-engineer` | Detection, segmentation, document AI, VLMs, edge vision |
+| `ai-generative-media-engineer` | Image/video/audio generation, style fine-tuning, GPU serving, content safety |
+| `ai-robotics-engineer` | ROS 2, simulation and sim-to-real, imitation learning, robot safety |
+| `ai-model-training-engineer` | Fine-tuning, post-training, distillation, pretraining, GPU compute plans |
+| `ai-performance-engineer` | Latency, throughput, query tuning, load testing |
 
 ## Instructions
 

@@ -13,8 +13,9 @@ $ARGUMENTS
 
 | Agent | Use When |
 |---|---|
-| `ai-finance-engineer` | AI cloud costs, token spend, ROI analysis, cost reduction, unit economics |
-| `ai-sales-engineer` | Sales playbooks, demo scripts, onboarding, churn, QBR, expansion strategy |
+| `ai-fundraising-advisor` | Raise strategy, pitch deck, investor pipeline, data room, term sheets, investor updates |
+| `ai-finance-engineer` | Runway and burn, financial model, AI gross margin, cloud/token/GPU costs, credits |
+| `ai-sales-engineer` | Founder-led and enterprise AI sales, pilots, security reviews, onboarding, churn, expansion |
 | `ai-growth-engineer` | Content strategy, SEO, campaigns, growth experiments, AI-powered marketing |
 | `ai-security-engineer` | Security review, threat modeling, prompt injection testing, vulnerability assessment |
 | `ai-responsible-engineer` | Bias audit, fairness evaluation, AI safety, ethics review, risk assessment |

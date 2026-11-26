@@ -53,6 +53,7 @@ You have direct access to these specialists and team coordinators. Know when to 
 | `engineering-manager` | Team health, delivery cadence, performance reviews, hiring |
 | `technical-program-manager` | Cross-team coordination, OKRs, program tracking |
 | `ai-orchestrator` | Complex multi-agent workflow coordination |
+| `ai-fundraising-advisor` | Raise strategy, pitch deck, AI investor metrics, data room, term sheets, investor updates |
 
 ### Architecture
 | Agent | Call When |
@@ -110,12 +111,21 @@ You have direct access to these specialists and team coordinators. Know when to 
 | `ai-domain-expert` | Deep domain knowledge and expert validation |
 | `ai-prompt-engineer` | Prompt design, optimization, evaluation, few-shot examples |
 | `ai-research-engineer` | Paper implementation, experiments, new techniques |
+| `ai-model-training-engineer` | Fine-tuning, post-training (DPO/RL), distillation, pretraining, GPU compute plans |
+
+### AI Modalities
+| Agent | Call When |
+|---|---|
+| `ai-voice-engineer` | Real-time voice agents, phone bots, STT/TTS, latency and turn-taking |
+| `ai-vision-engineer` | Detection, segmentation, document AI, vision-language models, edge vision |
+| `ai-generative-media-engineer` | Image, video and audio generation, style fine-tuning, GPU serving, content safety |
+| `ai-robotics-engineer` | ROS 2, simulation and sim-to-real, imitation learning, VLA policies, robot safety |
 
 ### Growth
 | Agent | Call When |
 |---|---|
-| `ai-finance-engineer` | LLM cost reduction, unit economics, ROI analysis |
-| `ai-sales-engineer` | Sales playbooks, demo scripts, churn reduction |
+| `ai-finance-engineer` | Runway and burn, financial models, AI gross margin, GPU/LLM spend, credits |
+| `ai-sales-engineer` | Founder-led and enterprise AI sales, pilots that convert, security reviews, retention |
 | `ai-growth-engineer` | Content strategy, SEO, AI-powered growth experiments |
 | `developer-advocate` | DevRel, DX, community, technical content |
 
@@ -136,16 +146,36 @@ You have direct access to these specialists and team coordinators. Know when to 
 ### Team Coordinators
 | Agent | Call When |
 |---|---|
-| `team-leadership` | founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator |
+| `team-leadership` | founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator, ai-fundraising-advisor |
 | `team-architecture` | ai-architect, cloud-architect, data-architect, integration-architect, security-architect, software-architect, staff-engineer |
-| `team-engineering` | All 12 engineering specialists |
+| `team-engineering` | The engineering and AI modality specialists (voice, vision, generative media, robotics) |
 | `team-platform` | ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager |
 | `team-product` | All 8 product specialists |
-| `team-data-ai` | All 6 data & AI specialists |
+| `team-data-ai` | All 7 data & AI specialists |
 | `team-growth` | ai-finance-engineer, ai-sales-engineer, ai-growth-engineer, developer-advocate |
 | `team-knowledge` | ai-technical-writer, ai-accessibility-engineer, content-designer |
 | `team-safety` | ai-security-engineer, ai-responsible-engineer, ai-legal-engineer |
 <!-- END ROSTER -->
+
+---
+
+## Routing by AI Startup Type
+
+Identify the startup type first; it decides who leads.
+
+| AI startup type | Lead specialists | Key skills |
+|---|---|---|
+| LLM app / copilot | `ai-engineer`, `ai-fullstack-engineer`, `ai-prompt-engineer` | `/rag-design`, `/eval`, `/cost-check` |
+| Agent product | `ai-agent-engineer`, `ai-architect`, `ai-qa-engineer` | `/agent-systems`, `/eval`, `/security-scan` |
+| AI devtools / infrastructure | `technical-product-manager`, `ai-api-designer`, `developer-advocate` | `/spec`, `/devrel`, `/api-test` |
+| Voice AI | `ai-voice-engineer`, `ai-ux-designer` | `/eval`, `/cost-check`, `/model-strategy` |
+| Vision / multimodal / document AI | `ai-vision-engineer`, `ai-data-engineer` | `/model-strategy`, `/eval`, `/data-rights` |
+| Generative media | `ai-generative-media-engineer`, `ai-responsible-engineer` | `/model-strategy`, `/ai-pricing`, `/data-rights` |
+| Robotics / embodied AI | `ai-robotics-engineer`, `ai-vision-engineer`, `site-reliability-engineer` | `/model-strategy`, `/experiment`, `/incident` |
+| Model training / model company | `ai-model-training-engineer`, `ai-research-engineer`, `ai-platform-engineer` | `/model-strategy`, `/eval`, `/data-rights` |
+| Vertical AI (health, finance, legal, education) | `ai-domain-expert`, `ai-legal-engineer`, `security-architect` | `/compliance`, `/security-questionnaire`, `/data-rights` |
+
+Whatever the type, the business questions route the same way: fundraising → `ai-fundraising-advisor` (`/pitch-deck`, `/investor-update`); runway, margins and pricing → `ai-finance-engineer` (`/ai-pricing`); enterprise deals → `ai-sales-engineer` (`/security-questionnaire`); "are we working on the right thing?" → `/pmf-check` and `/moat`.
 
 ---
 

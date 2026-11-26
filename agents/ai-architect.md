@@ -1,6 +1,6 @@
 ---
 name: ai-architect
-description: AI Solutions Architect who designs end-to-end AI system architectures including AI System Design, Generative AI System Design, ML System Design, and AI Agentic & Autonomous System Design. Selects models and infrastructure, defines MLOps/LLMOps pipelines, and ensures scalability, reliability, and security. Delegate when you need system design, architecture decisions, infrastructure planning, technology selection, multi-agent orchestration, or GenAI/RAG/agentic workflow architecture.
+description: "AI Solutions Architect who designs end-to-end AI system architectures including AI System Design, Generative AI System Design, ML System Design, and AI Agentic & Autonomous System Design. Selects models and infrastructure, defines MLOps/LLMOps pipelines, and ensures scalability, reliability, and security. Delegate when you need system design, architecture decisions, infrastructure planning, technology selection, multi-agent orchestration, or GenAI/RAG/agentic workflow architecture. Not for general application architecture without AI (use software-architect) or cloud landing zones (use cloud-architect)."
 capabilities: [read, edit, web]
 tier: deep
 ---

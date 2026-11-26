@@ -65,7 +65,8 @@ Identify which domains this feature touches:
 |---|---|---|
 | CI/CD, MLOps | `ai-devops-engineer` | Pipeline setup, deployment strategy, IaC |
 | Model serving, GPU | `ai-platform-engineer` | Model hosting, inference infra, internal AI platform |
-| ML training | `ml-engineer` | Training pipelines, fine-tuning, evaluation harness |
+| ML training | `ml-engineer` (classic ML) / `ai-model-training-engineer` (LLM fine-tuning, post-training) | Training pipelines, fine-tuning, evaluation harness |
+| Voice, vision, generative media, robotics | `ai-voice-engineer` / `ai-vision-engineer` / `ai-generative-media-engineer` / `ai-robotics-engineer` | Modality-specific pipeline, latency, data and safety |
 | Reliability, SLOs | `site-reliability-engineer` | SLO definition, runbooks, alerting strategy |
 | Release coordination | `release-manager` | Rollout plan, feature flags, launch checklist |
 | Performance | `ai-performance-engineer` | Latency analysis, Core Web Vitals, query optimization |
@@ -107,7 +108,7 @@ Identify which domains this feature touches:
 
 ## Step 3: Coordinate
 
-For each agent you spawn:
+For each agent you delegate to:
 1. Give them the full feature description
 2. Specify their deliverable (e.g., "deliver an OpenAPI spec for the new endpoints")
 3. Tell them what the other agents are building so they can design compatible interfaces

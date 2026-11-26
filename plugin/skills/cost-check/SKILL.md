@@ -36,20 +36,21 @@ Estimate token counts for:
 
 ### Step 2: Estimate Cost
 
-Current Claude API list pricing (verify at https://platform.claude.com/docs/en/about-claude/pricing — prices change):
+Use the **current list prices of the provider(s) and models actually in use** (OpenAI, Anthropic, Google, Mistral, open-weight hosting providers, etc.) — look them up on the provider's pricing page; prices change often. If the user hasn't said which models they use, ask, or show two or three representative options (a frontier model, a mid-tier model, a small fast model).
 
-| Model | Input (per 1M tokens) | Output (per 1M tokens) |
-|---|---|---|
-| Claude Opus 5.5 (`claude-opus-5-5`) | $4 | $20 |
-| Claude Sonnet 5.5 (`claude-sonnet-5-5`) | $2 | $10 |
-| Claude Haiku 5.5 (`claude-haiku-5-5`) | $0.10 ($0.50 for prompts >100K tokens) | $0.50 ($2.50 for prompts >100K tokens) |
+| Model (provider) | Input (per 1M tokens) | Output (per 1M tokens) | Notes |
+|---|---|---|---|
+| [model in use] | $X | $X | e.g. cached-input discount, batch discount, long-context surcharge |
+| [cheaper alternative] | $X | $X | |
 
-Batch API: 50% off. Prompt caching cuts repeated input cost further (cache reads ≈ 5% of input price).
+For example, at the time of writing Anthropic lists Claude Opus 5.5 at $4 / $20, Sonnet 5.5 at $2 / $10 and Haiku 5.5 at $0.10 / $0.50 per million input / output tokens (verify before relying on these).
+
+Most providers discount batch requests and cached input heavily — include those where the workload allows. For self-hosted or GPU-billed models, convert to cost per million tokens from GPU-hour price and measured throughput.
 
 **Cost per request** = (input_tokens / 1,000,000 × input_price) + (output_tokens / 1,000,000 × output_price)
 
 **Monthly cost at different volumes:**
-| Volume | Daily Requests | Monthly Cost (Sonnet) | Monthly Cost (Opus) |
+| Volume | Daily Requests | Monthly Cost (current model) | Monthly Cost (cheaper alternative) |
 |---|---|---|---|
 | Small | 100/day | ~$X | ~$X |
 | Medium | 1,000/day | ~$X | ~$X |
@@ -65,9 +66,9 @@ Calculate actual numbers for the specific token counts from Step 1.
 Check for each:
 
 **1. Model right-sizing** (biggest lever — often 5-20× cost difference)
-- Is this task actually complex enough to require Opus? Could Sonnet handle it?
-- Could a simple routing/classification step use Haiku, then escalate to Sonnet only when needed?
-- **Potential saving**: if moving from Opus → Sonnet: ~5× reduction
+- Is this task actually complex enough to require the largest model? Could a mid-tier model handle it?
+- Could a simple routing/classification step use a small fast model, then escalate to a larger model only when needed?
+- **Potential saving**: compute it from the price difference between the two models (often 2–5× between adjacent tiers, 10×+ from frontier to small models)
 
 **2. Prompt compression** (10-40% reduction typical)
 - Are there redundant instructions or repeated phrases?
@@ -106,7 +107,7 @@ Rank optimizations by impact × effort:
 
 | Optimization | Estimated Saving | Effort | Priority |
 |---|---|---|---|
-| Right-size model (Opus → Sonnet) | ~$X/month | Low | P1 |
+| Right-size model (largest → mid-tier) | ~$X/month | Low | P1 |
 | Enable prompt caching | ~$X/month | Low | P1 |
 | Compress system prompt | ~$X/month | Low | P2 |
 | Summarize history after 10 turns | ~$X/month | Medium | P2 |
@@ -123,4 +124,4 @@ After applying recommended optimizations:
 
 ---
 
-**Rule of thumb**: If you haven't set a `max_tokens` limit and you haven't tried Sonnet where you're using Opus, you have at least a 5× cost reduction available before doing anything clever.
+**Rule of thumb**: If you haven't set an output token limit and you haven't tried a smaller model where you're using the largest one, you probably have a multi-× cost reduction available before doing anything clever.

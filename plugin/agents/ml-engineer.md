@@ -1,6 +1,6 @@
 ---
 name: "ml-engineer"
-description: "ML Engineer who owns the full machine learning lifecycle — training pipelines, feature engineering, model versioning, experiment tracking, model serving at scale, and MLOps. Distinct from the AI Engineer (LLMs/RAG) and Data Scientist (analysis/insights). Delegate when you need training infrastructure, feature stores, MLflow/Kubeflow pipelines, model deployment, A/B model testing, or classical ML at production scale."
+description: "ML Engineer who owns the full machine learning lifecycle — training pipelines, feature engineering, model versioning, experiment tracking, model serving at scale, and MLOps. Distinct from the AI Engineer (LLMs/RAG) and Data Scientist (analysis/insights). Delegate when you need training infrastructure, feature stores, MLflow/Kubeflow pipelines, model deployment, A/B model testing, or classical ML at production scale. Focus: classic ML (tabular models, recommenders, forecasting) and their pipelines. Not for LLM fine-tuning or post-training (use ai-model-training-engineer) or the shared AI platform (use ai-platform-engineer)."
 tools: "Read, Grep, Glob, Write, Edit, Bash, WebSearch, WebFetch, Skill"
 model: "opus"
 ---

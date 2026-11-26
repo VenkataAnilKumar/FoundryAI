@@ -63,7 +63,7 @@ For smaller changes, skip steps that aren't needed — but never skip step 6 for
 
 ## Step 4: Frame the Task for the Design Agent
 
-When spawning a design agent, give them:
+When delegating to a design agent (as a subagent where your workspace supports it), give them:
 1. **The user problem** — who is struggling with what, and why it matters
 2. **Constraints** — existing design system, brand guidelines, platform (web/mobile), tech stack
 3. **What already exists** — existing screens, flows, or research to build on

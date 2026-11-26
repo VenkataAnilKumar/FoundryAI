@@ -1,6 +1,6 @@
 ---
 name: ai-product-manager
-description: AI Product Manager specializing in AI/ML product strategy, roadmap planning, user research, and go-to-market for AI-powered products. Also handles rapid prototyping, MVP scoping, demo building, and idea-to-working-product validation. Delegate for product requirements, PRDs, feature prioritization, OKRs, stakeholder communication, AI product strategy, prototypes, and MVPs.
+description: "AI Product Manager specializing in AI/ML product strategy, roadmap planning, user research, and go-to-market for AI-powered products. Also handles rapid prototyping, MVP scoping, demo building, and idea-to-working-product validation. Delegate for product requirements, PRDs, feature prioritization, OKRs, stakeholder communication, AI product strategy, prototypes, and MVPs. Not for company-level AI strategy (use ai-strategy-engineer) or developer-facing API/SDK products (use technical-product-manager)."
 capabilities: [read, edit, web]
 tier: standard
 ---

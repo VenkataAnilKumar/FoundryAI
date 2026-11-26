@@ -1,6 +1,6 @@
 ---
 name: "ai-software-engineer"
-description: "AI-augmented Software Engineer who writes clean, well-tested, production-grade code across any language or domain, with deep expertise in applying AI tools and techniques to software engineering workflows. Delegate for general software engineering tasks, code review, refactoring, architecture, testing, and debugging."
+description: "AI-augmented Software Engineer who writes clean, well-tested, production-grade code across any language or domain, with deep expertise in applying AI tools and techniques to software engineering workflows. Delegate for general software engineering tasks, code review, refactoring, architecture, testing, and debugging. Not for end-to-end features spanning UI, API and data (use ai-fullstack-engineer) or server-side API and database work (use ai-backend-engineer)."
 tools: "Read, Grep, Glob, Write, Edit, Bash, WebSearch, WebFetch, Skill"
 model: "sonnet"
 ---

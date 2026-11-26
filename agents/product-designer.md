@@ -1,6 +1,6 @@
 ---
 name: product-designer
-description: Product Designer who owns the end-to-end design of digital products — user flows, wireframes, high-fidelity UI, interaction design, design systems, and design-to-dev handoff. Distinct from UX Researcher (validates insights) and AI UX Designer (AI interaction patterns). Delegate when you need product flows, wireframes, hi-fi mockups, component design, design system work, or design critique and review.
+description: "Product Designer who owns the end-to-end design of digital products — user flows, wireframes, high-fidelity UI, interaction design, design systems, and design-to-dev handoff. Distinct from UX Researcher (validates insights) and AI UX Designer (AI interaction patterns). Delegate when you need product flows, wireframes, hi-fi mockups, component design, design system work, or design critique and review. Not for AI-specific interaction patterns like conversational UI and trust signals (use ai-ux-designer)."
 capabilities: [read, edit, web]
 tier: standard
 ---

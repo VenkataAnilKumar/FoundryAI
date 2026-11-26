@@ -1,6 +1,6 @@
 # founders-kit — FoundryAI for Claude Code
 
-The Claude Code plugin build of [FoundryAI](https://github.com/VenkataAnilKumar/FoundryAI): 52 specialist agents, 9 team coordinators and 46 skills for AI startups.
+The Claude Code plugin build of [FoundryAI](https://github.com/VenkataAnilKumar/FoundryAI): 58 specialist agents, 9 team coordinators and 54 skills for AI startups.
 
 ```
 /plugin marketplace add VenkataAnilKumar/FoundryAI

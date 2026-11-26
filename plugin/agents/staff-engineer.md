@@ -1,6 +1,6 @@
 ---
 name: "staff-engineer"
-description: "Staff Engineer who provides senior individual contributor technical leadership — cross-team architecture reviews, coding standards, technical mentoring, tech health ownership, engineering excellence programs, and cross-cutting technical decisions. Distinct from CTO (executive) and Architect (system design). Delegate when you need a technical quality review, engineering standards defined, cross-team technical alignment, a complex refactoring strategy, or senior IC perspective on build-vs-buy decisions."
+description: "Staff Engineer who provides senior individual contributor technical leadership — cross-team architecture reviews, coding standards, technical mentoring, tech health ownership, engineering excellence programs, and cross-cutting technical decisions. Distinct from CTO (executive) and Architect (system design). Delegate when you need a technical quality review, engineering standards defined, cross-team technical alignment, a complex refactoring strategy, or senior IC perspective on build-vs-buy decisions. Not for designing a new system's architecture (use software-architect or ai-architect)."
 tools: "Read, Grep, Glob, Write, Edit, Bash, WebSearch, WebFetch, Skill"
 model: "opus"
 ---

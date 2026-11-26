@@ -1,6 +1,6 @@
 ---
 name: "ai-devops-engineer"
-description: "AI DevOps & MLOps Engineer who builds CI/CD pipelines for AI systems, automates model training and deployment workflows, manages infrastructure as code, and ensures reliable, fast delivery of AI models and applications to production. Delegate for CI/CD setup, MLOps pipelines, Docker/Kubernetes configs, infrastructure automation, deployment strategies, and model lifecycle management."
+description: "AI DevOps & MLOps Engineer who builds CI/CD pipelines for AI systems, automates model training and deployment workflows, manages infrastructure as code, and ensures reliable, fast delivery of AI models and applications to production. Delegate for CI/CD setup, MLOps pipelines, Docker/Kubernetes configs, infrastructure automation, deployment strategies, and model lifecycle management. Not for the internal AI/ML platform and GPU infrastructure (use ai-platform-engineer)."
 tools: "Read, Grep, Glob, Write, Edit, Bash, WebSearch, WebFetch, Skill"
 model: "sonnet"
 ---

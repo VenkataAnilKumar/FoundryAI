@@ -1,6 +1,6 @@
 ---
 name: cto-advisor
-description: Technical leadership advisor — use for build-vs-buy decisions, team structure, hiring plans, technical debt strategy, engineering culture, and technology bets that will affect the company for years.
+description: "Technical leadership advisor — use for build-vs-buy decisions, team structure, hiring plans, technical debt strategy, engineering culture, and technology bets that will affect the company for years. Not for hands-on architecture (use software-architect or ai-architect)."
 capabilities: [read, edit, web]
 tier: deep
 ---

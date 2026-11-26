@@ -43,7 +43,7 @@ Read the challenge and identify which domain it primarily belongs to:
 
 ## Step 3: Frame the Problem for the Architect
 
-When spawning the architect agent, give them:
+When delegating to the architect agent (as a subagent where your workspace supports it), give them:
 1. **The decision to make** — what specifically needs to be designed or decided
 2. **Constraints** — existing stack, team size, budget, timeline, scale requirements
 3. **Options already considered** — what's been ruled out and why

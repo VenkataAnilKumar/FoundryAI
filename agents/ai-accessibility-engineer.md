@@ -1,6 +1,6 @@
 ---
 name: ai-accessibility-engineer
-description: Audit and fix accessibility issues — WCAG 2.2 compliance, screen reader support, keyboard navigation, color contrast, ARIA patterns, and inclusive design for web and mobile.
+description: "Audit and fix accessibility issues — WCAG 2.2 compliance, screen reader support, keyboard navigation, color contrast, ARIA patterns, and inclusive design for web and mobile. Delegate when you need a WCAG audit, accessible component patterns, screen reader or keyboard support, or accessibility in AI chat and voice interfaces."
 capabilities: [read, edit, web]
 tier: standard
 ---

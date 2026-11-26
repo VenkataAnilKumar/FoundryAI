@@ -2,7 +2,7 @@
 
 # Agent Capability Reference
 
-All 52 specialist agents and 9 team coordinators, with the tier and capabilities each one runs with.
+All 58 specialist agents and 9 team coordinators, with the tier and capabilities each one runs with.
 
 ## How to invoke an agent
 
@@ -22,7 +22,7 @@ Or let a routing skill pick:
 
 ---
 
-## Leadership (5)
+## Leadership (6)
 
 ### `founder`
 **Tier**: `deep` · **Capabilities**: read, edit, shell, web, delegate  
@@ -34,7 +34,7 @@ Your AI co-founder — strategic thinker, decisive executor, and orchestrator of
 **Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Build-vs-buy decisions, hiring plans, tech debt strategy, scaling engineering teams
 
-Technical leadership advisor — use for build-vs-buy decisions, team structure, hiring plans, technical debt strategy, engineering culture, and technology bets that will affect the company for years.
+Technical leadership advisor — use for build-vs-buy decisions, team structure, hiring plans, technical debt strategy, engineering culture, and technology bets that will affect the company for years. Not for hands-on architecture (use software-architect or ai-architect).
 
 ### `engineering-manager`
 **Tier**: `deep` · **Capabilities**: read, edit, web  
@@ -46,13 +46,19 @@ Engineering Manager who owns the software delivery process — sprint planning, 
 **Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Cross-team coordination, OKRs, program tracking
 
-Technical Program Manager (TPM) who coordinates large cross-team technical programs — dependency mapping, multi-team roadmaps, program-level risk management, OKR tracking, and large-scale delivery coordination. Distinct from Product Manager (owns product) and Engineering Manager (owns one team). Delegate when you need cross-team program planning, dependency resolution, milestone tracking across multiple teams, or executive-level program reporting.
+Technical Program Manager (TPM) who coordinates large cross-team technical programs — dependency mapping, multi-team roadmaps, program-level risk management, OKR tracking, and large-scale delivery coordination. Distinct from Product Manager (owns product) and Engineering Manager (owns one team). Delegate when you need cross-team program planning, dependency resolution, milestone tracking across multiple teams, or executive-level program reporting. Not for coordinating agents on a single task (use ai-orchestrator).
 
 ### `ai-orchestrator`
 **Tier**: `deep` · **Capabilities**: read, edit, shell, web, delegate  
 **Best for**: Complex multi-agent workflow coordination
 
-Multi-Agent Orchestrator who coordinates teams of AI agents to accomplish complex, multi-step tasks — decomposing goals, assigning subtasks to specialist agents, managing dependencies, handling failures, and synthesizing results. Delegate when you need to coordinate multiple agents, break down complex projects, manage parallel workstreams, or orchestrate autonomous workflows.
+Multi-Agent Orchestrator who coordinates teams of AI agents to accomplish complex, multi-step tasks — decomposing goals, assigning subtasks to specialist agents, managing dependencies, handling failures, and synthesizing results. Delegate when you need to coordinate multiple agents, break down complex projects, manage parallel workstreams, or orchestrate autonomous workflows. Use for coordinating several agents on one complex task. Not for strategic judgment (use founder) or multi-team program tracking over weeks (use technical-program-manager).
+
+### `ai-fundraising-advisor`
+**Tier**: `deep` · **Capabilities**: read, edit, web  
+**Best for**: Raise strategy, pitch deck, AI investor metrics, data room, term sheets, investor updates
+
+Fundraising Advisor for AI startups — pitch narrative and deck, metrics investors check for AI companies (growth, retention, gross margin after inference, burn multiple), defensibility story, investor pipeline, data room, SAFEs and term sheets, and investor updates. Delegate when you're preparing to raise, writing or reviewing a deck, answering diligence questions, comparing terms, or writing a monthly investor update. Not legal advice on final documents (pair with ai-legal-engineer and a startup lawyer).
 
 ---
 
@@ -62,7 +68,7 @@ Multi-Agent Orchestrator who coordinates teams of AI agents to accomplish comple
 **Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: AI system design, LLM/RAG architecture, tech stack decisions
 
-AI Solutions Architect who designs end-to-end AI system architectures including AI System Design, Generative AI System Design, ML System Design, and AI Agentic & Autonomous System Design. Selects models and infrastructure, defines MLOps/LLMOps pipelines, and ensures scalability, reliability, and security. Delegate when you need system design, architecture decisions, infrastructure planning, technology selection, multi-agent orchestration, or GenAI/RAG/agentic workflow architecture.
+AI Solutions Architect who designs end-to-end AI system architectures including AI System Design, Generative AI System Design, ML System Design, and AI Agentic & Autonomous System Design. Selects models and infrastructure, defines MLOps/LLMOps pipelines, and ensures scalability, reliability, and security. Delegate when you need system design, architecture decisions, infrastructure planning, technology selection, multi-agent orchestration, or GenAI/RAG/agentic workflow architecture. Not for general application architecture without AI (use software-architect) or cloud landing zones (use cloud-architect).
 
 ### `cloud-architect`
 **Tier**: `deep` · **Capabilities**: read, edit, web  
@@ -92,13 +98,13 @@ Security Architect who designs security into systems from the ground up — zero
 **Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Application architecture, DDD, ADRs, hexagonal design
 
-Software Architect who designs application-level architecture — system decomposition, technology selection, architectural patterns (hexagonal, clean, CQRS, layered), code structure standards, NFR definition, and architectural governance. Bridges high-level system design and day-to-day engineering decisions. Delegate when you need application architecture design, technology evaluation, NFR specification, architectural patterns selection, or technical design documentation.
+Software Architect who designs application-level architecture — system decomposition, technology selection, architectural patterns (hexagonal, clean, CQRS, layered), code structure standards, NFR definition, and architectural governance. Bridges high-level system design and day-to-day engineering decisions. Delegate when you need application architecture design, technology evaluation, NFR specification, architectural patterns selection, or technical design documentation. Not for cross-team engineering standards and reviews (use staff-engineer) or AI/LLM system design (use ai-architect).
 
 ### `staff-engineer`
 **Tier**: `deep` · **Capabilities**: read, edit, shell, web  
 **Best for**: Cross-team technical leadership, engineering standards
 
-Staff Engineer who provides senior individual contributor technical leadership — cross-team architecture reviews, coding standards, technical mentoring, tech health ownership, engineering excellence programs, and cross-cutting technical decisions. Distinct from CTO (executive) and Architect (system design). Delegate when you need a technical quality review, engineering standards defined, cross-team technical alignment, a complex refactoring strategy, or senior IC perspective on build-vs-buy decisions.
+Staff Engineer who provides senior individual contributor technical leadership — cross-team architecture reviews, coding standards, technical mentoring, tech health ownership, engineering excellence programs, and cross-cutting technical decisions. Distinct from CTO (executive) and Architect (system design). Delegate when you need a technical quality review, engineering standards defined, cross-team technical alignment, a complex refactoring strategy, or senior IC perspective on build-vs-buy decisions. Not for designing a new system's architecture (use software-architect or ai-architect).
 
 ---
 
@@ -108,13 +114,13 @@ Staff Engineer who provides senior individual contributor technical leadership �
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: LLM integration, RAG pipelines, embeddings, Claude/OpenAI API
 
-AI Engineer who builds production AI applications using LLMs, embeddings, RAG pipelines, and AI APIs. Delegate when you need to integrate AI into applications, build LLM-powered features, implement RAG, fine-tune models, or optimize AI application performance.
+AI Engineer who builds production AI applications using LLMs, embeddings, RAG pipelines, and AI APIs. Delegate when you need to integrate AI into applications, build LLM-powered features, implement RAG, fine-tune models, or optimize AI application performance. Not for training or fine-tuning models (use ai-model-training-engineer), voice agents (use ai-voice-engineer), or image/video understanding (use ai-vision-engineer).
 
 ### `ai-backend-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: APIs, databases, async processing, microservices
 
-AI Backend Engineer who builds scalable, reliable server-side systems powering AI applications — including APIs, LLM integration layers, data pipelines, async processing, and AI microservices. Delegate for API design, backend architecture, database work, async jobs, performance optimization, and server-side AI integration.
+AI Backend Engineer who builds scalable, reliable server-side systems powering AI applications — including APIs, LLM integration layers, data pipelines, async processing, and AI microservices. Delegate for API design, backend architecture, database work, async jobs, performance optimization, and server-side AI integration. Not for UI work (use ai-frontend-engineer) or LLM pipeline design (use ai-engineer).
 
 ### `ai-frontend-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
@@ -126,7 +132,7 @@ AI Frontend Engineer who builds beautiful, performant, accessible UIs for AI-pow
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: End-to-end features across the full stack
 
-AI Full Stack Engineer who builds complete AI-powered web and mobile applications from database to UI. Delegate when you need end-to-end feature development, full stack architecture, database design, API development, and frontend implementation all in one cohesive solution.
+AI Full Stack Engineer who builds complete AI-powered web and mobile applications from database to UI. Delegate when you need end-to-end feature development, full stack architecture, database design, API development, and frontend implementation all in one cohesive solution. Not for backend-only work (use ai-backend-engineer) or frontend-only work (use ai-frontend-engineer).
 
 ### `ai-mobile-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
@@ -150,7 +156,7 @@ AI API Designer who designs clean, developer-friendly APIs for AI-powered produc
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: General coding across any language/framework
 
-AI-augmented Software Engineer who writes clean, well-tested, production-grade code across any language or domain, with deep expertise in applying AI tools and techniques to software engineering workflows. Delegate for general software engineering tasks, code review, refactoring, architecture, testing, and debugging.
+AI-augmented Software Engineer who writes clean, well-tested, production-grade code across any language or domain, with deep expertise in applying AI tools and techniques to software engineering workflows. Delegate for general software engineering tasks, code review, refactoring, architecture, testing, and debugging. Not for end-to-end features spanning UI, API and data (use ai-fullstack-engineer) or server-side API and database work (use ai-backend-engineer).
 
 ### `ai-agent-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
@@ -162,7 +168,7 @@ Specialist in designing, building, and deploying autonomous AI agents and multi-
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: CI/CD, Docker/K8s, model deployment, MLOps
 
-AI DevOps & MLOps Engineer who builds CI/CD pipelines for AI systems, automates model training and deployment workflows, manages infrastructure as code, and ensures reliable, fast delivery of AI models and applications to production. Delegate for CI/CD setup, MLOps pipelines, Docker/Kubernetes configs, infrastructure automation, deployment strategies, and model lifecycle management.
+AI DevOps & MLOps Engineer who builds CI/CD pipelines for AI systems, automates model training and deployment workflows, manages infrastructure as code, and ensures reliable, fast delivery of AI models and applications to production. Delegate for CI/CD setup, MLOps pipelines, Docker/Kubernetes configs, infrastructure automation, deployment strategies, and model lifecycle management. Not for the internal AI/ML platform and GPU infrastructure (use ai-platform-engineer).
 
 ### `ai-qa-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
@@ -184,13 +190,13 @@ Diagnose and fix performance issues across frontend, backend, database, and AI s
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: Internal AI platform, model serving, GPU infra
 
-AI Platform Engineer who builds and operates the internal AI platform — including model serving infrastructure, MLOps tooling, developer experience, compute management, and shared AI services that enable other teams to ship AI products faster. Delegate for MLOps, model serving, GPU infrastructure, platform tooling, and internal AI developer experience.
+AI Platform Engineer who builds and operates the internal AI platform — including model serving infrastructure, MLOps tooling, developer experience, compute management, and shared AI services that enable other teams to ship AI products faster. Delegate for MLOps, model serving, GPU infrastructure, platform tooling, and internal AI developer experience. Not for application CI/CD (use ai-devops-engineer) or training models (use ai-model-training-engineer).
 
 ### `ml-engineer`
 **Tier**: `deep` · **Capabilities**: read, edit, shell, web  
 **Best for**: ML model training, fine-tuning, serving pipelines
 
-ML Engineer who owns the full machine learning lifecycle — training pipelines, feature engineering, model versioning, experiment tracking, model serving at scale, and MLOps. Distinct from the AI Engineer (LLMs/RAG) and Data Scientist (analysis/insights). Delegate when you need training infrastructure, feature stores, MLflow/Kubeflow pipelines, model deployment, A/B model testing, or classical ML at production scale.
+ML Engineer who owns the full machine learning lifecycle — training pipelines, feature engineering, model versioning, experiment tracking, model serving at scale, and MLOps. Distinct from the AI Engineer (LLMs/RAG) and Data Scientist (analysis/insights). Delegate when you need training infrastructure, feature stores, MLflow/Kubeflow pipelines, model deployment, A/B model testing, or classical ML at production scale. Focus: classic ML (tabular models, recommenders, forecasting) and their pipelines. Not for LLM fine-tuning or post-training (use ai-model-training-engineer) or the shared AI platform (use ai-platform-engineer).
 
 ### `site-reliability-engineer`
 **Tier**: `deep` · **Capabilities**: read, edit, shell, web  
@@ -199,7 +205,7 @@ ML Engineer who owns the full machine learning lifecycle — training pipelines,
 Site Reliability Engineer who owns production reliability — SLOs/SLIs/error budgets, incident management, on-call runbooks, chaos engineering, observability, and capacity planning. Delegate when you need reliability targets defined, incident runbooks written, alerting rules designed, postmortems produced, or production health assessed.
 
 ### `release-manager`
-**Tier**: `deep` · **Capabilities**: read, edit, web  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Release coordination, rollout strategy, feature flags
 
 Release Manager who owns the software release lifecycle — versioning strategy, changelog generation, release trains, hotfix protocols, rollback procedures, and release communication. Delegate when you need a release plan, changelog written, versioning strategy defined, hotfix coordinated, rollback runbook created, or release notes drafted.
@@ -212,13 +218,13 @@ Release Manager who owns the software release lifecycle — versioning strategy,
 **Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: PRDs, roadmaps, user stories, OKRs, GTM planning
 
-AI Product Manager specializing in AI/ML product strategy, roadmap planning, user research, and go-to-market for AI-powered products. Also handles rapid prototyping, MVP scoping, demo building, and idea-to-working-product validation. Delegate for product requirements, PRDs, feature prioritization, OKRs, stakeholder communication, AI product strategy, prototypes, and MVPs.
+AI Product Manager specializing in AI/ML product strategy, roadmap planning, user research, and go-to-market for AI-powered products. Also handles rapid prototyping, MVP scoping, demo building, and idea-to-working-product validation. Delegate for product requirements, PRDs, feature prioritization, OKRs, stakeholder communication, AI product strategy, prototypes, and MVPs. Not for company-level AI strategy (use ai-strategy-engineer) or developer-facing API/SDK products (use technical-product-manager).
 
 ### `ai-ux-designer`
 **Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: User flows, wireframes, AI UX patterns, onboarding design
 
-AI UX Designer who crafts intuitive, trustworthy, and delightful user experiences for AI-powered products — including conversational UI, AI onboarding, error states, transparency patterns, and human-AI interaction design. Delegate for UX research, user flows, wireframes, AI interaction patterns, design systems, accessibility, and usability reviews.
+AI UX Designer who crafts intuitive, trustworthy, and delightful user experiences for AI-powered products — including conversational UI, AI onboarding, error states, transparency patterns, and human-AI interaction design. Delegate for UX research, user flows, wireframes, AI interaction patterns, design systems, accessibility, and usability reviews. Focus: AI-specific interaction patterns. Not for visual design and design systems (use product-designer).
 
 ### `ux-researcher`
 **Tier**: `standard` · **Capabilities**: read, edit, web  
@@ -230,13 +236,13 @@ UX Researcher who generates validated user insights through qualitative and quan
 **Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Hi-fi designs, design systems, Figma handoff
 
-Product Designer who owns the end-to-end design of digital products — user flows, wireframes, high-fidelity UI, interaction design, design systems, and design-to-dev handoff. Distinct from UX Researcher (validates insights) and AI UX Designer (AI interaction patterns). Delegate when you need product flows, wireframes, hi-fi mockups, component design, design system work, or design critique and review.
+Product Designer who owns the end-to-end design of digital products — user flows, wireframes, high-fidelity UI, interaction design, design systems, and design-to-dev handoff. Distinct from UX Researcher (validates insights) and AI UX Designer (AI interaction patterns). Delegate when you need product flows, wireframes, hi-fi mockups, component design, design system work, or design critique and review. Not for AI-specific interaction patterns like conversational UI and trust signals (use ai-ux-designer).
 
 ### `product-marketing-manager`
 **Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Positioning, launch plans, competitive intel, battlecards
 
-Product Marketing Manager who owns go-to-market strategy, positioning, messaging, competitive intelligence, and launch execution for products. Bridges product and marketing — translating features into customer value, defining ICP and segmentation, building sales enablement assets, and driving adoption. Delegate when you need positioning documents, messaging frameworks, launch plans, competitive analysis, ICP definitions, sales battlecards, or pricing strategy.
+Product Marketing Manager who owns go-to-market strategy, positioning, messaging, competitive intelligence, and launch execution for products. Bridges product and marketing — translating features into customer value, defining ICP and segmentation, building sales enablement assets, and driving adoption. Delegate when you need positioning documents, messaging frameworks, launch plans, competitive analysis, ICP definitions, sales battlecards, or pricing strategy. Not for growth experiments, SEO and acquisition channels (use ai-growth-engineer) or investor pitch narrative (use ai-fundraising-advisor).
 
 ### `product-analyst`
 **Tier**: `standard` · **Capabilities**: read, edit, web  
@@ -254,11 +260,11 @@ Technical Product Manager who owns the product-engineering interface — transla
 **Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: AI strategy docs, competitive analysis, 3-year roadmaps
 
-AI Strategy Engineer who defines organizational AI strategy, identifies AI opportunities, builds AI transformation roadmaps, evaluates competitive AI landscape, and aligns AI initiatives with business goals. Delegate when you need AI strategy documents, opportunity assessments, build-vs-buy analysis, AI maturity models, executive presentations, or technology horizon planning.
+AI Strategy Engineer who defines organizational AI strategy, identifies AI opportunities, builds AI transformation roadmaps, evaluates competitive AI landscape, and aligns AI initiatives with business goals. Delegate when you need AI strategy documents, opportunity assessments, build-vs-buy analysis, AI maturity models, executive presentations, or technology horizon planning. Not for the product roadmap and PRDs (use ai-product-manager) or engineering organization decisions (use cto-advisor).
 
 ---
 
-## Data & AI (6)
+## Data & AI (7)
 
 ### `ai-data-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
@@ -282,7 +288,7 @@ Analytics & Insights Agent who transforms data into actionable business intellig
 **Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Deep domain knowledge and expert validation
 
-Domain Expert who provides deep subject matter knowledge in a specified field to guide AI system design, validate outputs, create domain-specific training data, and ensure AI solutions are accurate and contextually appropriate. Delegate when you need domain validation, specialized knowledge injection, expert review of AI outputs, or domain-specific data creation.
+Domain Expert who provides deep subject matter knowledge in a specified field to guide AI system design, validate outputs, create domain-specific training data, and ensure AI solutions are accurate and contextually appropriate. Delegate when you need domain validation, specialized knowledge injection, expert review of AI outputs, or domain-specific data creation. For regulated verticals, pair with ai-legal-engineer (health, finance, legal, education rules).
 
 ### `ai-prompt-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
@@ -296,30 +302,64 @@ Prompt Engineer who designs, tests, optimizes, and manages prompts for LLMs to r
 
 AI Research Engineer who bridges cutting-edge AI research and production engineering — implementing novel techniques from papers, running experiments, benchmarking models, and advancing the state of AI within the organization. Delegate for paper implementation, research experiments, model evaluation, novel technique exploration, and translating research into production.
 
+### `ai-model-training-engineer`
+**Tier**: `deep` · **Capabilities**: read, edit, shell, web  
+**Best for**: Fine-tuning, post-training (DPO/RL), distillation, pretraining, GPU compute plans
+
+Model Training Engineer who builds and improves models themselves — fine-tuning (SFT, LoRA/QLoRA), preference and RL post-training (DPO, GRPO-style RL, RLHF), distillation, continued pretraining, and pretraining from scratch on GPU clusters. Delegate when you need to decide whether to train at all, build a training dataset, run a fine-tune or post-training job, plan GPU compute, or evaluate a trained model. Not for prompting or RAG on existing models (use ai-engineer or ai-prompt-engineer).
+
+---
+
+## AI Modalities (4)
+
+### `ai-voice-engineer`
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
+**Best for**: Real-time voice agents, phone bots, STT/TTS, latency and turn-taking
+
+Voice AI Engineer who builds real-time voice agents and speech products — streaming speech-to-text, LLM turn-taking, text-to-speech, telephony and WebRTC. Delegate when you need a voice agent, phone bot, voice interface, latency budget for spoken conversation, interruption handling, or speech model selection. Not for general LLM features without audio (use ai-engineer).
+
+### `ai-vision-engineer`
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
+**Best for**: Detection, segmentation, document AI, vision-language models, edge vision
+
+Computer Vision & Multimodal Engineer who builds products that understand images, video and documents — detection, segmentation, OCR and document AI, visual search, and vision-language models. Delegate when you need to choose between a VLM API and a trained model, build a labeling and training loop, deploy vision on edge devices, or process video at scale. Not for image/video generation (use ai-generative-media-engineer).
+
+### `ai-generative-media-engineer`
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
+**Best for**: Image, video and audio generation, style fine-tuning, GPU serving, content safety
+
+Generative Media Engineer who builds products that create images, video, audio and 3D — diffusion and video model pipelines, LoRA and style fine-tuning, controllable generation, GPU serving, and content safety and provenance. Delegate when you need a generation pipeline, consistent characters or brand styles, GPU cost per generation, moderation, or C2PA content credentials. Not for analyzing images (use ai-vision-engineer) or voice agents (use ai-voice-engineer).
+
+### `ai-robotics-engineer`
+**Tier**: `deep` · **Capabilities**: read, edit, shell, web  
+**Best for**: ROS 2, simulation and sim-to-real, imitation learning, VLA policies, robot safety
+
+Robotics & Embodied AI Engineer who builds robots and physical AI systems — perception-to-action pipelines, ROS 2, simulation and sim-to-real, imitation learning and vision-language-action models, and real-time safety. Delegate when you need a robot software architecture, a simulation or data-collection strategy, policy learning, edge compute choices, or functional safety planning. Not for pure vision without actuation (use ai-vision-engineer).
+
 ---
 
 ## Growth (4)
 
 ### `ai-finance-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, shell, web  
-**Best for**: LLM cost reduction, unit economics, ROI analysis
+**Best for**: Runway and burn, financial models, AI gross margin, GPU/LLM spend, credits
 
-AI Finance & Cost Optimization specialist who manages AI infrastructure costs, builds financial models for AI products, optimizes token and compute spend, and ensures AI investments deliver measurable ROI. Delegate for AI cost modeling, cloud spend optimization, unit economics, budget planning, token cost reduction, and AI ROI analysis.
+AI Finance & Startup Finance specialist — runway and burn, financial models, AI unit economics and gross margin after inference, GPU and LLM spend, cloud credit programs, and pricing economics. Delegate for runway planning, financial models for fundraising, unit economics, cost-to-serve, cloud and token cost reduction, budget planning, and AI ROI analysis. Not for the fundraising process itself (use ai-fundraising-advisor).
 
 ### `ai-sales-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, web  
-**Best for**: Sales playbooks, demo scripts, churn reduction
+**Best for**: Founder-led and enterprise AI sales, pilots that convert, security reviews, retention
 
-AI Sales & Customer Success specialist who uses AI to accelerate deals, improve customer onboarding, drive product adoption, and maximize retention and expansion revenue. Delegate for sales enablement, demo scripting, customer success playbooks, QBR preparation, churn analysis, expansion strategies, and AI-powered CRM workflows.
+AI Sales & Customer Success specialist for AI startups — founder-led sales, ICP and outbound, enterprise AI deals (security reviews, AI governance questions, procurement, pilots that convert), demos, onboarding, adoption, retention and expansion. Delegate for sales playbooks, demo scripts, pilot design, security questionnaires, customer success playbooks, QBRs, churn analysis, and CRM workflows. Not for positioning and launch messaging (use product-marketing-manager).
 
 ### `ai-growth-engineer`
 **Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Content strategy, SEO, AI-powered growth experiments
 
-AI Growth & Marketing specialist who uses AI to accelerate acquisition, engagement, and retention — including AI-powered content creation, campaign optimization, personalization, SEO, and growth experimentation. Delegate for AI-driven marketing strategies, content generation, campaign planning, growth experiments, SEO optimization, and marketing automation workflows.
+AI Growth & Marketing specialist who uses AI to accelerate acquisition, engagement, and retention — including AI-powered content creation, campaign optimization, personalization, SEO, and growth experimentation. Delegate for AI-driven marketing strategies, content generation, campaign planning, growth experiments, SEO optimization, and marketing automation workflows. Not for positioning, messaging and launch plans (use product-marketing-manager).
 
 ### `developer-advocate`
-**Tier**: `deep` · **Capabilities**: read, edit, web  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: DevRel, DX, community, technical content
 
 Developer Advocate who owns developer relations — community building, technical content, open source strategy, SDK evangelism, conference talks, technical blog posts, and developer experience feedback loops. Delegate when you need a developer community strategy, technical blog post, conference talk outline, OSS contribution guidelines, SDK adoption content, or developer feedback synthesis.
@@ -338,7 +378,7 @@ Technical Writer and Documentation Engineer who creates all forms of technical c
 **Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: WCAG 2.2, screen readers, keyboard nav, ARIA patterns
 
-Audit and fix accessibility issues — WCAG 2.2 compliance, screen reader support, keyboard navigation, color contrast, ARIA patterns, and inclusive design for web and mobile.
+Audit and fix accessibility issues — WCAG 2.2 compliance, screen reader support, keyboard navigation, color contrast, ARIA patterns, and inclusive design for web and mobile. Delegate when you need a WCAG audit, accessible component patterns, screen reader or keyboard support, or accessibility in AI chat and voice interfaces.
 
 ### `content-designer`
 **Tier**: `standard` · **Capabilities**: read, edit, web  
@@ -373,55 +413,55 @@ Legal & Compliance Agent specializing in AI law, data privacy, intellectual prop
 ## Team Coordinators (9)
 
 ### `team-leadership`
-**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
-**Delegates to**: founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator
+**Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
+**Delegates to**: founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator, ai-fundraising-advisor
 
-Leadership & Program Management team coordinator. Handles company strategy, cross-team coordination, OKR tracking, sprint planning, and executive decision-making. Delegates to: founder (strategy), cto-advisor (tech leadership), ai-orchestrator (multi-agent coordination), technical-program-manager (cross-team programs), engineering-manager (delivery). Use when you need leadership-level decisions, program oversight, or company-wide coordination.
+Leadership & Program Management team coordinator. Handles company strategy, cross-team coordination, OKR tracking, sprint planning, and executive decision-making. Delegates to: founder (strategy), ai-fundraising-advisor (fundraising/investors), cto-advisor (tech leadership), ai-orchestrator (multi-agent coordination), technical-program-manager (cross-team programs), engineering-manager (delivery). Use when you need leadership-level decisions, program oversight, or company-wide coordination.
 
 ### `team-architecture`
-**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
+**Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-architect, cloud-architect, data-architect, integration-architect, security-architect, software-architect, staff-engineer
 
 Architecture team coordinator. Covers all architectural domains — AI/ML systems, application design, security, data strategy, integration patterns, cloud infrastructure, and engineering standards. Delegates to 7 specialist architects. Use when you need architectural decisions, design reviews, NFR definitions, compliance architecture, or technical standards.
 
 ### `team-engineering`
-**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
-**Delegates to**: All 12 engineering specialists
+**Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
+**Delegates to**: The engineering and AI modality specialists (voice, vision, generative media, robotics)
 
-Engineering team coordinator. 11 specialist engineers covering AI, frontend, backend, fullstack, mobile, database, API design, agents, DevOps, QA, and general software engineering. Use when you need to build features, write code, set up CI/CD, design APIs, build mobile apps, or run tests.
+Engineering team coordinator. Specialist engineers covering AI, voice, vision, generative media, robotics, frontend, backend, fullstack, mobile, database, API design, agents, DevOps, QA, performance, accessibility, and general software engineering. Use when you need to build features, write code, set up CI/CD, design APIs, build mobile apps, or run tests.
 
 ### `team-platform`
-**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
+**Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager
 
 Platform & Operations team coordinator. Owns production reliability, ML infrastructure, release management, model serving, and performance. Delegates to: site-reliability-engineer (SLOs/incidents/observability), ml-engineer (training pipelines/feature stores/model serving), release-manager (versioning/changelogs/hotfix), ai-platform-engineer (GPU infra/MLOps platform), ai-performance-engineer (latency/throughput). Use for production incidents, reliability work, MLOps, releases, and infrastructure performance.
 
 ### `team-product`
-**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
+**Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: All 8 product specialists
 
 Product team coordinator. Covers the full product development cycle — strategy, research, design, and go-to-market. Delegates to 8 specialists: ai-product-manager, technical-product-manager, ux-researcher, product-designer, ai-ux-designer, product-marketing-manager, product-analyst, ai-strategy-engineer. Use when you need product decisions, user research, design work, GTM strategy, or product analytics.
 
 ### `team-data-ai`
-**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
-**Delegates to**: All 6 data & AI specialists
+**Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
+**Delegates to**: All 7 data & AI specialists
 
-Data & AI team coordinator. Covers data engineering, data science, prompt engineering, analytics, AI research, and domain expertise. Delegates to: ai-data-engineer (pipelines/warehouses), ai-data-scientist (ML models/experiments), ai-prompt-engineer (prompt optimization), ai-analytics-engineer (dashboards/BI), ai-research-engineer (paper implementation/benchmarking), ai-domain-expert (subject matter expertise). Use for data pipelines, ML models, analytics, prompt work, or research tasks.
+Data & AI team coordinator. Covers data engineering, data science, prompt engineering, analytics, AI research, and domain expertise. Delegates to: ai-data-engineer (pipelines/warehouses), ai-data-scientist (ML models/experiments), ai-prompt-engineer (prompt optimization), ai-analytics-engineer (dashboards/BI), ai-research-engineer (paper implementation/benchmarking), ai-model-training-engineer (fine-tuning/post-training/pretraining), ai-domain-expert (subject matter expertise). Use for data pipelines, ML models, analytics, prompt work, or research tasks.
 
 ### `team-growth`
-**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
+**Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-finance-engineer, ai-sales-engineer, ai-growth-engineer, developer-advocate
 
 Growth & Business team coordinator. Covers growth engineering, cost optimization, sales enablement, and developer relations. Delegates to: ai-growth-engineer (acquisition/SEO/campaigns), ai-finance-engineer (LLM costs/FinOps/token optimization), ai-sales-engineer (demos/sales enablement/customer success), developer-advocate (DevRel/OSS/community/technical content). Use for growth strategies, marketing campaigns, cost reduction, sales assets, or developer community work.
 
 ### `team-knowledge`
-**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
+**Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-technical-writer, ai-accessibility-engineer, content-designer
 
 Knowledge & Content team coordinator. Owns all documentation, content design, and accessibility. Delegates to: ai-technical-writer (API docs/runbooks/user guides/SOPs/ADRs), content-designer (UI microcopy/error messages/onboarding copy/voice & tone), ai-accessibility-engineer (WCAG compliance/screen readers/inclusive design). Use when you need documentation written, UI copy designed, accessibility audited, or a knowledge base built.
 
 ### `team-safety`
-**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
+**Tier**: `standard` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-security-engineer, ai-responsible-engineer, ai-legal-engineer
 
 Safety, Security & Compliance team coordinator. Covers AI safety, security engineering, and legal/regulatory compliance. Delegates to: ai-responsible-engineer (bias/fairness/explainability), ai-security-engineer (threat modeling/vulnerability scanning/pentesting), ai-legal-engineer (GDPR/HIPAA/contracts/regulatory). Use for security reviews, compliance audits, bias assessments, threat modeling, or legal review of AI systems.

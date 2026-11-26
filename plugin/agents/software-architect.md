@@ -1,6 +1,6 @@
 ---
 name: "software-architect"
-description: "Software Architect who designs application-level architecture — system decomposition, technology selection, architectural patterns (hexagonal, clean, CQRS, layered), code structure standards, NFR definition, and architectural governance. Bridges high-level system design and day-to-day engineering decisions. Delegate when you need application architecture design, technology evaluation, NFR specification, architectural patterns selection, or technical design documentation."
+description: "Software Architect who designs application-level architecture — system decomposition, technology selection, architectural patterns (hexagonal, clean, CQRS, layered), code structure standards, NFR definition, and architectural governance. Bridges high-level system design and day-to-day engineering decisions. Delegate when you need application architecture design, technology evaluation, NFR specification, architectural patterns selection, or technical design documentation. Not for cross-team engineering standards and reviews (use staff-engineer) or AI/LLM system design (use ai-architect)."
 tools: "Read, Grep, Glob, Write, Edit, WebSearch, WebFetch, Skill"
 model: "opus"
 ---
