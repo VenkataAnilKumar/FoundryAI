@@ -22,7 +22,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 TIERS = {"deep", "standard", "fast"}
 CAPABILITIES = {"read", "edit", "shell", "web", "delegate"}
 NON_AGENT_FILES = {"README.md", "WORKFLOWS.md"}
-REFERENCE_ALLOWLIST = {"CONTRIBUTING.md", "CHANGELOG.md"}  # mention hypothetical agents on purpose
+REFERENCE_ALLOWLIST = {"CONTRIBUTING.md", "CHANGELOG.md", "launch.md"}  # mention hypothetical agents or GitHub topics on purpose
 SKILL_NAME = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 try:
@@ -125,7 +125,7 @@ ref_patterns = [
     re.compile(r"\b((?:ai|team)-[a-z0-9]+(?:-[a-z0-9]+)*-" + role + r")\b"),
     re.compile(r"\b(team-(?:leadership|architecture|engineering|platform|product|data-ai|growth|knowledge|safety|manager))\b"),
 ]
-scan = [ROOT / "README.md", ROOT / "INSTALL.md", ROOT / "DEMO.md"]
+scan = [ROOT / "README.md", ROOT / "INSTALL.md"]
 scan += sorted((ROOT / "agents").rglob("*.md")) + sorted((ROOT / "skills").glob("*/SKILL.md"))
 for d in ("templates", "docs"):
     scan += sorted((ROOT / d).glob("*.md"))
@@ -162,7 +162,7 @@ expect_count("README.md", readme, r"badge/skills-(\d+)", n_skills, "skills (badg
 expect_count("README.md", readme, r"## Skills — (\d+)", n_skills, "skills (heading)")
 expect_count("README.md", readme, r"#skills--(\d+)-", n_skills, "skills (anchor)")
 for rel in ("plugin/.claude-plugin/plugin.json", ".claude-plugin/marketplace.json", "plugin/README.md",
-            "INSTALL.md", "DEMO.md", "agents/README.md"):
+            "INSTALL.md", "agents/README.md"):
     p = ROOT / rel
     if p.exists():
         t = p.read_text(encoding="utf-8")
@@ -237,7 +237,7 @@ for f in link_files:
 
 # --- raw.githubusercontent install URLs point at a real branch and file ----------------
 DEFAULT_BRANCH = "master"
-for f in [ROOT / n for n in ("README.md", "INSTALL.md", "DEMO.md", "install.sh", "uninstall.sh")] + [ROOT / "agents" / "README.md"]:
+for f in [ROOT / n for n in ("README.md", "INSTALL.md", "install.sh", "uninstall.sh")] + [ROOT / "agents" / "README.md"]:
     if not f.exists():
         continue
     for m in re.finditer(r"raw\.githubusercontent\.com/VenkataAnilKumar/FoundryAI/([^/\s]+)/([^\s|`'\")]+)", f.read_text(encoding="utf-8")):
@@ -246,6 +246,21 @@ for f in [ROOT / n for n in ("README.md", "INSTALL.md", "DEMO.md", "install.sh",
             err(f, f"raw URL uses branch '{branch}'; the default branch is '{DEFAULT_BRANCH}'")
         if not (ROOT / path).exists():
             err(f, f"raw URL points to '{path}', which is not in the repo")
+
+# --- landing page: agent and skill names in the startup picker exist -------------------
+site = ROOT / "site" / "index.html"
+if site.exists():
+    html = site.read_text(encoding="utf-8")
+    script = html[html.find("<script>"):]
+    for name in sorted(set(re.findall(r'"((?:ai|team)-[a-z0-9-]+|[a-z]+-(?:architect|engineer|manager|advisor|advocate))"', script))):
+        if name not in agents:
+            err("site/index.html", f"names agent '{name}', which does not exist")
+    for name in sorted(set(re.findall(r'"/([a-z][a-z0-9-]+)"', script))):
+        if name not in skills:
+            err("site/index.html", f"names skill '/{name}', which does not exist")
+    for tpl in sorted(set(re.findall(r'tpl:"([^"]+)"', script))):
+        if not (ROOT / "templates" / tpl).exists():
+            err("site/index.html", f"links template '{tpl}', which does not exist")
 
 # --- project templates --------------------------------------------------------
 for t in sorted((ROOT / "templates").glob("AGENTS*.md")):

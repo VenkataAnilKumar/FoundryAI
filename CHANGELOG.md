@@ -2,6 +2,20 @@
 
 All notable changes to Founders Kit. Versions follow the plugin version in `plugin/.claude-plugin/plugin.json`.
 
+## [3.5.0] — 2026-11-26
+
+### Added
+- **Real demo** replaces the animated SVG.
+  - `assets/demo.gif` / `demo.mp4` / `demo.cast` record a genuine one-line install from GitHub, then a live, unedited answer from the `founder` agent in Claude Code.
+  - The recording is reproducible with `scripts/demo/record.sh`. `scripts/demo/README.md` lists exactly what's adjusted: typing pace, a compressed wait, and Markdown rendering.
+- **Landing page** (`site/index.html`), deployed to GitHub Pages by `.github/workflows/pages.yml`: real demo video, install command, an interactive "Pick your AI startup" guide, workspaces, FAQ.
+- **Social preview image** (`assets/social-preview.png`) and Open Graph tags.
+- **Launch kit** (`docs/launch.md`): one-time GitHub setup, ready-to-post copy for Hacker News, Reddit, X, LinkedIn and Product Hunt, article ideas, curated-list outreach, and how to keep momentum.
+- Validator check that the landing page only names agents, skills and templates that exist.
+
+### Removed
+- `demo.svg` (the scripted animation) and `DEMO.md` (manual recording instructions), replaced by the real recording and `scripts/demo/`.
+
 ## [3.4.0] — 2026-11-26
 
 ### Changed

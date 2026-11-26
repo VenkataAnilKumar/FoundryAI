@@ -9,7 +9,12 @@
 [![Skills](https://img.shields.io/badge/skills-54-orange)](#skills--54-skills)
 [![Workspaces](https://img.shields.io/badge/workspaces-Claude%20%C2%B7%20Cursor%20%C2%B7%20Copilot%20%C2%B7%20Codex%20%C2%B7%20Gemini-blue)](#works-in-any-ai-workspace)
 
-![FoundryAI Demo](demo.svg)
+<p align="center">
+  <img src="assets/demo.gif" alt="FoundryAI demo: one-line install, then the founder agent gives a voice AI startup a concrete plan for the week" width="100%">
+</p>
+<p align="center"><sub><b>Real recording, not an animation:</b> a fresh one-line install from GitHub, then a live answer from the <code>founder</code> agent in Claude Code (wait time sped up). <a href="assets/demo.mp4">MP4</a> · <a href="scripts/demo/README.md">how it was recorded</a></sub></p>
+
+**[Website](https://venkataanilkumar.github.io/FoundryAI/) · [Install](#quick-start) · [Pick your startup](https://venkataanilkumar.github.io/FoundryAI/#startups) · [Docs](docs/routing.md)**
 
 An AI startup needs architects, engineers, product people, growth, security, legal and fundraising help long before it can hire them. FoundryAI gives you that team as specialist agents and reusable skills, inside the AI workspace you already use.
 
@@ -538,6 +543,10 @@ Cursor and VS Code also read Claude Code's folders (`~/.claude/agents`, `~/.clau
 Re-run the installer — it migrates old slash commands to skills and backs up anything you changed. See [CHANGELOG.md](CHANGELOG.md) for what changed.
 
 ---
+
+## Support the project
+
+If FoundryAI saves you time, **[give it a ⭐ on GitHub](https://github.com/VenkataAnilKumar/FoundryAI)**. It helps other founders find it. Share what you built in Discussions, and tell us which agent you'd add next.
 
 ## Contributing
 
