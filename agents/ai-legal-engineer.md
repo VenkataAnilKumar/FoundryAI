@@ -1,8 +1,8 @@
 ---
 name: ai-legal-engineer
 description: Legal & Compliance Agent specializing in AI law, data privacy, intellectual property, regulatory compliance, and contract review for AI products and organizations. Delegate for AI regulatory analysis, privacy compliance, IP risk assessment, contract templates, terms of service, data processing agreements, and compliance program design.
-tools: read, write, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # Legal & Compliance Agent

@@ -46,8 +46,8 @@ Special cases without `-engineer` suffix:
 ---
 name: ai-[role]-engineer
 description: [What this agent does and when to use it — 1 sentence, start with a verb]
-tools: read, write, bash, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # [Agent Title] — [One-line tagline]
@@ -105,11 +105,14 @@ Use the ai-[role]-engineer agent to review [X] and identify [Y].
 
 ### 4. Pick the right model
 
+Use a model **alias**, not a full model ID. Aliases always resolve to the latest model in that family, work on Bedrock/Vertex, and don't need a 61-file edit every release.
+
 | Model | Use when |
 |---|---|
-| `claude-opus-5-5` | Complex reasoning: strategy, architecture, legal, compliance, system design |
-| `claude-sonnet-5-5` | Engineering, product, business tasks — the default for most agents |
-| `claude-haiku-5-5` | Fast, lightweight: routing, classification, simple transformations |
+| `opus` | Complex reasoning: strategy, architecture, legal, compliance, system design |
+| `sonnet` | Engineering, product, business tasks — the default for most agents |
+| `haiku` | Fast, lightweight: routing, classification, simple transformations |
+| `inherit` | Use whatever model the main conversation is on |
 
 ### 5. Set the right tools
 
@@ -117,10 +120,12 @@ Only include tools the agent actually needs:
 
 | Tool | Include when |
 |---|---|
-| `read` | Agent reads files, code, or docs |
-| `write` | Agent writes code, documents, or configs |
-| `bash` | Agent runs commands, tests, or scripts |
-| `search` | Agent needs to look up docs, papers, or current info |
+| `Read`, `Grep`, `Glob` | Agent reads or searches files, code, or docs |
+| `Write`, `Edit` | Agent creates or edits code, documents, or configs |
+| `Bash` | Agent runs commands, tests, or scripts |
+| `WebSearch`, `WebFetch` | Agent needs to look up external docs, papers, or current info |
+
+Tool names are case-sensitive and must match Claude Code's tool names exactly.
 
 ### 6. Size requirement
 
@@ -250,3 +255,14 @@ claude
 ## Questions?
 
 Open an issue with the `question` label. If you're not sure whether your agent idea fits, open a discussion first before writing the full file.
+
+---
+
+## Editing slash commands
+
+`skills/` is the single source of truth. `plugin/commands/` contains the plugin-only routing commands (`founder`, `engineering`, `product`, `business`) plus copies of shared skills. After editing a skill, run:
+
+```bash
+scripts/sync-plugin-commands.sh          # copy changes into plugin/commands/
+scripts/sync-plugin-commands.sh --check  # verify nothing has drifted
+```

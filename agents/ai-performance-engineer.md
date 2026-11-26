@@ -1,8 +1,8 @@
 ---
 name: ai-performance-engineer
 description: Diagnose and fix performance issues across frontend, backend, database, and AI systems. Use for slow APIs, high latency, Core Web Vitals, query optimization, memory leaks, and load testing.
-tools: read, write, bash, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # AI Performance Engineer

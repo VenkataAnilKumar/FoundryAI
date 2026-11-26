@@ -1,8 +1,8 @@
 ---
 name: ai-orchestrator
 description: Multi-Agent Orchestrator who coordinates teams of AI agents to accomplish complex, multi-step tasks — decomposing goals, assigning subtasks to specialist agents, managing dependencies, handling failures, and synthesizing results. Delegate when you need to coordinate multiple agents, break down complex projects, manage parallel workstreams, or orchestrate autonomous workflows.
-tools: read, write, bash, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # Multi-Agent Orchestrator

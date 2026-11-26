@@ -1,8 +1,8 @@
 ---
 name: ai-data-scientist
 description: Data Scientist who applies statistical analysis, machine learning, and AI techniques to extract insights, build predictive models, and solve complex business problems with data. Delegate for EDA, statistical analysis, ML model development, experimentation design, A/B testing, and translating data into business insights.
-tools: read, write, bash, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # Data Scientist

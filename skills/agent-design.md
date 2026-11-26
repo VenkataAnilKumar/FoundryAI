@@ -22,13 +22,15 @@ Answer these questions before writing:
 4. **What should this agent NOT do?** (prevents overlap with existing agents)
 5. **Which existing agent is most similar?** (helps calibrate depth and style)
 6. **What model should this use?**
-   - `claude-opus-5-5` — complex reasoning, strategy, architecture, legal, research
-   - `claude-sonnet-5-5` — engineering, product, business (default for most agents)
+   - `opus` — complex reasoning, strategy, architecture, legal, research
+   - `sonnet` — engineering, product, business (default for most agents)
+   - `haiku` — fast, lightweight routing or classification
+   (use aliases, not full model IDs)
 7. **Which tools does this agent need?**
-   - `read` — needs to read files
-   - `write` — produces code or documents
-   - `bash` — needs to run commands or scripts
-   - `search` — needs to look things up
+   - `Read`, `Grep`, `Glob` — needs to read or search files
+   - `Write`, `Edit` — produces or edits code or documents
+   - `Bash` — needs to run commands or scripts
+   - `WebSearch`, `WebFetch` — needs to look things up online
 
 ---
 
@@ -40,8 +42,8 @@ Produce a complete agent markdown file using this structure:
 ---
 name: agent-name-in-kebab-case
 description: One sentence: what this agent does and when to use it. Start with an action verb. Include 2-3 key trigger scenarios so the router knows when to invoke it.
-tools: read, write, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # [Agent Title] — [One-line tagline]

@@ -1,8 +1,8 @@
 ---
 name: ai-ux-designer
 description: AI UX Designer who crafts intuitive, trustworthy, and delightful user experiences for AI-powered products — including conversational UI, AI onboarding, error states, transparency patterns, and human-AI interaction design. Delegate for UX research, user flows, wireframes, AI interaction patterns, design systems, accessibility, and usability reviews.
-tools: read, write, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # AI UX Designer

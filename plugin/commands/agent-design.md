@@ -22,13 +22,15 @@ Answer these questions before writing:
 4. **What should this agent NOT do?** (prevents overlap with existing agents)
 5. **Which existing agent is most similar?** (helps calibrate depth and style)
 6. **What model should this use?**
-   - `claude-opus-5-5` — complex reasoning, strategy, architecture, legal, research
-   - `claude-sonnet-5-5` — engineering, product, business (default for most agents)
+   - `opus` — complex reasoning, strategy, architecture, legal, research
+   - `sonnet` — engineering, product, business (default for most agents)
+   - `haiku` — fast, lightweight routing or classification
+   (use aliases, not full model IDs)
 7. **Which tools does this agent need?**
-   - `read` — needs to read files
-   - `write` — produces code or documents
-   - `bash` — needs to run commands or scripts
-   - `search` — needs to look things up
+   - `Read`, `Grep`, `Glob` — needs to read or search files
+   - `Write`, `Edit` — produces or edits code or documents
+   - `Bash` — needs to run commands or scripts
+   - `WebSearch`, `WebFetch` — needs to look things up online
 
 ---
 
@@ -40,8 +42,8 @@ Produce a complete agent markdown file using this structure:
 ---
 name: agent-name-in-kebab-case
 description: One sentence: what this agent does and when to use it. Start with an action verb. Include 2-3 key trigger scenarios so the router knows when to invoke it.
-tools: read, write, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # [Agent Title] — [One-line tagline]
@@ -130,7 +132,11 @@ After producing the agent file, provide:
 
 1. The file name to use: `[agent-name].md`
 2. Where to save it: `~/.claude/agents/[agent-name].md`
-3. How to add it to the routing table in the existing agents (which command file to update)
+3. Which routing tables to update:
+   - `~/.claude/agents/CLAUDE.md` — add to the appropriate team section
+   - `plugin/commands/founder.md` — add to the right domain table
+   - `plugin/commands/engineering.md` / `product.md` / `business.md` — whichever domain fits
+   - Add to the relevant `team-*.md` coordinator's member list so team workflows include it
 4. A one-line test invocation to verify it works
 
 ---

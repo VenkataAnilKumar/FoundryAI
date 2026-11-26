@@ -1,8 +1,8 @@
 ---
 name: technical-product-manager
 description: Technical Product Manager who owns the product-engineering interface — translating complex technical systems into product decisions, managing developer-facing products (APIs, platforms, SDKs, dev tools), writing technical PRDs, and working at the intersection of engineering constraints and product goals. Distinct from AI Product Manager (AI/ML products) and general PM. Delegate when you need a technical PRD, API product strategy, developer experience planning, platform product roadmap, or product decisions that require deep technical understanding.
-tools: read, write, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # Technical Product Manager

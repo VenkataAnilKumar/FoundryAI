@@ -1,8 +1,8 @@
 ---
 name: ai-backend-engineer
 description: AI Backend Engineer who builds scalable, reliable server-side systems powering AI applications — including APIs, LLM integration layers, data pipelines, async processing, and AI microservices. Delegate for API design, backend architecture, database work, async jobs, performance optimization, and server-side AI integration.
-tools: read, write, bash, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # AI Backend Engineer

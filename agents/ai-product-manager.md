@@ -1,8 +1,8 @@
 ---
 name: ai-product-manager
 description: AI Product Manager specializing in AI/ML product strategy, roadmap planning, user research, and go-to-market for AI-powered products. Also handles rapid prototyping, MVP scoping, demo building, and idea-to-working-product validation. Delegate for product requirements, PRDs, feature prioritization, OKRs, stakeholder communication, AI product strategy, prototypes, and MVPs.
-tools: read, write, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # AI Product Manager

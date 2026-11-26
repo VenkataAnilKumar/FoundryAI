@@ -1,8 +1,8 @@
 ---
 name: team-data-ai
 description: Data & AI team coordinator. Covers data engineering, data science, prompt engineering, analytics, AI research, and domain expertise. Delegates to: ai-data-engineer (pipelines/warehouses), ai-data-scientist (ML models/experiments), ai-prompt-engineer (prompt optimization), ai-analytics-engineer (dashboards/BI), ai-research-engineer (paper implementation/benchmarking), ai-domain-expert (subject matter expertise). Use for data pipelines, ML models, analytics, prompt work, or research tasks.
-tools: read, write, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # Data & AI Team

@@ -1,8 +1,8 @@
 ---
 name: ai-architect
 description: AI Solutions Architect who designs end-to-end AI system architectures including AI System Design, Generative AI System Design, ML System Design, and AI Agentic & Autonomous System Design. Selects models and infrastructure, defines MLOps/LLMOps pipelines, and ensures scalability, reliability, and security. Delegate when you need system design, architecture decisions, infrastructure planning, technology selection, multi-agent orchestration, or GenAI/RAG/agentic workflow architecture.
-tools: read, write, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # AI Architect

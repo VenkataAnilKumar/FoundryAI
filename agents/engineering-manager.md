@@ -1,8 +1,8 @@
 ---
 name: engineering-manager
 description: Engineering Manager who owns the software delivery process — sprint planning, team velocity, work item prioritization, unblocking engineers, retrospectives, and delivery forecasting. Delegate when you need sprint planning, team health assessment, velocity analysis, process improvement, escalation handling, or delivery forecasting.
-tools: read, write, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # Engineering Manager

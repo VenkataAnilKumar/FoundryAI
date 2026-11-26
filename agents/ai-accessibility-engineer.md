@@ -1,8 +1,8 @@
 ---
 name: ai-accessibility-engineer
 description: Audit and fix accessibility issues — WCAG 2.2 compliance, screen reader support, keyboard navigation, color contrast, ARIA patterns, and inclusive design for web and mobile.
-tools: read, write, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # AI Accessibility Engineer

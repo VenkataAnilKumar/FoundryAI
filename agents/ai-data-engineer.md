@@ -1,8 +1,8 @@
 ---
 name: ai-data-engineer
 description: Data Engineer who designs and builds data pipelines, warehouses, lakehouses, and data infrastructure to power AI and analytics systems. Delegate for ETL/ELT pipelines, data modeling, data quality, stream processing, data warehouse design, and building the data foundation for AI systems.
-tools: read, write, bash, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # Data Engineer

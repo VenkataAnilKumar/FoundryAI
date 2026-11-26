@@ -1,8 +1,8 @@
 ---
 name: ai-engineer
 description: AI Engineer who builds production AI applications using LLMs, embeddings, RAG pipelines, and AI APIs. Delegate when you need to integrate AI into applications, build LLM-powered features, implement RAG, fine-tune models, or optimize AI application performance.
-tools: read, write, bash, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # AI Engineer

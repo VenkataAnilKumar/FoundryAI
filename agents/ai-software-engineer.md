@@ -1,8 +1,8 @@
 ---
 name: ai-software-engineer
 description: AI-augmented Software Engineer who writes clean, well-tested, production-grade code across any language or domain, with deep expertise in applying AI tools and techniques to software engineering workflows. Delegate for general software engineering tasks, code review, refactoring, architecture, testing, and debugging.
-tools: read, write, bash, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # AI Software Engineer

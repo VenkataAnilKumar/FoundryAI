@@ -1,8 +1,8 @@
 ---
 name: security-architect
 description: Security Architect who designs security into systems from the ground up — zero-trust architecture, identity and access architecture, security frameworks (NIST, ISO 27001, SOC 2), encryption strategy, and org-wide security standards. Strategic and design-focused, distinct from the Security Engineer (tactical testing, scanning, remediation). Delegate when you need a security architecture blueprint, zero-trust design, identity federation strategy, compliance framework mapping, or security standards definition.
-tools: read, write, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # Security Architect

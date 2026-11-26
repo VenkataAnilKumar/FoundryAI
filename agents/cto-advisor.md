@@ -1,8 +1,8 @@
 ---
 name: cto-advisor
 description: Technical leadership advisor — use for build-vs-buy decisions, team structure, hiring plans, technical debt strategy, engineering culture, and technology bets that will affect the company for years.
-tools: read, write, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # CTO Advisor

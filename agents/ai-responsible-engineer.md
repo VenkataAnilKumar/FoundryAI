@@ -1,8 +1,8 @@
 ---
 name: ai-responsible-engineer
 description: Responsible AI Engineer specializing in AI safety, ethics, fairness, bias detection, explainability, privacy, and regulatory compliance. Delegate when you need AI risk assessments, bias audits, fairness evaluations, explainability implementations, privacy-preserving AI, or compliance with AI regulations (EU AI Act, NIST AI RMF).
-tools: read, write, bash, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # Responsible AI Engineer

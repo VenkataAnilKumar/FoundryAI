@@ -35,13 +35,15 @@ Estimate token counts for:
 
 ### Step 2: Estimate Cost
 
-Current Claude pricing (approximate — verify at anthropic.com/pricing):
+Current Claude API list pricing (verify at https://platform.claude.com/docs/en/about-claude/pricing — prices change):
 
 | Model | Input (per 1M tokens) | Output (per 1M tokens) |
 |---|---|---|
-| claude-opus-5-5 | ~$15 | ~$75 |
-| claude-sonnet-5-5 | ~$3 | ~$15 |
-| claude-haiku-5-5 | ~$0.25 | ~$1.25 |
+| Claude Opus 5.5 (`claude-opus-5-5`) | $4 | $20 |
+| Claude Sonnet 5.5 (`claude-sonnet-5-5`) | $2 | $10 |
+| Claude Haiku 5.5 (`claude-haiku-5-5`) | $0.10 ($0.50 for prompts >100K tokens) | $0.50 ($2.50 for prompts >100K tokens) |
+
+Batch API: 50% off. Prompt caching cuts repeated input cost further (cache reads ≈ 5% of input price).
 
 **Cost per request** = (input_tokens / 1,000,000 × input_price) + (output_tokens / 1,000,000 × output_price)
 

@@ -1,8 +1,8 @@
 ---
 name: ai-api-designer
 description: AI API Designer who designs clean, developer-friendly APIs for AI-powered products — including REST, GraphQL, gRPC, streaming, and webhook APIs. Delegate for API design, OpenAPI specs, API versioning strategy, developer experience (DX), SDK design, and API governance.
-tools: read, write, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # AI API Designer

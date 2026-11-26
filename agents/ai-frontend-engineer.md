@@ -1,8 +1,8 @@
 ---
 name: ai-frontend-engineer
 description: AI Frontend Engineer who builds beautiful, performant, accessible UIs for AI-powered products including chat interfaces, streaming responses, AI dashboards, and interactive AI experiences. Delegate for all frontend work, UI components, design systems, AI UX patterns, and client-side AI integration.
-tools: read, write, bash, search
-model: claude-sonnet-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: sonnet
 ---
 
 # AI Frontend Engineer

@@ -1,8 +1,8 @@
 ---
 name: team-knowledge
 description: Knowledge & Content team coordinator. Owns all documentation, content design, and accessibility. Delegates to: ai-technical-writer (API docs/runbooks/user guides/SOPs/ADRs), content-designer (UI microcopy/error messages/onboarding copy/voice & tone), ai-accessibility-engineer (WCAG compliance/screen readers/inclusive design). Use when you need documentation written, UI copy designed, accessibility audited, or a knowledge base built.
-tools: read, write, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # Knowledge & Content Team

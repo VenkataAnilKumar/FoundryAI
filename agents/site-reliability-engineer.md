@@ -1,8 +1,8 @@
 ---
 name: site-reliability-engineer
 description: Site Reliability Engineer who owns production reliability — SLOs/SLIs/error budgets, incident management, on-call runbooks, chaos engineering, observability, and capacity planning. Delegate when you need reliability targets defined, incident runbooks written, alerting rules designed, postmortems produced, or production health assessed.
-tools: read, write, bash, search
-model: claude-opus-5-5
+tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+model: opus
 ---
 
 # Site Reliability Engineer
