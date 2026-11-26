@@ -2,250 +2,511 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FoundryAI — The AI Startup Team for Any AI Workspace</title>
-<meta name="description" content="58 specialist agents, 9 team coordinators and 54 skills for every kind of AI startup. Works in Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI and chat workspaces. Free and open source.">
-<meta property="og:title" content="FoundryAI — The AI Startup Team for Any AI Workspace">
-<meta property="og:description" content="Architects, engineers, product, growth, security, legal and fundraising specialists — as agents and skills in the AI workspace you already use. Free, MIT.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FoundryAI</title>
+<meta name="description" content="An open-source team of specialist AI agents for AI startups — architecture, engineering, product, security, pricing and fundraising — inside Claude Code, Cursor, Copilot, Codex and Gemini CLI.">
+<meta property="og:title" content="FoundryAI — the AI startup team that knows your stage">
+<meta property="og:description" content="58 specialist agents and 54 skills for every kind of AI startup, in the AI workspace you already use. Open source, MIT.">
 <meta property="og:image" content="https://venkataanilkumar.github.io/FoundryAI/social-preview.png">
 <meta property="og:url" content="https://venkataanilkumar.github.io/FoundryAI/">
-<meta name="twitter:image" content="https://venkataanilkumar.github.io/FoundryAI/social-preview.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="color-scheme" content="dark">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚒️</text></svg>">
+<meta name="twitter:image" content="https://venkataanilkumar.github.io/FoundryAI/social-preview.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314202B'/%3E%3Cpath d='M9 8h14v4H13.5v3.5H21v4h-7.5V25H9z' fill='%23E9EDF1'/%3E%3Ccircle cx='23' cy='22' r='3' fill='%23F0A030'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* Layout: left-aligned editorial column; the one bold element is the hero's Mon–Fri plan board,
+   drawn from a real agent answer. Steel neutrals, molten amber used sparingly. */
 :root{
-  --bg:#11111b; --panel:#1e1e2e; --panel2:#181825; --line:#313244; --text:#cdd6f4; --muted:#9399b2;
-  --accent:#cba6f7; --green:#a6e3a1; --blue:#89b4fa; --yellow:#f9e2af; --pink:#f38ba8; --radius:14px;
+  --bg:#EDF0F2;        /* cold steel paper */
+  --surface:#F8F9FA;   /* raised panels */
+  --ink:#14202B;       /* blue-black, like cooled iron */
+  --ink-2:#3B4954;
+  --muted:#6A7783;
+  --line:#CBD2D8;
+  --line-soft:#DDE2E6;
+  --molten:#F0A030;    /* accent fill: poured metal */
+  --molten-ink:#9A5A06;/* accent as text, readable on light */
+  --molten-wash:#FBE7C6;
+  --slab:#14202B;      /* dark slabs: code, board header */
+  --slab-ink:#E6EBEF;
+  --slab-muted:#8C9AA6;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --text:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E151C;--surface:#152029;--ink:#E3E9EE;--ink-2:#B9C4CD;--muted:#8796A3;--line:#2A3743;--line-soft:#1F2A34;
+    --molten:#F2A63A;--molten-ink:#F6B85C;--molten-wash:#3A2A12;--slab:#070C11;--slab-ink:#E3E9EE;--slab-muted:#7F8E9A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E151C;--surface:#152029;--ink:#E3E9EE;--ink-2:#B9C4CD;--muted:#8796A3;--line:#2A3743;--line-soft:#1F2A34;
+  --molten:#F2A63A;--molten-ink:#F6B85C;--molten-wash:#3A2A12;--slab:#070C11;--slab-ink:#E3E9EE;--slab-muted:#7F8E9A;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:10;background:rgba(17,17,27,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
-.brand{font-weight:800;color:var(--text);font-size:18px;letter-spacing:-.01em}
-.brand span{color:var(--accent)}
-.navlinks{display:flex;gap:22px;align-items:center;font-size:14px}
-.navlinks a{color:var(--muted)} .navlinks a:hover{color:var(--text);text-decoration:none}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .12s,background .12s}
-.btn:hover{text-decoration:none;transform:translateY(-1px)}
-.btn-primary{background:var(--accent);color:#11111b}
-.btn-ghost{border-color:var(--line);color:var(--text);background:var(--panel)}
-header.hero{padding:72px 0 40px;text-align:center}
-.pill{display:inline-block;font-size:13px;color:var(--green);border:1px solid #2f4a35;background:#16241b;padding:4px 12px;border-radius:999px;margin-bottom:20px}
-h1{font-size:clamp(34px,6vw,60px);line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;font-weight:850}
-h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
-.sub{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:760px;margin:0 auto 30px}
-.install{display:flex;align-items:center;gap:10px;max-width:760px;margin:0 auto 18px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 12px 12px 18px;font:14px var(--mono);text-align:left}
-.install code{flex:1;overflow-x:auto;white-space:nowrap;color:var(--text)}
-.install code b{color:var(--green);font-weight:400}
-.copy{flex:none;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font:600 13px var(--sans);cursor:pointer}
-.copy:hover{border-color:var(--accent)}
-.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
-.ws{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px;font-size:13px;color:var(--muted)}
-.ws span{border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--panel2)}
-.demo{margin:36px auto 0;max-width:1000px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45);background:var(--panel)}
-.demo video,.demo img{display:block;width:100%;height:auto}
-.caption{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
-section{padding:72px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(26px,3.6vw,38px);letter-spacing:-.02em;margin:0 0 12px;line-height:1.15}
-.lead{color:var(--muted);max-width:720px;margin:0 0 34px;font-size:18px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.stat b{display:block;font-size:34px;letter-spacing:-.02em;color:var(--text)}
-.stat span{color:var(--muted);font-size:14px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
-.card h3{margin:0 0 6px;font-size:18px}
-.card p{margin:0;color:var(--muted);font-size:15px}
-.picker{display:grid;grid-template-columns:280px 1fr;gap:18px;align-items:start}
-.types{display:flex;flex-direction:column;gap:8px}
-.types button{text-align:left;background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:12px 14px;font:600 15px var(--sans);cursor:pointer}
-.types button[aria-pressed="true"]{border-color:var(--accent);background:#241f33}
-.types button small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
-.result{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;min-height:100%}
-.result h3{margin:0 0 4px;font-size:22px}
-.result .muted{color:var(--muted);margin:0 0 18px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
-.chip{font:13px var(--mono);padding:5px 10px;border-radius:8px;background:var(--panel2);border:1px solid var(--line)}
-.chip.agent{color:var(--blue)} .chip.skill{color:var(--green)}
-.label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
-.prompt{font:14px var(--mono);background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:6px;color:var(--text);white-space:pre-wrap}
-table{width:100%;border-collapse:collapse;font-size:15px}
-th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
-th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
-td code{font:13px var(--mono);color:var(--yellow)}
-.tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow-x:auto}
-details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:700}
-details p{color:var(--muted);margin:10px 0 0}
-.final{text-align:center}
-footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px;text-align:center}
-@media (max-width:860px){
-  .stats{grid-template-columns:repeat(2,1fr)} .grid3{grid-template-columns:1fr} .picker{grid-template-columns:1fr}
-  .types{flex-direction:row;overflow-x:auto;padding-bottom:6px} .types button{flex:none;min-width:200px}
-  .navlinks a:not(.btn){display:none}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--molten-ink)}
+:focus-visible{outline:2px solid var(--molten);outline-offset:2px}
+code,.mono{font-family:var(--mono)}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+.label{font:500 12px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 21px/1 var(--display);font-stretch:118%;letter-spacing:-.01em}
+.brand svg{flex:none}
+.top nav{display:flex;align-items:center;gap:24px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--ink-2)}
+.top nav .gh{color:var(--ink);border:1.5px solid var(--ink);border-radius:8px;padding:7px 13px;font-weight:600}
+.top nav .gh:hover{background:var(--ink);color:var(--bg)}
+
+/* hero */
+.hero{padding-block:40px 72px}
+.hero h1{font-weight:850;font-stretch:125%;font-size:clamp(40px,6.6vw,84px);line-height:.98;letter-spacing:-.025em;max-width:14ch}
+.hero h1 span{color:var(--molten-ink)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:end;margin-top:28px}
+.lede{font-size:19px;line-height:1.55;color:var(--ink-2);max-width:36em;margin:0}
+.start{display:flex;flex-direction:column;gap:12px}
+.cmd{display:flex;align-items:stretch;background:var(--slab);color:var(--slab-ink);border-radius:10px;overflow:hidden;font:14px/1.5 var(--mono)}
+.cmd code{flex:1;min-width:0;padding:14px 16px;overflow-x:auto;white-space:nowrap}
+.cmd code::before{content:"$ ";color:var(--molten)}
+.cmd button{flex:none;border:0;background:transparent;color:var(--slab-ink);border-left:1px solid #2A3743;font:500 13px var(--mono);padding:0 16px;cursor:pointer}
+.cmd button:hover{background:var(--molten);color:#14202B}
+.works{font-size:14px;color:var(--muted)}
+.works b{color:var(--ink-2);font-weight:600}
+
+/* the plan board */
+.board{margin-top:44px;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.board-head{background:var(--slab);color:var(--slab-ink);display:flex;flex-wrap:wrap;gap:8px 28px;align-items:baseline;justify-content:space-between;padding:16px 22px}
+.board-head h2{font:700 18px/1.3 var(--display);font-stretch:110%}
+.board-head p{margin:0;font:13px/1.5 var(--mono);color:var(--slab-muted)}
+.board-head p b{color:var(--molten);font-weight:500}
+.cal-scroll{overflow-x:auto}
+.cal{display:grid;grid-template-columns:150px repeat(5,minmax(120px,1fr));min-width:760px}
+.cal .day{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:12px 14px;border-bottom:1px solid var(--line);border-left:1px solid var(--line-soft)}
+.cal .corner{border-bottom:1px solid var(--line)}
+.cal .who{padding:16px 14px 16px 22px;font:600 14px/1.35 var(--text);color:var(--ink);border-bottom:1px solid var(--line-soft)}
+.cal .who small{display:block;font:400 12px var(--mono);color:var(--muted);margin-top:3px}
+.cal .cell{border-left:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.task{margin:10px 8px;padding:11px 13px;border-radius:8px;background:var(--bg);border:1px solid var(--line);font-size:14px;line-height:1.45;color:var(--ink-2);align-self:start;z-index:1}
+.task b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
+.task.hot{background:var(--molten-wash);border-color:var(--molten)}
+.not{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;padding:16px 22px;border-top:1px solid var(--line);font-size:14px}
+.not .label{margin-right:4px;color:var(--ink)}
+.not s{color:var(--muted);text-decoration-color:var(--molten);text-decoration-thickness:2px}
+.board-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;padding:12px 22px;border-top:1px solid var(--line-soft);font:12px/1.5 var(--mono);color:var(--muted)}
+
+/* sections */
+section{padding-block:88px;border-top:1px solid var(--line)}
+.sec-title{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:20px 48px;align-items:end;margin-bottom:40px}
+.sec-title h2{font-weight:800;font-stretch:118%;font-size:clamp(32px,4.2vw,52px);line-height:1.02;letter-spacing:-.02em}
+.sec-title p{margin:0;font-size:18px;color:var(--ink-2);max-width:38em}
+
+/* how it thinks: three stances */
+.stances{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.stance{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.stance h3{font:700 20px/1.25 var(--display);font-stretch:108%;margin-bottom:10px}
+.stance p{margin:0 0 16px;color:var(--ink-2);font-size:16px}
+.stance code{display:block;font-size:13px;line-height:1.55;color:var(--molten-ink);background:var(--bg);border-radius:8px;padding:10px 12px;white-space:pre-wrap}
+
+/* directory */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filters button{border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:7px 14px;font:500 14px var(--text);cursor:pointer}
+.filters button span{font:12px var(--mono);color:var(--muted);margin-left:6px}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.filters button[aria-pressed="true"] span{color:var(--molten)}
+.dir{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.person{display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:4px 18px;padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.person .name{font:500 14px/1.4 var(--mono);color:var(--ink);word-break:break-word}
+.person .name i{font-style:normal;font-size:11px;color:var(--molten-ink);border:1px solid var(--molten);border-radius:4px;padding:0 5px;margin-left:6px;vertical-align:1px}
+.person .what{font-size:15px;line-height:1.45;color:var(--ink-2)}
+.dir-note{margin-top:18px;font:13px var(--mono);color:var(--muted)}
+
+/* staffing plan */
+.staff{display:grid;grid-template-columns:260px minmax(0,1fr);background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.types{border-right:1px solid var(--line);display:flex;flex-direction:column}
+.types button{all:unset;box-sizing:border-box;padding:14px 20px;border-bottom:1px solid var(--line-soft);cursor:pointer}
+.types button:last-child{border-bottom:0}
+.types button b{display:block;font:600 15px var(--text);color:var(--ink)}
+.types button span{font-size:13px;color:var(--muted)}
+.types button[aria-selected="true"]{background:var(--ink)}
+.types button[aria-selected="true"] b{color:var(--bg)}
+.types button[aria-selected="true"] span{color:var(--molten)}
+.types button:focus-visible{outline:2px solid var(--molten);outline-offset:-2px}
+.plan{padding:28px 32px;min-width:0}
+.plan h3{font:800 30px/1.1 var(--display);font-stretch:115%;margin:6px 0 22px}
+.plan-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.plan h4{margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.plan ul{list-style:none;margin:0;padding:0;font:14px/1.95 var(--mono);color:var(--ink)}
+.plan .tpl{margin-top:24px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;font-size:15px}
+.plan .ask{margin-top:18px;background:var(--slab);color:var(--slab-ink);border-radius:10px;padding:14px 16px;font:14px/1.55 var(--mono)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:step}
+.step{border-top:3px solid var(--ink);padding-top:16px}
+.step .n{font:800 15px var(--display);font-stretch:120%;color:var(--molten-ink)}
+.step h3{font:700 20px/1.25 var(--display);font-stretch:108%;margin:6px 0 8px}
+.step p{margin:0 0 12px;color:var(--ink-2);font-size:16px}
+.step code{display:block;font-size:13px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;white-space:nowrap}
+
+/* demo */
+.demo{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:44px;align-items:center}
+.demo ul{margin:18px 0 0;padding-left:18px;color:var(--ink-2)}
+.demo li{margin-bottom:6px}
+.screen{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#1e1e2e}
+.screen video,.screen img{display:block;width:100%;max-width:100%;height:auto}
+
+/* workspaces */
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:640px}
+th{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:14px 18px;border-bottom:1px solid var(--line)}
+td{padding:13px 18px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+td code{font-size:13px;color:var(--ink-2)}
+td code.flag{color:var(--molten-ink)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 32px}
+.sgroup h4{margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.sgroup ul{list-style:none;margin:0;padding:0}
+.sgroup li{font:14px/1.9 var(--mono);color:var(--ink)}
+.sgroup li[title]{cursor:help}
+
+/* faq */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.faq div{padding-block:18px;border-top:1px solid var(--line)}
+.faq h3{font:600 17px/1.4 var(--text);margin-bottom:6px}
+.faq p{margin:0;color:var(--ink-2);font-size:16px}
+
+/* closing */
+.closing{background:var(--slab);color:var(--slab-ink);border-top:0}
+.closing h2{font-weight:850;font-stretch:125%;font-size:clamp(34px,5.4vw,68px);line-height:1;letter-spacing:-.02em;max-width:16ch}
+.closing h2 span{color:var(--molten)}
+.closing .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 48px;align-items:end}
+.closing .cmd{background:#0B1117;border:1px solid #2A3743}
+.closing a{color:var(--slab-ink)}
+.closing .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px;font-size:15px}
+footer{background:var(--slab);color:var(--slab-muted);font:13px var(--mono);padding-block:22px 34px;border-top:1px solid #2A3743}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--slab-ink)}
+
+@media (max-width:960px){
+  .hero-grid,.sec-title,.demo,.closing .row{grid-template-columns:minmax(0,1fr)}
+  .stances,.steps{grid-template-columns:minmax(0,1fr)}
+  .dir{grid-template-columns:minmax(0,1fr)}
+  .plan-cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .skills{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+@media (max-width:680px){
+  .top nav a:not(.gh){display:none}
+  .staff{grid-template-columns:minmax(0,1fr)}
+  .types{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}
+  .types button{flex:none;min-width:168px;border-bottom:0;border-right:1px solid var(--line-soft)}
+  .plan{padding:22px 18px}
+  .plan-cols{grid-template-columns:minmax(0,1fr)}
+  .person{grid-template-columns:minmax(0,1fr)}
+  .faq{grid-template-columns:minmax(0,1fr)}
+  section{padding-block:64px}
+}
+.task .when{display:none}
+@media (max-width:680px){
+  .cal-scroll{overflow:visible}
+  .cal{display:flex;flex-direction:column;min-width:0;padding:6px 14px 10px}
+  .cal .day,.cal .corner,.cal .cell{display:none}
+  .cal .who{padding:16px 2px 4px;border-bottom:0}
+  .cal .who small{display:inline;margin-left:8px}
+  .task{margin:6px 0}
+  .task .when{display:block;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;font-style:normal;color:var(--molten-ink);margin-bottom:4px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<nav><div class="wrap">
-  <a class="brand" href="#">Foundry<span>AI</span></a>
-  <div class="navlinks">
-    <a href="#startups">For your startup</a>
-    <a href="#workspaces">Workspaces</a>
-    <a href="#faq">FAQ</a>
-    <a class="btn btn-ghost" href="https://github.com/VenkataAnilKumar/FoundryAI">★ Star on GitHub</a>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#" aria-label="FoundryAI">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M9 8h14v4H13.5v3.5H21v4h-7.5V25H9z" fill="var(--bg)"/><circle cx="23" cy="22" r="3" fill="var(--molten)"/></svg>
+      FoundryAI
+    </a>
+    <nav aria-label="Page">
+      <a href="#team">Team</a>
+      <a href="#by-startup">By startup</a>
+      <a href="#start">Get started</a>
+      <a class="gh" href="https://github.com/VenkataAnilKumar/FoundryAI">Star on GitHub</a>
+    </nav>
+  </header>
+</div>
+
+<main>
+<div class="wrap hero">
+  <h1>The AI startup team that knows <span>your stage</span>.</h1>
+  <div class="hero-grid">
+    <p class="lede">58 specialist agents and 54 skills — architecture, engineering, product, security, pricing and fundraising — inside the AI workspace you already use. Every agent works out what kind of AI startup you are and where you are before it recommends anything.</p>
+    <div class="start">
+      <div class="cmd">
+        <code>curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash</code>
+        <button type="button" id="copy-hero" data-copy="curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash">Copy</button>
+      </div>
+      <div class="works"><b>Works in</b> Claude Code, Cursor, GitHub Copilot, Codex CLI, Gemini CLI, and ChatGPT, Claude or Gemini projects. Open source, MIT.</div>
+    </div>
   </div>
-</div></nav>
 
-<header class="hero"><div class="wrap">
-  <div class="pill">Free &amp; open source · MIT · no account, no telemetry</div>
-  <h1>The <em>AI startup team</em><br>for any AI workspace</h1>
-  <p class="sub">58 specialist agents, 9 team coordinators and 54 skills — architects, engineers, product, growth, security, legal and fundraising — inside Claude Code, Cursor, Copilot, Codex, Gemini CLI or ChatGPT.</p>
-  <div class="install">
-    <code id="cmd"><b>$</b> curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash</code>
-    <button class="copy" data-copy="curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash">Copy</button>
+  <article class="board" aria-labelledby="board-title">
+    <div class="board-head">
+      <h2 id="board-title">A voice-AI startup asked for this week's plan.</h2>
+      <p>2 founders · MVP · replies take <b>2.5s</b> · calls cost <b>$0.40/min</b></p>
+    </div>
+    <div class="cal-scroll">
+      <div class="cal" role="table" aria-label="The founder agent's plan, Monday to Friday">
+        <div class="corner" role="columnheader"></div>
+        <div class="day" role="columnheader">Mon</div><div class="day" role="columnheader">Tue</div><div class="day" role="columnheader">Wed</div><div class="day" role="columnheader">Thu</div><div class="day" role="columnheader">Fri</div>
+
+        <div class="who" role="rowheader" style="grid-row:2">Founder A<small>latency</small></div>
+        <div class="task" style="grid-row:2;grid-column:2/4"><em class="when">Mon–Tue</em><b>Measure first</b>Log five timestamps per turn on 50 real calls. Typical split: 0.6–0.9s turn detection, 0.6–1.0s LLM.</div>
+        <div class="task" style="grid-row:2;grid-column:4/6"><em class="when">Wed–Thu</em><b>Fix in this order</b>300–400ms smart turn detection · stream every stage · small fast model · prompt under 2k tokens.</div>
+        <div class="task hot" style="grid-row:2/4;grid-column:6/7"><em class="when">Fri · both founders</em><b>Re-measure</b>Booking completion rate, latency and cost per minute. Expect about 1.0–1.2s.</div>
+
+        <div class="who" role="rowheader" style="grid-row:3">Founder B<small>the real blocker</small></div>
+        <div class="task" style="grid-row:3;grid-column:2/5"><em class="when">Mon–Wed</em><b>Listen to 30 calls</b>Tag why each booking failed — misheard names and dates of birth, bookings that never reach the clinic's software.</div>
+        <div class="task" style="grid-row:3;grid-column:5/6"><em class="when">Thu</em><b>Sell</b>Work toward 2–3 paid pilots.</div>
+
+        <div class="cell" style="grid-row:2/4;grid-column:2"></div><div class="cell" style="grid-row:2/4;grid-column:3"></div><div class="cell" style="grid-row:2/4;grid-column:4"></div><div class="cell" style="grid-row:2/4;grid-column:5"></div><div class="cell" style="grid-row:2/4;grid-column:6"></div>
+      </div>
+    </div>
+    <div class="not"><span class="label">Not this week</span><s>self-hosting models</s><s>rebuilding the stack</s><s>fine-tuning</s><s>negotiating vendor contracts</s></div>
+    <div class="board-foot"><span>Laid out from an unedited answer by the founder agent, recorded live.</span><a href="#demo">Watch the recording</a></div>
+  </article>
+</div>
+
+<section id="thinking">
+  <div class="wrap">
+    <div class="sec-title">
+      <h2>Built for a two-person team, not a Fortune 500.</h2>
+      <p>Ask a general assistant how to scale and you get Kubernetes. FoundryAI's agents share three habits that keep advice proportionate to where you are.</p>
+    </div>
+    <div class="stances">
+      <div class="stance"><h3>Stage before solution</h3><p>The simplest thing that works at your stage, and the signal that would justify the next step up.</p><code>"Revisit self-hosting at about
+50k minutes a month."</code></div>
+      <div class="stance"><h3>A team, not one generalist</h3><p>Each specialist has a defined deliverable and says who should take over. Coordinators run them as subagents where your tool allows.</p><code>founder
+ → ai-voice-engineer
+ → ai-finance-engineer</code></div>
+      <div class="stance"><h3>One source, every workspace</h3><p>Written once in plain Markdown, built into each tool's own format. Switch tools and keep the team. No account, no telemetry.</p><code>.claude/agents  .cursor/agents
+.copilot/agents .codex/agents
+.gemini/agents  .agents/skills</code></div>
+    </div>
   </div>
-  <div class="cta">
-    <a class="btn btn-primary" href="https://github.com/VenkataAnilKumar/FoundryAI">★ Star on GitHub</a>
-    <a class="btn btn-ghost" href="#startups">Find your team →</a>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="sec-title">
+      <h2>58 specialists and 9 team leads.</h2>
+      <p>The engineering and the business side of an AI startup in one directory. Names are what you type: <span class="mono">Use the ai-architect agent to …</span></p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter by team"></div>
+    <div class="dir" id="dir"></div>
+    <p class="dir-note"><span style="color:var(--molten-ink)">deep</span> marks agents on the deep-reasoning tier. The rest run on the standard tier to keep cost down.</p>
   </div>
-  <div class="ws"><span>Claude Code</span><span>Cursor</span><span>GitHub Copilot</span><span>Codex CLI</span><span>Gemini CLI</span><span>ChatGPT · Claude · Gemini projects</span></div>
-  <div class="demo">
-    <video autoplay muted loop playsinline preload="metadata" poster="demo-poster.png" aria-label="Real recording: one-line install, then a live answer from the founder agent">
-      <source src="demo.mp4" type="video/mp4">
-      <img src="demo.gif" alt="FoundryAI demo">
-    </video>
+</section>
+
+<section id="by-startup">
+  <div class="wrap">
+    <div class="sec-title">
+      <h2>Staffed for the startup you're building.</h2>
+      <p>A robotics company and a voice-agent company need different leads. Pick yours to see who leads, which skills to start with and which project template to use.</p>
+    </div>
+    <div class="staff">
+      <div class="types" id="types" role="tablist" aria-label="AI startup type"></div>
+      <div class="plan" id="plan" role="tabpanel" aria-live="polite"></div>
+    </div>
   </div>
-  <p class="caption"><b>Real recording, not an animation:</b> a fresh install from GitHub, then a live answer from the <code>founder</code> agent (wait time sped up).</p>
-</div></header>
+</section>
 
-<section><div class="wrap">
-  <div class="stats">
-    <div class="stat"><b>58</b><span>specialist agents</span></div>
-    <div class="stat"><b>54</b><span>skills (Agent Skills standard)</span></div>
-    <div class="stat"><b>12</b><span>project templates by stack &amp; startup type</span></div>
-    <div class="stat"><b>6</b><span>workspace formats from one source</span></div>
+<section id="start">
+  <div class="wrap">
+    <div class="sec-title">
+      <h2>Get started in three steps.</h2>
+      <p>The installer detects the AI tools on your machine and writes each one's native format. It backs up anything it would overwrite, and <span class="mono">uninstall.sh</span> removes exactly what it added.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>Install</h3><p>Every detected workspace, or pick one with <span class="mono">--target</span>.</p><code>curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash</code></div>
+      <div class="step"><span class="n">2</span><h3>Describe your startup</h3><p>Copy a template into your repo as AGENTS.md and fill in your startup type and stage.</p><code>cp templates/AGENTS-voice-ai.md ./AGENTS.md</code></div>
+      <div class="step"><span class="n">3</span><h3>Ask</h3><p>Use a routing skill, or name a specialist directly.</p><code>/cofounder "plan our seed raise"</code></div>
+    </div>
+    <div class="tablewrap" style="margin-top:40px">
+      <table>
+        <thead><tr><th scope="col">Workspace</th><th scope="col">Flag</th><th scope="col">Agents</th><th scope="col">Skills</th></tr></thead>
+        <tbody>
+          <tr><td>Claude Code</td><td><code class="flag">--target claude</code></td><td><code>~/.claude/agents/</code></td><td><code>~/.claude/skills/</code></td></tr>
+          <tr><td>Cursor</td><td><code class="flag">--target cursor</code></td><td><code>~/.cursor/agents/</code></td><td><code>~/.agents/skills/</code></td></tr>
+          <tr><td>GitHub Copilot</td><td><code class="flag">--target copilot</code></td><td><code>~/.copilot/agents/*.agent.md</code></td><td><code>~/.copilot/skills/</code></td></tr>
+          <tr><td>Codex CLI</td><td><code class="flag">--target codex</code></td><td><code>~/.codex/agents/*.toml</code></td><td><code>~/.agents/skills/</code></td></tr>
+          <tr><td>Gemini CLI</td><td><code class="flag">--target gemini</code></td><td><code>~/.gemini/agents/</code></td><td><code>~/.agents/skills/</code></td></tr>
+          <tr><td>Windsurf, Cline, Zed, Amp</td><td><code class="flag">--target codex</code></td><td><code>—</code></td><td><code>~/.agents/skills/</code></td></tr>
+          <tr><td>ChatGPT, Claude, Gemini projects</td><td><code class="flag">--target chat</code></td><td colspan="2"><code>~/FoundryAI-chat-prompts/</code> to paste into project instructions</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section><div class="wrap">
-  <h2>Advice that fits your stage</h2>
-  <p class="lead">Generic AI assistants recommend Kubernetes to a two-person team. Every FoundryAI agent first works out what kind of AI startup you are and what stage you're at — then recommends the simplest thing that works now, and what would justify the next step.</p>
-  <div class="grid3">
-    <div class="card"><h3>Engineering <i>and</i> business</h3><p>Architecture, code, evals and security — alongside fundraising, pricing, enterprise sales and product-market fit.</p></div>
-    <div class="card"><h3>A real team, not one prompt</h3><p>Coordinators delegate to specialists as subagents where your workspace supports it, and integrate the result into one plan.</p></div>
-    <div class="card"><h3>Consistent output</h3><p>Every agent has a defined deliverable and says when another specialist should take over. Checked in CI.</p></div>
+<section id="demo">
+  <div class="wrap demo">
+    <div>
+      <h2 style="font-weight:800;font-stretch:118%;font-size:clamp(30px,3.6vw,44px);line-height:1.05;letter-spacing:-.02em">The plan above, recorded.</h2>
+      <p style="color:var(--ink-2);font-size:18px;margin:16px 0 0">A fresh install from GitHub, then the same question to the installed founder agent.</p>
+      <ul>
+        <li>Typing is scripted so you can read it.</li>
+        <li>The 40-second wait is sped up, and the video says so.</li>
+        <li>Markdown is rendered for readability. The words are the model's.</li>
+      </ul>
+      <p style="font:13px var(--mono);color:var(--muted);margin-top:18px">Record it yourself: <a href="https://github.com/VenkataAnilKumar/FoundryAI/tree/master/scripts/demo">scripts/demo</a></p>
+    </div>
+    <div class="screen">
+      <video controls muted loop playsinline preload="metadata" poster="demo-poster.png" aria-label="Recording of the install and the founder agent's answer">
+        <source src="demo.mp4" type="video/mp4">
+        <img src="demo.gif" alt="Recording of the install and the founder agent's answer">
+      </video>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section id="startups"><div class="wrap">
-  <h2>Pick your AI startup</h2>
-  <p class="lead">See who leads, which skills to use and which template to drop into your repo.</p>
-  <div class="picker">
-    <div class="types" id="types" role="group" aria-label="AI startup type"></div>
-    <div class="result" id="result" aria-live="polite"></div>
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-title">
+      <h2>54 skills in an open standard.</h2>
+      <p>Reusable workflows in the <a href="https://agentskills.io">Agent Skills</a> format, from <span class="mono">/rag-design</span> and <span class="mono">/eval</span> to <span class="mono">/pitch-deck</span> and <span class="mono">/security-questionnaire</span>. Hover a skill to see what it does.</p>
+    </div>
+    <div class="skills" id="skills-list"></div>
   </div>
-</div></section>
+</section>
 
-<section id="workspaces"><div class="wrap">
-  <h2>Works in the tool you already use</h2>
-  <p class="lead">One workspace-neutral source, built into each tool's native format. Switch tools without losing your team.</p>
-  <div class="tablewrap"><table>
-    <thead><tr><th>Workspace</th><th>Install</th><th>What you get</th></tr></thead>
-    <tbody>
-      <tr><td>Claude Code</td><td><code>--target claude</code></td><td>Subagents, skills, optional plugin and hooks</td></tr>
-      <tr><td>Cursor</td><td><code>--target cursor</code></td><td>Subagents + Agent Skills</td></tr>
-      <tr><td>GitHub Copilot / VS Code</td><td><code>--target copilot</code></td><td>Custom agents + skills</td></tr>
-      <tr><td>OpenAI Codex CLI</td><td><code>--target codex</code></td><td>Custom agents (TOML) + skills</td></tr>
-      <tr><td>Gemini CLI</td><td><code>--target gemini</code></td><td>Subagents + skills</td></tr>
-      <tr><td>Windsurf, Cline, Zed, Amp…</td><td><code>--target codex</code></td><td>Skills via the shared <code>~/.agents/skills</code></td></tr>
-      <tr><td>ChatGPT · Claude · Gemini projects</td><td><code>--target chat</code></td><td>Paste-ready prompts for project instructions</td></tr>
-    </tbody>
-  </table></div>
-  <p class="caption">Without <code>--target</code>, the installer detects the workspaces on your machine. It backs up anything it overwrites; <code>uninstall.sh</code> removes exactly what it installed.</p>
-</div></section>
-
-<section id="faq"><div class="wrap">
-  <h2>FAQ</h2>
-  <details><summary>Does FoundryAI send my code or data anywhere?</summary><p>No. FoundryAI is prompt files — agents, skills and templates. Your AI workspace runs them with whatever model and data settings you already use.</p></details>
-  <details><summary>What does it cost?</summary><p>Nothing. It's MIT-licensed. You pay your AI workspace or model provider as usual.</p></details>
-  <details><summary>My workspace can't run subagents.</summary><p>Everything still works: coordinators name the right specialist and, if you ask, take on that role themselves.</p></details>
-  <details><summary>Is it only for AI startups?</summary><p>It's tuned for AI startups — LLM apps, agents, devtools, voice, vision, generative media, robotics, model training and regulated verticals — but most of the engineering, product and growth specialists are useful to any software team.</p></details>
-  <details><summary>How do I contribute an agent or skill?</summary><p>Write it once in the neutral format and run <code>scripts/validate.sh</code>. See CONTRIBUTING.md on GitHub.</p></details>
-</div></section>
-
-<section class="final"><div class="wrap">
-  <h2>Hire your AI startup team in one line</h2>
-  <p class="lead" style="margin:0 auto 26px">Free, open source, and yours to change.</p>
-  <div class="install">
-    <code><b>$</b> curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash</code>
-    <button class="copy" data-copy="curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash">Copy</button>
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-title"><h2>Questions</h2></div>
+    <div class="faq">
+      <div><h3>Does it send my code anywhere?</h3><p>No. FoundryAI is prompt files. Your AI workspace runs them with the model and data settings you already use.</p></div>
+      <div><h3>What does it cost?</h3><p>Nothing. It's MIT licensed. You pay your AI tool or model provider as usual.</p></div>
+      <div><h3>What if my tool can't run subagents?</h3><p>It still works. Coordinators name the right specialist and take on that role when you ask them to.</p></div>
+      <div><h3>Is it only for AI startups?</h3><p>It's tuned for them, but most of the engineering, product and growth specialists suit any software team.</p></div>
+    </div>
   </div>
-  <div class="cta"><a class="btn btn-primary" href="https://github.com/VenkataAnilKumar/FoundryAI">★ Star FoundryAI on GitHub</a></div>
-</div></section>
+</section>
 
-<footer><div class="wrap">MIT licensed · <a href="https://github.com/VenkataAnilKumar/FoundryAI">GitHub</a> · <a href="https://github.com/VenkataAnilKumar/FoundryAI/blob/master/INSTALL.md">Install guide</a> · <a href="https://github.com/VenkataAnilKumar/FoundryAI/blob/master/CHANGELOG.md">Changelog</a></div></footer>
+<section class="closing">
+  <div class="wrap">
+    <div class="row">
+      <h2>Hire the team. It costs <span>nothing</span>.</h2>
+      <div>
+        <div class="cmd">
+          <code>curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash</code>
+          <button type="button" id="copy-closing" data-copy="curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash">Copy</button>
+        </div>
+        <div class="links"><a href="https://github.com/VenkataAnilKumar/FoundryAI">Star FoundryAI on GitHub</a><a href="https://github.com/VenkataAnilKumar/FoundryAI/blob/master/CONTRIBUTING.md">Add an agent</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
 
+<footer>
+  <div class="wrap">
+    <span>FoundryAI · MIT licensed</span>
+    <span><a href="https://github.com/VenkataAnilKumar/FoundryAI">GitHub</a> · <a href="https://github.com/VenkataAnilKumar/FoundryAI/blob/master/INSTALL.md">Install guide</a> · <a href="https://github.com/VenkataAnilKumar/FoundryAI/blob/master/CHANGELOG.md">Changelog</a></span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
 <script>
 const REPO = "https://github.com/VenkataAnilKumar/FoundryAI/blob/master/";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* Lead specialists, starter skills, template and an example request per startup type */
 const TYPES = [
-  {id:"llm", name:"LLM app / copilot", tag:"RAG, chat, copilots", agents:["ai-engineer","ai-fullstack-engineer","ai-prompt-engineer"], skills:["/rag-design","/eval","/cost-check"], tpl:"AGENTS-nextjs-saas.md",
-   ask:'/cofounder "We\'re an LLM copilot for sales teams at MVP. Answers are often wrong — what do we fix first?"'},
+  {id:"llm", name:"LLM app or copilot", tag:"RAG, chat, copilots", agents:["ai-engineer","ai-fullstack-engineer","ai-prompt-engineer"], skills:["/rag-design","/eval","/cost-check"], tpl:"AGENTS-nextjs-saas.md",
+   ask:'/cofounder "We\'re an LLM copilot for sales teams at MVP. Answers are often wrong. What do we fix first?"'},
   {id:"agent", name:"Agent product", tag:"Agents that take actions", agents:["ai-agent-engineer","ai-architect","ai-qa-engineer"], skills:["/agent-systems","/eval","/security-scan"], tpl:"AGENTS-agent-product.md",
    ask:'/cofounder "Our support agent sometimes issues refunds it shouldn\'t. Add the right approvals and evals."'},
-  {id:"devtools", name:"AI devtools / infra", tag:"APIs, SDKs, platforms", agents:["technical-product-manager","ai-api-designer","developer-advocate"], skills:["/spec","/devrel","/api-test"], tpl:"AGENTS.md",
+  {id:"devtools", name:"Devtools and infra", tag:"APIs, SDKs, platforms", agents:["technical-product-manager","ai-api-designer","developer-advocate"], skills:["/spec","/devrel","/api-test"], tpl:"AGENTS.md",
    ask:'/cofounder "Plan the public launch of our AI SDK for developers."'},
   {id:"voice", name:"Voice AI", tag:"Voice agents, phone bots", agents:["ai-voice-engineer","ai-ux-designer"], skills:["/eval","/cost-check","/model-strategy"], tpl:"AGENTS-voice-ai.md",
    ask:'/cofounder "Our phone agent takes 2.5s per reply and costs $0.40/min. What do we do this week?"'},
-  {id:"vision", name:"Vision & document AI", tag:"Images, video, documents", agents:["ai-vision-engineer","ai-data-engineer"], skills:["/model-strategy","/eval","/data-rights"], tpl:"AGENTS-vision-ai.md",
+  {id:"vision", name:"Vision and documents", tag:"Images, video, documents", agents:["ai-vision-engineer","ai-data-engineer"], skills:["/model-strategy","/eval","/data-rights"], tpl:"AGENTS-vision-ai.md",
    ask:'/cofounder "Should we fine-tune a detector or keep using a multimodal API for invoice extraction?"'},
   {id:"genmedia", name:"Generative media", tag:"Image, video, audio", agents:["ai-generative-media-engineer","ai-responsible-engineer"], skills:["/model-strategy","/ai-pricing","/data-rights"], tpl:"AGENTS-generative-media.md",
    ask:'/cofounder "Our GPU bill is eating our margin. Price our credits and cut cost per image."'},
-  {id:"robotics", name:"Robotics / embodied AI", tag:"Robots, sim-to-real", agents:["ai-robotics-engineer","ai-vision-engineer","site-reliability-engineer"], skills:["/model-strategy","/experiment","/incident"], tpl:"AGENTS-robotics.md",
+  {id:"robotics", name:"Robotics", tag:"Embodied AI, sim-to-real", agents:["ai-robotics-engineer","ai-vision-engineer","site-reliability-engineer"], skills:["/model-strategy","/experiment","/incident"], tpl:"AGENTS-robotics.md",
    ask:'/cofounder "What safety measures do we need before our first warehouse pilot?"'},
   {id:"training", name:"Model training", tag:"Fine-tuning to pretraining", agents:["ai-model-training-engineer","ai-research-engineer","ai-platform-engineer"], skills:["/model-strategy","/eval","/data-rights"], tpl:"AGENTS-python-ml.md",
    ask:'/cofounder "Should we fine-tune our own model or keep using an API?"'},
-  {id:"vertical", name:"Vertical AI", tag:"Health, finance, legal", agents:["ai-domain-expert","ai-legal-engineer","security-architect"], skills:["/compliance","/security-questionnaire","/data-rights"], tpl:"AGENTS-healthtech-ai.md",
+  {id:"vertical", name:"Regulated vertical", tag:"Health, finance, legal", agents:["ai-domain-expert","ai-legal-engineer","security-architect"], skills:["/compliance","/security-questionnaire","/data-rights"], tpl:"AGENTS-healthtech-ai.md",
    ask:'/cofounder "A hospital sent us a security questionnaire. What do we need before the pilot?"'},
 ];
 const BUSINESS = ["ai-fundraising-advisor","ai-finance-engineer","ai-sales-engineer"];
-const typesEl = document.getElementById("types"), resultEl = document.getElementById("result");
-const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function show(t){
-  [...typesEl.children].forEach(b => b.setAttribute("aria-pressed", b.dataset.id === t.id));
-  resultEl.innerHTML = `
-    <h3>${esc(t.name)}</h3><p class="muted">${esc(t.tag)}</p>
-    <div class="label">Who leads</div>
-    <div class="chips">${t.agents.map(a=>`<span class="chip agent">${a}</span>`).join("")}</div>
-    <div class="label">Skills to start with</div>
-    <div class="chips">${t.skills.map(s=>`<span class="chip skill">${s}</span>`).join("")}</div>
-    <div class="label">Business side (every AI startup)</div>
-    <div class="chips">${BUSINESS.map(a=>`<span class="chip agent">${a}</span>`).join("")}<span class="chip skill">/pitch-deck</span><span class="chip skill">/pmf-check</span><span class="chip skill">/ai-pricing</span></div>
-    <div class="label">Drop into your repo as AGENTS.md</div>
-    <p style="margin:6px 0 18px"><a href="${REPO}templates/${t.tpl}">templates/${t.tpl}</a></p>
-    <div class="label">Try asking</div>
-    <div class="prompt">${esc(t.ask)}</div>`;
+
+const data = window.FOUNDRY || {team:[], skills:[]};
+
+/* directory with team filters */
+const filtersEl = document.getElementById("filters"), dirEl = document.getElementById("dir");
+const all = data.team.flatMap(g => g.agents.map(a => ({...a, group:g.group})));
+function renderDir(group){
+  [...filtersEl.children].forEach(b => b.setAttribute("aria-pressed", b.dataset.group === group));
+  const list = group === "All" ? all : all.filter(a => a.group === group);
+  dirEl.innerHTML = list.map(a => `<div class="person"><div class="name">${esc(a.name)}${a.tier === "deep" ? "<i>deep</i>" : ""}</div><div class="what">${esc(a.summary)}</div></div>`).join("");
 }
-TYPES.forEach((t,i) => {
+[["All", all.length], ...data.team.map(g => [g.group, g.agents.length])].forEach(([g, n]) => {
   const b = document.createElement("button");
-  b.type = "button"; b.dataset.id = t.id;
-  b.innerHTML = `${esc(t.name)}<small>${esc(t.tag)}</small>`;
-  b.addEventListener("click", () => show(t));
+  b.type = "button"; b.dataset.group = g;
+  b.innerHTML = `${esc(g)}<span>${n}</span>`;
+  b.addEventListener("click", () => renderDir(g));
+  filtersEl.appendChild(b);
+});
+renderDir("Leadership");
+
+/* staffing plan by startup type */
+const typesEl = document.getElementById("types"), planEl = document.getElementById("plan");
+function showType(t){
+  [...typesEl.children].forEach(b => b.setAttribute("aria-selected", b.dataset.id === t.id));
+  planEl.innerHTML = `
+    <span class="label">Staffing plan</span>
+    <h3>${esc(t.name)}</h3>
+    <div class="plan-cols">
+      <div><h4 class="label">Who leads</h4><ul>${t.agents.map(a => `<li>${esc(a)}</li>`).join("")}</ul></div>
+      <div><h4 class="label">Start with</h4><ul>${t.skills.map(s => `<li>${esc(s)}</li>`).join("")}</ul></div>
+      <div><h4 class="label">Business side</h4><ul>${BUSINESS.map(a => `<li>${esc(a)}</li>`).join("")}</ul></div>
+    </div>
+    <div class="tpl"><span class="label">Project template</span><a class="mono" href="${REPO}templates/${t.tpl}">templates/${esc(t.tpl)}</a></div>
+    <div class="ask">${esc(t.ask)}</div>`;
+}
+TYPES.forEach(t => {
+  const b = document.createElement("button");
+  b.type = "button"; b.setAttribute("role", "tab"); b.dataset.id = t.id;
+  b.innerHTML = `<b>${esc(t.name)}</b><span>${esc(t.tag)}</span>`;
+  b.addEventListener("click", () => showType(t));
   typesEl.appendChild(b);
 });
-show(TYPES[3]);
-document.querySelectorAll(".copy").forEach(btn => btn.addEventListener("click", async () => {
-  try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent = "Copied ✓"; }
-  catch { btn.textContent = "Select & copy"; }
-  setTimeout(() => btn.textContent = "Copy", 1800);
+showType(TYPES[3]);
+
+/* skills index */
+document.getElementById("skills-list").innerHTML = data.skills.map(g =>
+  `<div class="sgroup"><h4 class="label">${esc(g.group)}</h4><ul>${g.skills.map(s => `<li title="${esc(s.summary)}">/${esc(s.name)}</li>`).join("")}</ul></div>`).join("");
+
+/* copy buttons */
+document.querySelectorAll("[data-copy]").forEach(btn => btn.addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent = "Copied"; }
+  catch { btn.textContent = "Select it"; }
+  setTimeout(() => { btn.textContent = "Copy"; }, 1600);
 }));
 </script>
 </body>
