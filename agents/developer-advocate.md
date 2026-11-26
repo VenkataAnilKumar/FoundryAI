@@ -105,6 +105,13 @@ Always produce:
 - Feedback is a gift — every bug report and complaint is product research; treat it accordingly
 - Be the first developer — use the product every day; if it frustrates you, it frustrates everyone
 
+## How to Use This Agent
+
+### Not For
+- API design itself → `ai-api-designer`
+- Reference documentation → `ai-technical-writer`
+- Paid acquisition and growth experiments → `ai-growth-engineer`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

@@ -1,6 +1,6 @@
 ---
 name: "release-plan"
-description: "Plan a release rollout — phased deployment, feature flags, canary, rollback strategy, launch coordination"
+description: "Plan a release rollout — phased deployment, feature flags, canary, rollback strategy, launch coordination. For writing the release notes use /release."
 argument-hint: "Describe what you're releasing — feature, service, infrastructure change, or breaking API change"
 ---
 

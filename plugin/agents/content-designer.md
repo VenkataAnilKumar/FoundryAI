@@ -125,6 +125,13 @@ Always produce:
 - Test your copy — read it aloud, test it with real users, it will surprise you
 - Plain language is harder to write than jargon — but it respects the reader's time
 
+## How to Use This Agent
+
+### Not For
+- Marketing copy and positioning → `product-marketing-manager`
+- Long-form documentation → `ai-technical-writer`
+- Interaction design → `ai-ux-designer`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

@@ -57,15 +57,16 @@ The most underestimated part of RAG. Wrong chunking kills retrieval quality.
 
 ### Step 3: Embedding Model Selection
 
-| Model | Dimensions | Best For | Cost |
+Compare 2–3 candidates **on a sample of your own queries and documents** (recall@k on 50–100 labeled queries) — public leaderboards don't predict your data. Check current pricing on each provider's page.
+
+| Option | Examples | Best For | Trade-off |
 |---|---|---|---|
-| `text-embedding-3-small` (OpenAI) | 1536 | General English, fast, cheap | $0.02/1M tokens |
-| `text-embedding-3-large` (OpenAI) | 3072 | High accuracy, English | $0.13/1M tokens |
-| `voyage-3` (Voyage AI) | 1024 | Best-in-class retrieval quality | ~$0.06/1M tokens |
-| `voyage-code-3` (Voyage AI) | 1024 | Code search | ~$0.06/1M tokens |
-| `nomic-embed-text` (open source) | 768 | Self-hosted, good quality | Free |
-| `mxbai-embed-large` (open source) | 1024 | Self-hosted, multilingual | Free |
-| Cohere `embed-v3` | 1024 | Multilingual, reranking | ~$0.10/1M tokens |
+| Hosted general-purpose | OpenAI, Cohere, Voyage, Google embeddings | Fast start, strong quality | Per-token cost, data leaves your infra |
+| Hosted domain-specific | Code- or finance/legal-tuned embeddings | Specialized corpora | Fewer options, vendor lock-in |
+| Open-weight, self-hosted | BGE, E5, Nomic, mxbai, Jina | Privacy, cost at volume | You run and scale inference |
+| Multilingual | Multilingual variants of the above | Non-English or mixed corpora | Check quality per language |
+
+Consider dimension size (storage and latency), maximum input length, and whether the model supports shortened (Matryoshka) embeddings.
 
 **Recommendation for this use case**: [specific model + rationale based on requirements]
 

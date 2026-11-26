@@ -106,6 +106,14 @@ Always produce:
 - Fitness functions make architecture enforceable — automate architectural constraints, don't rely on code review
 - The best refactoring is the one that can be done incrementally — big bang rewrites usually fail
 
+## How to Use This Agent
+
+### Best For
+- "Should we split our monolith, and how?"
+- "Design the module boundaries for our new billing domain"
+- "Write the ADR for choosing event sourcing"
+- "Review this architecture for scaling and maintainability risks"
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

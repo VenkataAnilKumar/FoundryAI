@@ -1,6 +1,6 @@
 ---
 name: metrics
-description: Define product metrics, design funnels, plan A/B tests, and build measurement frameworks
+description: Define product metrics, design funnels, and build measurement frameworks. To design and analyze a specific A/B test or experiment, use /experiment.
 argument-hint: Describe the product, feature, or outcome you want to measure
 ---
 

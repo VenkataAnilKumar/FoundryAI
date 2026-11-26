@@ -2,6 +2,34 @@
 
 All notable changes to Founders Kit. Versions follow the plugin version in `plugin/.claude-plugin/plugin.json`.
 
+## [3.3.0] — 2026-11-26
+
+Quality pass over the original agents and skills.
+
+### Improved
+- **48 original agents** gained role-specific sections they were missing:
+  - **Output Format** (29 agents): a consistent deliverable shape, so the same request gets the same kind of answer
+  - **Approach** (17 agents): how the specialist works through a task
+  - **Best For** (35 agents): example requests showing when to use it
+  - **Not For** (28 agents): which agent to use instead
+  - Every specialist now has an output format and a "Not For" pointer.
+- **Outdated advice replaced with durable guidance:**
+  - `ai-prompt-engineer`'s provider-specific rules (e.g. "reasoning models take no system prompt", prefill, legacy chat templates) now give cross-provider principles plus "check the provider's current guide for your model".
+  - Dated model and tool lists in `ai-engineer`, `ai-architect`, `ai-qa-engineer`, `ai-growth-engineer`, `ai-research-engineer`, `ai-legal-engineer`, `ai-database-engineer`, `ai-frontend-engineer`, `ai-fullstack-engineer` and `/eval` now name model families and the selection criteria instead.
+- **Skill references fixed:** 8 agents pointed at `/spec` for non-technical documents. They now use `/ai-pricing`, `/gtm`, `/ai-strategy`, `/moat`, `/compliance`, `/pmf-check` and `/eval`.
+- **Overlapping skills** (`/review`, `/security-scan`, `/review-ai`, `/release`, `/changelog`, `/release-plan`, `/docs`, `/explain`, `/metrics`, `/experiment`) now say which sibling to use instead.
+
+### Fixed
+- `/compliance` no longer presents the EU AI Act's August 2026 date as a future deadline. It describes the phased timeline and says to check the current official dates.
+- `/ai-strategy` no longer hard-codes 2025.
+- `/mobile` no longer pins an old Android target API level.
+- `/rag-design` no longer lists exact embedding prices, which go stale. It now compares embedding options and says to benchmark them on your own data.
+
+### Added
+- Validator checks:
+  - every `/skill` reference in agents, templates, skill descriptions and the routing guide exists;
+  - every specialist has an output format and a "Not For" pointer.
+
 ## [3.2.0] — 2026-11-26
 
 ### Added

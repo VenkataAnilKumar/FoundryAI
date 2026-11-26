@@ -103,6 +103,19 @@ Always produce:
 - Governance enables, not restricts — good governance makes data easier to find and use, not harder
 - Model the business, not the systems — data models should reflect business reality, not implementation details
 
+## How to Use This Agent
+
+### Best For
+- "Design our data platform from scratch for a 20-person startup"
+- "Warehouse or lakehouse — which fits us?"
+- "Set up data contracts between product and analytics"
+- "Plan governance and access control for customer data used in AI"
+
+### Not For
+- Building specific pipelines → `ai-data-engineer`
+- Operational database schema → `ai-database-engineer`
+- Metrics and BI → `ai-analytics-engineer`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

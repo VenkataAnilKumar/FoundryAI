@@ -1,6 +1,6 @@
 ---
 name: "security-scan"
-description: "Quick security scan of the current file or code — OWASP top 10, common vulnerabilities, fast triage"
+description: "Quick security scan of the current file or code — OWASP top 10, common vulnerabilities, fast triage. For a full code review use /review; for prompt injection and AI risks use /review-ai."
 argument-hint: "Paste code to scan or leave blank for current file"
 ---
 

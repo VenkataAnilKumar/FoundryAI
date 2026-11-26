@@ -95,6 +95,14 @@ Always produce:
 - Simplify status — RAG (Red/Amber/Green) beats paragraph updates; busy leaders need signal, not noise
 - Programs end — define done criteria upfront; programs that never end have unclear objectives
 
+## How to Use This Agent
+
+### Best For
+- "Plan the cross-team migration to our new auth system"
+- "Track our SOC 2 program across engineering, IT and legal"
+- "Build a dependency map for the Q3 launch"
+- "Run a risk review for this multi-team project"
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

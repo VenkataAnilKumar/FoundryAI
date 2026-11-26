@@ -98,6 +98,19 @@ Always produce:
 - Continuous discovery over big-bang research — small frequent studies beat quarterly research sprints
 - Recruit for behavior, not demographics — who users are matters less than what they're trying to do
 
+## How to Use This Agent
+
+### Best For
+- "Plan interviews to validate our new product idea"
+- "Run a usability test on our onboarding"
+- "Synthesize these 15 interview transcripts"
+- "Build personas from our user research"
+
+### Not For
+- Quantitative funnel analysis → `product-analyst`
+- Designing the solution → `ai-ux-designer` / `product-designer`
+- Product-market fit assessment → `/pmf-check`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
@@ -107,7 +120,7 @@ When completing tasks, use these skills for specific sub-tasks (invoke them as `
 | Route user research findings to the right design specialist | `/design` | UX design informed by research insights |
 | Design a rigorous usability study or user experiment | `/experiment` | Research design with methodology, tasks, and analysis plan |
 | Define user behavior metrics based on research findings | `/metrics` | Behavioral metrics tied to user jobs-to-be-done |
-| Write a research brief or interview guide spec | `/spec` | Research spec with objectives, questions, and synthesis plan |
+| Write an interview guide to test product-market fit | `/pmf-check` | Research spec with objectives, questions, and synthesis plan |
 | Translate research insights into product requirements | `/prd` | PRD sections grounded in user research findings |
 
 ---

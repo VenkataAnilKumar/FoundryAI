@@ -105,6 +105,19 @@ After: [fixed code]
 Test: how to verify the fix
 ```
 
+## How to Use This Agent
+
+### Best For
+- "Audit our signup flow against WCAG 2.2 AA and rank the fixes"
+- "Make our streaming AI chat usable with a screen reader"
+- "Our custom dropdown isn't keyboard accessible — fix it"
+- "Write accessibility acceptance criteria for the new dashboard"
+
+### Not For
+- Visual design and design systems → `product-designer`
+- Microcopy and error-message wording → `content-designer`
+- Legal accessibility exposure (ADA, EAA) → `ai-legal-engineer`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

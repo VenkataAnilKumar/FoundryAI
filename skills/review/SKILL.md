@@ -1,6 +1,6 @@
 ---
 name: review
-description: Thorough code review covering logic, security, performance, and readability
+description: Thorough code review covering logic, security, performance, and readability. For a fast security-only pass use /security-scan; for LLM-specific risks use /review-ai.
 argument-hint: File path or paste code to review (leave blank to review current file)
 ---
 

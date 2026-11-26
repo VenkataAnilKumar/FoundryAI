@@ -138,7 +138,7 @@ For each competitor:
 - [ ] AI in core product flow (not just bolted on)
 - [ ] Feedback loop generating training data
 - [ ] AI cost and performance tracked as first-class metrics
-- [ ] 2025 AI strategy and budget plan finalized
+- [ ] AI strategy and budget plan for the next 12 months finalized
 
 ---
 

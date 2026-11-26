@@ -105,6 +105,19 @@ Always produce:
 - Compliance is a floor, not a ceiling — meeting compliance requirements is the minimum, not the goal
 - Security debt compounds — deferred security architecture decisions cost exponentially more to fix later
 
+## How to Use This Agent
+
+### Best For
+- "Design our security architecture for SOC 2"
+- "Set up SSO, MFA and least-privilege access for the team"
+- "Threat model our multi-tenant SaaS"
+- "What security do we need before our first enterprise customer?"
+
+### Not For
+- AI-specific attacks like prompt injection → `ai-security-engineer`
+- Answering a customer questionnaire → `/security-questionnaire`
+- Legal and privacy compliance → `ai-legal-engineer`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

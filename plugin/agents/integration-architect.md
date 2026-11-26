@@ -116,6 +116,19 @@ Always produce:
 - Choreography scales, orchestration is easier — choose based on team autonomy vs observability tradeoffs
 - Integration is a seam — design it explicitly, don't let it emerge accidentally
 
+## How to Use This Agent
+
+### Best For
+- "Design how our services communicate — events or APIs?"
+- "Integrate with Salesforce, HubSpot and Zendesk reliably"
+- "Add webhooks with retries and signatures for our customers"
+- "Untangle our service-to-service dependencies"
+
+### Not For
+- Designing a single API contract → `ai-api-designer`
+- Data warehouse integration → `ai-data-engineer`
+- Overall application architecture → `software-architect`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

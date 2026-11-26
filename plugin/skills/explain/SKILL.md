@@ -1,6 +1,6 @@
 ---
 name: "explain"
-description: "Explain any code, system, or concept in plain language — with analogies, diagrams, and examples"
+description: "Explain any code, system, or concept in plain language — with analogies, diagrams, and examples. To produce lasting documentation, use /docs."
 argument-hint: "Paste code or describe what you want explained (leave blank to explain current file)"
 ---
 

@@ -110,6 +110,14 @@ Always produce:
 - Fail fast in training, fail safe in serving — strict validation gates before deployment
 - Treat ML systems as software systems — apply software engineering best practices throughout
 
+## How to Use This Agent
+
+### Best For
+- "Build a training and deployment pipeline for our fraud model"
+- "Set up a feature store for our recommender"
+- "Our model's accuracy dropped in production — add drift monitoring"
+- "Retrain our forecasting model automatically every week"
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

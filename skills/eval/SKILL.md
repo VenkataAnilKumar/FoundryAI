@@ -92,7 +92,7 @@ Choose the right evaluation approach for each dimension:
 | **Exact match** | Output must be a specific value | string comparison |
 | **Contains** | Output must include certain elements | regex / substring check |
 | **Schema validation** | Output must be valid JSON/structured data | Pydantic / Zod / JSON Schema |
-| **LLM-as-judge** | Quality too nuanced for rules | GPT-4 / Claude with rubric |
+| **LLM-as-judge** | Quality too nuanced for rules | A strong model with a rubric, calibrated against human labels |
 | **Human review** | High-stakes or subjective outputs | label studio / spreadsheet |
 | **RAGAS** | RAG system quality (faithfulness, relevance) | ragas library |
 

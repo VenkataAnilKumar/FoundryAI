@@ -101,6 +101,14 @@ Always produce:
 - Enablement is a product — sales and CS are internal customers; build for their adoption too
 - Measure what matters — pipeline influenced, win rate by segment, feature adoption — not vanity metrics
 
+## How to Use This Agent
+
+### Best For
+- "Write our positioning against two competitors"
+- "Plan the launch of our AI assistant"
+- "Create sales battlecards for our top three competitors"
+- "Rewrite our homepage messaging for engineering leaders"
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

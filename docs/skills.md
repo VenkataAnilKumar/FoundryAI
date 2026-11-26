@@ -43,14 +43,14 @@ Route any business, operations, compliance, data, or content task to the right s
 ## Code Quality
 
 ### `/review`
-Thorough code review covering logic, security, performance, and readability
+Thorough code review covering logic, security, performance, and readability. For a fast security-only pass use /security-scan; for LLM-specific risks use /review-ai.
 
 ```
 /review <File path or paste code to review (leave blank to review current file)>
 ```
 
 ### `/review-ai`
-AI-specific code review — prompt injection, hallucination risks, token waste, eval gaps
+AI-specific code review — prompt injection, hallucination risks, token waste, eval gaps. For general code quality use /review.
 
 ```
 /review-ai <File path, prompt text, or AI feature description to review>
@@ -71,7 +71,7 @@ Structured debugging — reproduce, isolate, hypothesize, fix
 ```
 
 ### `/security-scan`
-Quick security scan of the current file or code — OWASP top 10, common vulnerabilities, fast triage
+Quick security scan of the current file or code — OWASP top 10, common vulnerabilities, fast triage. For a full code review use /review; for prompt injection and AI risks use /review-ai.
 
 ```
 /security-scan <Paste code to scan or leave blank for current file>
@@ -85,7 +85,7 @@ Generate a complete test plan — unit, integration, E2E, edge cases, and covera
 ```
 
 ### `/explain`
-Explain any code, system, or concept in plain language — with analogies, diagrams, and examples
+Explain any code, system, or concept in plain language — with analogies, diagrams, and examples. To produce lasting documentation, use /docs.
 
 ```
 /explain <Paste code or describe what you want explained (leave blank to explain current file)>
@@ -198,7 +198,7 @@ Audit AI systems for bias, fairness, safety, and explainability — with actiona
 ```
 
 ### `/experiment`
-Design experiments — A/B tests, statistical analysis, ML model evaluation, research benchmarking
+Design experiments — A/B tests, statistical analysis, ML model evaluation, research benchmarking. To define which metrics matter in the first place, use /metrics.
 
 ```
 /experiment <Describe the hypothesis, model, or behavior you want to test>
@@ -269,7 +269,7 @@ Assess whether an AI startup has the rights to use its data for training, fine-t
 ## Product & Design
 
 ### `/metrics`
-Define product metrics, design funnels, plan A/B tests, and build measurement frameworks
+Define product metrics, design funnels, and build measurement frameworks. To design and analyze a specific A/B test or experiment, use /experiment.
 
 ```
 /metrics <Describe the product, feature, or outcome you want to measure>
@@ -322,7 +322,7 @@ Build mobile apps — iOS/Android/React Native/Flutter patterns, on-device AI, a
 ```
 
 ### `/release-plan`
-Plan a release rollout — phased deployment, feature flags, canary, rollback strategy, launch coordination
+Plan a release rollout — phased deployment, feature flags, canary, rollback strategy, launch coordination. For writing the release notes use /release.
 
 ```
 /release-plan <Describe what you're releasing — feature, service, infrastructure change, or breaking API change>
@@ -351,21 +351,21 @@ Audit and fix accessibility issues — WCAG 2.2 compliance, screen readers, keyb
 ## Docs & Community
 
 ### `/docs`
-Write documentation for any function, module, API, or system
+Write documentation for any function, module, API, or system. To explain code or a concept conversationally without producing docs, use /explain.
 
 ```
 /docs <Paste code, function name, or describe what needs documenting>
 ```
 
 ### `/changelog`
-Generate a CHANGELOG entry from recent git commits
+Generate a CHANGELOG entry from recent git commits. For polished user-facing release notes use /release.
 
 ```
 /changelog <Version number (e.g. 1.2.0) or leave blank to auto-detect>
 ```
 
 ### `/release`
-Draft release notes — what's new, breaking changes, upgrade steps, migration guide
+Draft user-facing release notes — what's new, breaking changes, upgrade steps, migration guide. For a raw CHANGELOG entry use /changelog; for planning the rollout use /release-plan.
 
 ```
 /release <Version number and optionally what changed (e.g. "2.0.0 — new auth system")>

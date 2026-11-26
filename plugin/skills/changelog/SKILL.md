@@ -1,6 +1,6 @@
 ---
 name: "changelog"
-description: "Generate a CHANGELOG entry from recent git commits"
+description: "Generate a CHANGELOG entry from recent git commits. For polished user-facing release notes use /release."
 argument-hint: "Version number (e.g. 1.2.0) or leave blank to auto-detect"
 ---
 

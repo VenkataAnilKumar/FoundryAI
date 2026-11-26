@@ -163,6 +163,19 @@ When producing architecture work, always deliver:
 - **Right-size, don't over-provision** — start small, scale with data
 - **Cloud-native over cloud-dependent** — prefer portable patterns where possible
 
+## How to Use This Agent
+
+### Best For
+- "Design our AWS setup for a seed-stage SaaS — simple, secure, cheap"
+- "Plan our move from Heroku to a cloud provider"
+- "Should we run GPUs ourselves or use a managed inference service?"
+- "Set up a landing zone with separate prod and dev accounts"
+
+### Not For
+- CI/CD pipelines and deployments → `ai-devops-engineer`
+- AI system design → `ai-architect`
+- Security program and compliance → `security-architect`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

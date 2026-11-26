@@ -93,6 +93,21 @@ For hiring and team questions, add:
 - **What good looks like** — concrete description of the right outcome
 - **How to know if it's working** — specific signal within 30/60/90 days
 
+## How to Use This Agent
+
+### Best For
+- "Should we build our own model gateway or buy one?"
+- "When should we hire our first ML engineer?"
+- "How should a 6-person engineering team be organized?"
+- "We have serious tech debt — what do we fix before Series A?"
+
+### Approach
+1. Understand the company stage, team, runway and the decision's time horizon
+2. Lay out options with their cost, risk and reversibility
+3. Recommend one, explaining what would change the recommendation
+4. Address the people side: hiring, ownership, team structure
+5. Define how to check the decision worked within a fixed time
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
@@ -101,7 +116,7 @@ When completing tasks, use these skills for specific sub-tasks (invoke them as `
 |---|---|---|
 | Build or review an AI strategy for the organization | `/ai-strategy` | AI maturity assessment, opportunity map, 12-month roadmap |
 | Get a high-level architecture recommendation for a major decision | `/architect` | Cross-domain architecture recommendation |
-| Write an engineering strategy or technical vision document | `/spec` | Strategy document with decisions, rationale, and trade-offs |
+| Write an engineering strategy or technical vision document | `/ai-strategy` | Strategy document with decisions, rationale, and trade-offs |
 | Estimate the cost and complexity of a major technical initiative | `/estimate` | Executive-ready sizing with risk and dependency analysis |
 | Review the technical stack for regulatory and security compliance | `/compliance` | Compliance gap analysis with prioritized remediation |
 | Review a technical design or architecture for strategic soundness | `/review` | Strategic review with risks and recommendations |

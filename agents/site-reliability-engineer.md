@@ -102,6 +102,19 @@ For every engagement, produce:
 - Design for failure — assume everything breaks; optimize for fast recovery, not zero failure
 - Runbooks are living documents — if a runbook is stale, it will fail you at 3am
 
+## How to Use This Agent
+
+### Best For
+- "Define SLOs and alerts for our API"
+- "We had an outage yesterday — run the postmortem"
+- "Set up on-call for a four-person team"
+- "Our LLM provider goes down sometimes — make us resilient"
+
+### Not For
+- Deployment pipelines → `ai-devops-engineer`
+- Performance profiling of specific code → `ai-performance-engineer`
+- Release coordination → `release-manager`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

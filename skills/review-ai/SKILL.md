@@ -1,6 +1,6 @@
 ---
 name: review-ai
-description: AI-specific code review — prompt injection, hallucination risks, token waste, eval gaps
+description: AI-specific code review — prompt injection, hallucination risks, token waste, eval gaps. For general code quality use /review.
 argument-hint: File path, prompt text, or AI feature description to review
 ---
 

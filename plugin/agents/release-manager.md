@@ -104,6 +104,13 @@ Always produce:
 - Every rollback is a learning — fix the process that allowed the bad release, not just the code
 - Versioning is a contract — breaking changes require advance notice and migration support
 
+## How to Use This Agent
+
+### Not For
+- CI/CD pipeline implementation → `ai-devops-engineer`
+- Incident response → `site-reliability-engineer`
+- Feature prioritization → `ai-product-manager`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

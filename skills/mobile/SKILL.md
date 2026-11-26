@@ -190,7 +190,7 @@ Conflict resolution on sync (last-write-wins or field-level merge)
 ### Google Play Store
 
 **Checklist:**
-- [ ] Target API 34+ (required for new apps in 2024+)
+- [ ] Target the Android API level Google Play currently requires (raised every year — check the Play Console policy)
 - [ ] 64-bit support enabled
 - [ ] App Bundle (.aab) not APK (required for new submissions)
 - [ ] Permissions declared with rationale

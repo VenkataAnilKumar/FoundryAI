@@ -189,6 +189,38 @@ for name in sorted(set(skills) - listed_skills):
 for name in sorted(listed_skills - set(skills)):
     err("README.md", f"lists skill '/{name}', but skills/{name}/SKILL.md does not exist")
 
+# --- skill references & agent structure ------------------------------------------
+def check_skill_refs(where, text):
+    for m in re.finditer(r"`/([a-z][a-z0-9-]*)`|(?<![\w/`])/([a-z][a-z0-9-]+)\b", text):
+        name = m.group(1) or m.group(2)
+        if name not in skills:
+            line = text.count("\n", 0, m.start()) + 1
+            err(f"{where}:{line}", f"references skill '/{name}', which does not exist")
+
+
+for p in sorted((ROOT / "agents").glob("*.md")):
+    if p.name in NON_AGENT_FILES:
+        continue
+    text = p.read_text(encoding="utf-8")
+    rel = p.relative_to(ROOT)
+    # skill tables: every table row anywhere that names a `/skill`
+    rows = "\n".join(l for l in text.splitlines() if l.startswith("|") and "`/" in l)
+    check_skill_refs(rel, "\n".join(re.findall(r"`/[a-z][a-z0-9-]*`", rows)))
+    if not p.stem.startswith("team-") and p.stem != "founder":
+        if not re.search(r"^## .*(Output|Deliverable)", text, re.M | re.I):
+            err(p, "specialists need an '## Output Format' section so answers have a consistent shape")
+        if "not for" not in text.lower():
+            err(p, "specialists need a 'Not For' pointer to the agent to use instead")
+for p in sorted((ROOT / "templates").glob("AGENTS*.md")):
+    text = p.read_text(encoding="utf-8")
+    m = re.search(r"^## Useful Skills\n+(.*)$", text, re.M)
+    if m:
+        check_skill_refs(p.relative_to(ROOT), m.group(1))
+for name, fm in skills.items():
+    check_skill_refs(f"skills/{name}/SKILL.md (description)", fm.get("description", ""))
+routing = (ROOT / "docs" / "routing.md").read_text(encoding="utf-8")
+check_skill_refs("docs/routing.md", "\n".join(re.findall(r"\((/[^)]*)\)", routing)))
+
 # --- project templates --------------------------------------------------------
 for t in sorted((ROOT / "templates").glob("AGENTS*.md")):
     text = t.read_text(encoding="utf-8")

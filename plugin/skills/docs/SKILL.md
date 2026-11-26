@@ -1,6 +1,6 @@
 ---
 name: "docs"
-description: "Write documentation for any function, module, API, or system"
+description: "Write documentation for any function, module, API, or system. To explain code or a concept conversationally without producing docs, use /explain."
 argument-hint: "Paste code, function name, or describe what needs documenting"
 ---
 

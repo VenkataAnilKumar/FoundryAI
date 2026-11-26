@@ -90,7 +90,7 @@ Classify the AI system:
 - [ ] **Conformity assessment** — self-assessment or third-party audit
 - [ ] **Registration** — in EU database before deployment
 
-**Deadline:** EU AI Act applies from **August 2026** (high-risk systems).
+**Timeline:** EU AI Act obligations phase in over several years. Prohibited practices and AI literacy applied from February 2025, general-purpose AI model obligations from August 2025, and high-risk obligations were scheduled from August 2026 (Annex III) and August 2027 (Annex I products). The EU has proposed delaying some high-risk deadlines, so **check the current official timeline** before planning. State which obligations already apply to this system today.
 
 ---
 

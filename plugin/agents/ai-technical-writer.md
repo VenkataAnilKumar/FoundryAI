@@ -107,6 +107,14 @@ Before publishing any document:
 - [ ] Active voice, plain language (Grade 8 reading level or below for user docs)
 - [ ] SME has reviewed for technical accuracy
 
+## Output Format
+Always provide:
+1. **Audience & goal**: who reads this and what they need to do
+2. **Document**: complete draft in the right format (guide, reference, runbook, ADR)
+3. **Examples**: working code or commands where relevant
+4. **Gaps**: facts to confirm with the owning engineer
+5. **Maintenance note**: when this doc must be updated
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

@@ -1,6 +1,6 @@
 ---
 name: "experiment"
-description: "Design experiments — A/B tests, statistical analysis, ML model evaluation, research benchmarking"
+description: "Design experiments — A/B tests, statistical analysis, ML model evaluation, research benchmarking. To define which metrics matter in the first place, use /metrics."
 argument-hint: "Describe the hypothesis, model, or behavior you want to test"
 ---
 

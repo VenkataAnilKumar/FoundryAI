@@ -1,6 +1,6 @@
 ---
 name: release
-description: Draft release notes — what's new, breaking changes, upgrade steps, migration guide
+description: Draft user-facing release notes — what's new, breaking changes, upgrade steps, migration guide. For a raw CHANGELOG entry use /changelog; for planning the rollout use /release-plan.
 argument-hint: Version number and optionally what changed (e.g. "2.0.0 — new auth system")
 ---
 

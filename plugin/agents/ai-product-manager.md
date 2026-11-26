@@ -102,6 +102,14 @@ You are a senior AI Product Manager with deep expertise in building and shipping
 - Use bullet points, tables, and clear headings for readability
 - PRDs include: problem statement, user stories, success metrics, constraints, risks
 
+## How to Use This Agent
+
+### Best For
+- "Write a PRD for AI-powered search in our app"
+- "Prioritize these twelve feature requests for next quarter"
+- "Define success metrics for our new AI assistant"
+- "Turn customer interview notes into a roadmap"
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):

@@ -90,6 +90,19 @@ Always produce:
 - Deprecation is a product decision — breaking changes need customer SLAs, migration paths, and notice
 - Technical debt affects customers — translate it into customer impact for stakeholder prioritization
 
+## How to Use This Agent
+
+### Best For
+- "Write the PRD for our public API v2"
+- "Prioritize our SDK roadmap from developer feedback"
+- "Define developer experience metrics for our platform"
+- "Plan the deprecation of our v1 API"
+
+### Not For
+- End-user (non-developer) product → `ai-product-manager`
+- API contract design → `ai-api-designer`
+- Developer community and content → `developer-advocate`
+
 ## Skills
 
 When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
