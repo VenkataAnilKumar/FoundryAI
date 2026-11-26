@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FoundryAI — The AI Startup Team for Any AI Workspace</title>
+<meta name="description" content="58 specialist agents, 9 team coordinators and 54 skills for every kind of AI startup. Works in Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI and chat workspaces. Free and open source.">
+<meta property="og:title" content="FoundryAI — The AI Startup Team for Any AI Workspace">
+<meta property="og:description" content="Architects, engineers, product, growth, security, legal and fundraising specialists — as agents and skills in the AI workspace you already use. Free, MIT.">
+<meta property="og:image" content="https://venkataanilkumar.github.io/FoundryAI/social-preview.png">
+<meta property="og:url" content="https://venkataanilkumar.github.io/FoundryAI/">
+<meta name="twitter:image" content="https://venkataanilkumar.github.io/FoundryAI/social-preview.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚒️</text></svg>">
+<style>
+:root{
+  --bg:#11111b; --panel:#1e1e2e; --panel2:#181825; --line:#313244; --text:#cdd6f4; --muted:#9399b2;
+  --accent:#cba6f7; --green:#a6e3a1; --blue:#89b4fa; --yellow:#f9e2af; --pink:#f38ba8; --radius:14px;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:rgba(17,17,27,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-weight:800;color:var(--text);font-size:18px;letter-spacing:-.01em}
+.brand span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;align-items:center;font-size:14px}
+.navlinks a{color:var(--muted)} .navlinks a:hover{color:var(--text);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .12s,background .12s}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#11111b}
+.btn-ghost{border-color:var(--line);color:var(--text);background:var(--panel)}
+header.hero{padding:72px 0 40px;text-align:center}
+.pill{display:inline-block;font-size:13px;color:var(--green);border:1px solid #2f4a35;background:#16241b;padding:4px 12px;border-radius:999px;margin-bottom:20px}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;font-weight:850}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:760px;margin:0 auto 30px}
+.install{display:flex;align-items:center;gap:10px;max-width:760px;margin:0 auto 18px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 12px 12px 18px;font:14px var(--mono);text-align:left}
+.install code{flex:1;overflow-x:auto;white-space:nowrap;color:var(--text)}
+.install code b{color:var(--green);font-weight:400}
+.copy{flex:none;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font:600 13px var(--sans);cursor:pointer}
+.copy:hover{border-color:var(--accent)}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.ws{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px;font-size:13px;color:var(--muted)}
+.ws span{border:1px solid var(--line);border-radius:999px;padding:4px 12px;background:var(--panel2)}
+.demo{margin:36px auto 0;max-width:1000px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45);background:var(--panel)}
+.demo video,.demo img{display:block;width:100%;height:auto}
+.caption{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,3.6vw,38px);letter-spacing:-.02em;margin:0 0 12px;line-height:1.15}
+.lead{color:var(--muted);max-width:720px;margin:0 0 34px;font-size:18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.stat b{display:block;font-size:34px;letter-spacing:-.02em;color:var(--text)}
+.stat span{color:var(--muted);font-size:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.picker{display:grid;grid-template-columns:280px 1fr;gap:18px;align-items:start}
+.types{display:flex;flex-direction:column;gap:8px}
+.types button{text-align:left;background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:12px 14px;font:600 15px var(--sans);cursor:pointer}
+.types button[aria-pressed="true"]{border-color:var(--accent);background:#241f33}
+.types button small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.result{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;min-height:100%}
+.result h3{margin:0 0 4px;font-size:22px}
+.result .muted{color:var(--muted);margin:0 0 18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
+.chip{font:13px var(--mono);padding:5px 10px;border-radius:8px;background:var(--panel2);border:1px solid var(--line)}
+.chip.agent{color:var(--blue)} .chip.skill{color:var(--green)}
+.label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.prompt{font:14px var(--mono);background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:6px;color:var(--text);white-space:pre-wrap}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+td code{font:13px var(--mono);color:var(--yellow)}
+.tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow-x:auto}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--muted);margin:10px 0 0}
+.final{text-align:center}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:860px){
+  .stats{grid-template-columns:repeat(2,1fr)} .grid3{grid-template-columns:1fr} .picker{grid-template-columns:1fr}
+  .types{flex-direction:row;overflow-x:auto;padding-bottom:6px} .types button{flex:none;min-width:200px}
+  .navlinks a:not(.btn){display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#">Foundry<span>AI</span></a>
+  <div class="navlinks">
+    <a href="#startups">For your startup</a>
+    <a href="#workspaces">Workspaces</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-ghost" href="https://github.com/VenkataAnilKumar/FoundryAI">★ Star on GitHub</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="pill">Free &amp; open source · MIT · no account, no telemetry</div>
+  <h1>The <em>AI startup team</em><br>for any AI workspace</h1>
+  <p class="sub">58 specialist agents, 9 team coordinators and 54 skills — architects, engineers, product, growth, security, legal and fundraising — inside Claude Code, Cursor, Copilot, Codex, Gemini CLI or ChatGPT.</p>
+  <div class="install">
+    <code id="cmd"><b>$</b> curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash</code>
+    <button class="copy" data-copy="curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash">Copy</button>
+  </div>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://github.com/VenkataAnilKumar/FoundryAI">★ Star on GitHub</a>
+    <a class="btn btn-ghost" href="#startups">Find your team →</a>
+  </div>
+  <div class="ws"><span>Claude Code</span><span>Cursor</span><span>GitHub Copilot</span><span>Codex CLI</span><span>Gemini CLI</span><span>ChatGPT · Claude · Gemini projects</span></div>
+  <div class="demo">
+    <video autoplay muted loop playsinline preload="metadata" poster="demo-poster.png" aria-label="Real recording: one-line install, then a live answer from the founder agent">
+      <source src="demo.mp4" type="video/mp4">
+      <img src="demo.gif" alt="FoundryAI demo">
+    </video>
+  </div>
+  <p class="caption"><b>Real recording, not an animation:</b> a fresh install from GitHub, then a live answer from the <code>founder</code> agent (wait time sped up).</p>
+</div></header>
+
+<section><div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>58</b><span>specialist agents</span></div>
+    <div class="stat"><b>54</b><span>skills (Agent Skills standard)</span></div>
+    <div class="stat"><b>12</b><span>project templates by stack &amp; startup type</span></div>
+    <div class="stat"><b>6</b><span>workspace formats from one source</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Advice that fits your stage</h2>
+  <p class="lead">Generic AI assistants recommend Kubernetes to a two-person team. Every FoundryAI agent first works out what kind of AI startup you are and what stage you're at — then recommends the simplest thing that works now, and what would justify the next step.</p>
+  <div class="grid3">
+    <div class="card"><h3>Engineering <i>and</i> business</h3><p>Architecture, code, evals and security — alongside fundraising, pricing, enterprise sales and product-market fit.</p></div>
+    <div class="card"><h3>A real team, not one prompt</h3><p>Coordinators delegate to specialists as subagents where your workspace supports it, and integrate the result into one plan.</p></div>
+    <div class="card"><h3>Consistent output</h3><p>Every agent has a defined deliverable and says when another specialist should take over. Checked in CI.</p></div>
+  </div>
+</div></section>
+
+<section id="startups"><div class="wrap">
+  <h2>Pick your AI startup</h2>
+  <p class="lead">See who leads, which skills to use and which template to drop into your repo.</p>
+  <div class="picker">
+    <div class="types" id="types" role="group" aria-label="AI startup type"></div>
+    <div class="result" id="result" aria-live="polite"></div>
+  </div>
+</div></section>
+
+<section id="workspaces"><div class="wrap">
+  <h2>Works in the tool you already use</h2>
+  <p class="lead">One workspace-neutral source, built into each tool's native format. Switch tools without losing your team.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Workspace</th><th>Install</th><th>What you get</th></tr></thead>
+    <tbody>
+      <tr><td>Claude Code</td><td><code>--target claude</code></td><td>Subagents, skills, optional plugin and hooks</td></tr>
+      <tr><td>Cursor</td><td><code>--target cursor</code></td><td>Subagents + Agent Skills</td></tr>
+      <tr><td>GitHub Copilot / VS Code</td><td><code>--target copilot</code></td><td>Custom agents + skills</td></tr>
+      <tr><td>OpenAI Codex CLI</td><td><code>--target codex</code></td><td>Custom agents (TOML) + skills</td></tr>
+      <tr><td>Gemini CLI</td><td><code>--target gemini</code></td><td>Subagents + skills</td></tr>
+      <tr><td>Windsurf, Cline, Zed, Amp…</td><td><code>--target codex</code></td><td>Skills via the shared <code>~/.agents/skills</code></td></tr>
+      <tr><td>ChatGPT · Claude · Gemini projects</td><td><code>--target chat</code></td><td>Paste-ready prompts for project instructions</td></tr>
+    </tbody>
+  </table></div>
+  <p class="caption">Without <code>--target</code>, the installer detects the workspaces on your machine. It backs up anything it overwrites; <code>uninstall.sh</code> removes exactly what it installed.</p>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>FAQ</h2>
+  <details><summary>Does FoundryAI send my code or data anywhere?</summary><p>No. FoundryAI is prompt files — agents, skills and templates. Your AI workspace runs them with whatever model and data settings you already use.</p></details>
+  <details><summary>What does it cost?</summary><p>Nothing. It's MIT-licensed. You pay your AI workspace or model provider as usual.</p></details>
+  <details><summary>My workspace can't run subagents.</summary><p>Everything still works: coordinators name the right specialist and, if you ask, take on that role themselves.</p></details>
+  <details><summary>Is it only for AI startups?</summary><p>It's tuned for AI startups — LLM apps, agents, devtools, voice, vision, generative media, robotics, model training and regulated verticals — but most of the engineering, product and growth specialists are useful to any software team.</p></details>
+  <details><summary>How do I contribute an agent or skill?</summary><p>Write it once in the neutral format and run <code>scripts/validate.sh</code>. See CONTRIBUTING.md on GitHub.</p></details>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Hire your AI startup team in one line</h2>
+  <p class="lead" style="margin:0 auto 26px">Free, open source, and yours to change.</p>
+  <div class="install">
+    <code><b>$</b> curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash</code>
+    <button class="copy" data-copy="curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash">Copy</button>
+  </div>
+  <div class="cta"><a class="btn btn-primary" href="https://github.com/VenkataAnilKumar/FoundryAI">★ Star FoundryAI on GitHub</a></div>
+</div></section>
+
+<footer><div class="wrap">MIT licensed · <a href="https://github.com/VenkataAnilKumar/FoundryAI">GitHub</a> · <a href="https://github.com/VenkataAnilKumar/FoundryAI/blob/master/INSTALL.md">Install guide</a> · <a href="https://github.com/VenkataAnilKumar/FoundryAI/blob/master/CHANGELOG.md">Changelog</a></div></footer>
+
+<script>
+const REPO = "https://github.com/VenkataAnilKumar/FoundryAI/blob/master/";
+const TYPES = [
+  {id:"llm", name:"LLM app / copilot", tag:"RAG, chat, copilots", agents:["ai-engineer","ai-fullstack-engineer","ai-prompt-engineer"], skills:["/rag-design","/eval","/cost-check"], tpl:"AGENTS-nextjs-saas.md",
+   ask:'/cofounder "We\'re an LLM copilot for sales teams at MVP. Answers are often wrong — what do we fix first?"'},
+  {id:"agent", name:"Agent product", tag:"Agents that take actions", agents:["ai-agent-engineer","ai-architect","ai-qa-engineer"], skills:["/agent-systems","/eval","/security-scan"], tpl:"AGENTS-agent-product.md",
+   ask:'/cofounder "Our support agent sometimes issues refunds it shouldn\'t. Add the right approvals and evals."'},
+  {id:"devtools", name:"AI devtools / infra", tag:"APIs, SDKs, platforms", agents:["technical-product-manager","ai-api-designer","developer-advocate"], skills:["/spec","/devrel","/api-test"], tpl:"AGENTS.md",
+   ask:'/cofounder "Plan the public launch of our AI SDK for developers."'},
+  {id:"voice", name:"Voice AI", tag:"Voice agents, phone bots", agents:["ai-voice-engineer","ai-ux-designer"], skills:["/eval","/cost-check","/model-strategy"], tpl:"AGENTS-voice-ai.md",
+   ask:'/cofounder "Our phone agent takes 2.5s per reply and costs $0.40/min. What do we do this week?"'},
+  {id:"vision", name:"Vision & document AI", tag:"Images, video, documents", agents:["ai-vision-engineer","ai-data-engineer"], skills:["/model-strategy","/eval","/data-rights"], tpl:"AGENTS-vision-ai.md",
+   ask:'/cofounder "Should we fine-tune a detector or keep using a multimodal API for invoice extraction?"'},
+  {id:"genmedia", name:"Generative media", tag:"Image, video, audio", agents:["ai-generative-media-engineer","ai-responsible-engineer"], skills:["/model-strategy","/ai-pricing","/data-rights"], tpl:"AGENTS-generative-media.md",
+   ask:'/cofounder "Our GPU bill is eating our margin. Price our credits and cut cost per image."'},
+  {id:"robotics", name:"Robotics / embodied AI", tag:"Robots, sim-to-real", agents:["ai-robotics-engineer","ai-vision-engineer","site-reliability-engineer"], skills:["/model-strategy","/experiment","/incident"], tpl:"AGENTS-robotics.md",
+   ask:'/cofounder "What safety measures do we need before our first warehouse pilot?"'},
+  {id:"training", name:"Model training", tag:"Fine-tuning to pretraining", agents:["ai-model-training-engineer","ai-research-engineer","ai-platform-engineer"], skills:["/model-strategy","/eval","/data-rights"], tpl:"AGENTS-python-ml.md",
+   ask:'/cofounder "Should we fine-tune our own model or keep using an API?"'},
+  {id:"vertical", name:"Vertical AI", tag:"Health, finance, legal", agents:["ai-domain-expert","ai-legal-engineer","security-architect"], skills:["/compliance","/security-questionnaire","/data-rights"], tpl:"AGENTS-healthtech-ai.md",
+   ask:'/cofounder "A hospital sent us a security questionnaire. What do we need before the pilot?"'},
+];
+const BUSINESS = ["ai-fundraising-advisor","ai-finance-engineer","ai-sales-engineer"];
+const typesEl = document.getElementById("types"), resultEl = document.getElementById("result");
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function show(t){
+  [...typesEl.children].forEach(b => b.setAttribute("aria-pressed", b.dataset.id === t.id));
+  resultEl.innerHTML = `
+    <h3>${esc(t.name)}</h3><p class="muted">${esc(t.tag)}</p>
+    <div class="label">Who leads</div>
+    <div class="chips">${t.agents.map(a=>`<span class="chip agent">${a}</span>`).join("")}</div>
+    <div class="label">Skills to start with</div>
+    <div class="chips">${t.skills.map(s=>`<span class="chip skill">${s}</span>`).join("")}</div>
+    <div class="label">Business side (every AI startup)</div>
+    <div class="chips">${BUSINESS.map(a=>`<span class="chip agent">${a}</span>`).join("")}<span class="chip skill">/pitch-deck</span><span class="chip skill">/pmf-check</span><span class="chip skill">/ai-pricing</span></div>
+    <div class="label">Drop into your repo as AGENTS.md</div>
+    <p style="margin:6px 0 18px"><a href="${REPO}templates/${t.tpl}">templates/${t.tpl}</a></p>
+    <div class="label">Try asking</div>
+    <div class="prompt">${esc(t.ask)}</div>`;
+}
+TYPES.forEach((t,i) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.dataset.id = t.id;
+  b.innerHTML = `${esc(t.name)}<small>${esc(t.tag)}</small>`;
+  b.addEventListener("click", () => show(t));
+  typesEl.appendChild(b);
+});
+show(TYPES[3]);
+document.querySelectorAll(".copy").forEach(btn => btn.addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent = "Copied ✓"; }
+  catch { btn.textContent = "Select & copy"; }
+  setTimeout(() => btn.textContent = "Copy", 1800);
+}));
+</script>
+</body>
+</html>
