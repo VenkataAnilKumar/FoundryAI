@@ -44,9 +44,9 @@ curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/ins
 
 Show the output:
 ```
-✓ Installing 38 agents...
-✓ Installing 25 skills...
-✓ Installing founders-kit plugin...
+Agents:   52 specialists + 9 team coordinators
+Skills:   42 slash commands
+Plugin:   ✓ founders-kit@foundryai
 ✓ Done. Your AI team is ready.
 ```
 
@@ -105,7 +105,7 @@ Overall: Solid structure. Fix the HIGH before shipping.
 Type into terminal or show a text card:
 
 ```
-38 agents. 25 skills. Zero context switching.
+52 agents. 9 teams. 42 skills. Zero context switching.
 
 github.com/VenkataAnilKumar/FoundryAI
 ```

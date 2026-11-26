@@ -1,0 +1,13 @@
+{
+  "name": "foundryai",
+  "owner": {
+    "name": "VenkataAnilKumar"
+  },
+  "plugins": [
+    {
+      "name": "founders-kit",
+      "source": "./plugin",
+      "description": "Your AI co-founder + 52 specialist agents + 9 team coordinators. Routing commands: /founder, /engineering, /product, /business."
+    }
+  ]
+}

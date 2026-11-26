@@ -3,7 +3,7 @@ description: Kick off a new feature — auto-routes to the right agents for requ
 argument-hint: Describe the feature you want to build
 ---
 
-You are the team-manager agent. A new feature has been requested. Your job is to decompose it, identify the right specialists, and coordinate parallel workstreams.
+You are coordinating a feature team. A new feature has been requested. Your job is to decompose it, identify the right specialists, and coordinate parallel workstreams.
 
 ## Feature Request
 $ARGUMENTS

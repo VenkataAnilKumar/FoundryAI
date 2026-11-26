@@ -51,7 +51,7 @@ Notebooks:      Jupyter, nbstripout for git hygiene
 - Security for model serving → `ai-security-engineer`
 
 ### Documentation
-- Model cards, experiment docs → `ai-docs-engineer`
+- Model cards, experiment docs → `ai-technical-writer`
 - Research write-ups → `ai-technical-writer`
 
 ### Everything else

@@ -139,7 +139,7 @@ If your agent belongs to a domain, add it to the relevant plugin command:
 - Product agents → `plugin/commands/product.md`
 - Business agents → `plugin/commands/business.md`
 
-Also update `README.md` agent roster and `docs/agents.md`.
+Then add the agent to the right table under **The Team** in `README.md` (and bump that group's count), and run `scripts/gen-docs.py` — it regenerates `docs/agents.md` and the roster in `agents/founder.md` from the README.
 
 ---
 
@@ -184,7 +184,7 @@ This is where the user's input goes. Design your skill so it works both with and
 
 ### 4. Add to the plugin
 
-If the skill is broadly useful, add it to `plugin/commands/` so it's available via the founders-kit plugin. Update `README.md` skills table and `docs/skills.md`.
+Add it to the right table under **Skills** in `README.md`, then run `scripts/gen-docs.py` to regenerate `docs/skills.md`. If the skill is broadly useful, copy it into `plugin/commands/` once; after that `scripts/sync-plugin-commands.sh` keeps the copy in sync.
 
 ---
 
@@ -209,7 +209,8 @@ If the skill is broadly useful, add it to `plugin/commands/` so it's available v
 - [ ] Agent has all required sections (Role, Core Expertise, How to Use, Output Format)
 - [ ] Tested in Claude Code — invoked the agent and got useful output
 - [ ] Routing tables updated if applicable
-- [ ] README and docs updated if adding a new agent/skill
+- [ ] README tables updated and `scripts/gen-docs.py` run if adding a new agent/skill
+- [ ] `scripts/validate.sh` passes (CI runs it on every PR)
 
 ### Quality bar
 

@@ -49,7 +49,7 @@ Deploy:     Vercel (frontend), Railway / Fly.io (backend), Supabase (db)
 
 ### Launch
 - Cost analysis → `ai-finance-engineer`
-- Docs, API reference → `ai-docs-engineer`
+- Docs, API reference → `ai-technical-writer`
 - Analytics setup → `ai-analytics-engineer`
 
 ### Everything else

@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-blue)](https://claude.ai/code)
 [![Agents](https://img.shields.io/badge/agents-52-green)](#the-team--52-specialists)
-[![Skills](https://img.shields.io/badge/skills-42-orange)](#skills--25-slash-commands)
+[![Skills](https://img.shields.io/badge/skills-42-orange)](#skills--42-slash-commands)
 [![Plugin](https://img.shields.io/badge/plugin-founders--kit-purple)](#routing-commands)
 
 ![FoundryAI Demo](demo.svg)
@@ -38,15 +38,23 @@ Or manually:
 ```bash
 git clone https://github.com/VenkataAnilKumar/FoundryAI
 
-# Agents
-cp FoundryAI/agents/*.md ~/.claude/agents/
+cd FoundryAI
+./install.sh --dry-run   # preview what will change
+./install.sh             # install agents, skills, and the plugin
+./install.sh --hooks     # ...and copy the hook scripts too
+```
 
-# Skills (slash commands)
-mkdir -p ~/.claude/commands
-cp FoundryAI/skills/*.md ~/.claude/commands/
+Or install the routing plugin on its own, inside Claude Code:
 
-# Plugin (routing commands)
-claude plugin add ./FoundryAI/plugin
+```
+/plugin marketplace add VenkataAnilKumar/FoundryAI
+/plugin install founders-kit@foundryai
+```
+
+The installer backs up any file it would overwrite and records what it installed, so you can remove it cleanly:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash
 ```
 
 ---
@@ -59,7 +67,7 @@ claude plugin add ./FoundryAI/plugin
 | **Skills** | 42 | Slash commands — `/review`, `/debug`, `/prd`, `/eval`, `/migrate`... |
 | **Routing commands** | 4 | `/founder`, `/engineering`, `/product`, `/business` |
 | **Project templates** | 4 | Stack-specific `CLAUDE.md` files for your project |
-| **Workflow recipes** | 16 | Pre-built multi-agent team prompts |
+| **Workflow recipes** | 31 | Copy-paste team recipes ([15](templates/WORKFLOWS.md)) + team workflows ([16](agents/WORKFLOWS.md)) |
 | **Hooks** | 3 | Automated behaviors (logging, protection, notifications) |
 | **MCP configs** | 3 | GitHub, PostgreSQL, full-stack server configs |
 
@@ -101,7 +109,7 @@ claude plugin add ./FoundryAI/plugin
 | `ai-agent-engineer` | Multi-agent systems, tool use, autonomous workflows |
 | `ai-devops-engineer` | CI/CD, Docker/K8s, model deployment, MLOps |
 | `ai-qa-engineer` | LLM evals, test frameworks, adversarial testing |
-| `ai-research-engineer` | Paper implementation, experiments, new techniques |
+| `ai-performance-engineer` | Latency, throughput, Core Web Vitals, load testing, query tuning |
 
 ### Platform (4)
 | Agent | Best For |
@@ -302,15 +310,16 @@ cp FoundryAI/templates/CLAUDE-nextjs-saas.md ./CLAUDE.md
 ### Hooks — Automate Claude Code behaviors
 
 ```bash
-cp FoundryAI/templates/hooks/*.sh ~/.claude/hooks/
-chmod +x ~/.claude/hooks/*.sh
+./install.sh --hooks      # copies the scripts to ~/.claude/hooks
 ```
+
+Then register them in `~/.claude/settings.json` — the snippet is in [`templates/hooks-setup.md`](templates/hooks-setup.md). Hooks need `jq` or `python3`.
 
 | Hook | Trigger | Does |
 |---|---|---|
-| `log-agent-usage.sh` | After every agent call | Logs to `~/.claude/logs/agent-usage.log` |
-| `protect-env-files.sh` | Before any file write | Blocks writes to `.env`, `.pem`, `secrets.*` |
-| `notify-on-complete.sh` | Task complete | Desktop notification (Windows/Mac/Linux) |
+| `protect-env-files.sh` | Before Write/Edit | Blocks writes to `.env*`, `*.pem`, `*.key`, `secrets.*`, `credentials.*`, SSH keys (fails closed) |
+| `log-agent-usage.sh` | After every subagent call | Logs to `~/.claude/logs/agent-usage.log` |
+| `notify-on-complete.sh` | Prompt submit + Stop | Desktop notification when a turn takes over 30s (Windows/Mac/Linux) |
 
 ### MCP Servers — Connect Claude to your infrastructure
 
@@ -357,7 +366,9 @@ Copy any recipe from [`templates/WORKFLOWS.md`](templates/WORKFLOWS.md) and past
 
 ```
 FoundryAI/
-├── install.sh                       ← one-liner installer
+├── install.sh                       ← installer (--dry-run, --hooks, --no-plugin)
+├── uninstall.sh                     ← removes exactly what install.sh installed
+├── .claude-plugin/marketplace.json  ← lets Claude Code install the plugin from this repo
 ├── agents/                          ← 52 specialists + 9 team coordinators (flat)
 │   ├── founder.md                   ← AI co-founder (master orchestrator)
 │   ├── cto-advisor.md               ← Technical leadership advisor
@@ -368,23 +379,28 @@ FoundryAI/
 │   ├── review.md                    ← /review
 │   ├── debug.md                     ← /debug
 │   ├── prd.md                       ← /prd
-│   └── ... (22 more)
+│   └── ... (39 more)
 ├── plugin/                          ← founders-kit plugin
 │   ├── .claude-plugin/
-│   └── commands/                    ← /founder + domain commands
+│   └── commands/                    ← routing commands + synced copies of skills
 ├── templates/
 │   ├── CLAUDE.md                    ← Generic project config
 │   ├── CLAUDE-nextjs-saas.md        ← Next.js + FastAPI template
 │   ├── CLAUDE-python-ml.md          ← Python ML project template
 │   ├── CLAUDE-react-native.md       ← React Native mobile template
 │   ├── WORKFLOWS.md                 ← 15 pre-built team recipes
-│   ├── hooks/                       ← 3 automation hook scripts
+│   ├── hooks/                       ← 3 hook scripts (tested by scripts/test-hooks.sh)
 │   ├── mcp-github.json              ← GitHub MCP config
 │   ├── mcp-postgres.json            ← PostgreSQL MCP config
 │   └── mcp-full-stack.json          ← Combined MCP config
+├── scripts/
+│   ├── validate.sh                  ← CI checks: frontmatter, counts, references, sync
+│   ├── gen-docs.py                  ← regenerates docs/agents.md + docs/skills.md
+│   ├── sync-plugin-commands.sh      ← keeps plugin/commands in sync with skills/
+│   └── test-hooks.sh                ← hook tests
 └── docs/
-    ├── agents.md                    ← Full agent reference
-    └── skills.md                    ← Full skills reference
+    ├── agents.md                    ← Full agent reference (generated)
+    └── skills.md                    ← Full skills reference (generated)
 ```
 
 ---

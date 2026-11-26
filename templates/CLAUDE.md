@@ -48,8 +48,7 @@ When delegating tasks in this project, prefer these agents:
 
 ### Business
 - **Cost analysis** → `ai-finance-engineer`
-- **Technical documentation, API docs** → `ai-docs-engineer`
-- **User guides, tutorials, SOPs** → `ai-technical-writer`
+- **Technical documentation, API docs, user guides, SOPs** → `ai-technical-writer`
 
 ### Multi-agent tasks
 - **Any task needing strategic judgment + execution** → `founder` (thinks like a co-founder, delegates to the right team)
@@ -108,7 +107,7 @@ Lead:   ai-qa-engineer
 ```
 Lead:   ai-orchestrator
 →       ai-legal-engineer (compliance review)
-→       ai-docs-engineer (docs)
+→       ai-technical-writer (docs)
 →       ai-devops-engineer (deployment checklist)
 →       ai-analytics-engineer (metrics setup)
 ```

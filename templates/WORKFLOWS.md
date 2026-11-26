@@ -54,7 +54,7 @@ Team composition:
 - ai-responsible-engineer: audit for bias, fairness, and harmful output risks
 - ai-security-engineer: conduct threat model review and test for prompt injection
 - ai-qa-engineer: define go/no-go quality metrics and run final eval suite
-- ai-docs-engineer: review docs completeness for launch
+- ai-technical-writer: review docs completeness for launch
 - ai-analytics-engineer: verify that all launch metrics and dashboards are in place
 
 Deliverable: A launch readiness report with a clear GO / NO-GO recommendation
@@ -160,7 +160,7 @@ Team composition:
 - ai-devops-engineer: implement CI/CD pipelines, model registry, and deployment automation
 - ai-data-engineer: design the data versioning and feature pipeline integration
 - ai-qa-engineer: set up automated model evaluation and quality gates
-- ai-docs-engineer: write runbooks and platform documentation
+- ai-technical-writer: write runbooks and platform documentation
 
 Deliverable: Working MLOps platform with CI/CD, model registry, automated evaluation,
 and monitoring. Include full documentation and runbooks.
@@ -273,7 +273,7 @@ Team composition:
 - ai-data-scientist: define quality criteria, label schema, and statistical validation
 - ai-devops-engineer: automate pipeline scheduling, monitoring, and alerting
 - ai-responsible-engineer: audit data for bias, PII, and consent compliance
-- ai-docs-engineer: document data lineage and schema
+- ai-technical-writer: document data lineage and schema
 
 Deliverable: Automated data pipeline with monitoring, data quality gates, versioned
 dataset artifacts, and full lineage documentation.

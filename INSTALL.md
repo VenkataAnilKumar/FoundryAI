@@ -1,82 +1,111 @@
 # Installation Guide
 
-## Option A — Quick Install (Recommended)
+## Option A — One-line install (recommended)
 
 ```bash
-# Clone the repo
-git clone https://github.com/yourusername/claude-agents
-
-# Install agents (specialist subagents)
-cp claude-agents/agents/*.md ~/.claude/agents/
-
-# Install skills (slash commands)
-mkdir -p ~/.claude/commands
-cp claude-agents/skills/*.md ~/.claude/commands/
-
-# Verify
-ls ~/.claude/agents/ | wc -l    # should show 35
-ls ~/.claude/commands/ | wc -l  # should show 20
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
 ```
 
-Done. Open Claude Code — agents and skills are available immediately.
+This installs:
 
----
+- **52 specialist agents + 9 team coordinators** → `~/.claude/agents/`
+- **42 skills (slash commands)** → `~/.claude/commands/`
+- **The `founders-kit` plugin** (routing commands `/founder`, `/engineering`, `/product`, `/business`)
 
-## Option B — Install with Routing Plugin
+Any existing file it would overwrite is backed up to `~/.claude/founders-kit-backup/<timestamp>/` first.
 
-The routing plugin adds `/team`, `/engineering`, `/product`, and `/business` commands.
+Options (pass after `bash -s --` when piping from curl):
+
+| Flag | Effect |
+|---|---|
+| `--dry-run` | Show what would be installed; change nothing |
+| `--hooks` | Also copy the hook scripts to `~/.claude/hooks/` |
+| `--no-plugin` | Skip the routing plugin |
 
 ```bash
-# After cloning (see Option A above)
-claude plugin add ./claude-agents/plugin
-```
-
-Test it:
-```
-/team "help me build a streaming chat interface"
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash -s -- --dry-run
 ```
 
 ---
 
-## Option C — Full Setup with Project Template
-
-For a new project that uses the full agent team:
+## Option B — From a local clone
 
 ```bash
-# 1. Install agents (Option A)
-cp claude-agents/agents/*.md ~/.claude/agents/
-
-# 2. Install plugin (Option B)
-claude plugin add ./claude-agents/plugin
-
-# 3. Add project config to your repo
-cp claude-agents/templates/CLAUDE.md ./your-project/CLAUDE.md
-
-# 4. Edit CLAUDE.md with your project details
-# - Set your tech stack
-# - Set coding conventions
-# - Customize agent routing preferences
+git clone https://github.com/VenkataAnilKumar/FoundryAI
+cd FoundryAI
+./install.sh
 ```
+
+The installer uses your local checkout, so you can edit agents before installing.
 
 ---
 
-## Verify Installation
+## Option C — Plugin only
 
-In Claude Code, run:
+Inside Claude Code:
+
 ```
-List all available agents
+/plugin marketplace add VenkataAnilKumar/FoundryAI
+/plugin install founders-kit@foundryai
 ```
 
-You should see all 34 specialists listed.
+Or from your shell:
+
+```bash
+claude plugin marketplace add VenkataAnilKumar/FoundryAI
+```
+
+```bash
+claude plugin install founders-kit@foundryai
+```
+
+Plugin commands are namespaced, e.g. `/founders-kit:founder "help me build a streaming chat interface"`.
+
+---
+
+## Option D — Add a project template
+
+```bash
+cp FoundryAI/templates/CLAUDE.md ./your-project/CLAUDE.md
+```
+
+Then edit it with your stack, conventions, and agent routing preferences. Stack-specific templates: `CLAUDE-nextjs-saas.md`, `CLAUDE-python-ml.md`, `CLAUDE-react-native.md`.
+
+---
+
+## Hooks (optional)
+
+```bash
+./install.sh --hooks
+```
+
+Then register them in `~/.claude/settings.json` — see [`templates/hooks-setup.md`](templates/hooks-setup.md).
+
+---
+
+## Verify
+
+```bash
+ls ~/.claude/agents/ | wc -l    # at least 61
+ls ~/.claude/commands/ | wc -l  # at least 42
+```
+
+In Claude Code, run `/agents` to see the installed agents.
 
 ---
 
 ## Updating
 
+Re-run the installer. It overwrites the kit's files (backing up any you changed) and leaves your own agents and commands alone.
+
 ```bash
-cd claude-agents
-git pull
-cp agents/*.md ~/.claude/agents/
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
+```
+
+To update just the plugin:
+
+```bash
+claude plugin marketplace update foundryai
 ```
 
 ---
@@ -84,12 +113,9 @@ cp agents/*.md ~/.claude/agents/
 ## Uninstalling
 
 ```bash
-# Remove agents
-rm ~/.claude/agents/ai-*.md
-rm ~/.claude/agents/team-manager.md
-rm ~/.claude/agents/ai-technical-writer.md
-# ... etc
-
-# Remove plugin
-claude plugin remove founders-kit
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash
 ```
+
+This removes exactly the files `install.sh` recorded in `~/.claude/founders-kit.manifest`, plus the plugin. Your own agents, commands, and the backups are kept. Add `--dry-run` (`bash -s -- --dry-run`) to preview.
+
+Installs made before the manifest existed have to be removed by hand: compare `~/.claude/agents/` and `~/.claude/commands/` with this repo's `agents/` and `skills/`.
