@@ -1,6 +1,8 @@
-# Claude Code AI Agent Pack — Full Team (52 Agents + 9 Team Coordinators)
+# FoundryAI Agents — Full Team (58 Agents + 9 Team Coordinators)
 
-A complete set of **52 specialist AI agents** and **9 team coordinators** covering every role across a modern AI product organization. Drop them into `~/.claude/agents/` for instant access in Claude Code.
+A complete set of **58 specialist AI agents** and **9 team coordinators** covering every role across a modern AI startup.
+
+These files are the **workspace-neutral source**: each declares a `tier` and `capabilities` instead of workspace-specific models and tools. Don't copy them into a workspace directly; `install.sh` builds them into the native format for Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI or chat workspaces.
 
 ---
 
@@ -17,17 +19,18 @@ A complete set of **52 specialist AI agents** and **9 team coordinators** coveri
 | Software Architect | `software-architect.md` |
 | Staff Engineer | `staff-engineer.md` |
 
-### Data & AI Team (6)
+### Data & AI Team (7)
 | Agent | File |
 |-------|------|
 | AI Analytics Engineer | `ai-analytics-engineer.md` |
 | AI Data Engineer | `ai-data-engineer.md` |
 | AI Data Scientist | `ai-data-scientist.md` |
 | AI Domain Expert | `ai-domain-expert.md` |
+| AI Model Training Engineer | `ai-model-training-engineer.md` |
 | AI Prompt Engineer | `ai-prompt-engineer.md` |
 | AI Research Engineer | `ai-research-engineer.md` |
 
-### Engineering Team (12)
+### Engineering Team (16)
 | Agent | File |
 |-------|------|
 | AI Agent Engineer | `ai-agent-engineer.md` |
@@ -38,10 +41,14 @@ A complete set of **52 specialist AI agents** and **9 team coordinators** coveri
 | AI Engineer | `ai-engineer.md` |
 | AI Frontend Engineer | `ai-frontend-engineer.md` |
 | AI Full Stack Engineer | `ai-fullstack-engineer.md` |
+| AI Generative Media Engineer | `ai-generative-media-engineer.md` |
 | AI Mobile Engineer | `ai-mobile-engineer.md` |
 | AI Performance Engineer | `ai-performance-engineer.md` |
 | AI QA Engineer | `ai-qa-engineer.md` |
+| AI Robotics Engineer | `ai-robotics-engineer.md` |
 | AI Software Engineer | `ai-software-engineer.md` |
+| AI Vision Engineer | `ai-vision-engineer.md` |
+| AI Voice Engineer | `ai-voice-engineer.md` |
 
 ### Growth Team (4)
 | Agent | File |
@@ -58,9 +65,10 @@ A complete set of **52 specialist AI agents** and **9 team coordinators** coveri
 | AI Technical Writer | `ai-technical-writer.md` |
 | Content Designer | `content-designer.md` |
 
-### Leadership Team (5)
+### Leadership Team (6)
 | Agent | File |
 |-------|------|
+| AI Fundraising Advisor | `ai-fundraising-advisor.md` |
 | AI Orchestrator | `ai-orchestrator.md` |
 | CTO Advisor | `cto-advisor.md` |
 | Engineering Manager | `engineering-manager.md` |
@@ -117,27 +125,23 @@ Each team coordinator knows its members, can delegate subtasks, and orchestrates
 ## Installation
 
 ```bash
-# From FoundryAI root
-cp agents/*.md ~/.claude/agents/
+# Every AI workspace detected on this machine
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash
+
+# Or pick: claude | cursor | copilot | codex | gemini | chat | all
+./install.sh --target cursor
 ```
 
-Or use the one-line installer:
-```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
-```
-
-Restart Claude Code and run `/agents` to verify all 61 agents appear.
+Restart your workspace and check its agent list (for example `/agents` in Claude Code).
 
 ---
 
 ## Quick Start
 
-```bash
-# Spawn your co-founder for any strategic task
-/founder "build me a RAG-powered document search"
-
-# Route directly to a specialist
-# Use the Agent tool or type the agent name in Claude Code
+```
+/cofounder "build me a RAG-powered document search"
 ```
 
-See `CLAUDE.md` for the full routing guide and `WORKFLOWS.md` for pre-built team workflows.
+Or name a specialist directly: *"Use the ai-architect agent to design our retrieval pipeline."*
+
+See [`docs/routing.md`](../docs/routing.md) for the full routing guide and [`templates/WORKFLOWS.md`](../templates/WORKFLOWS.md) for pre-built team workflows.

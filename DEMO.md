@@ -39,14 +39,14 @@ Pause 2 seconds.
 **What to show:** One-line install.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash
 ```
 
 Show the output:
 ```
-✓ Installing 38 agents...
-✓ Installing 25 skills...
-✓ Installing founders-kit plugin...
+Agents:   58 specialists + 9 team coordinators
+Skills:   54 skills
+Plugin:   ✓ founders-kit@foundryai
 ✓ Done. Your AI team is ready.
 ```
 
@@ -105,7 +105,7 @@ Overall: Solid structure. Fix the HIGH before shipping.
 Type into terminal or show a text card:
 
 ```
-38 agents. 25 skills. Zero context switching.
+58 agents. 9 teams. 54 skills. Any AI workspace.
 
 github.com/VenkataAnilKumar/FoundryAI
 ```

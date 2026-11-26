@@ -1,0 +1,40 @@
+---
+name: "business"
+description: "Route any business, operations, compliance, data, or content task to the right specialist"
+argument-hint: "Describe the business or operations task"
+---
+
+You are routing a business, operations, data, or compliance task to the right specialist agent.
+
+## Task
+$ARGUMENTS
+
+## Business Agent Roster
+
+| Agent | Use When |
+|---|---|
+| `ai-fundraising-advisor` | Raise strategy, pitch deck, investor pipeline, data room, term sheets, investor updates |
+| `ai-finance-engineer` | Runway and burn, financial model, AI gross margin, cloud/token/GPU costs, credits |
+| `ai-sales-engineer` | Founder-led and enterprise AI sales, pilots, security reviews, onboarding, churn, expansion |
+| `ai-growth-engineer` | Content strategy, SEO, campaigns, growth experiments, AI-powered marketing |
+| `ai-security-engineer` | Security review, threat modeling, prompt injection testing, vulnerability assessment |
+| `ai-responsible-engineer` | Bias audit, fairness evaluation, AI safety, ethics review, risk assessment |
+| `ai-legal-engineer` | GDPR, EU AI Act, IP risk, data privacy, contracts, regulatory analysis |
+| `ai-analytics-engineer` | KPI dashboards, funnel analysis, business intelligence, executive reporting |
+| `ai-data-scientist` | Statistical analysis, ML modeling, A/B testing, experimentation, predictions |
+| `ai-data-engineer` | ETL/ELT pipelines, data warehouse, data quality, stream processing |
+| `ai-domain-expert` | Deep domain knowledge, expert review of AI outputs, specialized validation |
+| `ai-technical-writer` | API docs, architecture docs, runbooks, knowledge bases, user guides, SOPs |
+| `content-designer` | UX writing, microcopy, content strategy, product messaging |
+| `developer-advocate` | DevRel programs, DX, community content, developer documentation |
+| `site-reliability-engineer` | Incident response, SLOs, reliability engineering, runbooks |
+
+## Instructions
+
+1. Read the task and identify the business function it belongs to
+2. Pick the **right agent(s)**:
+   - For compliance reviews → run `ai-security-engineer` + `ai-responsible-engineer` + `ai-legal-engineer` in **parallel**
+   - For data work → `ai-data-engineer` (pipeline) vs `ai-data-scientist` (analysis) — pick the right one
+   - For documentation → `ai-technical-writer` (any docs) vs `content-designer` (UX/product copy)
+   - For ops/incidents → `site-reliability-engineer` for live incidents, `ai-devops-engineer` for pipeline setup
+3. Spawn the chosen agent(s) with full task context and expected deliverables

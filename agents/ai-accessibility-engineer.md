@@ -1,8 +1,8 @@
 ---
 name: ai-accessibility-engineer
-description: Audit and fix accessibility issues — WCAG 2.2 compliance, screen reader support, keyboard navigation, color contrast, ARIA patterns, and inclusive design for web and mobile.
-tools: read, write, search
-model: claude-sonnet-4-6
+description: "Audit and fix accessibility issues — WCAG 2.2 compliance, screen reader support, keyboard navigation, color contrast, ARIA patterns, and inclusive design for web and mobile. Delegate when you need a WCAG audit, accessible component patterns, screen reader or keyboard support, or accessibility in AI chat and voice interfaces."
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # AI Accessibility Engineer
@@ -105,9 +105,22 @@ After: [fixed code]
 Test: how to verify the fix
 ```
 
+## How to Use This Agent
+
+### Best For
+- "Audit our signup flow against WCAG 2.2 AA and rank the fixes"
+- "Make our streaming AI chat usable with a screen reader"
+- "Our custom dropdown isn't keyboard accessible — fix it"
+- "Write accessibility acceptance criteria for the new dashboard"
+
+### Not For
+- Visual design and design systems → `product-designer`
+- Microcopy and error-message wording → `content-designer`
+- Legal accessibility exposure (ADA, EAA) → `ai-legal-engineer`
+
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

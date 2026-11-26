@@ -27,7 +27,7 @@
   <circle cx="70" cy="20" r="6.5" fill="#a6e3a1"/>
 
   <!-- Window title -->
-  <text x="400" y="25" text-anchor="middle" fill="#585b70" font-size="12">claude — FoundryAI</text>
+  <text x="400" y="25" text-anchor="middle" fill="#585b70" font-size="12">FoundryAI — any AI workspace</text>
 
   <!-- ── SCENE 1: Prompt + typing ── -->
 
@@ -62,7 +62,7 @@
   </text>
 
   <text x="20" y="128" fill="#585b70" opacity="0">
-    Analyzing request · selecting specialists · preparing parallel workstreams
+    Startup type: LLM app · Stage: MVP · selecting specialists
     <animate attributeName="opacity"
       values="0;0;1;1;0;0"
       keyTimes="0;0.27;0.31;0.90;0.94;1"
@@ -151,7 +151,7 @@
       dur="20s" repeatCount="indefinite"/>
     <text x="20" y="318" fill="#a6e3a1" font-weight="bold">✓</text>
     <text x="36" y="318" fill="#cdd6f4" font-weight="bold">Architecture</text>
-    <text x="133" y="318" fill="#585b70">  Pinecone · voyage-3 embeddings · hybrid retrieval</text>
+    <text x="150" y="318" fill="#585b70">Pinecone · voyage-3 embeddings · hybrid retrieval</text>
   </g>
 
   <!-- Result 2 -->
@@ -162,7 +162,7 @@
       dur="20s" repeatCount="indefinite"/>
     <text x="20" y="342" fill="#a6e3a1" font-weight="bold">✓</text>
     <text x="36" y="342" fill="#cdd6f4" font-weight="bold">Pipeline</text>
-    <text x="98" y="342" fill="#585b70">       LangChain → embed → upsert → RAGAS eval</text>
+    <text x="150" y="342" fill="#585b70">LangChain → embed → upsert → RAGAS eval</text>
   </g>
 
   <!-- Result 3 -->
@@ -173,7 +173,7 @@
       dur="20s" repeatCount="indefinite"/>
     <text x="20" y="366" fill="#a6e3a1" font-weight="bold">✓</text>
     <text x="36" y="366" fill="#cdd6f4" font-weight="bold">Cost</text>
-    <text x="70" y="366" fill="#585b70">           $0.004/query · $380/mo · 60% savings with cache</text>
+    <text x="150" y="366" fill="#585b70">$0.004/query · $380/mo · 60% savings with cache</text>
   </g>
 
   <!-- Divider bottom -->
@@ -192,7 +192,7 @@
       values="0;0;1;1;0;0"
       keyTimes="0;0.78;0.82;0.90;0.94;1"
       dur="20s" repeatCount="indefinite"/>
-    <text x="20" y="415" fill="#585b70" font-size="12">52 agents + 9 teams · 42 skills · zero context switching</text>
+    <text x="20" y="415" fill="#585b70" font-size="12">58 agents + 9 teams · 54 skills · Claude Code · Cursor · Copilot · Codex · Gemini</text>
     <text x="20" y="438" fill="#89b4fa" font-size="12.5">⭐  github.com/VenkataAnilKumar/FoundryAI</text>
   </g>
 

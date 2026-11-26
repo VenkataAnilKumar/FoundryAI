@@ -1,0 +1,13 @@
+{
+  "name": "foundryai",
+  "owner": {
+    "name": "VenkataAnilKumar"
+  },
+  "plugins": [
+    {
+      "name": "founders-kit",
+      "source": "./plugin",
+      "description": "FoundryAI for Claude Code: 58 specialist agents, 9 team coordinators and 54 skills for every kind of AI startup."
+    }
+  ]
+}
