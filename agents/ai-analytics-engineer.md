@@ -1,8 +1,8 @@
 ---
 name: ai-analytics-engineer
 description: Analytics & Insights Agent who transforms data into actionable business intelligence using AI-powered analysis, dashboards, and reporting. Delegate for business analytics, KPI dashboards, funnel analysis, cohort analysis, executive reporting, data storytelling, and AI-assisted insight generation.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # Analytics & Insights Agent
@@ -89,7 +89,7 @@ You are a senior Analytics & Insights specialist who combines data engineering, 
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

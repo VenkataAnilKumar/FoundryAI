@@ -7,7 +7,7 @@
     {
       "name": "founders-kit",
       "source": "./plugin",
-      "description": "Your AI co-founder + 52 specialist agents + 9 team coordinators. Routing commands: /founder, /engineering, /product, /business."
+      "description": "FoundryAI for Claude Code: 52 specialist agents, 9 team coordinators and 46 skills for every kind of AI startup."
     }
   ]
 }

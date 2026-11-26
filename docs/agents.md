@@ -2,7 +2,7 @@
 
 # Agent Capability Reference
 
-All 52 specialist agents and 9 team coordinators, with the model and tools each one runs with.
+All 52 specialist agents and 9 team coordinators, with the tier and capabilities each one runs with.
 
 ## How to invoke an agent
 
@@ -12,44 +12,44 @@ In Claude Code, name the agent you want:
 Use the ai-architect agent to design a scalable architecture for my AI SaaS.
 ```
 
-Or let a routing command pick (requires the founders-kit plugin):
+Or let a routing skill pick:
 
 ```
-/founder "design a scalable architecture for my AI SaaS"
+/cofounder "design a scalable architecture for my AI SaaS"
 ```
 
-Model `opus` / `sonnet` are aliases that always resolve to the latest model in that family.
+**Tier** is how much reasoning the agent needs (`deep`, `standard`, `fast`); each workspace maps it to its own models. **Capabilities** (`read`, `edit`, `shell`, `web`, `delegate`) map to each workspace's tools.
 
 ---
 
 ## Leadership (5)
 
 ### `founder`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, shell, web, delegate  
 **Best for**: Your AI co-founder — thinks strategically, delegates to the right team, ships
 
 Your AI co-founder — strategic thinker, decisive executor, and orchestrator of the full specialist team. Use for any task that needs business judgment, multi-domain coordination, or first-principles thinking before delegating to specialists.
 
 ### `cto-advisor`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Build-vs-buy decisions, hiring plans, tech debt strategy, scaling engineering teams
 
 Technical leadership advisor — use for build-vs-buy decisions, team structure, hiring plans, technical debt strategy, engineering culture, and technology bets that will affect the company for years.
 
 ### `engineering-manager`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Team health, delivery cadence, performance reviews, hiring
 
 Engineering Manager who owns the software delivery process — sprint planning, team velocity, work item prioritization, unblocking engineers, retrospectives, and delivery forecasting. Delegate when you need sprint planning, team health assessment, velocity analysis, process improvement, escalation handling, or delivery forecasting.
 
 ### `technical-program-manager`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Cross-team coordination, OKRs, program tracking
 
 Technical Program Manager (TPM) who coordinates large cross-team technical programs — dependency mapping, multi-team roadmaps, program-level risk management, OKR tracking, and large-scale delivery coordination. Distinct from Product Manager (owns product) and Engineering Manager (owns one team). Delegate when you need cross-team program planning, dependency resolution, milestone tracking across multiple teams, or executive-level program reporting.
 
 ### `ai-orchestrator`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, shell, web, delegate  
 **Best for**: Complex multi-agent workflow coordination
 
 Multi-Agent Orchestrator who coordinates teams of AI agents to accomplish complex, multi-step tasks — decomposing goals, assigning subtasks to specialist agents, managing dependencies, handling failures, and synthesizing results. Delegate when you need to coordinate multiple agents, break down complex projects, manage parallel workstreams, or orchestrate autonomous workflows.
@@ -59,43 +59,43 @@ Multi-Agent Orchestrator who coordinates teams of AI agents to accomplish comple
 ## Architecture (7)
 
 ### `ai-architect`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: AI system design, LLM/RAG architecture, tech stack decisions
 
 AI Solutions Architect who designs end-to-end AI system architectures including AI System Design, Generative AI System Design, ML System Design, and AI Agentic & Autonomous System Design. Selects models and infrastructure, defines MLOps/LLMOps pipelines, and ensures scalability, reliability, and security. Delegate when you need system design, architecture decisions, infrastructure planning, technology selection, multi-agent orchestration, or GenAI/RAG/agentic workflow architecture.
 
 ### `cloud-architect`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: AWS/GCP/Azure infrastructure, multi-cloud, IaC
 
 Cloud Architect who designs, plans, and governs cloud infrastructure for startups and enterprises — covering AWS, GCP, Azure, and multi-cloud strategies. Handles infrastructure architecture, cost optimization, security posture, scalability design, migration planning, and FinOps. Delegate when you need cloud architecture blueprints, landing zone design, cost reduction strategies, disaster recovery plans, cloud migration roadmaps, or infrastructure review.
 
 ### `data-architect`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Data lakehouse, warehouse, modeling, lineage
 
 Data Architect who designs the organization's data strategy and governance layer — data mesh/fabric architecture, master data management, data lineage, data contracts, governance frameworks, and enterprise-level data modeling. Distinct from Data Engineer (builds pipelines) and Data Scientist (analysis). Delegate when you need a data strategy, data governance framework, data mesh design, master data management plan, data catalog architecture, or enterprise data model.
 
 ### `integration-architect`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: API gateways, event mesh, microservices integration
 
 Integration Architect who designs how systems communicate — event-driven architecture, microservices decomposition, API gateway orchestration, message broker patterns, CQRS/event sourcing, service mesh design, and enterprise integration patterns. Delegate when you need a system integration design, event-driven architecture blueprint, microservices communication strategy, message broker topology, or service decomposition plan.
 
 ### `security-architect`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Threat modeling, zero-trust, security frameworks
 
 Security Architect who designs security into systems from the ground up — zero-trust architecture, identity and access architecture, security frameworks (NIST, ISO 27001, SOC 2), encryption strategy, and org-wide security standards. Strategic and design-focused, distinct from the Security Engineer (tactical testing, scanning, remediation). Delegate when you need a security architecture blueprint, zero-trust design, identity federation strategy, compliance framework mapping, or security standards definition.
 
 ### `software-architect`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Application architecture, DDD, ADRs, hexagonal design
 
 Software Architect who designs application-level architecture — system decomposition, technology selection, architectural patterns (hexagonal, clean, CQRS, layered), code structure standards, NFR definition, and architectural governance. Bridges high-level system design and day-to-day engineering decisions. Delegate when you need application architecture design, technology evaluation, NFR specification, architectural patterns selection, or technical design documentation.
 
 ### `staff-engineer`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, shell, web  
 **Best for**: Cross-team technical leadership, engineering standards
 
 Staff Engineer who provides senior individual contributor technical leadership — cross-team architecture reviews, coding standards, technical mentoring, tech health ownership, engineering excellence programs, and cross-cutting technical decisions. Distinct from CTO (executive) and Architect (system design). Delegate when you need a technical quality review, engineering standards defined, cross-team technical alignment, a complex refactoring strategy, or senior IC perspective on build-vs-buy decisions.
@@ -105,73 +105,73 @@ Staff Engineer who provides senior individual contributor technical leadership �
 ## Engineering (12)
 
 ### `ai-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: LLM integration, RAG pipelines, embeddings, Claude/OpenAI API
 
 AI Engineer who builds production AI applications using LLMs, embeddings, RAG pipelines, and AI APIs. Delegate when you need to integrate AI into applications, build LLM-powered features, implement RAG, fine-tune models, or optimize AI application performance.
 
 ### `ai-backend-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: APIs, databases, async processing, microservices
 
 AI Backend Engineer who builds scalable, reliable server-side systems powering AI applications — including APIs, LLM integration layers, data pipelines, async processing, and AI microservices. Delegate for API design, backend architecture, database work, async jobs, performance optimization, and server-side AI integration.
 
 ### `ai-frontend-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: React/Next.js, streaming UI, AI chat interfaces
 
 AI Frontend Engineer who builds beautiful, performant, accessible UIs for AI-powered products including chat interfaces, streaming responses, AI dashboards, and interactive AI experiences. Delegate for all frontend work, UI components, design systems, AI UX patterns, and client-side AI integration.
 
 ### `ai-fullstack-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: End-to-end features across the full stack
 
 AI Full Stack Engineer who builds complete AI-powered web and mobile applications from database to UI. Delegate when you need end-to-end feature development, full stack architecture, database design, API development, and frontend implementation all in one cohesive solution.
 
 ### `ai-mobile-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: React Native, Flutter, iOS/Android, on-device AI
 
 AI Mobile Engineer who builds high-quality iOS, Android, and cross-platform mobile applications with AI capabilities. Delegate for mobile app development, on-device AI inference, React Native/Flutter/Swift/Kotlin work, mobile UX for AI features, and mobile deployment pipelines.
 
 ### `ai-database-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: PostgreSQL, vector DBs, migrations, query optimization
 
 AI Database Engineer who designs, optimizes, and manages databases for AI-powered applications — including relational schemas, vector stores, graph databases, and data modeling for ML workloads. Delegate for schema design, query optimization, vector search setup, database migrations, data modeling, and AI-specific storage architecture.
 
 ### `ai-api-designer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: REST/GraphQL/gRPC design, OpenAPI specs, DX
 
 AI API Designer who designs clean, developer-friendly APIs for AI-powered products — including REST, GraphQL, gRPC, streaming, and webhook APIs. Delegate for API design, OpenAPI specs, API versioning strategy, developer experience (DX), SDK design, and API governance.
 
 ### `ai-software-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: General coding across any language/framework
 
 AI-augmented Software Engineer who writes clean, well-tested, production-grade code across any language or domain, with deep expertise in applying AI tools and techniques to software engineering workflows. Delegate for general software engineering tasks, code review, refactoring, architecture, testing, and debugging.
 
 ### `ai-agent-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: Multi-agent systems, tool use, autonomous workflows
 
 Specialist in designing, building, and deploying autonomous AI agents and multi-agent systems. Delegate when you need agent frameworks, tool use, planning loops, memory systems, agent orchestration, autonomous workflows, or self-improving systems.
 
 ### `ai-devops-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: CI/CD, Docker/K8s, model deployment, MLOps
 
 AI DevOps & MLOps Engineer who builds CI/CD pipelines for AI systems, automates model training and deployment workflows, manages infrastructure as code, and ensures reliable, fast delivery of AI models and applications to production. Delegate for CI/CD setup, MLOps pipelines, Docker/Kubernetes configs, infrastructure automation, deployment strategies, and model lifecycle management.
 
 ### `ai-qa-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: LLM evals, test frameworks, adversarial testing
 
 AI QA & Evaluation Engineer who designs and runs comprehensive testing frameworks for AI systems — including LLM evaluation, regression testing, adversarial testing, safety testing, and automated quality gates. Delegate for test strategy, eval framework design, benchmark creation, automated QA pipelines, and quality assurance for AI outputs.
 
 ### `ai-performance-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: Latency, throughput, Core Web Vitals, load testing, query tuning
 
 Diagnose and fix performance issues across frontend, backend, database, and AI systems. Use for slow APIs, high latency, Core Web Vitals, query optimization, memory leaks, and load testing.
@@ -181,25 +181,25 @@ Diagnose and fix performance issues across frontend, backend, database, and AI s
 ## Platform (4)
 
 ### `ai-platform-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: Internal AI platform, model serving, GPU infra
 
 AI Platform Engineer who builds and operates the internal AI platform — including model serving infrastructure, MLOps tooling, developer experience, compute management, and shared AI services that enable other teams to ship AI products faster. Delegate for MLOps, model serving, GPU infrastructure, platform tooling, and internal AI developer experience.
 
 ### `ml-engineer`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, shell, web  
 **Best for**: ML model training, fine-tuning, serving pipelines
 
 ML Engineer who owns the full machine learning lifecycle — training pipelines, feature engineering, model versioning, experiment tracking, model serving at scale, and MLOps. Distinct from the AI Engineer (LLMs/RAG) and Data Scientist (analysis/insights). Delegate when you need training infrastructure, feature stores, MLflow/Kubeflow pipelines, model deployment, A/B model testing, or classical ML at production scale.
 
 ### `site-reliability-engineer`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, shell, web  
 **Best for**: SLOs, incident response, reliability engineering
 
 Site Reliability Engineer who owns production reliability — SLOs/SLIs/error budgets, incident management, on-call runbooks, chaos engineering, observability, and capacity planning. Delegate when you need reliability targets defined, incident runbooks written, alerting rules designed, postmortems produced, or production health assessed.
 
 ### `release-manager`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: Release coordination, rollout strategy, feature flags
 
 Release Manager who owns the software release lifecycle — versioning strategy, changelog generation, release trains, hotfix protocols, rollback procedures, and release communication. Delegate when you need a release plan, changelog written, versioning strategy defined, hotfix coordinated, rollback runbook created, or release notes drafted.
@@ -209,49 +209,49 @@ Release Manager who owns the software release lifecycle — versioning strategy,
 ## Product (8)
 
 ### `ai-product-manager`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: PRDs, roadmaps, user stories, OKRs, GTM planning
 
 AI Product Manager specializing in AI/ML product strategy, roadmap planning, user research, and go-to-market for AI-powered products. Also handles rapid prototyping, MVP scoping, demo building, and idea-to-working-product validation. Delegate for product requirements, PRDs, feature prioritization, OKRs, stakeholder communication, AI product strategy, prototypes, and MVPs.
 
 ### `ai-ux-designer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: User flows, wireframes, AI UX patterns, onboarding design
 
 AI UX Designer who crafts intuitive, trustworthy, and delightful user experiences for AI-powered products — including conversational UI, AI onboarding, error states, transparency patterns, and human-AI interaction design. Delegate for UX research, user flows, wireframes, AI interaction patterns, design systems, accessibility, and usability reviews.
 
 ### `ux-researcher`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: User interviews, usability testing, JTBD, personas
 
 UX Researcher who generates validated user insights through qualitative and quantitative research methods — user interviews, usability testing, diary studies, surveys, concept testing, and Jobs-to-Be-Done analysis. Distinct from UX Designer (creates solutions) and Product Manager (defines requirements). Delegate when you need user research plans, interview scripts, usability test protocols, synthesis reports, personas, journey maps, or research-backed insights to inform product decisions.
 
 ### `product-designer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Hi-fi designs, design systems, Figma handoff
 
 Product Designer who owns the end-to-end design of digital products — user flows, wireframes, high-fidelity UI, interaction design, design systems, and design-to-dev handoff. Distinct from UX Researcher (validates insights) and AI UX Designer (AI interaction patterns). Delegate when you need product flows, wireframes, hi-fi mockups, component design, design system work, or design critique and review.
 
 ### `product-marketing-manager`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Positioning, launch plans, competitive intel, battlecards
 
 Product Marketing Manager who owns go-to-market strategy, positioning, messaging, competitive intelligence, and launch execution for products. Bridges product and marketing — translating features into customer value, defining ICP and segmentation, building sales enablement assets, and driving adoption. Delegate when you need positioning documents, messaging frameworks, launch plans, competitive analysis, ICP definitions, sales battlecards, or pricing strategy.
 
 ### `product-analyst`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Funnel analysis, cohort retention, A/B testing
 
 Product Analyst who generates data-driven product insights — funnel analysis, cohort analysis, retention modeling, feature adoption tracking, A/B test design and analysis, and product KPI dashboards. Bridges raw behavioral data and product decisions. Delegate when you need product metric definitions, funnel analysis, retention curves, A/B test analysis, feature adoption reports, user segmentation, or data-driven product recommendations.
 
 ### `technical-product-manager`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Developer-facing products, APIs/SDKs, DX metrics
 
 Technical Product Manager who owns the product-engineering interface — translating complex technical systems into product decisions, managing developer-facing products (APIs, platforms, SDKs, dev tools), writing technical PRDs, and working at the intersection of engineering constraints and product goals. Distinct from AI Product Manager (AI/ML products) and general PM. Delegate when you need a technical PRD, API product strategy, developer experience planning, platform product roadmap, or product decisions that require deep technical understanding.
 
 ### `ai-strategy-engineer`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: AI strategy docs, competitive analysis, 3-year roadmaps
 
 AI Strategy Engineer who defines organizational AI strategy, identifies AI opportunities, builds AI transformation roadmaps, evaluates competitive AI landscape, and aligns AI initiatives with business goals. Delegate when you need AI strategy documents, opportunity assessments, build-vs-buy analysis, AI maturity models, executive presentations, or technology horizon planning.
@@ -261,37 +261,37 @@ AI Strategy Engineer who defines organizational AI strategy, identifies AI oppor
 ## Data & AI (6)
 
 ### `ai-data-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: ETL pipelines, data warehouse, stream processing
 
 Data Engineer who designs and builds data pipelines, warehouses, lakehouses, and data infrastructure to power AI and analytics systems. Delegate for ETL/ELT pipelines, data modeling, data quality, stream processing, data warehouse design, and building the data foundation for AI systems.
 
 ### `ai-data-scientist`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: Statistical analysis, ML modeling, A/B testing
 
 Data Scientist who applies statistical analysis, machine learning, and AI techniques to extract insights, build predictive models, and solve complex business problems with data. Delegate for EDA, statistical analysis, ML model development, experimentation design, A/B testing, and translating data into business insights.
 
 ### `ai-analytics-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: KPI dashboards, funnel analysis, BI reporting
 
 Analytics & Insights Agent who transforms data into actionable business intelligence using AI-powered analysis, dashboards, and reporting. Delegate for business analytics, KPI dashboards, funnel analysis, cohort analysis, executive reporting, data storytelling, and AI-assisted insight generation.
 
 ### `ai-domain-expert`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Deep domain knowledge and expert validation
 
 Domain Expert who provides deep subject matter knowledge in a specified field to guide AI system design, validate outputs, create domain-specific training data, and ensure AI solutions are accurate and contextually appropriate. Delegate when you need domain validation, specialized knowledge injection, expert review of AI outputs, or domain-specific data creation.
 
 ### `ai-prompt-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: Prompt design, optimization, evaluation, few-shot examples
 
 Prompt Engineer who designs, tests, optimizes, and manages prompts for LLMs to reliably produce desired outputs. Delegate when you need prompt design, prompt optimization, system prompt creation, few-shot examples, chain-of-thought prompting, prompt evaluation, or structured output engineering.
 
 ### `ai-research-engineer`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, shell, web  
 **Best for**: Paper implementation, experiments, new techniques
 
 AI Research Engineer who bridges cutting-edge AI research and production engineering — implementing novel techniques from papers, running experiments, benchmarking models, and advancing the state of AI within the organization. Delegate for paper implementation, research experiments, model evaluation, novel technique exploration, and translating research into production.
@@ -301,25 +301,25 @@ AI Research Engineer who bridges cutting-edge AI research and production enginee
 ## Growth (4)
 
 ### `ai-finance-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: LLM cost reduction, unit economics, ROI analysis
 
 AI Finance & Cost Optimization specialist who manages AI infrastructure costs, builds financial models for AI products, optimizes token and compute spend, and ensures AI investments deliver measurable ROI. Delegate for AI cost modeling, cloud spend optimization, unit economics, budget planning, token cost reduction, and AI ROI analysis.
 
 ### `ai-sales-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Sales playbooks, demo scripts, churn reduction
 
 AI Sales & Customer Success specialist who uses AI to accelerate deals, improve customer onboarding, drive product adoption, and maximize retention and expansion revenue. Delegate for sales enablement, demo scripting, customer success playbooks, QBR preparation, churn analysis, expansion strategies, and AI-powered CRM workflows.
 
 ### `ai-growth-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: Content strategy, SEO, AI-powered growth experiments
 
 AI Growth & Marketing specialist who uses AI to accelerate acquisition, engagement, and retention — including AI-powered content creation, campaign optimization, personalization, SEO, and growth experimentation. Delegate for AI-driven marketing strategies, content generation, campaign planning, growth experiments, SEO optimization, and marketing automation workflows.
 
 ### `developer-advocate`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: DevRel, DX, community, technical content
 
 Developer Advocate who owns developer relations — community building, technical content, open source strategy, SDK evangelism, conference talks, technical blog posts, and developer experience feedback loops. Delegate when you need a developer community strategy, technical blog post, conference talk outline, OSS contribution guidelines, SDK adoption content, or developer feedback synthesis.
@@ -329,19 +329,19 @@ Developer Advocate who owns developer relations — community building, technica
 ## Knowledge (3)
 
 ### `ai-technical-writer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: API docs, architecture docs, knowledge bases
 
 Technical Writer and Documentation Engineer who creates all forms of technical content — user guides, API docs, runbooks, architecture docs, knowledge bases, developer guides, SOPs, release notes, and internal wikis. The single documentation specialist for both user-facing and internal technical content. Delegate for any writing or documentation task across the entire product.
 
 ### `ai-accessibility-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: WCAG 2.2, screen readers, keyboard nav, ARIA patterns
 
 Audit and fix accessibility issues — WCAG 2.2 compliance, screen reader support, keyboard navigation, color contrast, ARIA patterns, and inclusive design for web and mobile.
 
 ### `content-designer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, web  
 **Best for**: UX writing, microcopy, content strategy
 
 Content Designer (UX Writer) who owns the words inside the product — UI microcopy, error messages, onboarding flows, empty states, tooltips, notifications, and in-product content strategy. Distinct from UX Designer (flows/wireframes) and Technical Writer (documentation). Delegate when you need UI copy, error message rewrites, onboarding content, button labels, modal text, confirmation dialogs, or an in-product voice and tone guide.
@@ -351,19 +351,19 @@ Content Designer (UX Writer) who owns the words inside the product — UI microc
 ## Safety (3)
 
 ### `ai-security-engineer`
-**Model**: `sonnet` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `standard` · **Capabilities**: read, edit, shell, web  
 **Best for**: Threat modeling, prompt injection, red teaming
 
 AI Security & Risk specialist who identifies, assesses, and mitigates security threats and risks specific to AI systems — including prompt injection, model theft, adversarial attacks, data poisoning, and AI supply chain risks. Delegate for AI threat modeling, security reviews, red teaming, vulnerability assessments, security architecture, and AI risk frameworks.
 
 ### `ai-responsible-engineer`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, shell, web  
 **Best for**: Bias audits, fairness, safety, EU AI Act compliance
 
 Responsible AI Engineer specializing in AI safety, ethics, fairness, bias detection, explainability, privacy, and regulatory compliance. Delegate when you need AI risk assessments, bias audits, fairness evaluations, explainability implementations, privacy-preserving AI, or compliance with AI regulations (EU AI Act, NIST AI RMF).
 
 ### `ai-legal-engineer`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web  
 **Best for**: GDPR, IP, contracts, regulatory analysis
 
 Legal & Compliance Agent specializing in AI law, data privacy, intellectual property, regulatory compliance, and contract review for AI products and organizations. Delegate for AI regulatory analysis, privacy compliance, IP risk assessment, contract templates, terms of service, data processing agreements, and compliance program design.
@@ -373,55 +373,55 @@ Legal & Compliance Agent specializing in AI law, data privacy, intellectual prop
 ## Team Coordinators (9)
 
 ### `team-leadership`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: founder, cto-advisor, engineering-manager, technical-program-manager, ai-orchestrator
 
 Leadership & Program Management team coordinator. Handles company strategy, cross-team coordination, OKR tracking, sprint planning, and executive decision-making. Delegates to: founder (strategy), cto-advisor (tech leadership), ai-orchestrator (multi-agent coordination), technical-program-manager (cross-team programs), engineering-manager (delivery). Use when you need leadership-level decisions, program oversight, or company-wide coordination.
 
 ### `team-architecture`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-architect, cloud-architect, data-architect, integration-architect, security-architect, software-architect, staff-engineer
 
 Architecture team coordinator. Covers all architectural domains — AI/ML systems, application design, security, data strategy, integration patterns, cloud infrastructure, and engineering standards. Delegates to 7 specialist architects. Use when you need architectural decisions, design reviews, NFR definitions, compliance architecture, or technical standards.
 
 ### `team-engineering`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: All 12 engineering specialists
 
 Engineering team coordinator. 11 specialist engineers covering AI, frontend, backend, fullstack, mobile, database, API design, agents, DevOps, QA, and general software engineering. Use when you need to build features, write code, set up CI/CD, design APIs, build mobile apps, or run tests.
 
 ### `team-platform`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-platform-engineer, ml-engineer, site-reliability-engineer, release-manager
 
 Platform & Operations team coordinator. Owns production reliability, ML infrastructure, release management, model serving, and performance. Delegates to: site-reliability-engineer (SLOs/incidents/observability), ml-engineer (training pipelines/feature stores/model serving), release-manager (versioning/changelogs/hotfix), ai-platform-engineer (GPU infra/MLOps platform), ai-performance-engineer (latency/throughput). Use for production incidents, reliability work, MLOps, releases, and infrastructure performance.
 
 ### `team-product`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: All 8 product specialists
 
 Product team coordinator. Covers the full product development cycle — strategy, research, design, and go-to-market. Delegates to 8 specialists: ai-product-manager, technical-product-manager, ux-researcher, product-designer, ai-ux-designer, product-marketing-manager, product-analyst, ai-strategy-engineer. Use when you need product decisions, user research, design work, GTM strategy, or product analytics.
 
 ### `team-data-ai`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: All 6 data & AI specialists
 
 Data & AI team coordinator. Covers data engineering, data science, prompt engineering, analytics, AI research, and domain expertise. Delegates to: ai-data-engineer (pipelines/warehouses), ai-data-scientist (ML models/experiments), ai-prompt-engineer (prompt optimization), ai-analytics-engineer (dashboards/BI), ai-research-engineer (paper implementation/benchmarking), ai-domain-expert (subject matter expertise). Use for data pipelines, ML models, analytics, prompt work, or research tasks.
 
 ### `team-growth`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-finance-engineer, ai-sales-engineer, ai-growth-engineer, developer-advocate
 
 Growth & Business team coordinator. Covers growth engineering, cost optimization, sales enablement, and developer relations. Delegates to: ai-growth-engineer (acquisition/SEO/campaigns), ai-finance-engineer (LLM costs/FinOps/token optimization), ai-sales-engineer (demos/sales enablement/customer success), developer-advocate (DevRel/OSS/community/technical content). Use for growth strategies, marketing campaigns, cost reduction, sales assets, or developer community work.
 
 ### `team-knowledge`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-technical-writer, ai-accessibility-engineer, content-designer
 
 Knowledge & Content team coordinator. Owns all documentation, content design, and accessibility. Delegates to: ai-technical-writer (API docs/runbooks/user guides/SOPs/ADRs), content-designer (UI microcopy/error messages/onboarding copy/voice & tone), ai-accessibility-engineer (WCAG compliance/screen readers/inclusive design). Use when you need documentation written, UI copy designed, accessibility audited, or a knowledge base built.
 
 ### `team-safety`
-**Model**: `opus` · **Tools**: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch  
+**Tier**: `deep` · **Capabilities**: read, edit, web, delegate  
 **Delegates to**: ai-security-engineer, ai-responsible-engineer, ai-legal-engineer
 
 Safety, Security & Compliance team coordinator. Covers AI safety, security engineering, and legal/regulatory compliance. Delegates to: ai-responsible-engineer (bias/fairness/explainability), ai-security-engineer (threat modeling/vulnerability scanning/pentesting), ai-legal-engineer (GDPR/HIPAA/contracts/regulatory). Use for security reviews, compliance audits, bias assessments, threat modeling, or legal review of AI systems.

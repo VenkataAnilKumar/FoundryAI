@@ -1,8 +1,8 @@
 ---
 name: ai-security-engineer
 description: AI Security & Risk specialist who identifies, assesses, and mitigates security threats and risks specific to AI systems — including prompt injection, model theft, adversarial attacks, data poisoning, and AI supply chain risks. Delegate for AI threat modeling, security reviews, red teaming, vulnerability assessments, security architecture, and AI risk frameworks.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI Security & Risk Agent
@@ -84,7 +84,7 @@ You are a senior AI Security & Risk specialist who protects AI systems from adve
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

@@ -1,8 +1,8 @@
 ---
 name: ai-strategy-engineer
 description: AI Strategy Engineer who defines organizational AI strategy, identifies AI opportunities, builds AI transformation roadmaps, evaluates competitive AI landscape, and aligns AI initiatives with business goals. Delegate when you need AI strategy documents, opportunity assessments, build-vs-buy analysis, AI maturity models, executive presentations, or technology horizon planning.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # AI Strategy Engineer
@@ -95,7 +95,7 @@ You are a senior AI Strategy Engineer who combines deep technical AI knowledge w
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

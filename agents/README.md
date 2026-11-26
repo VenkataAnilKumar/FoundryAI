@@ -1,6 +1,8 @@
-# Claude Code AI Agent Pack — Full Team (52 Agents + 9 Team Coordinators)
+# FoundryAI Agents — Full Team (52 Agents + 9 Team Coordinators)
 
-A complete set of **52 specialist AI agents** and **9 team coordinators** covering every role across a modern AI product organization. Drop them into `~/.claude/agents/` for instant access in Claude Code.
+A complete set of **52 specialist AI agents** and **9 team coordinators** covering every role across a modern AI startup.
+
+These files are the **workspace-neutral source**: each declares a `tier` and `capabilities` instead of workspace-specific models and tools. Don't copy them into a workspace directly; `install.sh` builds them into the native format for Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI or chat workspaces.
 
 ---
 
@@ -117,27 +119,23 @@ Each team coordinator knows its members, can delegate subtasks, and orchestrates
 ## Installation
 
 ```bash
-# From FoundryAI root
-cp agents/*.md ~/.claude/agents/
-```
-
-Or use the one-line installer:
-```bash
+# Every AI workspace detected on this machine
 curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
+
+# Or pick: claude | cursor | copilot | codex | gemini | chat | all
+./install.sh --target cursor
 ```
 
-Restart Claude Code and run `/agents` to verify all 61 agents appear.
+Restart your workspace and check its agent list (for example `/agents` in Claude Code).
 
 ---
 
 ## Quick Start
 
-```bash
-# Spawn your co-founder for any strategic task
-/founder "build me a RAG-powered document search"
-
-# Route directly to a specialist
-# Use the Agent tool or type the agent name in Claude Code
+```
+/cofounder "build me a RAG-powered document search"
 ```
 
-See `CLAUDE.md` for the full routing guide and `WORKFLOWS.md` for pre-built team workflows.
+Or name a specialist directly: *"Use the ai-architect agent to design our retrieval pipeline."*
+
+See [`docs/routing.md`](../docs/routing.md) for the full routing guide and `WORKFLOWS.md` for pre-built team workflows.

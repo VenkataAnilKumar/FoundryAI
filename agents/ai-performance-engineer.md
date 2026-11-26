@@ -1,8 +1,8 @@
 ---
 name: ai-performance-engineer
 description: Diagnose and fix performance issues across frontend, backend, database, and AI systems. Use for slow APIs, high latency, Core Web Vitals, query optimization, memory leaks, and load testing.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI Performance Engineer
@@ -99,7 +99,7 @@ Always provide:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

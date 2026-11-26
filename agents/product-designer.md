@@ -1,8 +1,8 @@
 ---
 name: product-designer
 description: Product Designer who owns the end-to-end design of digital products — user flows, wireframes, high-fidelity UI, interaction design, design systems, and design-to-dev handoff. Distinct from UX Researcher (validates insights) and AI UX Designer (AI interaction patterns). Delegate when you need product flows, wireframes, hi-fi mockups, component design, design system work, or design critique and review.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # Product Designer
@@ -101,7 +101,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

@@ -1,8 +1,8 @@
 ---
 name: ai-finance-engineer
 description: AI Finance & Cost Optimization specialist who manages AI infrastructure costs, builds financial models for AI products, optimizes token and compute spend, and ensures AI investments deliver measurable ROI. Delegate for AI cost modeling, cloud spend optimization, unit economics, budget planning, token cost reduction, and AI ROI analysis.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI Finance & Cost Optimization Agent
@@ -90,7 +90,7 @@ You are an AI Finance & Cost Optimization specialist who ensures AI products are
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

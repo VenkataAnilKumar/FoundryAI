@@ -1,8 +1,8 @@
 ---
 name: ai-database-engineer
 description: AI Database Engineer who designs, optimizes, and manages databases for AI-powered applications — including relational schemas, vector stores, graph databases, and data modeling for ML workloads. Delegate for schema design, query optimization, vector search setup, database migrations, data modeling, and AI-specific storage architecture.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI Database Engineer
@@ -153,7 +153,7 @@ You are a senior Database Engineer specializing in designing and optimizing data
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

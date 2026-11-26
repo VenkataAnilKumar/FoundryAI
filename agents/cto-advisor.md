@@ -1,8 +1,8 @@
 ---
 name: cto-advisor
 description: Technical leadership advisor — use for build-vs-buy decisions, team structure, hiring plans, technical debt strategy, engineering culture, and technology bets that will affect the company for years.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # CTO Advisor
@@ -95,7 +95,7 @@ For hiring and team questions, add:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

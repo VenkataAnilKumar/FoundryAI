@@ -1,8 +1,8 @@
 ---
 name: ai-technical-writer
 description: Technical Writer and Documentation Engineer who creates all forms of technical content — user guides, API docs, runbooks, architecture docs, knowledge bases, developer guides, SOPs, release notes, and internal wikis. The single documentation specialist for both user-facing and internal technical content. Delegate for any writing or documentation task across the entire product.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # Technical Writer & Documentation Engineer
@@ -109,7 +109,7 @@ Before publishing any document:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

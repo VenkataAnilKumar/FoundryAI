@@ -1,6 +1,6 @@
 # Agent Team Workflow Recipes
 
-Copy-paste these prompts into Claude Code to launch pre-configured multi-agent teams for common AI project tasks. Requires Agent Teams enabled.
+Copy-paste these prompts into your AI workspace (Claude Code, Cursor, Copilot, Codex, Gemini CLI, or a chat project) to launch pre-configured multi-agent teams for common AI startup tasks. Workspaces that run subagents execute the team in parallel; elsewhere, the assistant works through each role in turn.
 
 ---
 

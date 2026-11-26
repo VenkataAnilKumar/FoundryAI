@@ -1,13 +1,12 @@
-# Founders Kit — Your AI Team in a Box
+# FoundryAI — The AI Startup Team for Any AI Workspace
 
-> 52 specialist AI agents + 9 team coordinators + 42 slash commands + hooks + MCP configs for Claude Code.
-> One install. Your entire product, engineering, and business team — ready to ship.
+> 52 specialist agents + 9 team coordinators + 46 skills for **every kind of AI startup**, from LLM apps and agents to voice, vision, model training and vertical AI.
+> Works in **Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI**, every `AGENTS.md`-compatible agent, and chat workspaces like ChatGPT, Claude and Gemini projects.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-compatible-blue)](https://claude.ai/code)
 [![Agents](https://img.shields.io/badge/agents-52-green)](#the-team--52-specialists)
-[![Skills](https://img.shields.io/badge/skills-42-orange)](#skills--42-slash-commands)
-[![Plugin](https://img.shields.io/badge/plugin-founders--kit-purple)](#routing-commands)
+[![Skills](https://img.shields.io/badge/skills-46-orange)](#skills--46-skills)
+[![Workspaces](https://img.shields.io/badge/workspaces-Claude%20%C2%B7%20Cursor%20%C2%B7%20Copilot%20%C2%B7%20Codex%20%C2%B7%20Gemini-blue)](#works-in-any-ai-workspace)
 
 ![FoundryAI Demo](demo.svg)
 
@@ -15,46 +14,68 @@
 
 ## What is this?
 
-Instead of switching between AI tools, spinning up different ChatGPT conversations, or wondering which AI is best for your task — you get a full team of specialists that work together inside Claude Code.
+An AI startup needs architects, engineers, product people, a growth team, security and legal, long before it can hire them. FoundryAI gives you that team as specialist agents and reusable skills, in whichever AI workspace you already use.
 
-**Type `/founder "build me a RAG-powered document search"` and get:**
+**Ask for `/cofounder "build me a RAG-powered document search"` and get:**
 - `ai-architect` designing the system
 - `ai-engineer` implementing the embedding pipeline
 - `ai-backend-engineer` building the API
 - `ai-qa-engineer` setting up evals
 
-All coordinated. All specialists. No context switching.
+Every agent first works out what kind of AI startup you are and what stage you're at, and recommends the simplest thing that works for you now.
 
 ---
 
-## One-Line Install
+## Install
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
 ```
 
-Or manually:
+The installer detects the AI workspaces on your machine and installs the agents and skills in each one's native format. Choose explicitly with `--target`:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash -s -- --target cursor --target codex
+```
+
+Or from a clone:
 
 ```bash
 git clone https://github.com/VenkataAnilKumar/FoundryAI
-
 cd FoundryAI
-./install.sh --dry-run   # preview what will change
-./install.sh             # install agents, skills, and the plugin
-./install.sh --hooks     # ...and copy the hook scripts too
+./install.sh --dry-run             # preview what will change
+./install.sh --target all          # every workspace, including chat prompts
 ```
 
-Or install the routing plugin on its own, inside Claude Code:
+The installer needs `python3`. It backs up any file it would overwrite and records what it installed, so you can remove it cleanly:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash
+```
+
+---
+
+## Works in any AI workspace
+
+One neutral source is built into each workspace's native format by [`scripts/build.py`](scripts/build.py).
+
+| Workspace | `--target` | Agents | Skills |
+|---|---|---|---|
+| **Claude Code** | `claude` | `~/.claude/agents/` | `~/.claude/skills/` |
+| **Cursor** | `cursor` | `~/.cursor/agents/` | `~/.agents/skills/` |
+| **GitHub Copilot / VS Code** | `copilot` | `~/.copilot/agents/*.agent.md` | `~/.copilot/skills/` |
+| **OpenAI Codex CLI** | `codex` | `~/.codex/agents/*.toml` | `~/.agents/skills/` |
+| **Gemini CLI** | `gemini` | `~/.gemini/agents/` | `~/.agents/skills/` |
+| **Other agents** (Windsurf, Cline, Roo, Zed, Amp, Junie, …) | `cursor` or `codex` | — | `~/.agents/skills/` ([Agent Skills](https://agentskills.io) standard) |
+| **Chat workspaces** (ChatGPT Projects & GPTs, Claude Projects, Gemini Gems) | `chat` | paste-ready prompts in `~/FoundryAI-chat-prompts/` | same folder |
+
+Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents read directly; see [Project Templates](#project-templates) for Claude Code and Gemini CLI.
+
+**Claude Code plugin.** Claude Code users can also install everything as a plugin:
 
 ```
 /plugin marketplace add VenkataAnilKumar/FoundryAI
 /plugin install founders-kit@foundryai
-```
-
-The installer backs up any file it would overwrite and records what it installed, so you can remove it cleanly:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash
 ```
 
 ---
@@ -63,12 +84,11 @@ curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uni
 
 | | Count | What |
 |---|---|---|
-| **Agents** | 52 + 9 teams | Specialist subagents across engineering, product, and business |
-| **Skills** | 42 | Slash commands — `/review`, `/debug`, `/prd`, `/eval`, `/migrate`... |
-| **Routing commands** | 4 | `/founder`, `/engineering`, `/product`, `/business` |
-| **Project templates** | 4 | Stack-specific `CLAUDE.md` files for your project |
+| **Agents** | 52 + 9 teams | Specialists across architecture, engineering, product, data & AI, growth, safety |
+| **Skills** | 46 | `/review`, `/debug`, `/prd`, `/eval`, `/rag-design`, `/cost-check`, `/cofounder`... |
+| **Project templates** | 4 | Stack-specific `AGENTS.md` files for your project |
 | **Workflow recipes** | 31 | Copy-paste team recipes ([15](templates/WORKFLOWS.md)) + team workflows ([16](agents/WORKFLOWS.md)) |
-| **Hooks** | 3 | Automated behaviors (logging, protection, notifications) |
+| **Hooks** | 3 | Claude Code automations (secret-file protection, logging, notifications) |
 | **MCP configs** | 3 | GitHub, PostgreSQL, full-stack server configs |
 
 ---
@@ -180,16 +200,18 @@ Use a team coordinator when you want the whole team to work together on a proble
 
 ---
 
-## Routing Commands
+## Routing
+
+The routing skills pick the right specialists for you:
 
 ```
-/founder "build a RAG-powered document Q&A feature"
+/cofounder "build a RAG-powered document Q&A feature"
 → Thinks strategically, routes to: ai-architect + ai-engineer + ai-backend-engineer
 
-/founder "we need to be GDPR compliant before launch"
+/cofounder "we need to be GDPR compliant before launch"
 → Routes to: ai-legal-engineer + ai-responsible-engineer (parallel)
 
-/founder "our API latency is 2 seconds — fix it"
+/cofounder "our API latency is 2 seconds — fix it"
 → Routes to: ai-performance-engineer + ai-database-engineer
 
 /engineering "design the database schema for conversation history"
@@ -204,7 +226,17 @@ Use a team coordinator when you want the whole team to work together on a proble
 
 ---
 
-## Skills — 42 Slash Commands
+## Skills — 46 Skills
+
+Skills follow the open [Agent Skills](https://agentskills.io) standard. Invoke them as `/name` in workspaces with slash commands, or just describe the task and the agent picks the skill.
+
+### Routing
+| Command | What it does |
+|---|---|
+| `/cofounder "task"` | Your AI co-founder — thinks strategically, routes to the right specialists |
+| `/engineering "task"` | Routes an engineering task to the right engineer(s) |
+| `/product "task"` | Routes a product, design or strategy task |
+| `/business "task"` | Routes a business, data, ops or compliance task |
 
 ### Code Quality
 | Command | What it does |
@@ -288,26 +320,29 @@ Use a team coordinator when you want the whole team to work together on a proble
 
 ## Project Templates
 
-Drop a stack-specific `CLAUDE.md` into your project root — it configures agent routing for your exact setup.
+Drop a stack-specific `AGENTS.md` into your project root. It records your AI startup type, stage and stack, and configures agent routing for your setup.
 
 | Template | Stack |
 |---|---|
-| [`CLAUDE.md`](templates/CLAUDE.md) | Generic — works for any project |
-| [`CLAUDE-nextjs-saas.md`](templates/CLAUDE-nextjs-saas.md) | Next.js 14 + FastAPI + PostgreSQL + Claude API |
-| [`CLAUDE-python-ml.md`](templates/CLAUDE-python-ml.md) | PyTorch / HuggingFace + MLflow + FastAPI |
-| [`CLAUDE-react-native.md`](templates/CLAUDE-react-native.md) | Expo + FastAPI + EAS Build |
+| [`AGENTS.md`](templates/AGENTS.md) | Generic — works for any project |
+| [`AGENTS-nextjs-saas.md`](templates/AGENTS-nextjs-saas.md) | Next.js 14 + FastAPI + PostgreSQL + LLM API |
+| [`AGENTS-python-ml.md`](templates/AGENTS-python-ml.md) | PyTorch / HuggingFace + MLflow + FastAPI |
+| [`AGENTS-react-native.md`](templates/AGENTS-react-native.md) | Expo + FastAPI + EAS Build |
 
 ```bash
-# Example: Next.js SaaS project
-cp FoundryAI/templates/CLAUDE-nextjs-saas.md ./CLAUDE.md
-# Edit with your project name, stage, and any custom conventions
+cp FoundryAI/templates/AGENTS-nextjs-saas.md ./AGENTS.md
 ```
+
+- **Codex, Cursor, Copilot, Windsurf, Zed, Amp…** read `AGENTS.md` directly.
+- **Claude Code:** `echo '@AGENTS.md' > CLAUDE.md`
+- **Gemini CLI:** add `"context": { "fileName": ["AGENTS.md", "GEMINI.md"] }` to `.gemini/settings.json`.
+- **Chat workspaces:** upload it as project knowledge.
 
 ---
 
 ## Hooks & MCP
 
-### Hooks — Automate Claude Code behaviors
+### Hooks — Claude Code automations
 
 ```bash
 ./install.sh --hooks      # copies the scripts to ~/.claude/hooks
@@ -321,7 +356,7 @@ Then register them in `~/.claude/settings.json` — the snippet is in [`template
 | `log-agent-usage.sh` | After every subagent call | Logs to `~/.claude/logs/agent-usage.log` |
 | `notify-on-complete.sh` | Prompt submit + Stop | Desktop notification when a turn takes over 30s (Windows/Mac/Linux) |
 
-### MCP Servers — Connect Claude to your infrastructure
+### MCP Servers — Connect your agents to your infrastructure
 
 ```bash
 # GitHub (issues, PRs, code search)
@@ -334,7 +369,7 @@ cp FoundryAI/templates/mcp-postgres.json ./.mcp.json
 cp FoundryAI/templates/mcp-full-stack.json ./.mcp.json
 ```
 
-See [`templates/hooks-setup.md`](templates/hooks-setup.md) for full setup instructions.
+These use the `.mcp.json` format (Claude Code). Most other workspaces take the same `mcpServers` block in their own config file, such as `.cursor/mcp.json` or `.vscode/mcp.json`. See [`templates/hooks-setup.md`](templates/hooks-setup.md) for full setup instructions.
 
 ---
 
@@ -358,7 +393,7 @@ architecture, engineering, compliance, docs, and marketing.
 ```
 
 ### Workflow recipe
-Copy any recipe from [`templates/WORKFLOWS.md`](templates/WORKFLOWS.md) and paste into Claude Code to launch a pre-configured team for 15 common scenarios.
+Copy any recipe from [`templates/WORKFLOWS.md`](templates/WORKFLOWS.md) and paste into your AI workspace to launch a pre-configured team for 15 common scenarios.
 
 ---
 
@@ -366,50 +401,36 @@ Copy any recipe from [`templates/WORKFLOWS.md`](templates/WORKFLOWS.md) and past
 
 ```
 FoundryAI/
-├── install.sh                       ← installer (--dry-run, --hooks, --no-plugin)
-├── uninstall.sh                     ← removes exactly what install.sh installed
-├── .claude-plugin/marketplace.json  ← lets Claude Code install the plugin from this repo
-├── agents/                          ← 52 specialists + 9 team coordinators (flat)
+├── agents/                          ← single source: 52 specialists + 9 team coordinators
 │   ├── founder.md                   ← AI co-founder (master orchestrator)
-│   ├── cto-advisor.md               ← Technical leadership advisor
 │   ├── team-*.md                    ← 9 team coordinators
-│   ├── ai-architect.md
-│   └── ... (48 more specialists)
-├── skills/                          ← 42 slash commands
-│   ├── review.md                    ← /review
-│   ├── debug.md                     ← /debug
-│   ├── prd.md                       ← /prd
-│   └── ... (39 more)
-├── plugin/                          ← founders-kit plugin
-│   ├── .claude-plugin/
-│   └── commands/                    ← routing commands + synced copies of skills
+│   ├── _shared/                     ← operating principles added to every agent
+│   └── ... (workspace-neutral: tier + capabilities, mapped per workspace at build time)
+├── skills/<name>/SKILL.md           ← 46 skills (Agent Skills standard)
 ├── templates/
-│   ├── CLAUDE.md                    ← Generic project config
-│   ├── CLAUDE-nextjs-saas.md        ← Next.js + FastAPI template
-│   ├── CLAUDE-python-ml.md          ← Python ML project template
-│   ├── CLAUDE-react-native.md       ← React Native mobile template
+│   ├── AGENTS*.md                   ← project templates (generic, Next.js SaaS, Python ML, React Native)
 │   ├── WORKFLOWS.md                 ← 15 pre-built team recipes
-│   ├── hooks/                       ← 3 hook scripts (tested by scripts/test-hooks.sh)
-│   ├── mcp-github.json              ← GitHub MCP config
-│   ├── mcp-postgres.json            ← PostgreSQL MCP config
-│   └── mcp-full-stack.json          ← Combined MCP config
+│   ├── hooks/                       ← 3 Claude Code hook scripts
+│   └── mcp-*.json                   ← MCP server configs
 ├── scripts/
-│   ├── validate.sh                  ← CI checks: frontmatter, counts, references, sync
-│   ├── gen-docs.py                  ← regenerates docs/agents.md + docs/skills.md
-│   ├── sync-plugin-commands.sh      ← keeps plugin/commands in sync with skills/
+│   ├── build.py                     ← builds every workspace format (and the Claude plugin)
+│   ├── validate.sh                  ← CI: frontmatter, references, counts, all build targets, hooks
+│   ├── gen-docs.py                  ← regenerates docs/agents.md, docs/skills.md, founder roster
 │   └── test-hooks.sh                ← hook tests
-└── docs/
-    ├── agents.md                    ← Full agent reference (generated)
-    └── skills.md                    ← Full skills reference (generated)
+├── plugin/                          ← Claude Code plugin (generated by build.py)
+├── .claude-plugin/marketplace.json  ← lets Claude Code install the plugin from this repo
+├── docs/                            ← agents.md, skills.md (generated), routing.md
+├── install.sh                       ← multi-workspace installer (--target, --dry-run, --hooks)
+└── uninstall.sh                     ← removes exactly what install.sh installed
 ```
 
 ---
 
 ## Requirements
 
-- [Claude Code](https://claude.ai/code) CLI installed
-- Anthropic API access
-- Agent Teams enabled: `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` in Claude Code settings
+- One or more AI workspaces: Claude Code, Cursor, GitHub Copilot (VS Code), Codex CLI, Gemini CLI, any `AGENTS.md` / Agent Skills compatible agent — or a chat workspace (ChatGPT, Claude, Gemini)
+- `python3` and `git` for the installer
+- Subagent support varies by workspace; where agents can't run other agents, coordinators tell you which specialist to use next
 
 ---
 
@@ -426,4 +447,4 @@ MIT — use freely, build products, ship it.
 
 ---
 
-*Built by [VenkataAnilKumar](https://github.com/VenkataAnilKumar) · Powered by [Claude Code](https://claude.ai/code)*
+*Built by [VenkataAnilKumar](https://github.com/VenkataAnilKumar) · Works with Claude Code, Cursor, GitHub Copilot, Codex, Gemini CLI and more*

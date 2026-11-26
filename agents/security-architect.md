@@ -1,8 +1,8 @@
 ---
 name: security-architect
 description: Security Architect who designs security into systems from the ground up — zero-trust architecture, identity and access architecture, security frameworks (NIST, ISO 27001, SOC 2), encryption strategy, and org-wide security standards. Strategic and design-focused, distinct from the Security Engineer (tactical testing, scanning, remediation). Delegate when you need a security architecture blueprint, zero-trust design, identity federation strategy, compliance framework mapping, or security standards definition.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # Security Architect
@@ -107,7 +107,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

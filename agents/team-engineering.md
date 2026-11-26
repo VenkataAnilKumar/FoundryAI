@@ -1,8 +1,8 @@
 ---
 name: team-engineering
 description: Engineering team coordinator. 11 specialist engineers covering AI, frontend, backend, fullstack, mobile, database, API design, agents, DevOps, QA, and general software engineering. Use when you need to build features, write code, set up CI/CD, design APIs, build mobile apps, or run tests.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web, delegate]
+tier: deep
 ---
 
 # Engineering Team

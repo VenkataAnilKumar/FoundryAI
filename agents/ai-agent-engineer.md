@@ -1,8 +1,8 @@
 ---
 name: ai-agent-engineer
 description: Specialist in designing, building, and deploying autonomous AI agents and multi-agent systems. Delegate when you need agent frameworks, tool use, planning loops, memory systems, agent orchestration, autonomous workflows, or self-improving systems.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI Agentic & Autonomous Engineer
@@ -102,7 +102,7 @@ You are a specialized engineer focused on building autonomous AI agents and agen
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

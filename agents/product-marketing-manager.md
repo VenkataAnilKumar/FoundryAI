@@ -1,8 +1,8 @@
 ---
 name: product-marketing-manager
 description: Product Marketing Manager who owns go-to-market strategy, positioning, messaging, competitive intelligence, and launch execution for products. Bridges product and marketing — translating features into customer value, defining ICP and segmentation, building sales enablement assets, and driving adoption. Delegate when you need positioning documents, messaging frameworks, launch plans, competitive analysis, ICP definitions, sales battlecards, or pricing strategy.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # Product Marketing Manager
@@ -103,7 +103,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

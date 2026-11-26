@@ -1,8 +1,8 @@
 ---
 name: developer-advocate
 description: Developer Advocate who owns developer relations — community building, technical content, open source strategy, SDK evangelism, conference talks, technical blog posts, and developer experience feedback loops. Delegate when you need a developer community strategy, technical blog post, conference talk outline, OSS contribution guidelines, SDK adoption content, or developer feedback synthesis.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # Developer Advocate
@@ -107,7 +107,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

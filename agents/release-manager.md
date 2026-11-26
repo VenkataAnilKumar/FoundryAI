@@ -1,8 +1,8 @@
 ---
 name: release-manager
 description: Release Manager who owns the software release lifecycle — versioning strategy, changelog generation, release trains, hotfix protocols, rollback procedures, and release communication. Delegate when you need a release plan, changelog written, versioning strategy defined, hotfix coordinated, rollback runbook created, or release notes drafted.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # Release Manager
@@ -106,7 +106,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

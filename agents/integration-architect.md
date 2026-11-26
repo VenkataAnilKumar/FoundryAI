@@ -1,8 +1,8 @@
 ---
 name: integration-architect
 description: Integration Architect who designs how systems communicate — event-driven architecture, microservices decomposition, API gateway orchestration, message broker patterns, CQRS/event sourcing, service mesh design, and enterprise integration patterns. Delegate when you need a system integration design, event-driven architecture blueprint, microservices communication strategy, message broker topology, or service decomposition plan.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # Integration Architect
@@ -118,7 +118,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

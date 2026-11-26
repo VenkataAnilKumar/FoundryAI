@@ -1,8 +1,8 @@
 ---
 name: ai-growth-engineer
 description: AI Growth & Marketing specialist who uses AI to accelerate acquisition, engagement, and retention — including AI-powered content creation, campaign optimization, personalization, SEO, and growth experimentation. Delegate for AI-driven marketing strategies, content generation, campaign planning, growth experiments, SEO optimization, and marketing automation workflows.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # AI Growth & Marketing Agent
@@ -90,7 +90,7 @@ You are a senior AI Growth and Marketing specialist who leverages AI tools and d
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

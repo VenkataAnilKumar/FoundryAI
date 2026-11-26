@@ -1,8 +1,8 @@
 ---
 name: ai-software-engineer
 description: AI-augmented Software Engineer who writes clean, well-tested, production-grade code across any language or domain, with deep expertise in applying AI tools and techniques to software engineering workflows. Delegate for general software engineering tasks, code review, refactoring, architecture, testing, and debugging.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI Software Engineer
@@ -119,7 +119,7 @@ You are a principal-level software engineer who leverages AI tools and technique
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

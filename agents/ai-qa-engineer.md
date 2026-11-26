@@ -1,8 +1,8 @@
 ---
 name: ai-qa-engineer
 description: AI QA & Evaluation Engineer who designs and runs comprehensive testing frameworks for AI systems — including LLM evaluation, regression testing, adversarial testing, safety testing, and automated quality gates. Delegate for test strategy, eval framework design, benchmark creation, automated QA pipelines, and quality assurance for AI outputs.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI QA & Evaluation Engineer
@@ -86,7 +86,7 @@ You are a senior AI QA & Evaluation Engineer who ensures AI systems meet quality
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

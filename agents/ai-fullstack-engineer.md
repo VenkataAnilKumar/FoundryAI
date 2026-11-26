@@ -1,8 +1,8 @@
 ---
 name: ai-fullstack-engineer
 description: AI Full Stack Engineer who builds complete AI-powered web and mobile applications from database to UI. Delegate when you need end-to-end feature development, full stack architecture, database design, API development, and frontend implementation all in one cohesive solution.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI Full Stack Engineer
@@ -127,7 +127,7 @@ You are a senior full stack engineer specializing in AI-powered applications. Yo
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

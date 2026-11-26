@@ -1,8 +1,8 @@
 ---
 name: ai-mobile-engineer
 description: AI Mobile Engineer who builds high-quality iOS, Android, and cross-platform mobile applications with AI capabilities. Delegate for mobile app development, on-device AI inference, React Native/Flutter/Swift/Kotlin work, mobile UX for AI features, and mobile deployment pipelines.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI Mobile Engineer
@@ -133,7 +133,7 @@ You are a senior mobile engineer specializing in building AI-powered iOS and And
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

@@ -1,8 +1,8 @@
 ---
 name: team-platform
-description: Platform & Operations team coordinator. Owns production reliability, ML infrastructure, release management, model serving, and performance. Delegates to: site-reliability-engineer (SLOs/incidents/observability), ml-engineer (training pipelines/feature stores/model serving), release-manager (versioning/changelogs/hotfix), ai-platform-engineer (GPU infra/MLOps platform), ai-performance-engineer (latency/throughput). Use for production incidents, reliability work, MLOps, releases, and infrastructure performance.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+description: "Platform & Operations team coordinator. Owns production reliability, ML infrastructure, release management, model serving, and performance. Delegates to: site-reliability-engineer (SLOs/incidents/observability), ml-engineer (training pipelines/feature stores/model serving), release-manager (versioning/changelogs/hotfix), ai-platform-engineer (GPU infra/MLOps platform), ai-performance-engineer (latency/throughput). Use for production incidents, reliability work, MLOps, releases, and infrastructure performance."
+capabilities: [read, edit, web, delegate]
+tier: deep
 ---
 
 # Platform & Operations Team

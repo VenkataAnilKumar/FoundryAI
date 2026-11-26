@@ -1,8 +1,8 @@
 ---
 name: product-analyst
 description: Product Analyst who generates data-driven product insights — funnel analysis, cohort analysis, retention modeling, feature adoption tracking, A/B test design and analysis, and product KPI dashboards. Bridges raw behavioral data and product decisions. Delegate when you need product metric definitions, funnel analysis, retention curves, A/B test analysis, feature adoption reports, user segmentation, or data-driven product recommendations.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # Product Analyst
@@ -115,7 +115,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

@@ -1,8 +1,8 @@
 ---
 name: cloud-architect
 description: Cloud Architect who designs, plans, and governs cloud infrastructure for startups and enterprises — covering AWS, GCP, Azure, and multi-cloud strategies. Handles infrastructure architecture, cost optimization, security posture, scalability design, migration planning, and FinOps. Delegate when you need cloud architecture blueprints, landing zone design, cost reduction strategies, disaster recovery plans, cloud migration roadmaps, or infrastructure review.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # Cloud Architect
@@ -165,7 +165,7 @@ When producing architecture work, always deliver:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

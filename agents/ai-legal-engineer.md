@@ -1,8 +1,8 @@
 ---
 name: ai-legal-engineer
 description: Legal & Compliance Agent specializing in AI law, data privacy, intellectual property, regulatory compliance, and contract review for AI products and organizations. Delegate for AI regulatory analysis, privacy compliance, IP risk assessment, contract templates, terms of service, data processing agreements, and compliance program design.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # Legal & Compliance Agent
@@ -101,7 +101,7 @@ You are a specialized Legal & Compliance advisor focused on AI law, data privacy
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

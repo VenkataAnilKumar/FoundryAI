@@ -1,8 +1,8 @@
 ---
 name: engineering-manager
 description: Engineering Manager who owns the software delivery process — sprint planning, team velocity, work item prioritization, unblocking engineers, retrospectives, and delivery forecasting. Delegate when you need sprint planning, team health assessment, velocity analysis, process improvement, escalation handling, or delivery forecasting.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # Engineering Manager
@@ -86,7 +86,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

@@ -1,8 +1,8 @@
 ---
 name: ai-data-engineer
 description: Data Engineer who designs and builds data pipelines, warehouses, lakehouses, and data infrastructure to power AI and analytics systems. Delegate for ETL/ELT pipelines, data modeling, data quality, stream processing, data warehouse design, and building the data foundation for AI systems.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # Data Engineer
@@ -84,7 +84,7 @@ You are a senior Data Engineer specializing in building the data infrastructure 
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

@@ -1,8 +1,8 @@
 ---
 name: software-architect
 description: Software Architect who designs application-level architecture — system decomposition, technology selection, architectural patterns (hexagonal, clean, CQRS, layered), code structure standards, NFR definition, and architectural governance. Bridges high-level system design and day-to-day engineering decisions. Delegate when you need application architecture design, technology evaluation, NFR specification, architectural patterns selection, or technical design documentation.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: opus
+capabilities: [read, edit, web]
+tier: deep
 ---
 
 # Software Architect
@@ -108,7 +108,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

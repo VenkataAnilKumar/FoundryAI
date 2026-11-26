@@ -1,45 +1,43 @@
 #!/usr/bin/env bash
-# Founders Kit — installer
+# FoundryAI — installer for any AI workspace
 #
 #   curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
-#   curl -fsSL .../install.sh | bash -s -- --dry-run      # show what would change
-#   ./install.sh --no-plugin                               # from a local clone
+#   curl -fsSL .../install.sh | bash -s -- --target cursor --target codex
+#   ./install.sh --dry-run                      # from a local clone
 #
 # Options:
-#   --dry-run     print what would be installed; change nothing
-#   --no-plugin   skip the founders-kit plugin (routing commands)
-#   --hooks       also copy hook scripts to ~/.claude/hooks (you still register them
-#                 in ~/.claude/settings.json; see templates/hooks-setup.md)
+#   --target NAME  claude | cursor | copilot | codex | gemini | chat | all  (repeatable)
+#                  Default: every workspace detected on this machine.
+#   --dry-run      show what would be installed; change nothing
+#   --hooks        also copy the Claude Code hook scripts to ~/.claude/hooks
 #
-# Existing files that would be overwritten with different content are backed up to
-# ~/.claude/founders-kit-backup/<timestamp>/ first. Every installed file is recorded in
-# ~/.claude/founders-kit.manifest so uninstall.sh removes exactly what was installed.
+# Files that would be overwritten with different content are backed up to
+# ~/.foundryai/backup/<timestamp>/ first. Every installed file is recorded in
+# ~/.foundryai/manifest so uninstall.sh removes exactly what was installed.
+# Requires git (when not run from a clone) and python3.
 
 set -euo pipefail
 
 REPO_URL="https://github.com/VenkataAnilKumar/FoundryAI"
-MARKETPLACE_SOURCE="VenkataAnilKumar/FoundryAI"
-MARKETPLACE_NAME="foundryai"
-PLUGIN_NAME="founders-kit"
-
-CLAUDE_DIR="$HOME/.claude"
-AGENTS_DIR="$CLAUDE_DIR/agents"
-COMMANDS_DIR="$CLAUDE_DIR/commands"
-HOOKS_DIR="$CLAUDE_DIR/hooks"
-MANIFEST="$CLAUDE_DIR/founders-kit.manifest"
-BACKUP_DIR="$CLAUDE_DIR/founders-kit-backup/$(date +%Y%m%d-%H%M%S)"
+ALL_TARGETS="claude cursor copilot codex gemini chat"
+STATE_DIR="$HOME/.foundryai"
+MANIFEST="$STATE_DIR/manifest"
+LEGACY_MANIFEST="$HOME/.claude/founders-kit.manifest"
+BACKUP_DIR="$STATE_DIR/backup/$(date +%Y%m%d-%H%M%S)"
 
 DRY_RUN=0
-INSTALL_PLUGIN=1
 INSTALL_HOOKS=0
-for arg in "$@"; do
-  case "$arg" in
+TARGETS=""
+while [ $# -gt 0 ]; do
+  case "$1" in
     --dry-run) DRY_RUN=1 ;;
-    --no-plugin) INSTALL_PLUGIN=0 ;;
     --hooks) INSTALL_HOOKS=1 ;;
-    -h|--help) { sed -n "2,17p" "$0" | sed "s/^# \{0,1\}//"; } 2>/dev/null || true; exit 0 ;;
-    *) echo "Unknown option: $arg" >&2; exit 1 ;;
+    --target) shift; TARGETS="$TARGETS ${1:?--target needs a value}" ;;
+    --target=*) TARGETS="$TARGETS ${1#--target=}" ;;
+    -h|--help) { sed -n "2,18p" "$0" | sed "s/^# \{0,1\}//"; } 2>/dev/null || true; exit 0 ;;
+    *) echo "Unknown option: $1" >&2; exit 1 ;;
   esac
+  shift
 done
 
 if [ -t 1 ]; then
@@ -48,114 +46,155 @@ else
   GREEN=''; BLUE=''; YELLOW=''; RED=''; NC=''
 fi
 warn() { echo -e "${YELLOW}warning:${NC} $*" >&2; }
+die() { echo -e "${RED}error:${NC} $*" >&2; exit 1; }
 
 echo ""
-echo -e "${BLUE}Founders Kit — your AI co-founder + specialist agents + team coordinators${NC}"
+echo -e "${BLUE}FoundryAI — an AI startup team for any AI workspace${NC}"
 echo "────────────────────────────────────────────────────────"
 [ "$DRY_RUN" = 1 ] && echo -e "${YELLOW}Dry run — nothing will be changed.${NC}"
 echo ""
 
-if ! command -v claude >/dev/null 2>&1; then
-  echo -e "${RED}Claude Code is not installed.${NC} Install it first: https://claude.ai/code" >&2
-  exit 1
-fi
+command -v python3 >/dev/null 2>&1 || die "python3 is required to build FoundryAI for your workspaces."
 
-# Use the local checkout when run from one; otherwise clone.
+# --- which workspaces --------------------------------------------------------
+detect() {
+  case "$1" in
+    claude)  command -v claude >/dev/null 2>&1 || [ -d "$HOME/.claude" ] ;;
+    cursor)  command -v cursor >/dev/null 2>&1 || [ -d "$HOME/.cursor" ] ;;
+    copilot) command -v code >/dev/null 2>&1 || [ -d "$HOME/.copilot" ] || [ -d "$HOME/.vscode" ] ;;
+    codex)   command -v codex >/dev/null 2>&1 || [ -d "$HOME/.codex" ] ;;
+    gemini)  command -v gemini >/dev/null 2>&1 || [ -d "$HOME/.gemini" ] ;;
+    *) return 1 ;;
+  esac
+}
+
+if [ -z "${TARGETS// }" ]; then
+  for t in claude cursor copilot codex gemini; do
+    detect "$t" && TARGETS="$TARGETS $t"
+  done
+  if [ -z "${TARGETS// }" ]; then
+    die "no supported AI workspace detected. Choose one with --target ($ALL_TARGETS)."
+  fi
+  echo "Detected:$TARGETS"
+fi
+case " $TARGETS " in *" all "*) TARGETS="$ALL_TARGETS" ;; esac
+for t in $TARGETS; do
+  case " $ALL_TARGETS " in *" $t "*) ;; *) die "unknown target '$t' (choose from: $ALL_TARGETS all)" ;; esac
+done
+
+# --- get the source and build ------------------------------------------------
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd || true)"
-if [ -n "$SCRIPT_DIR" ] && [ -d "$SCRIPT_DIR/agents" ] && [ -d "$SCRIPT_DIR/skills" ]; then
+TMP_DIR="$(mktemp -d)"
+trap 'rm -rf "$TMP_DIR"' EXIT
+if [ -n "$SCRIPT_DIR" ] && [ -f "$SCRIPT_DIR/scripts/build.py" ]; then
   SRC="$SCRIPT_DIR"
 else
-  command -v git >/dev/null 2>&1 || { echo "git is required." >&2; exit 1; }
-  TMP_DIR="$(mktemp -d)"
-  trap 'rm -rf "$TMP_DIR"' EXIT
+  command -v git >/dev/null 2>&1 || die "git is required."
   echo "Downloading..."
   git clone --depth 1 --quiet "$REPO_URL" "$TMP_DIR/FoundryAI"
   SRC="$TMP_DIR/FoundryAI"
 fi
 
-# Only real agent definitions: files whose frontmatter has a name: field.
-# (agents/ also holds README.md, CLAUDE.md and WORKFLOWS.md, which are docs.)
-is_agent() { head -1 "$1" | grep -q '^---$' && sed -n '2,/^---$/p' "$1" | grep -q '^name:'; }
+BUILD_ARGS=()
+for t in $TARGETS; do BUILD_ARGS+=(--target "$t"); done
+python3 "$SRC/scripts/build.py" --out "$TMP_DIR/dist" --no-plugin "${BUILD_ARGS[@]}" >/dev/null
 
+# --- install -----------------------------------------------------------------
 NEW_MANIFEST=()
 backed_up=0
-install_file() { # install_file <src> <dest-dir>
-  local src="$1" dest
-  dest="$2/$(basename "$1")"
-  NEW_MANIFEST+=("$dest")
-  [ "$DRY_RUN" = 1 ] && return 0
-  if [ -f "$dest" ] && ! cmp -s "$src" "$dest"; then
-    mkdir -p "$BACKUP_DIR"
-    cp "$dest" "$BACKUP_DIR/"
-    backed_up=$((backed_up + 1))
-  fi
-  cp "$src" "$dest"
+install_tree() { # install_tree <built-dir>: copy every file to the same path under $HOME
+  local root="$1" src rel dest
+  while IFS= read -r src; do
+    rel="${src#"$root"/}"
+    dest="$HOME/$rel"
+    NEW_MANIFEST+=("$dest")
+    [ "$DRY_RUN" = 1 ] && continue
+    if [ -f "$dest" ] && ! cmp -s "$src" "$dest"; then
+      mkdir -p "$(dirname "$BACKUP_DIR/$rel")"
+      cp "$dest" "$BACKUP_DIR/$rel"
+      backed_up=$((backed_up + 1))
+    fi
+    mkdir -p "$(dirname "$dest")"
+    cp "$src" "$dest"
+  done < <(find "$root" -type f | sort)
 }
 
-[ "$DRY_RUN" = 1 ] || mkdir -p "$AGENTS_DIR" "$COMMANDS_DIR"
+label() {
+  case "$1" in
+    claude)  echo "Claude Code     → ~/.claude/agents, ~/.claude/skills" ;;
+    cursor)  echo "Cursor          → ~/.cursor/agents, ~/.agents/skills" ;;
+    copilot) echo "Copilot/VS Code → ~/.copilot/agents, ~/.copilot/skills" ;;
+    codex)   echo "Codex CLI       → ~/.codex/agents, ~/.agents/skills" ;;
+    gemini)  echo "Gemini CLI      → ~/.gemini/agents, ~/.agents/skills" ;;
+    chat)    echo "Chat workspaces → ~/FoundryAI-chat-prompts (paste into ChatGPT, Claude, Gemini projects)" ;;
+  esac
+}
 
-agents=0; coordinators=0
-for f in "$SRC"/agents/*.md; do
-  is_agent "$f" || continue
-  install_file "$f" "$AGENTS_DIR"
-  case "$(basename "$f")" in team-*) coordinators=$((coordinators + 1)) ;; *) agents=$((agents + 1)) ;; esac
+for t in $TARGETS; do
+  install_tree "$TMP_DIR/dist/$t"
+  echo -e "  ${GREEN}✓${NC} $(label "$t")"
 done
-echo -e "Agents:   ${GREEN}$agents specialists + $coordinators team coordinators${NC} → $AGENTS_DIR"
-
-skills=0
-for f in "$SRC"/skills/*.md; do
-  install_file "$f" "$COMMANDS_DIR"
-  skills=$((skills + 1))
-done
-echo -e "Skills:   ${GREEN}$skills slash commands${NC} → $COMMANDS_DIR"
 
 if [ "$INSTALL_HOOKS" = 1 ]; then
-  [ "$DRY_RUN" = 1 ] || mkdir -p "$HOOKS_DIR"
-  for f in "$SRC"/templates/hooks/*.sh; do
-    install_file "$f" "$HOOKS_DIR"
-    [ "$DRY_RUN" = 1 ] || chmod +x "$HOOKS_DIR/$(basename "$f")"
-  done
-  echo -e "Hooks:    ${GREEN}copied${NC} → $HOOKS_DIR (register them: templates/hooks-setup.md)"
+  case " $TARGETS " in
+    *" claude "*)
+      [ "$DRY_RUN" = 1 ] || mkdir -p "$HOME/.claude/hooks"
+      for f in "$SRC"/templates/hooks/*.sh; do
+        dest="$HOME/.claude/hooks/$(basename "$f")"
+        NEW_MANIFEST+=("$dest")
+        [ "$DRY_RUN" = 1 ] || { cp "$f" "$dest"; chmod +x "$dest"; }
+      done
+      echo -e "  ${GREEN}✓${NC} Claude Code hooks → ~/.claude/hooks (register them: templates/hooks-setup.md)" ;;
+    *) warn "--hooks only applies to Claude Code; skipped." ;;
+  esac
+fi
+
+# --- clean up files from 1.x/2.x installs (slash commands are now skills) ------
+legacy_removed=0
+if [ -f "$LEGACY_MANIFEST" ]; then
+  while IFS= read -r old; do
+    case "$old" in
+      "$HOME/.claude/commands/"*.md)
+        name="$(basename "$old" .md)"
+        if [ -f "$old" ] && { [ -d "$SRC/skills/$name" ] || [ "$name" = founder ]; }; then
+          if [ "$DRY_RUN" = 1 ]; then
+            echo "  would remove old slash command $old (now a skill)"
+          else
+            mkdir -p "$BACKUP_DIR/.claude/commands"
+            mv "$old" "$BACKUP_DIR/.claude/commands/"
+          fi
+          legacy_removed=$((legacy_removed + 1))
+        fi ;;
+      *) [ -f "$old" ] && NEW_MANIFEST+=("$old") ;;
+    esac
+  done < "$LEGACY_MANIFEST"
+  [ "$DRY_RUN" = 1 ] || rm -f "$LEGACY_MANIFEST"
 fi
 
 if [ "$DRY_RUN" = 0 ]; then
-  # Merge with any earlier manifest so uninstall also catches files from older versions.
+  mkdir -p "$STATE_DIR"
   { [ -f "$MANIFEST" ] && cat "$MANIFEST"; printf '%s\n' "${NEW_MANIFEST[@]}"; } | sort -u > "$MANIFEST.tmp"
   mv "$MANIFEST.tmp" "$MANIFEST"
   [ "$backed_up" -gt 0 ] && warn "$backed_up existing file(s) differed and were backed up to $BACKUP_DIR"
+  [ "$legacy_removed" -gt 0 ] && warn "moved $legacy_removed old slash command(s) from ~/.claude/commands to $BACKUP_DIR (they are skills now)"
 fi
 
-if [ "$INSTALL_PLUGIN" = 1 ]; then
-  if [ "$DRY_RUN" = 1 ]; then
-    echo -e "Plugin:   would run: claude plugin marketplace add $MARKETPLACE_SOURCE"
-    echo -e "          would run: claude plugin install $PLUGIN_NAME@$MARKETPLACE_NAME"
-  else
-    echo -e "Plugin:   installing ${GREEN}$PLUGIN_NAME${NC}..."
-    if claude plugin marketplace add "$MARKETPLACE_SOURCE" >/dev/null 2>&1 || claude plugin marketplace update "$MARKETPLACE_NAME" >/dev/null 2>&1; then
-      if claude plugin install "$PLUGIN_NAME@$MARKETPLACE_NAME" >/dev/null 2>&1; then
-        echo -e "          ${GREEN}✓${NC} $PLUGIN_NAME@$MARKETPLACE_NAME"
-      else
-        warn "plugin install failed. Run it yourself: claude plugin install $PLUGIN_NAME@$MARKETPLACE_NAME"
-      fi
-    else
-      warn "could not add the $MARKETPLACE_NAME marketplace. Inside Claude Code run:"
-      warn "  /plugin marketplace add $MARKETPLACE_SOURCE"
-      warn "  /plugin install $PLUGIN_NAME@$MARKETPLACE_NAME"
-    fi
-  fi
-fi
-
+echo ""
+echo "${#NEW_MANIFEST[@]} files $([ "$DRY_RUN" = 1 ] && echo "would be installed" || echo installed)."
 echo ""
 if [ "$DRY_RUN" = 1 ]; then
   echo -e "${GREEN}Dry run complete.${NC} Re-run without --dry-run to install."
 else
-  echo -e "${GREEN}✓ Done!${NC} Founders Kit is installed. Restart Claude Code to pick up new agents."
+  echo -e "${GREEN}✓ Done!${NC} Restart your AI workspace to pick up the new agents and skills."
 fi
 echo ""
-echo "Quick start:"
-echo -e "  ${YELLOW}/founders-kit:founder \"build a streaming chat interface\"${NC}"
-echo -e "  ${YELLOW}/review${NC}             ← review current file"
-echo -e "  ${YELLOW}/prd \"your idea\"${NC}    ← write a PRD"
+echo "Try:  /cofounder \"build a RAG-powered document search\"   (or ask: use the founder agent to …)"
+echo "      /prd \"your idea\"     /review     /launch-check"
+case " $TARGETS " in *" gemini "*)
+  echo ""
+  echo "Gemini CLI: to also load project AGENTS.md files, add to ~/.gemini/settings.json:"
+  echo '      { "context": { "fileName": ["AGENTS.md", "GEMINI.md"] } }' ;;
+esac
 echo ""
 echo "Uninstall: curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash"
 echo "Docs:      $REPO_URL"

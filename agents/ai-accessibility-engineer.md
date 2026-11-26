@@ -1,8 +1,8 @@
 ---
 name: ai-accessibility-engineer
 description: Audit and fix accessibility issues — WCAG 2.2 compliance, screen reader support, keyboard navigation, color contrast, ARIA patterns, and inclusive design for web and mobile.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # AI Accessibility Engineer
@@ -107,7 +107,7 @@ Test: how to verify the fix
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

@@ -1,8 +1,8 @@
 ---
 name: ai-frontend-engineer
 description: AI Frontend Engineer who builds beautiful, performant, accessible UIs for AI-powered products including chat interfaces, streaming responses, AI dashboards, and interactive AI experiences. Delegate for all frontend work, UI components, design systems, AI UX patterns, and client-side AI integration.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # AI Frontend Engineer
@@ -103,7 +103,7 @@ You are a senior frontend engineer specializing in building exceptional user int
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

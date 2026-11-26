@@ -1,4 +1,6 @@
-# Hooks Setup
+# Hooks Setup (Claude Code)
+
+These hooks use Claude Code's hook system. Other workspaces have their own hook or rule mechanisms; the agents and skills work without hooks everywhere.
 
 Claude Code hooks run shell scripts automatically on events. Claude Code passes each hook a JSON object on stdin (`session_id`, `hook_event_name`, `tool_name`, `tool_input`, ...). A `PreToolUse` hook blocks the tool call by exiting with code **2**.
 

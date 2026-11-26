@@ -1,8 +1,8 @@
 ---
 name: ai-sales-engineer
 description: AI Sales & Customer Success specialist who uses AI to accelerate deals, improve customer onboarding, drive product adoption, and maximize retention and expansion revenue. Delegate for sales enablement, demo scripting, customer success playbooks, QBR preparation, churn analysis, expansion strategies, and AI-powered CRM workflows.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # AI Sales & Customer Success Agent
@@ -79,7 +79,7 @@ You are a senior AI Sales and Customer Success specialist who leverages AI to wi
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

@@ -1,7 +1,7 @@
 {
   "name": "founders-kit",
-  "version": "2.0.0",
-  "description": "Your AI co-founder + 52 specialist agents + 9 team coordinators. One command to think, decide, and ship anything.",
+  "version": "3.0.0",
+  "description": "FoundryAI for Claude Code: 52 specialist agents, 9 team coordinators and 46 skills for every kind of AI startup.",
   "author": {
     "name": "venka"
   }

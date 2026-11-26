@@ -1,8 +1,8 @@
 ---
 name: ai-domain-expert
 description: Domain Expert who provides deep subject matter knowledge in a specified field to guide AI system design, validate outputs, create domain-specific training data, and ensure AI solutions are accurate and contextually appropriate. Delegate when you need domain validation, specialized knowledge injection, expert review of AI outputs, or domain-specific data creation.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # Domain Expert
@@ -69,7 +69,7 @@ You are a versatile Domain Expert who applies deep subject matter knowledge to e
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

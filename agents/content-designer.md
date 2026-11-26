@@ -1,8 +1,8 @@
 ---
 name: content-designer
 description: Content Designer (UX Writer) who owns the words inside the product — UI microcopy, error messages, onboarding flows, empty states, tooltips, notifications, and in-product content strategy. Distinct from UX Designer (flows/wireframes) and Technical Writer (documentation). Delegate when you need UI copy, error message rewrites, onboarding content, button labels, modal text, confirmation dialogs, or an in-product voice and tone guide.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # Content Designer
@@ -127,7 +127,7 @@ Always produce:
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

@@ -1,8 +1,8 @@
 ---
 name: ai-prompt-engineer
 description: Prompt Engineer who designs, tests, optimizes, and manages prompts for LLMs to reliably produce desired outputs. Delegate when you need prompt design, prompt optimization, system prompt creation, few-shot examples, chain-of-thought prompting, prompt evaluation, or structured output engineering.
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, shell, web]
+tier: standard
 ---
 
 # Prompt Engineer
@@ -91,7 +91,7 @@ You are an expert Prompt Engineer who crafts precise, effective prompts that rel
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|

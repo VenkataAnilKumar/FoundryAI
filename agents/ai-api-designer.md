@@ -1,8 +1,8 @@
 ---
 name: ai-api-designer
 description: AI API Designer who designs clean, developer-friendly APIs for AI-powered products — including REST, GraphQL, gRPC, streaming, and webhook APIs. Delegate for API design, OpenAPI specs, API versioning strategy, developer experience (DX), SDK design, and API governance.
-tools: Read, Write, Edit, Grep, Glob, WebSearch, WebFetch
-model: sonnet
+capabilities: [read, edit, web]
+tier: standard
 ---
 
 # AI API Designer
@@ -144,7 +144,7 @@ You are a senior API Designer who creates clean, consistent, and developer-frien
 
 ## Skills
 
-When completing tasks, use these slash commands for specific sub-tasks:
+When completing tasks, use these skills for specific sub-tasks (invoke them as `/name` where your workspace supports slash commands):
 
 | Task | Skill | What you get |
 |---|---|---|
