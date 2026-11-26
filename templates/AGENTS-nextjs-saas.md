@@ -13,7 +13,7 @@ Drop this file into your project root as `AGENTS.md`. It tells your AI agents yo
 ## Project Overview
 
 **Type**: AI SaaS product
-**Stack**: Next.js 14 + FastAPI + PostgreSQL + Claude API
+**Stack**: Next.js 14 + FastAPI + PostgreSQL + LLM API
 **Stage**: [MVP / Beta / Production]
 **AI startup type**: [LLM app / copilot · agent product · AI devtools or infra · voice · vision / multimodal · generative media · model training · vertical AI (health / finance / legal / education) · other]
 **Team size**: [e.g. 2 founders, 1 engineer]
@@ -25,7 +25,7 @@ Drop this file into your project root as `AGENTS.md`. It tells your AI agents yo
 ```
 Frontend:   Next.js 14 (App Router), TypeScript, Tailwind CSS, Vercel AI SDK
 Backend:    FastAPI, SQLAlchemy, Alembic, PostgreSQL, Redis
-AI layer:   Anthropic Claude API, pgvector for embeddings
+AI layer:   [LLM provider API(s) behind a gateway], pgvector for embeddings
 Auth:       Clerk / NextAuth / Supabase Auth
 Deploy:     Vercel (frontend), Railway / Fly.io (backend), Supabase (db)
 ```
@@ -70,7 +70,7 @@ Deploy:     Vercel (frontend), Railway / Fly.io (backend), Supabase (db)
 ```
 - TypeScript strict mode — no `any`
 - All API routes in /app/api/, typed with Zod schemas
-- All LLM calls through /lib/llm.ts — never call Anthropic SDK directly
+- All LLM calls through /lib/llm.ts — never call provider SDKs directly
 - All prompts in /prompts/*.ts — versioned, never inline
 - Server components by default — client components only when needed
 - Error boundaries on all AI-powered components
@@ -97,7 +97,7 @@ components/
   ui/              ← shadcn/ui components
   ai/              ← AI-specific components (chat, streaming, etc.)
 lib/
-  llm.ts           ← Anthropic SDK wrapper — all AI calls go here
+  llm.ts           ← LLM gateway wrapper — all AI calls go here
   db.ts            ← Database client
   auth.ts          ← Auth utilities
 prompts/           ← All LLM prompts, versioned

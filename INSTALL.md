@@ -80,7 +80,7 @@ Then follow `~/FoundryAI-chat-prompts/README.md`: paste an agent file into the p
 cp FoundryAI/templates/AGENTS.md ./your-project/AGENTS.md
 ```
 
-Edit it with your AI startup type, stage, stack and conventions. Stack-specific templates: `AGENTS-nextjs-saas.md`, `AGENTS-python-ml.md`, `AGENTS-react-native.md`.
+Edit it with your AI startup type, stage, stack and conventions. Templates by stack: `AGENTS-nextjs-saas.md`, `AGENTS-python-ml.md`, `AGENTS-react-native.md`. By AI startup type: `AGENTS-agent-product.md`, `AGENTS-voice-ai.md`, `AGENTS-vision-ai.md`, `AGENTS-generative-media.md`, `AGENTS-robotics.md`, `AGENTS-healthtech-ai.md`, `AGENTS-fintech-ai.md`, `AGENTS-legaltech-ai.md`.
 
 - Codex, Cursor, Copilot, Windsurf, Zed, Amp and most agents read `AGENTS.md` directly.
 - **Claude Code:** create `CLAUDE.md` containing `@AGENTS.md`.

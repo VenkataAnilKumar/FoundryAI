@@ -13,7 +13,7 @@ Drop this file into your project root as `AGENTS.md`. It tells your AI agents yo
 ## Project Overview
 
 **Type**: AI-powered mobile app
-**Stack**: React Native (Expo) + FastAPI + PostgreSQL + Claude API
+**Stack**: React Native (Expo) + FastAPI + PostgreSQL + LLM API
 **Platforms**: iOS + Android
 **Stage**: [Prototype / Alpha / TestFlight / Production]
 **AI startup type**: [LLM app / copilot · agent product · AI devtools or infra · voice · vision / multimodal · generative media · model training · vertical AI (health / finance / legal / education) · other]
@@ -28,7 +28,7 @@ Mobile:     React Native, Expo SDK 51+, TypeScript
 Navigation: Expo Router (file-based)
 State:      Zustand / Jotai
 API client: React Query (TanStack Query)
-AI:         Anthropic Claude API (via backend), on-device ML via TFLite/Core ML
+AI:         [LLM provider API(s)] via backend, on-device ML via TFLite/Core ML
 Auth:       Clerk Expo / Supabase Auth
 Storage:    MMKV (fast), Expo SecureStore (sensitive), AsyncStorage (general)
 Backend:    FastAPI, PostgreSQL, Redis
@@ -46,7 +46,7 @@ Deploy:     EAS Build + Submit (App Store + Play Store)
 - On-device ML (Core ML, TFLite) → `ai-mobile-engineer` + `ai-engineer`
 
 ### AI Features
-- LLM integration, Claude API → `ai-engineer`
+- LLM integration → `ai-engineer`
 - Streaming responses in mobile → `ai-mobile-engineer` + `ai-engineer`
 - Prompt design → `ai-prompt-engineer`
 - Eval for AI features → `ai-qa-engineer`
@@ -82,7 +82,7 @@ Deploy:     EAS Build + Submit (App Store + Play Store)
 - Expo Router for all navigation — no React Navigation directly
 - Components in /components, screens in /app (Expo Router)
 - All API calls through /lib/api.ts (React Query hooks)
-- All AI calls through /lib/ai.ts — never call Claude API directly from mobile
+- All AI calls through /lib/ai.ts — never call LLM provider APIs directly from mobile
 - Sensitive data in Expo SecureStore — never AsyncStorage
 - No hardcoded API keys — use EAS secrets
 - StyleSheet.create() or NativeWind — no inline styles

@@ -2,6 +2,24 @@
 
 All notable changes to Founders Kit. Versions follow the plugin version in `plugin/.claude-plugin/plugin.json`.
 
+## [3.2.0] — 2026-11-26
+
+### Added
+- **8 project templates by AI startup type.** Each covers routing, stage guidance, key metrics, conventions and directory layout:
+  - `AGENTS-agent-product.md`
+  - `AGENTS-voice-ai.md`
+  - `AGENTS-vision-ai.md`
+  - `AGENTS-generative-media.md`
+  - `AGENTS-robotics.md`
+  - `AGENTS-healthtech-ai.md`
+  - `AGENTS-fintech-ai.md`
+  - `AGENTS-legaltech-ai.md`
+- The health, fintech and legal templates add a regulatory checklist (to confirm with counsel).
+- The validator checks every template is listed in the README, has the stage and startup-type fields, and only references agents that exist.
+
+### Changed
+- The Next.js and React Native templates are provider-neutral ("LLM API" instead of a specific vendor).
+
 ## [3.1.0] — 2026-11-26
 
 Coverage for every kind of AI startup.

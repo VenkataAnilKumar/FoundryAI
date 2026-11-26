@@ -189,6 +189,17 @@ for name in sorted(set(skills) - listed_skills):
 for name in sorted(listed_skills - set(skills)):
     err("README.md", f"lists skill '/{name}', but skills/{name}/SKILL.md does not exist")
 
+# --- project templates --------------------------------------------------------
+for t in sorted((ROOT / "templates").glob("AGENTS*.md")):
+    text = t.read_text(encoding="utf-8")
+    if t.name not in readme:
+        err("README.md", f"template '{t.name}' is not listed under Project Templates")
+    for required in ("**Stage**", "**AI startup type**", "Works in any AI workspace"):
+        if required not in text:
+            err(t, f"missing '{required}'")
+    if "{{" in text:
+        err(t, "unfilled placeholder '{{...}}'")
+
 # --- every build target -------------------------------------------------------
 EXPECT = {  # target: (agent glob, skill glob)
     "claude": (".claude/agents/*.md", ".claude/skills/*/SKILL.md"),

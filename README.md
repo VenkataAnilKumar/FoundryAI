@@ -86,7 +86,7 @@ Project instructions use [`AGENTS.md`](templates/AGENTS.md), which most agents r
 |---|---|---|
 | **Agents** | 58 + 9 teams | Specialists across architecture, engineering, AI modalities, product, data & AI, fundraising, growth, safety |
 | **Skills** | 54 | `/review`, `/debug`, `/prd`, `/eval`, `/rag-design`, `/cost-check`, `/cofounder`... |
-| **Project templates** | 4 | Stack-specific `AGENTS.md` files for your project |
+| **Project templates** | 12 | `AGENTS.md` files by stack and by AI startup type (agents, voice, vision, generative media, robotics, health, fintech, legal) |
 | **Workflow recipes** | 31 | Copy-paste team recipes ([15](templates/WORKFLOWS.md)) + team workflows ([16](agents/WORKFLOWS.md)) |
 | **Hooks** | 3 | Claude Code automations (secret-file protection, logging, notifications) |
 | **MCP configs** | 3 | GitHub, PostgreSQL, full-stack server configs |
@@ -347,9 +347,23 @@ Drop a stack-specific `AGENTS.md` into your project root. It records your AI sta
 | Template | Stack |
 |---|---|
 | [`AGENTS.md`](templates/AGENTS.md) | Generic — works for any project |
-| [`AGENTS-nextjs-saas.md`](templates/AGENTS-nextjs-saas.md) | Next.js 14 + FastAPI + PostgreSQL + LLM API |
+| [`AGENTS-nextjs-saas.md`](templates/AGENTS-nextjs-saas.md) | LLM app / copilot: Next.js 14 + FastAPI + PostgreSQL + LLM API |
 | [`AGENTS-python-ml.md`](templates/AGENTS-python-ml.md) | PyTorch / HuggingFace + MLflow + FastAPI |
 | [`AGENTS-react-native.md`](templates/AGENTS-react-native.md) | Expo + FastAPI + EAS Build |
+
+**By AI startup type** — routing, stage guidance, key metrics and conventions for each:
+
+| Template | For |
+|---|---|
+| [`AGENTS-agent-product.md`](templates/AGENTS-agent-product.md) | Agents that take actions with tools — permissions, approvals, evals |
+| [`AGENTS-voice-ai.md`](templates/AGENTS-voice-ai.md) | Voice agents and phone bots — latency budget, turn-taking, consent |
+| [`AGENTS-vision-ai.md`](templates/AGENTS-vision-ai.md) | Vision, multimodal and document AI — labeling loop, slices, edge |
+| [`AGENTS-generative-media.md`](templates/AGENTS-generative-media.md) | Image/video/audio generation — GPU cost, licenses, content safety |
+| [`AGENTS-robotics.md`](templates/AGENTS-robotics.md) | Robotics and embodied AI — sim-to-real, safety envelope, fleet ops |
+| [`AGENTS-python-ml.md`](templates/AGENTS-python-ml.md) | Model training and research — also the start for model companies |
+| [`AGENTS-healthtech-ai.md`](templates/AGENTS-healthtech-ai.md) | Healthcare AI — HIPAA/GDPR, intended use and device status, clinical safety |
+| [`AGENTS-fintech-ai.md`](templates/AGENTS-fintech-ai.md) | Financial services AI — licensing, KYC/AML, fair lending, model risk |
+| [`AGENTS-legaltech-ai.md`](templates/AGENTS-legaltech-ai.md) | Legal AI — confidentiality, citations, supervision, UPL |
 
 ```bash
 cp FoundryAI/templates/AGENTS-nextjs-saas.md ./AGENTS.md
@@ -430,7 +444,7 @@ FoundryAI/
 │   └── ... (workspace-neutral: tier + capabilities, mapped per workspace at build time)
 ├── skills/<name>/SKILL.md           ← 54 skills (Agent Skills standard)
 ├── templates/
-│   ├── AGENTS*.md                   ← project templates (generic, Next.js SaaS, Python ML, React Native)
+│   ├── AGENTS*.md                   ← 12 project templates, by stack and by AI startup type
 │   ├── WORKFLOWS.md                 ← 15 pre-built team recipes
 │   ├── hooks/                       ← 3 Claude Code hook scripts
 │   └── mcp-*.json                   ← MCP server configs
