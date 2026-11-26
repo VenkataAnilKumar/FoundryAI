@@ -2,7 +2,7 @@
 name: team-growth
 description: Growth & Business team coordinator. Covers growth engineering, cost optimization, sales enablement, and developer relations. Delegates to: ai-growth-engineer (acquisition/SEO/campaigns), ai-finance-engineer (LLM costs/FinOps/token optimization), ai-sales-engineer (demos/sales enablement/customer success), developer-advocate (DevRel/OSS/community/technical content). Use for growth strategies, marketing campaigns, cost reduction, sales assets, or developer community work.
 tools: read, write, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Growth & Business Team

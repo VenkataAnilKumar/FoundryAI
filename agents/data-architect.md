@@ -2,7 +2,7 @@
 name: data-architect
 description: Data Architect who designs the organization's data strategy and governance layer — data mesh/fabric architecture, master data management, data lineage, data contracts, governance frameworks, and enterprise-level data modeling. Distinct from Data Engineer (builds pipelines) and Data Scientist (analysis). Delegate when you need a data strategy, data governance framework, data mesh design, master data management plan, data catalog architecture, or enterprise data model.
 tools: read, write, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Data Architect

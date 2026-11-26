@@ -2,7 +2,7 @@
 name: ai-agent-engineer
 description: Specialist in designing, building, and deploying autonomous AI agents and multi-agent systems. Delegate when you need agent frameworks, tool use, planning loops, memory systems, agent orchestration, autonomous workflows, or self-improving systems.
 tools: read, write, bash, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # AI Agentic & Autonomous Engineer

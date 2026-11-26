@@ -39,9 +39,9 @@ Current Claude pricing (approximate — verify at anthropic.com/pricing):
 
 | Model | Input (per 1M tokens) | Output (per 1M tokens) |
 |---|---|---|
-| claude-opus-4-6 | ~$15 | ~$75 |
-| claude-sonnet-4-6 | ~$3 | ~$15 |
-| claude-haiku-4-5 | ~$0.25 | ~$1.25 |
+| claude-opus-5-5 | ~$15 | ~$75 |
+| claude-sonnet-5-5 | ~$3 | ~$15 |
+| claude-haiku-5-5 | ~$0.25 | ~$1.25 |
 
 **Cost per request** = (input_tokens / 1,000,000 × input_price) + (output_tokens / 1,000,000 × output_price)
 

@@ -2,7 +2,7 @@
 name: product-designer
 description: Product Designer who owns the end-to-end design of digital products — user flows, wireframes, high-fidelity UI, interaction design, design systems, and design-to-dev handoff. Distinct from UX Researcher (validates insights) and AI UX Designer (AI interaction patterns). Delegate when you need product flows, wireframes, hi-fi mockups, component design, design system work, or design critique and review.
 tools: read, write, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # Product Designer

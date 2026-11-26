@@ -2,7 +2,7 @@
 name: release-manager
 description: Release Manager who owns the software release lifecycle — versioning strategy, changelog generation, release trains, hotfix protocols, rollback procedures, and release communication. Delegate when you need a release plan, changelog written, versioning strategy defined, hotfix coordinated, rollback runbook created, or release notes drafted.
 tools: read, write, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Release Manager

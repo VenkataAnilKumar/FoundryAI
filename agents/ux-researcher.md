@@ -2,7 +2,7 @@
 name: ux-researcher
 description: UX Researcher who generates validated user insights through qualitative and quantitative research methods — user interviews, usability testing, diary studies, surveys, concept testing, and Jobs-to-Be-Done analysis. Distinct from UX Designer (creates solutions) and Product Manager (defines requirements). Delegate when you need user research plans, interview scripts, usability test protocols, synthesis reports, personas, journey maps, or research-backed insights to inform product decisions.
 tools: read, write, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # UX Researcher

@@ -22,8 +22,8 @@ Answer these questions before writing:
 4. **What should this agent NOT do?** (prevents overlap with existing agents)
 5. **Which existing agent is most similar?** (helps calibrate depth and style)
 6. **What model should this use?**
-   - `claude-opus-4-6` — complex reasoning, strategy, architecture, legal, research
-   - `claude-sonnet-4-6` — engineering, product, business (default for most agents)
+   - `claude-opus-5-5` — complex reasoning, strategy, architecture, legal, research
+   - `claude-sonnet-5-5` — engineering, product, business (default for most agents)
 7. **Which tools does this agent need?**
    - `read` — needs to read files
    - `write` — produces code or documents
@@ -41,7 +41,7 @@ Produce a complete agent markdown file using this structure:
 name: agent-name-in-kebab-case
 description: One sentence: what this agent does and when to use it. Start with an action verb. Include 2-3 key trigger scenarios so the router knows when to invoke it.
 tools: read, write, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # [Agent Title] — [One-line tagline]

@@ -2,7 +2,7 @@
 name: ai-fullstack-engineer
 description: AI Full Stack Engineer who builds complete AI-powered web and mobile applications from database to UI. Delegate when you need end-to-end feature development, full stack architecture, database design, API development, and frontend implementation all in one cohesive solution.
 tools: read, write, bash, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # AI Full Stack Engineer

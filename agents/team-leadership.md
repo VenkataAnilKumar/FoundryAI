@@ -2,7 +2,7 @@
 name: team-leadership
 description: Leadership & Program Management team coordinator. Handles company strategy, cross-team coordination, OKR tracking, sprint planning, and executive decision-making. Delegates to: founder (strategy), cto-advisor (tech leadership), ai-orchestrator (multi-agent coordination), technical-program-manager (cross-team programs), engineering-manager (delivery). Use when you need leadership-level decisions, program oversight, or company-wide coordination.
 tools: read, write, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Leadership & Program Management Team

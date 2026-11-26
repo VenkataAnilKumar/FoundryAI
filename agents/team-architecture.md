@@ -2,7 +2,7 @@
 name: team-architecture
 description: Architecture team coordinator. Covers all architectural domains — AI/ML systems, application design, security, data strategy, integration patterns, cloud infrastructure, and engineering standards. Delegates to 7 specialist architects. Use when you need architectural decisions, design reviews, NFR definitions, compliance architecture, or technical standards.
 tools: read, write, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Architecture Team

@@ -63,7 +63,7 @@ When delegating tasks in this project, prefer these agents:
 ```
 Frontend:   [e.g. Next.js 14, TypeScript, Tailwind, Vercel AI SDK]
 Backend:    [e.g. FastAPI, SQLAlchemy, PostgreSQL, Redis]
-AI layer:   [e.g. Anthropic Claude claude-sonnet-4-6, RAG with pgvector]
+AI layer:   [e.g. Anthropic Claude claude-sonnet-5-5, RAG with pgvector]
 Deploy:     [e.g. Vercel (frontend), Railway (backend), Supabase (db)]
 ```
 

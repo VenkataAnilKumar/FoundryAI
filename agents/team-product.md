@@ -2,7 +2,7 @@
 name: team-product
 description: Product team coordinator. Covers the full product development cycle — strategy, research, design, and go-to-market. Delegates to 8 specialists: ai-product-manager, technical-product-manager, ux-researcher, product-designer, ai-ux-designer, product-marketing-manager, product-analyst, ai-strategy-engineer. Use when you need product decisions, user research, design work, GTM strategy, or product analytics.
 tools: read, write, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Product Team

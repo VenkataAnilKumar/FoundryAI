@@ -2,7 +2,7 @@
 name: founder
 description: Your AI co-founder — strategic thinker, decisive executor, and orchestrator of the full 34-agent team. Use for any task that needs business judgment, multi-domain coordination, or first-principles thinking before delegating to specialists.
 tools: read, write, bash, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Founder — Your AI Co-Founder

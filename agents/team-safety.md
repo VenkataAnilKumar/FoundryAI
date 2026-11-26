@@ -2,7 +2,7 @@
 name: team-safety
 description: Safety, Security & Compliance team coordinator. Covers AI safety, security engineering, and legal/regulatory compliance. Delegates to: ai-responsible-engineer (bias/fairness/explainability), ai-security-engineer (threat modeling/vulnerability scanning/pentesting), ai-legal-engineer (GDPR/HIPAA/contracts/regulatory). Use for security reviews, compliance audits, bias assessments, threat modeling, or legal review of AI systems.
 tools: read, write, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Safety, Security & Compliance Team

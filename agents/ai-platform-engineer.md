@@ -2,7 +2,7 @@
 name: ai-platform-engineer
 description: AI Platform Engineer who builds and operates the internal AI platform — including model serving infrastructure, MLOps tooling, developer experience, compute management, and shared AI services that enable other teams to ship AI products faster. Delegate for MLOps, model serving, GPU infrastructure, platform tooling, and internal AI developer experience.
 tools: read, write, bash, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # AI Platform Engineer

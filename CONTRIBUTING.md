@@ -47,7 +47,7 @@ Special cases without `-engineer` suffix:
 name: ai-[role]-engineer
 description: [What this agent does and when to use it — 1 sentence, start with a verb]
 tools: read, write, bash, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # [Agent Title] — [One-line tagline]
@@ -107,9 +107,9 @@ Use the ai-[role]-engineer agent to review [X] and identify [Y].
 
 | Model | Use when |
 |---|---|
-| `claude-opus-4-6` | Complex reasoning: strategy, architecture, legal, compliance, system design |
-| `claude-sonnet-4-6` | Engineering, product, business tasks — the default for most agents |
-| `claude-haiku-4-5-20251001` | Fast, lightweight: routing, classification, simple transformations |
+| `claude-opus-5-5` | Complex reasoning: strategy, architecture, legal, compliance, system design |
+| `claude-sonnet-5-5` | Engineering, product, business tasks — the default for most agents |
+| `claude-haiku-5-5` | Fast, lightweight: routing, classification, simple transformations |
 
 ### 5. Set the right tools
 

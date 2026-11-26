@@ -2,7 +2,7 @@
 name: product-analyst
 description: Product Analyst who generates data-driven product insights — funnel analysis, cohort analysis, retention modeling, feature adoption tracking, A/B test design and analysis, and product KPI dashboards. Bridges raw behavioral data and product decisions. Delegate when you need product metric definitions, funnel analysis, retention curves, A/B test analysis, feature adoption reports, user segmentation, or data-driven product recommendations.
 tools: read, write, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # Product Analyst

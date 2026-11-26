@@ -2,7 +2,7 @@
 name: ai-devops-engineer
 description: AI DevOps & MLOps Engineer who builds CI/CD pipelines for AI systems, automates model training and deployment workflows, manages infrastructure as code, and ensures reliable, fast delivery of AI models and applications to production. Delegate for CI/CD setup, MLOps pipelines, Docker/Kubernetes configs, infrastructure automation, deployment strategies, and model lifecycle management.
 tools: read, write, bash, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # AI DevOps & MLOps Engineer

@@ -2,7 +2,7 @@
 name: ai-growth-engineer
 description: AI Growth & Marketing specialist who uses AI to accelerate acquisition, engagement, and retention — including AI-powered content creation, campaign optimization, personalization, SEO, and growth experimentation. Delegate for AI-driven marketing strategies, content generation, campaign planning, growth experiments, SEO optimization, and marketing automation workflows.
 tools: read, write, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # AI Growth & Marketing Agent

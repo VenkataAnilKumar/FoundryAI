@@ -22,72 +22,72 @@ Or use the routing commands (requires plugin):
 ## Engineering Agents (14)
 
 ### `ai-architect`
-**Model**: claude-opus-4-6 (most capable)
+**Model**: claude-opus-5-5 (most capable)
 **Best for**: System architecture, technology selection, scalability design, architecture reviews, ADRs
 **Use when**: You need a high-level design decision, want to evaluate trade-offs, or need an architecture document
 
 ### `ai-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: LLM integration, RAG systems, embedding pipelines, vector search, Claude/OpenAI API usage
 **Use when**: You're building AI features — the AI core, not the surrounding infrastructure
 
 ### `ai-backend-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: REST APIs, background jobs, async processing, database design, microservices
 **Use when**: Building server-side logic, API endpoints, or backend services
 
 ### `ai-frontend-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: React/Next.js, streaming chat UI, real-time updates, responsive design, accessibility
 **Use when**: Building UI components, especially for AI products with streaming responses
 
 ### `ai-fullstack-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: End-to-end features that span frontend and backend
 **Use when**: You need one agent to handle a complete feature rather than coordinating two
 
 ### `ai-mobile-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: React Native, Flutter, Swift/SwiftUI, Kotlin/Jetpack Compose, on-device ML
 **Use when**: Building iOS/Android apps or cross-platform mobile
 
 ### `ai-database-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: PostgreSQL, vector databases (pgvector, Pinecone, Qdrant), schema design, migrations, query optimization
 **Use when**: Database design decisions, performance issues, or vector search architecture
 
 ### `ai-api-designer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: REST API design, OpenAPI/Swagger specs, GraphQL schemas, gRPC, API versioning, DX
 **Use when**: Designing APIs for others to consume or reviewing existing API design
 
 ### `ai-software-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: General coding in any language (Python, TypeScript, Go, Java, Rust, C#)
 **Use when**: General purpose coding that doesn't fit a specialist category
 
 ### `ai-agent-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: Multi-agent systems, tool use, planning loops, memory systems, autonomous workflows
 **Use when**: Building agent-to-agent systems, autonomous workflows, or anything that uses LLMs to make decisions
 
 ### `ai-devops-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: CI/CD, Docker, Kubernetes, model deployment, GitHub Actions, infrastructure as code
 **Use when**: Setting up deployment pipelines, containerization, or MLOps workflows
 
 ### `ai-platform-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: Internal AI platform, model serving (vLLM, TGI), GPU infrastructure, developer tooling
 **Use when**: Building internal infrastructure that other teams use to ship AI features
 
 ### `ai-qa-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: LLM evaluation frameworks, adversarial testing, RAGAS, automated quality gates
 **Use when**: Setting up evals for LLM outputs, designing test suites, or validating model behavior
 
 ### `ai-research-engineer`
-**Model**: claude-opus-4-6
+**Model**: claude-opus-5-5
 **Best for**: Implementing techniques from papers, running experiments, model benchmarking, novel approaches
 **Use when**: You want to implement a research paper or experiment with new AI techniques
 
@@ -96,37 +96,37 @@ Or use the routing commands (requires plugin):
 ## Product Agents (7)
 
 ### `ai-product-manager`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: PRDs, user stories, roadmaps, OKRs, AI product metrics, GTM planning
 **Use when**: Defining what to build and why
 
 ### `ai-product-builder`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: Rapid MVP scoping, prototype planning, demo building, fast iteration
 **Use when**: You need to ship something fast and need help defining minimal viable scope
 
 ### `ai-ux-designer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: User flows, wireframes, AI interaction patterns, onboarding design, error states
 **Use when**: Designing how users will interact with your product
 
 ### `ai-solution-architect`
-**Model**: claude-opus-4-6
+**Model**: claude-opus-5-5
 **Best for**: Client-facing proposals, PoC design, build-vs-buy analysis, feasibility assessment
 **Use when**: Designing solutions for specific client problems or evaluating technical feasibility
 
 ### `ai-strategy-engineer`
-**Model**: claude-opus-4-6
+**Model**: claude-opus-5-5
 **Best for**: AI strategy documents, competitive analysis, Wardley mapping, 3-year roadmaps
 **Use when**: Executive-level strategy documents or major technology direction decisions
 
 ### `ai-prompt-engineer`
-**Model**: claude-sonnet-4-6
+**Model**: claude-sonnet-5-5
 **Best for**: Prompt design, optimization, few-shot examples, chain-of-thought, structured output
 **Use when**: Your LLM outputs aren't good enough and you need to improve prompts systematically
 
 ### `ai-orchestrator`
-**Model**: claude-opus-4-6
+**Model**: claude-opus-5-5
 **Best for**: Coordinating teams of agents, complex multi-step projects, parallel workstreams
 **Use when**: A task is too complex for one agent and needs a coordinator
 

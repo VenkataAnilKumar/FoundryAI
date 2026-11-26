@@ -2,7 +2,7 @@
 name: staff-engineer
 description: Staff Engineer who provides senior individual contributor technical leadership — cross-team architecture reviews, coding standards, technical mentoring, tech health ownership, engineering excellence programs, and cross-cutting technical decisions. Distinct from CTO (executive) and Architect (system design). Delegate when you need a technical quality review, engineering standards defined, cross-team technical alignment, a complex refactoring strategy, or senior IC perspective on build-vs-buy decisions.
 tools: read, write, bash, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Staff Engineer

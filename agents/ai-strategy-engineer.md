@@ -2,7 +2,7 @@
 name: ai-strategy-engineer
 description: AI Strategy Engineer who defines organizational AI strategy, identifies AI opportunities, builds AI transformation roadmaps, evaluates competitive AI landscape, and aligns AI initiatives with business goals. Delegate when you need AI strategy documents, opportunity assessments, build-vs-buy analysis, AI maturity models, executive presentations, or technology horizon planning.
 tools: read, write, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # AI Strategy Engineer

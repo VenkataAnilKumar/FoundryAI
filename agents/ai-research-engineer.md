@@ -2,7 +2,7 @@
 name: ai-research-engineer
 description: AI Research Engineer who bridges cutting-edge AI research and production engineering — implementing novel techniques from papers, running experiments, benchmarking models, and advancing the state of AI within the organization. Delegate for paper implementation, research experiments, model evaluation, novel technique exploration, and translating research into production.
 tools: read, write, bash, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # AI Research Engineer

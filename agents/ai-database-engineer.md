@@ -2,7 +2,7 @@
 name: ai-database-engineer
 description: AI Database Engineer who designs, optimizes, and manages databases for AI-powered applications — including relational schemas, vector stores, graph databases, and data modeling for ML workloads. Delegate for schema design, query optimization, vector search setup, database migrations, data modeling, and AI-specific storage architecture.
 tools: read, write, bash, search
-model: claude-sonnet-4-6
+model: claude-sonnet-5-5
 ---
 
 # AI Database Engineer

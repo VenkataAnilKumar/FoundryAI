@@ -2,7 +2,7 @@
 name: software-architect
 description: Software Architect who designs application-level architecture — system decomposition, technology selection, architectural patterns (hexagonal, clean, CQRS, layered), code structure standards, NFR definition, and architectural governance. Bridges high-level system design and day-to-day engineering decisions. Delegate when you need application architecture design, technology evaluation, NFR specification, architectural patterns selection, or technical design documentation.
 tools: read, write, search
-model: claude-opus-4-6
+model: claude-opus-5-5
 ---
 
 # Software Architect
