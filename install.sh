@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # FoundryAI — installer for any AI workspace
 #
-#   curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash
 #   curl -fsSL .../install.sh | bash -s -- --target cursor --target codex
 #   ./install.sh --dry-run                      # from a local clone
 #
@@ -203,6 +203,6 @@ case " $TARGETS " in *" gemini "*)
   echo '      { "context": { "fileName": ["AGENTS.md", "GEMINI.md"] } }' ;;
 esac
 echo ""
-echo "Uninstall: curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash"
+echo "Uninstall: curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/uninstall.sh | bash"
 echo "Docs:      $REPO_URL"
 echo ""

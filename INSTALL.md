@@ -5,7 +5,7 @@ FoundryAI installs into any AI workspace. The installer builds the agents and sk
 ## Option A — One-line install (recommended)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash
 ```
 
 With no options it installs into **every workspace it detects** on your machine: 58 specialist agents, 9 team coordinators and 54 skills each.
@@ -30,7 +30,7 @@ Options (pass after `bash -s --` when piping from curl):
 | `--hooks` | Also copy the Claude Code hook scripts to `~/.claude/hooks/` |
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash -s -- --target cursor --target codex --dry-run
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash -s -- --target cursor --target codex --dry-run
 ```
 
 Any existing file it would overwrite is backed up to `~/.foundryai/backup/<timestamp>/` first.
@@ -109,7 +109,7 @@ Restart your workspace, then check its agent list — e.g. `/agents` in Claude C
 Re-run the installer. It overwrites FoundryAI's files (backing up any you changed) and leaves your own agents and skills alone. Upgrading from 2.x also moves the old `~/.claude/commands/` copies of FoundryAI's skills into the backup folder, since they're installed as skills now.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash
 ```
 
 Plugin users: `claude plugin marketplace update foundryai`.
@@ -119,7 +119,7 @@ Plugin users: `claude plugin marketplace update foundryai`.
 ## Uninstalling
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/uninstall.sh | bash
 ```
 
 This removes exactly the files `install.sh` recorded in `~/.foundryai/manifest` from every workspace, plus the Claude Code plugin if installed. Your own agents, skills and the backups are kept. Add `--dry-run` (`bash -s -- --dry-run`) to preview.

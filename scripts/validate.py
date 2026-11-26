@@ -235,6 +235,18 @@ for f in link_files:
         if not (f.parent / target).resolve().exists():
             err(f, f"broken link to '{target}'")
 
+# --- raw.githubusercontent install URLs point at a real branch and file ----------------
+DEFAULT_BRANCH = "master"
+for f in [ROOT / n for n in ("README.md", "INSTALL.md", "DEMO.md", "install.sh", "uninstall.sh")] + [ROOT / "agents" / "README.md"]:
+    if not f.exists():
+        continue
+    for m in re.finditer(r"raw\.githubusercontent\.com/VenkataAnilKumar/FoundryAI/([^/\s]+)/([^\s|`'\")]+)", f.read_text(encoding="utf-8")):
+        branch, path = m.group(1), m.group(2)
+        if branch != DEFAULT_BRANCH:
+            err(f, f"raw URL uses branch '{branch}'; the default branch is '{DEFAULT_BRANCH}'")
+        if not (ROOT / path).exists():
+            err(f, f"raw URL points to '{path}', which is not in the repo")
+
 # --- project templates --------------------------------------------------------
 for t in sorted((ROOT / "templates").glob("AGENTS*.md")):
     text = t.read_text(encoding="utf-8")

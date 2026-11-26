@@ -126,7 +126,7 @@ Each team coordinator knows its members, can delegate subtasks, and orchestrates
 
 ```bash
 # Every AI workspace detected on this machine
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash
 
 # Or pick: claude | cursor | copilot | codex | gemini | chat | all
 ./install.sh --target cursor

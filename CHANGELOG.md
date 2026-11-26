@@ -16,6 +16,7 @@ All notable changes to Founders Kit. Versions follow the plugin version in `plug
 - **Demo image** shows current counts, workspaces, and stage-aware routing. Fixed result labels overlapping their values.
 
 ### Fixed
+- **The one-line install never worked.** Every `curl … | bash` URL pointed at a `main` branch that doesn't exist; the default branch is `master`. The validator now checks these URLs.
 - **MCP configs** no longer use the deprecated `@modelcontextprotocol/server-github` or the archived `server-postgres`:
   - GitHub now uses GitHub's official remote server.
   - Postgres uses the community `postgres-mcp` in restricted (read-only) mode.

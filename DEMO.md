@@ -39,7 +39,7 @@ Pause 2 seconds.
 **What to show:** One-line install.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash
 ```
 
 Show the output:

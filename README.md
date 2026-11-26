@@ -20,7 +20,7 @@ An AI startup needs architects, engineers, product people, growth, security, leg
 **1. Install** — the installer detects your AI workspaces and installs into each one (needs `python3` and `git`):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash
 ```
 
 **2. Tell it about your startup** — copy a [project template](#project-templates) into your repo as `AGENTS.md` and fill in your AI startup type and stage.
@@ -77,7 +77,7 @@ agents/_shared/      stage-aware operating principles       ─┘          │
 | **Chat workspaces** (ChatGPT, Claude, Gemini projects) | `chat` | `~/FoundryAI-chat-prompts/` | same folder |
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/install.sh | bash -s -- --target cursor --target codex
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/install.sh | bash -s -- --target cursor --target codex
 ./install.sh --dry-run        # from a clone: preview changes
 ./install.sh --target all     # every workspace, including chat prompts
 ```
@@ -85,7 +85,7 @@ curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/ins
 The installer backs up any file it would overwrite and records what it installed. Remove everything with:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/uninstall.sh | bash
 ```
 
 **Claude Code plugin:** `/plugin marketplace add VenkataAnilKumar/FoundryAI` then `/plugin install founders-kit@foundryai` (use the plugin *or* `install.sh --target claude`, not both). See [INSTALL.md](INSTALL.md) for every option.

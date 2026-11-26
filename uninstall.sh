@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # FoundryAI — uninstaller
 #
-#   curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/main/uninstall.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/VenkataAnilKumar/FoundryAI/master/uninstall.sh | bash
 #   ./uninstall.sh --dry-run
 #
 # Removes exactly the files listed in ~/.foundryai/manifest (written by install.sh) from every
